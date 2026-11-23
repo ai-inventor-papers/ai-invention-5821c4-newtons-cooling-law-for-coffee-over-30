@@ -1,0 +1,8264 @@
+{
+  "meta": {
+    "description": "Per-curve scores for C0 and C1 under each protocol and ambient.",
+    "columns": "rms_K over the 0-30 min window; signed residual = model minus observed"
+  },
+  "rows": [
+    {
+      "protocol": "in_sample_reference",
+      "fold": "Sedlacek",
+      "ambient": "A",
+      "model": "C0",
+      "curve_id": "SEDLACEK2010_Fig1",
+      "source": "Sedlacek",
+      "T0_C": 80.25,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "k": 0.02649543286553719
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.4,
+      "measurement_error_C": 0.3,
+      "is_in_sample": true,
+      "rms_K": 1.260833253246719,
+      "signed_mean_0_10_K": 1.0266909633708785,
+      "signed_mean_10_30_K": -0.4545713620214258,
+      "room_used_C": 20.0,
+      "room_source": "default_20C",
+      "first_time_min": 0.0,
+      "last_time_min": 25.59,
+      "n_points": 7,
+      "partial": true,
+      "residual_vs_time": [
+        {
+          "t_min": 0.0,
+          "resid_K": 0.0
+        },
+        {
+          "t_min": 2.75,
+          "resid_K": 1.1562
+        },
+        {
+          "t_min": 4.65,
+          "resid_K": 1.506
+        },
+        {
+          "t_min": 9.66,
+          "resid_K": 1.4446
+        },
+        {
+          "t_min": 14.67,
+          "resid_K": 0.6662
+        },
+        {
+          "t_min": 20.58,
+          "resid_K": 0.1958
+        },
+        {
+          "t_min": 25.59,
+          "resid_K": -2.2258
+        }
+      ]
+    },
+    {
+      "protocol": "in_sample_reference",
+      "fold": "Sedlacek",
+      "ambient": "A",
+      "model": "C1",
+      "curve_id": "SEDLACEK2010_Fig1",
+      "source": "Sedlacek",
+      "T0_C": 80.25,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "kc": 0.00028187612436524897,
+        "x": 2.1823972144051766
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.4,
+      "measurement_error_C": 0.3,
+      "is_in_sample": true,
+      "rms_K": 0.32750775340306404,
+      "signed_mean_0_10_K": -0.03195188684200545,
+      "signed_mean_10_30_K": 0.034878338935934984,
+      "room_used_C": 20.0,
+      "room_source": "default_20C",
+      "first_time_min": 0.0,
+      "last_time_min": 25.59,
+      "n_points": 7,
+      "partial": true,
+      "residual_vs_time": [
+        {
+          "t_min": 0.0,
+          "resid_K": -0.0
+        },
+        {
+          "t_min": 2.75,
+          "resid_K": 0.0235
+        },
+        {
+          "t_min": 4.65,
+          "resid_K": -0.0171
+        },
+        {
+          "t_min": 9.66,
+          "resid_K": -0.1342
+        },
+        {
+          "t_min": 14.67,
+          "resid_K": -0.1594
+        },
+        {
+          "t_min": 20.58,
+          "resid_K": 0.7115
+        },
+        {
+          "t_min": 25.59,
+          "resid_K": -0.4475
+        }
+      ]
+    },
+    {
+      "protocol": "in_sample_reference",
+      "fold": "Sedlacek",
+      "ambient": "B",
+      "model": "C0",
+      "curve_id": "SEDLACEK2010_Fig1",
+      "source": "Sedlacek",
+      "T0_C": 80.25,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "k": 0.02978136334215473,
+        "Tr_fitted_C": 24.999999999999996,
+        "Tr_bounds_C": [
+          15.0,
+          25.0
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.4,
+      "measurement_error_C": 0.3,
+      "is_in_sample": true,
+      "rms_K": 1.1238682675882559,
+      "signed_mean_0_10_K": 0.9069078438086109,
+      "signed_mean_10_30_K": -0.4362735798075808,
+      "room_used_C": 24.999999999999996,
+      "room_source": "fitted_shared",
+      "first_time_min": 0.0,
+      "last_time_min": 25.59,
+      "n_points": 7,
+      "partial": true,
+      "residual_vs_time": [
+        {
+          "t_min": 0.0,
+          "resid_K": 0.0
+        },
+        {
+          "t_min": 2.75,
+          "resid_K": 1.0454
+        },
+        {
+          "t_min": 4.65,
+          "resid_K": 1.3449
+        },
+        {
+          "t_min": 9.66,
+          "resid_K": 1.2373
+        },
+        {
+          "t_min": 14.67,
+          "resid_K": 0.5138
+        },
+        {
+          "t_min": 20.58,
+          "resid_K": 0.2032
+        },
+        {
+          "t_min": 25.59,
+          "resid_K": -2.0258
+        }
+      ]
+    },
+    {
+      "protocol": "in_sample_reference",
+      "fold": "Sedlacek",
+      "ambient": "B",
+      "model": "C1",
+      "curve_id": "SEDLACEK2010_Fig1",
+      "source": "Sedlacek",
+      "T0_C": 80.25,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "kc": 0.0008938214424470254,
+        "x": 1.940267917497158,
+        "Tr_fitted_C": 24.999999999999133,
+        "Tr_bounds_C": [
+          15.0,
+          25.0
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.4,
+      "measurement_error_C": 0.3,
+      "is_in_sample": true,
+      "rms_K": 0.3232276836049024,
+      "signed_mean_0_10_K": -0.0256127351149793,
+      "signed_mean_10_30_K": 0.0312130220337347,
+      "room_used_C": 24.999999999999133,
+      "room_source": "fitted_shared",
+      "first_time_min": 0.0,
+      "last_time_min": 25.59,
+      "n_points": 7,
+      "partial": true,
+      "residual_vs_time": [
+        {
+          "t_min": 0.0,
+          "resid_K": -0.0
+        },
+        {
+          "t_min": 2.75,
+          "resid_K": 0.0408
+        },
+        {
+          "t_min": 4.65,
+          "resid_K": -0.0025
+        },
+        {
+          "t_min": 9.66,
+          "resid_K": -0.1407
+        },
+        {
+          "t_min": 14.67,
+          "resid_K": -0.1782
+        },
+        {
+          "t_min": 20.58,
+          "resid_K": 0.7021
+        },
+        {
+          "t_min": 25.59,
+          "resid_K": -0.4303
+        }
+      ]
+    },
+    {
+      "protocol": "A_transfer",
+      "fold": "Sedlacek->Manitoba+Langer",
+      "ambient": "A",
+      "model": "C0",
+      "curve_id": "MANITOBA_WORKSHOP_coffee",
+      "source": "Manitoba",
+      "T0_C": 85.56,
+      "room_source_recorded_or_default": "recorded",
+      "fitted_params": {
+        "k": 0.02649543278191068
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": null,
+      "measurement_error_C": 0.28,
+      "is_in_sample": false,
+      "rms_K": 3.454423112780328,
+      "signed_mean_0_10_K": 2.5933678740437474,
+      "signed_mean_10_30_K": 3.9152796778225607,
+      "room_used_C": 21.67,
+      "room_source": "recorded",
+      "first_time_min": 0.0,
+      "last_time_min": 28.0,
+      "n_points": 9,
+      "partial": true,
+      "residual_vs_time": [
+        {
+          "t_min": 0.0,
+          "resid_K": 0.0
+        },
+        {
+          "t_min": 1.0,
+          "resid_K": 2.2194
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": 2.8226
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": 3.4582
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": 4.4666
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": 4.7235
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": 4.1061
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": 3.6257
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": 3.2058
+        }
+      ]
+    },
+    {
+      "protocol": "A_transfer",
+      "fold": "Sedlacek->Manitoba+Langer",
+      "ambient": "A",
+      "model": "C0",
+      "curve_id": "LANGER2018_Abb2-01",
+      "source": "Langer",
+      "T0_C": 80.17,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "k": 0.02649543278191068
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 6.863607004068806,
+      "signed_mean_0_10_K": -3.1245830515949278,
+      "signed_mean_10_30_K": -7.920674457499253,
+      "room_used_C": 20.0,
+      "room_source": "default_20C",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -1.5733
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -1.7955
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -2.1775
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -2.5206
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -2.9457
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -3.3238
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -3.7059
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -4.0628
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -4.4156
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -4.7251
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -5.0922
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -5.4377
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -5.7525
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -6.0874
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -6.4131
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -6.7404
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -7.0501
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -7.3429
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -7.6694
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -7.9604
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -8.1865
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -8.5085
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -8.7168
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -8.9722
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -9.2452
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -9.4164
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -9.6664
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -9.8558
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -10.045
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -10.2546
+        }
+      ]
+    },
+    {
+      "protocol": "A_transfer",
+      "fold": "Sedlacek->Manitoba+Langer",
+      "ambient": "A",
+      "model": "C0",
+      "curve_id": "LANGER2018_Abb2-02",
+      "source": "Langer",
+      "T0_C": 80.6,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "k": 0.02649543278191068
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 8.950733275876443,
+      "signed_mean_0_10_K": -4.239815737521238,
+      "signed_mean_10_30_K": -10.332956907502993,
+      "room_used_C": 20.0,
+      "room_source": "default_20C",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -1.5845
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -2.1276
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -2.9304
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -3.4239
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -4.0591
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -4.657
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -5.1486
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -5.7149
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -6.1168
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -6.6352
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -7.0709
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -7.5149
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -7.8778
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -8.3607
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -8.7141
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -9.069
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -9.3961
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -9.706
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -10.0895
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -10.3973
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -10.69
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -10.9584
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -11.203
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -11.5045
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -11.8034
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -12.0305
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -12.2761
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -12.451
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -12.6456
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -12.9004
+        }
+      ]
+    },
+    {
+      "protocol": "A_transfer",
+      "fold": "Sedlacek->Manitoba+Langer",
+      "ambient": "A",
+      "model": "C0",
+      "curve_id": "LANGER2018_Abb2-03",
+      "source": "Langer",
+      "T0_C": 82.28,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "k": 0.02649543278191068
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 11.926926833125309,
+      "signed_mean_0_10_K": -5.328422510442616,
+      "signed_mean_10_30_K": -13.805095316819898,
+      "room_used_C": 20.0,
+      "room_source": "default_20C",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -1.6285
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -2.5844
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -3.4588
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -4.2528
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -5.0675
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -5.7539
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -6.583
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -7.2958
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -7.9933
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -8.6662
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -9.2357
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -9.8224
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -10.4174
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -11.0013
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -11.4951
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -12.0295
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -12.5053
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -12.9732
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -13.454
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -13.8683
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -14.2669
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -14.6605
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -15.0696
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -15.485
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -15.8472
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -16.1769
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -16.4846
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -16.8109
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -17.1264
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -17.3717
+        }
+      ]
+    },
+    {
+      "protocol": "A_transfer",
+      "fold": "Sedlacek->Manitoba+Langer",
+      "ambient": "A",
+      "model": "C0",
+      "curve_id": "LANGER2018_Abb2-04",
+      "source": "Langer",
+      "T0_C": 80.63,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "k": 0.02649543278191068
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 8.896074185043924,
+      "signed_mean_0_10_K": -3.9478087156091135,
+      "signed_mean_10_30_K": -10.294825450526508,
+      "room_used_C": 20.0,
+      "room_source": "default_20C",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -1.5853
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -1.9592
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -2.5127
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -3.1569
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -3.7428
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -4.2614
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -4.8037
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -5.3307
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -5.8232
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -6.3022
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -6.7685
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -7.243
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -7.6266
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -8.08
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -8.494
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -8.8794
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -9.2669
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -9.6473
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -9.9913
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -10.3196
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -10.6328
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -10.9416
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -11.2667
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -11.5886
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -11.908
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -12.1554
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -12.4215
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -12.6467
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -12.9017
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -13.1169
+        }
+      ]
+    },
+    {
+      "protocol": "A_transfer",
+      "fold": "Sedlacek->Manitoba+Langer",
+      "ambient": "A",
+      "model": "C0",
+      "curve_id": "LANGER2018_Abb2-05",
+      "source": "Langer",
+      "T0_C": 80.86,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "k": 0.02649543278191068
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 8.308521230923741,
+      "signed_mean_0_10_K": -3.8904215476162065,
+      "signed_mean_10_30_K": -9.589150947040128,
+      "room_used_C": 20.0,
+      "room_source": "default_20C",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -1.5913
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -2.0911
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -2.6403
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -3.18
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -3.7113
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -4.1952
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -4.7027
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -5.1746
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -5.592
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -6.0257
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -6.4067
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -6.8557
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -7.2336
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -7.6212
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -7.9594
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -8.3289
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -8.6303
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -8.9646
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -9.2923
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -9.6242
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -9.901
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -10.1932
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -10.4617
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -10.7868
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -11.0494
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -11.2499
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -11.489
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -11.7272
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -11.905
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -12.103
+        }
+      ]
+    },
+    {
+      "protocol": "A_transfer",
+      "fold": "Sedlacek->Manitoba+Langer",
+      "ambient": "A",
+      "model": "C0",
+      "curve_id": "LANGER2018_Abb2-06",
+      "source": "Langer",
+      "T0_C": 81.9,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "k": 0.02649543278191068
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 9.943729797583359,
+      "signed_mean_0_10_K": -4.437844787996108,
+      "signed_mean_10_30_K": -11.513427105188692,
+      "room_used_C": 20.0,
+      "room_source": "default_20C",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -1.6185
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -2.1447
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -2.8097
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -3.4746
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -4.1204
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -4.8381
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -5.4687
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -6.0733
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -6.6426
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -7.1878
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -7.6996
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -8.2089
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -8.6766
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -9.1435
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -9.6205
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -10.0382
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -10.4475
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -10.8491
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -11.2137
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -11.562
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -11.8948
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -12.2426
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -12.5462
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -12.8862
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -13.1631
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -13.4377
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -13.7304
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -14.0319
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -14.3227
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -14.5533
+        }
+      ]
+    },
+    {
+      "protocol": "A_transfer",
+      "fold": "Sedlacek->Manitoba+Langer",
+      "ambient": "A",
+      "model": "C1",
+      "curve_id": "MANITOBA_WORKSHOP_coffee",
+      "source": "Manitoba",
+      "T0_C": 85.56,
+      "room_source_recorded_or_default": "recorded",
+      "fitted_params": {
+        "kc": 0.0002818748303862672,
+        "x": 2.1823984063329664
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": null,
+      "measurement_error_C": 0.28,
+      "is_in_sample": false,
+      "rms_K": 2.6589534094770912,
+      "signed_mean_0_10_K": 1.3685016297085326,
+      "signed_mean_10_30_K": 3.5089167329864335,
+      "room_used_C": 21.67,
+      "room_source": "recorded",
+      "first_time_min": 0.0,
+      "last_time_min": 28.0,
+      "n_points": 9,
+      "partial": true,
+      "residual_vs_time": [
+        {
+          "t_min": 0.0,
+          "resid_K": 0.0
+        },
+        {
+          "t_min": 1.0,
+          "resid_K": 1.5328
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": 1.5874
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": 1.7931
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": 1.9292
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": 2.5918
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": 2.9849
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": 3.7713
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": 4.6876
+        }
+      ]
+    },
+    {
+      "protocol": "A_transfer",
+      "fold": "Sedlacek->Manitoba+Langer",
+      "ambient": "A",
+      "model": "C1",
+      "curve_id": "LANGER2018_Abb2-01",
+      "source": "Langer",
+      "T0_C": 80.17,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "kc": 0.0002818748303862672,
+        "x": 2.1823984063329664
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 6.571885350686255,
+      "signed_mean_0_10_K": -4.4904899900743604,
+      "signed_mean_10_30_K": -7.326159074983583,
+      "room_used_C": 20.0,
+      "room_source": "default_20C",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -2.0737
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -2.6875
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -3.3675
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -3.9276
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -4.4996
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -4.9641
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -5.38
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -5.7254
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -6.0274
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -6.2521
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -6.505
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -6.7113
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -6.8652
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -7.0207
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -7.1514
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -7.2705
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -7.361
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -7.4254
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -7.5163
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -7.5657
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -7.5458
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -7.6182
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -7.5748
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -7.5771
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -7.5965
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -7.5143
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -7.5117
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -7.4499
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -7.3899
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -7.3526
+        }
+      ]
+    },
+    {
+      "protocol": "A_transfer",
+      "fold": "Sedlacek->Manitoba+Langer",
+      "ambient": "A",
+      "model": "C1",
+      "curve_id": "LANGER2018_Abb2-02",
+      "source": "Langer",
+      "T0_C": 80.6,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "kc": 0.0002818748303862672,
+        "x": 2.1823984063329664
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 8.768225212126469,
+      "signed_mean_0_10_K": -5.679020237607311,
+      "signed_mean_10_30_K": -9.849547549096496,
+      "room_used_C": 20.0,
+      "room_source": "default_20C",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -2.1055
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -3.0576
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -4.173
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -4.8958
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -5.6884
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -6.3814
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -6.9142
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -7.475
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -7.8309
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -8.2685
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -8.5933
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -8.9004
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -9.1043
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -9.4091
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -9.5684
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -9.7155
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -9.8234
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -9.9048
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -10.0521
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -10.1176
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -10.1633
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -10.1811
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -10.1727
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -10.2197
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -10.2635
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -10.2355
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -10.2269
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -10.1488
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -10.0923
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -10.0983
+        }
+      ]
+    },
+    {
+      "protocol": "A_transfer",
+      "fold": "Sedlacek->Manitoba+Langer",
+      "ambient": "A",
+      "model": "C1",
+      "curve_id": "LANGER2018_Abb2-03",
+      "source": "Langer",
+      "T0_C": 82.28,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "kc": 0.0002818748303862672,
+        "x": 2.1823984063329664
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 12.09223528544031,
+      "signed_mean_0_10_K": -7.06137709402911,
+      "signed_mean_10_30_K": -13.764892130268663,
+      "room_used_C": 20.0,
+      "room_source": "default_20C",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -2.2322
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -3.6669
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -4.9127
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -5.9856
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -6.9992
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -7.8154
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -8.7146
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -9.4457
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -10.1168
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -10.7248
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -11.1958
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -11.6554
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -12.0986
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -12.5096
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -12.8125
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -13.1407
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -13.3976
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -13.6359
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -13.8784
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -14.0474
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -14.1951
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -14.3336
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -14.4845
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -14.6397
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -14.7407
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -14.8088
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -14.8554
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -14.9217
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -14.9788
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -14.9678
+        }
+      ]
+    },
+    {
+      "protocol": "A_transfer",
+      "fold": "Sedlacek->Manitoba+Langer",
+      "ambient": "A",
+      "model": "C1",
+      "curve_id": "LANGER2018_Abb2-04",
+      "source": "Langer",
+      "T0_C": 80.63,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "kc": 0.0002818748303862672,
+        "x": 2.1823984063329664
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 8.685313880714618,
+      "signed_mean_0_10_K": -5.392155857645262,
+      "signed_mean_10_30_K": -9.819203600885183,
+      "room_used_C": 20.0,
+      "room_source": "default_20C",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -2.1077
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -2.8919
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -3.759
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -4.6334
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -5.3774
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -5.9917
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -6.5757
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -7.0975
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -7.5445
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -7.9429
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -8.2985
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -8.6364
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -8.861
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -9.1364
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -9.3564
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -9.534
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -9.7024
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -9.8543
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -9.9621
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -10.048
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -10.1141
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -10.1723
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -10.2443
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -10.3116
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -10.3757
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -10.3679
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -10.3796
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -10.3517
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -10.3555
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -10.3218
+        }
+      ]
+    },
+    {
+      "protocol": "A_transfer",
+      "fold": "Sedlacek->Manitoba+Langer",
+      "ambient": "A",
+      "model": "C1",
+      "curve_id": "LANGER2018_Abb2-05",
+      "source": "Langer",
+      "T0_C": 80.86,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "kc": 0.0002818748303862672,
+        "x": 2.1823984063329664
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 8.181636122067742,
+      "signed_mean_0_10_K": -5.374320419911943,
+      "signed_mean_10_30_K": -9.173388220732367,
+      "room_used_C": 20.0,
+      "room_source": "default_20C",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -2.1249
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -3.0442
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -3.915
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -4.6916
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -5.3866
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -5.9709
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -6.5239
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -6.994
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -7.3684
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -7.7238
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -7.9957
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -8.3094
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -8.5294
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -8.7398
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -8.8843
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -9.0462
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -9.1286
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -9.2342
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -9.3254
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -9.4146
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -9.4437
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -9.4847
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -9.4994
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -9.5692
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -9.5757
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -9.5201
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -9.5039
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -9.488
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -9.4136
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -9.3617
+        }
+      ]
+    },
+    {
+      "protocol": "A_transfer",
+      "fold": "Sedlacek->Manitoba+Langer",
+      "ambient": "A",
+      "model": "C1",
+      "curve_id": "LANGER2018_Abb2-06",
+      "source": "Langer",
+      "T0_C": 81.9,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "kc": 0.0002818748303862672,
+        "x": 2.1823984063329664
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 10.034462705591595,
+      "signed_mean_0_10_K": -6.103332735142243,
+      "signed_mean_10_30_K": -11.371720329377021,
+      "room_used_C": 20.0,
+      "room_source": "default_20C",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -2.2032
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -3.1922
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -4.2151
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -5.1474
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -5.9825
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -6.8221
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -7.5162
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -8.1337
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -8.6722
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -9.1488
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -9.5593
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -9.9393
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -10.2536
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -10.5464
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -10.8317
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -11.0429
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -11.2333
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -11.4055
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -11.5323
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -11.6361
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -11.7188
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -11.8126
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -11.8592
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -11.9403
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -11.9574
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -11.9719
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -12.0051
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -12.0481
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -12.0822
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -12.0583
+        }
+      ]
+    },
+    {
+      "protocol": "A_transfer",
+      "fold": "Sedlacek->Manitoba+Langer",
+      "ambient": "B",
+      "model": "C0",
+      "curve_id": "MANITOBA_WORKSHOP_coffee",
+      "source": "Manitoba",
+      "T0_C": 85.56,
+      "room_source_recorded_or_default": "recorded",
+      "fitted_params": {
+        "k": 0.02978136329775882,
+        "Tr_fitted_C": 24.999999999999996,
+        "Tr_bounds_C": [
+          15.0,
+          25.0
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": null,
+      "measurement_error_C": 0.28,
+      "is_in_sample": false,
+      "rms_K": 2.8850043637074414,
+      "signed_mean_0_10_K": 2.3453608755854534,
+      "signed_mean_10_30_K": 3.0682940578354714,
+      "room_used_C": 24.999999999999996,
+      "room_source": "fitted_shared",
+      "first_time_min": 0.0,
+      "last_time_min": 28.0,
+      "n_points": 9,
+      "partial": true,
+      "residual_vs_time": [
+        {
+          "t_min": 0.0,
+          "resid_K": 0.0
+        },
+        {
+          "t_min": 1.0,
+          "resid_K": 2.113
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": 2.6182
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": 3.164
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": 3.8316
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": 3.8993
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": 3.2104
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": 2.7486
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": 2.4149
+        }
+      ]
+    },
+    {
+      "protocol": "A_transfer",
+      "fold": "Sedlacek->Manitoba+Langer",
+      "ambient": "B",
+      "model": "C0",
+      "curve_id": "LANGER2018_Abb2-01",
+      "source": "Langer",
+      "T0_C": 80.17,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "k": 0.02978136329775882,
+        "Tr_fitted_C": 24.999999999999996,
+        "Tr_bounds_C": [
+          15.0,
+          25.0
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 6.831585174647376,
+      "signed_mean_0_10_K": -3.279885619299962,
+      "signed_mean_10_30_K": -7.8786198561353755,
+      "room_used_C": 24.999999999999996,
+      "room_source": "fitted_shared",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -1.6188
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -1.8801
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -2.2953
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -2.6658
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -3.1128
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -3.5077
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -3.9016
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -4.2658
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -4.6214
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -4.9296
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -5.2915
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -5.6281
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -5.9305
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -6.2496
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -6.5565
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -6.8621
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -7.1473
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -7.413
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -7.7101
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -7.9694
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -8.1617
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -8.4478
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -8.6185
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -8.8346
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -9.0667
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -9.1956
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -9.4019
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -9.5463
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -9.6894
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -9.8519
+        }
+      ]
+    },
+    {
+      "protocol": "A_transfer",
+      "fold": "Sedlacek->Manitoba+Langer",
+      "ambient": "B",
+      "model": "C0",
+      "curve_id": "LANGER2018_Abb2-02",
+      "source": "Langer",
+      "T0_C": 80.6,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "k": 0.02978136329775882,
+        "Tr_fitted_C": 24.999999999999996,
+        "Tr_bounds_C": [
+          15.0,
+          25.0
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 8.937469966504356,
+      "signed_mean_0_10_K": -4.401515686660834,
+      "signed_mean_10_30_K": -10.306641453709029,
+      "room_used_C": 24.999999999999996,
+      "room_source": "fitted_shared",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -1.6314
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -2.215
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -3.0521
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -3.5741
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -4.2323
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -4.848
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -5.3525
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -5.9269
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -6.3325
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -6.8504
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -7.2816
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -7.7173
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -8.0685
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -8.5362
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -8.8714
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -9.2051
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -9.5081
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -9.7914
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -10.1459
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -10.4224
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -10.6816
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -10.9145
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -11.1218
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -11.3842
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -11.6425
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -11.8273
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -12.0294
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -12.1595
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -12.3081
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -12.516
+        }
+      ]
+    },
+    {
+      "protocol": "A_transfer",
+      "fold": "Sedlacek->Manitoba+Langer",
+      "ambient": "B",
+      "model": "C0",
+      "curve_id": "LANGER2018_Abb2-03",
+      "source": "Langer",
+      "T0_C": 82.28,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "k": 0.02978136329775882,
+        "Tr_fitted_C": 24.999999999999996,
+        "Tr_bounds_C": [
+          15.0,
+          25.0
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 11.963532905086117,
+      "signed_mean_0_10_K": -5.515116880070724,
+      "signed_mean_10_30_K": -13.840272346554908,
+      "room_used_C": 24.999999999999996,
+      "room_source": "fitted_shared",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -1.6807
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -2.6821
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -3.5957
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -4.4227
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -5.2647
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -5.9729
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -6.8186
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -7.5431
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -8.2475
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -8.9231
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -9.4909
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -10.0721
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -10.6578
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -11.229
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -11.7067
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -12.2219
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -12.6755
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -13.1186
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -13.5719
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -13.9563
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -14.3228
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -14.682
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -15.0549
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -15.4321
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -15.7545
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -16.0428
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -16.3077
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -16.5898
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -16.8598
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -17.0584
+        }
+      ]
+    },
+    {
+      "protocol": "A_transfer",
+      "fold": "Sedlacek->Manitoba+Langer",
+      "ambient": "B",
+      "model": "C0",
+      "curve_id": "LANGER2018_Abb2-04",
+      "source": "Langer",
+      "T0_C": 80.63,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "k": 0.02978136329775882,
+        "Tr_fitted_C": 24.999999999999996,
+        "Tr_bounds_C": [
+          15.0,
+          25.0
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 8.879379142329055,
+      "signed_mean_0_10_K": -4.109954993686006,
+      "signed_mean_10_30_K": -10.269608076795564,
+      "room_used_C": 24.999999999999996,
+      "room_source": "fitted_shared",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -1.6323
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -2.0467
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -2.6346
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -3.3074
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -3.9164
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -4.4529
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -5.0081
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -5.5433
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -6.0396
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -6.5181
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -6.98
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -7.4463
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -7.8181
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -8.2564
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -8.6522
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -9.0165
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -9.38
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -9.7339
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -10.0489
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -10.3458
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -10.6256
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -10.8989
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -11.1867
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -11.4695
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -11.7482
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -11.9535
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -12.176
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -12.3565
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -12.5655
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -12.7337
+        }
+      ]
+    },
+    {
+      "protocol": "A_transfer",
+      "fold": "Sedlacek->Manitoba+Langer",
+      "ambient": "B",
+      "model": "C0",
+      "curve_id": "LANGER2018_Abb2-05",
+      "source": "Langer",
+      "T0_C": 80.86,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "k": 0.02978136329775882,
+        "Tr_fitted_C": 24.999999999999996,
+        "Tr_bounds_C": [
+          15.0,
+          25.0
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 8.301621305311013,
+      "signed_mean_0_10_K": -4.0559896808790254,
+      "signed_mean_10_30_K": -9.57235218712565,
+      "room_used_C": 24.999999999999996,
+      "room_source": "fitted_shared",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -1.6391
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -2.18
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -2.7643
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -3.3333
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -3.8883
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -4.3906
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -4.9114
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -5.392
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -5.8136
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -6.2473
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -6.6242
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -7.0654
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -7.432
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -7.8048
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -8.1251
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -8.4736
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -8.7514
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -9.0593
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -9.3582
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -9.659
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -9.9025
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -10.1595
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -10.3907
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -10.677
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -10.899
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -11.0575
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -11.2531
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -11.4466
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -11.5785
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -11.7296
+        }
+      ]
+    },
+    {
+      "protocol": "A_transfer",
+      "fold": "Sedlacek->Manitoba+Langer",
+      "ambient": "B",
+      "model": "C0",
+      "curve_id": "LANGER2018_Abb2-06",
+      "source": "Langer",
+      "T0_C": 81.9,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "k": 0.02978136329775882,
+        "Tr_fitted_C": 24.999999999999996,
+        "Tr_bounds_C": [
+          15.0,
+          25.0
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 9.968451271436372,
+      "signed_mean_0_10_K": -4.618885657751818,
+      "signed_mean_10_30_K": -11.534695120792145,
+      "room_used_C": 24.999999999999996,
+      "room_source": "fitted_shared",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -1.6696
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -2.2402
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -2.9432
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -3.6401
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -4.3121
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -5.0507
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -5.6971
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -6.3125
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -6.8882
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -7.4352
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -7.9447
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -8.4479
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -8.9058
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -9.3594
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -9.8198
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -10.2178
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -10.6046
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -10.9809
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -11.3177
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -11.6358
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -11.9361
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -12.2494
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -12.5164
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -12.8181
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -13.055
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -13.288
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -13.5377
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -13.7948
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -14.04
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -14.224
+        }
+      ]
+    },
+    {
+      "protocol": "A_transfer",
+      "fold": "Sedlacek->Manitoba+Langer",
+      "ambient": "B",
+      "model": "C1",
+      "curve_id": "MANITOBA_WORKSHOP_coffee",
+      "source": "Manitoba",
+      "T0_C": 85.56,
+      "room_source_recorded_or_default": "recorded",
+      "fitted_params": {
+        "kc": 0.0008938214606658605,
+        "x": 1.940267912078961,
+        "Tr_fitted_C": 24.999999999999996,
+        "Tr_bounds_C": [
+          15.0,
+          25.0
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": null,
+      "measurement_error_C": 0.28,
+      "is_in_sample": false,
+      "rms_K": 1.8832143949131583,
+      "signed_mean_0_10_K": 1.1059194313191312,
+      "signed_mean_10_30_K": 2.362767830866744,
+      "room_used_C": 24.999999999999996,
+      "room_source": "fitted_shared",
+      "first_time_min": 0.0,
+      "last_time_min": 28.0,
+      "n_points": 9,
+      "partial": true,
+      "residual_vs_time": [
+        {
+          "t_min": 0.0,
+          "resid_K": -0.0
+        },
+        {
+          "t_min": 1.0,
+          "resid_K": 1.4258
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": 1.379
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": 1.4892
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": 1.2355
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": 1.6356
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": 1.8606
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": 2.5461
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": 3.4088
+        }
+      ]
+    },
+    {
+      "protocol": "A_transfer",
+      "fold": "Sedlacek->Manitoba+Langer",
+      "ambient": "B",
+      "model": "C1",
+      "curve_id": "LANGER2018_Abb2-01",
+      "source": "Langer",
+      "T0_C": 80.17,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "kc": 0.0008938214606658605,
+        "x": 1.940267912078961,
+        "Tr_fitted_C": 24.999999999999996,
+        "Tr_bounds_C": [
+          15.0,
+          25.0
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 6.569431382974613,
+      "signed_mean_0_10_K": -4.483168878587044,
+      "signed_mean_10_30_K": -7.32476418821101,
+      "room_used_C": 24.999999999999996,
+      "room_source": "fitted_shared",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -2.0633
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -2.672
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -3.3506
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -3.9118
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -4.4867
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -4.955
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -5.3753
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -5.7252
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -6.0316
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -6.2603
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -6.5168
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -6.726
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -6.8821
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -7.0391
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -7.1706
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -7.2897
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -7.3793
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -7.4422
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -7.5308
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -7.5772
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -7.5536
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -7.6217
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -7.5733
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -7.5699
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -7.5831
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -7.4941
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -7.4843
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -7.4147
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -7.3464
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -7.3005
+        }
+      ]
+    },
+    {
+      "protocol": "A_transfer",
+      "fold": "Sedlacek->Manitoba+Langer",
+      "ambient": "B",
+      "model": "C1",
+      "curve_id": "LANGER2018_Abb2-02",
+      "source": "Langer",
+      "T0_C": 80.6,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "kc": 0.0008938214606658605,
+        "x": 1.940267912078961,
+        "Tr_fitted_C": 24.999999999999996,
+        "Tr_bounds_C": [
+          15.0,
+          25.0
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 8.765012305601086,
+      "signed_mean_0_10_K": -5.669414718350064,
+      "signed_mean_10_30_K": -9.847866505710575,
+      "room_used_C": 24.999999999999996,
+      "room_source": "fitted_shared",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -2.0941
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -3.0404
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -4.1538
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -4.8775
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -5.6727
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -6.3696
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -6.9068
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -7.4722
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -7.8327
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -8.2745
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -8.603
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -8.9132
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -9.1196
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -9.4261
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -9.5863
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -9.7337
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -9.841
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -9.921
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -10.0662
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -10.1289
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -10.1711
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -10.1846
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -10.1714
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -10.2129
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -10.2506
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -10.216
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -10.2002
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -10.1145
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -10.0498
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -10.0474
+        }
+      ]
+    },
+    {
+      "protocol": "A_transfer",
+      "fold": "Sedlacek->Manitoba+Langer",
+      "ambient": "B",
+      "model": "C1",
+      "curve_id": "LANGER2018_Abb2-03",
+      "source": "Langer",
+      "T0_C": 82.28,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "kc": 0.0008938214606658605,
+        "x": 1.940267912078961,
+        "Tr_fitted_C": 24.999999999999996,
+        "Tr_bounds_C": [
+          15.0,
+          25.0
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 12.085225175152654,
+      "signed_mean_0_10_K": -7.041859066538899,
+      "signed_mean_10_30_K": -13.76110051852064,
+      "room_used_C": 24.999999999999996,
+      "room_source": "fitted_shared",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -2.2163
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -3.642
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -4.8839
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -5.9564
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -6.972
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -7.7919
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -8.6956
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -9.4318
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -10.1079
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -10.7207
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -11.1963
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -11.6598
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -12.1062
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -12.5198
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -12.8245
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -13.1538
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -13.4108
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -13.6486
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -13.8898
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -14.0567
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -14.2016
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -14.3364
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -14.4832
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -14.6335
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -14.729
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -14.791
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -14.831
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -14.8901
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -14.9396
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -14.9204
+        }
+      ]
+    },
+    {
+      "protocol": "A_transfer",
+      "fold": "Sedlacek->Manitoba+Langer",
+      "ambient": "B",
+      "model": "C1",
+      "curve_id": "LANGER2018_Abb2-04",
+      "source": "Langer",
+      "T0_C": 80.63,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "kc": 0.0008938214606658605,
+        "x": 1.940267912078961,
+        "Tr_fitted_C": 24.999999999999996,
+        "Tr_bounds_C": [
+          15.0,
+          25.0
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 8.681868864811547,
+      "signed_mean_0_10_K": -5.382387128415987,
+      "signed_mean_10_30_K": -9.81749869130365,
+      "room_used_C": 24.999999999999996,
+      "room_source": "fitted_shared",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -2.0962
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -2.8744
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -3.7396
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -4.6149
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -5.3616
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -5.9797
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -6.5681
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -7.0946
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -7.5461
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -7.9487
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -8.3081
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -8.6491
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -8.8762
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -9.1533
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -9.3742
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -9.5521
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -9.7199
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -9.8705
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -9.9762
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -10.0593
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -10.1218
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -10.1758
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -10.2429
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -10.3048
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -10.3628
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -10.3485
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -10.353
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -10.3175
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -10.3131
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -10.2709
+        }
+      ]
+    },
+    {
+      "protocol": "A_transfer",
+      "fold": "Sedlacek->Manitoba+Langer",
+      "ambient": "B",
+      "model": "C1",
+      "curve_id": "LANGER2018_Abb2-05",
+      "source": "Langer",
+      "T0_C": 80.86,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "kc": 0.0008938214606658605,
+        "x": 1.940267912078961,
+        "Tr_fitted_C": 24.999999999999996,
+        "Tr_bounds_C": [
+          15.0,
+          25.0
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 8.177908421756088,
+      "signed_mean_0_10_K": -5.3632837845319585,
+      "signed_mean_10_30_K": -9.17148349713103,
+      "room_used_C": 24.999999999999996,
+      "room_source": "fitted_shared",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -2.1128
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -3.0258
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -3.8944
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -4.6717
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -5.3693
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -5.9574
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -6.5148
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -6.9896
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -7.3687
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -7.7283
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -8.0041
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -8.321
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -8.5436
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -8.7559
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -8.9015
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -9.0637
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -9.1456
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -9.25
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -9.3392
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -9.4256
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -9.4514
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -9.4883
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -9.4981
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -9.5625
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -9.563
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -9.501
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -9.4776
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -9.4542
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -9.3718
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -9.3114
+        }
+      ]
+    },
+    {
+      "protocol": "A_transfer",
+      "fold": "Sedlacek->Manitoba+Langer",
+      "ambient": "B",
+      "model": "C1",
+      "curve_id": "LANGER2018_Abb2-06",
+      "source": "Langer",
+      "T0_C": 81.9,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "kc": 0.0008938214606658605,
+        "x": 1.940267912078961,
+        "Tr_fitted_C": 24.999999999999996,
+        "Tr_bounds_C": [
+          15.0,
+          25.0
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 10.028475445517016,
+      "signed_mean_0_10_K": -6.0861948240653,
+      "signed_mean_10_30_K": -11.368543006482865,
+      "room_used_C": 24.999999999999996,
+      "room_source": "fitted_shared",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -2.1884
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -3.1691
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -4.1886
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -5.1208
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -5.9582
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -6.8014
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -7.5
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -8.1224
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -8.6659
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -9.1472
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -9.562
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -9.9458
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -10.2632
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -10.5584
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -10.8452
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -11.0573
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -11.2477
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -11.4192
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -11.5445
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -11.6459
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -11.7257
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -11.8158
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -11.858
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -11.9341
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -11.9455
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -11.9538
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -11.9803
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -12.0161
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -12.0424
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -12.0102
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Sedlacek",
+      "ambient": "A",
+      "model": "C0",
+      "curve_id": "SEDLACEK2010_Fig1",
+      "source": "Sedlacek",
+      "T0_C": 80.25,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "k": 0.0139621346113868
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.4,
+      "measurement_error_C": 0.3,
+      "is_in_sample": false,
+      "rms_K": 7.207460208580466,
+      "signed_mean_0_10_K": 3.8177781376228843,
+      "signed_mean_10_30_K": 9.574355550543379,
+      "room_used_C": 20.0,
+      "room_source": "default_20C",
+      "first_time_min": 0.0,
+      "last_time_min": 25.59,
+      "n_points": 7,
+      "partial": true,
+      "residual_vs_time": [
+        {
+          "t_min": 0.0,
+          "resid_K": 0.0
+        },
+        {
+          "t_min": 2.75,
+          "resid_K": 3.1205
+        },
+        {
+          "t_min": 4.65,
+          "resid_K": 4.7026
+        },
+        {
+          "t_min": 9.66,
+          "resid_K": 7.448
+        },
+        {
+          "t_min": 14.67,
+          "resid_K": 8.9111
+        },
+        {
+          "t_min": 20.58,
+          "resid_K": 10.4729
+        },
+        {
+          "t_min": 25.59,
+          "resid_K": 9.339
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Sedlacek",
+      "ambient": "A",
+      "model": "C1",
+      "curve_id": "SEDLACEK2010_Fig1",
+      "source": "Sedlacek",
+      "T0_C": 80.25,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "kc": 0.005054074951758799,
+        "x": 1.2565075310067642
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.4,
+      "measurement_error_C": 0.3,
+      "is_in_sample": false,
+      "rms_K": 7.1953266475423625,
+      "signed_mean_0_10_K": 3.744858279273906,
+      "signed_mean_10_30_K": 9.606487978491744,
+      "room_used_C": 20.0,
+      "room_source": "default_20C",
+      "first_time_min": 0.0,
+      "last_time_min": 25.59,
+      "n_points": 7,
+      "partial": true,
+      "residual_vs_time": [
+        {
+          "t_min": 0.0,
+          "resid_K": 0.0
+        },
+        {
+          "t_min": 2.75,
+          "resid_K": 3.0526
+        },
+        {
+          "t_min": 4.65,
+          "resid_K": 4.604
+        },
+        {
+          "t_min": 9.66,
+          "resid_K": 7.3229
+        },
+        {
+          "t_min": 14.67,
+          "resid_K": 8.825
+        },
+        {
+          "t_min": 20.58,
+          "resid_K": 10.4972
+        },
+        {
+          "t_min": 25.59,
+          "resid_K": 9.4973
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Manitoba",
+      "ambient": "A",
+      "model": "C0",
+      "curve_id": "MANITOBA_WORKSHOP_coffee",
+      "source": "Manitoba",
+      "T0_C": 85.56,
+      "room_source_recorded_or_default": "recorded",
+      "fitted_params": {
+        "k": 0.013690739116251956
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": null,
+      "measurement_error_C": 0.28,
+      "is_in_sample": false,
+      "rms_K": 10.770195169403372,
+      "signed_mean_0_10_K": 4.645325649380649,
+      "signed_mean_10_30_K": 14.78909469226475,
+      "room_used_C": 21.67,
+      "room_source": "recorded",
+      "first_time_min": 0.0,
+      "last_time_min": 28.0,
+      "n_points": 9,
+      "partial": true,
+      "residual_vs_time": [
+        {
+          "t_min": 0.0,
+          "resid_K": 0.0
+        },
+        {
+          "t_min": 1.0,
+          "resid_K": 3.0213
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": 4.3943
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": 5.7691
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": 10.042
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": 12.9233
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": 14.3854
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": 15.5215
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": 16.3262
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Manitoba",
+      "ambient": "A",
+      "model": "C1",
+      "curve_id": "MANITOBA_WORKSHOP_coffee",
+      "source": "Manitoba",
+      "T0_C": 85.56,
+      "room_source_recorded_or_default": "recorded",
+      "fitted_params": {
+        "kc": 0.09928446475411327,
+        "x": 0.5000000000000018
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": null,
+      "measurement_error_C": 0.28,
+      "is_in_sample": false,
+      "rms_K": 11.0355979292303,
+      "signed_mean_0_10_K": 4.820383916662661,
+      "signed_mean_10_30_K": 15.126501285098293,
+      "room_used_C": 21.67,
+      "room_source": "recorded",
+      "first_time_min": 0.0,
+      "last_time_min": 28.0,
+      "n_points": 9,
+      "partial": true,
+      "residual_vs_time": [
+        {
+          "t_min": 0.0,
+          "resid_K": 0.0
+        },
+        {
+          "t_min": 1.0,
+          "resid_K": 3.0989
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": 4.5427
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": 5.9814
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": 10.479
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": 13.4398
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": 14.8538
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": 15.831
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": 16.3815
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Langer",
+      "ambient": "A",
+      "model": "C0",
+      "curve_id": "LANGER2018_Abb2-01",
+      "source": "Langer",
+      "T0_C": 80.17,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "k": 0.030056817467022327
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 8.913560029626337,
+      "signed_mean_0_10_K": -4.093904299585192,
+      "signed_mean_10_30_K": -10.300796853120598,
+      "room_used_C": 20.0,
+      "room_source": "default_20C",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -1.7816
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -2.2005
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -2.7681
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -3.2861
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -3.8759
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -4.4089
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -4.9365
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -5.4301
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -5.9109
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -6.3403
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -6.8194
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -7.2694
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -7.6816
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -8.1069
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -8.5166
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -8.9216
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -9.3031
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -9.6619
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -10.049
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -10.3955
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -10.6722
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -11.0399
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -11.2896
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -11.582
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -11.888
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -12.0884
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -12.3639
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -12.5753
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -12.7832
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -13.0084
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Langer",
+      "ambient": "A",
+      "model": "C0",
+      "curve_id": "LANGER2018_Abb2-02",
+      "source": "Langer",
+      "T0_C": 80.6,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "k": 0.030056817467022327
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 11.018495607254286,
+      "signed_mean_0_10_K": -5.216064160792141,
+      "signed_mean_10_30_K": -12.730088653799378,
+      "room_used_C": 20.0,
+      "room_source": "default_20C",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -1.7943
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -2.5356
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -3.5252
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -4.1948
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -4.9959
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -5.7499
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -6.3881
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -7.092
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -7.6229
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -8.2619
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -8.8104
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -9.3596
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -9.8206
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -10.3946
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -10.8327
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -11.2658
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -11.6651
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -12.0416
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -12.4861
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -12.8498
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -13.1934
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -13.5079
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -13.7942
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -14.133
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -14.4652
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -14.7216
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -14.9929
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -15.1899
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -15.4033
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -15.6738
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Langer",
+      "ambient": "A",
+      "model": "C0",
+      "curve_id": "LANGER2018_Abb2-03",
+      "source": "Langer",
+      "T0_C": 82.28,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "k": 0.030056817467022327
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 14.051216597969258,
+      "signed_mean_0_10_K": -6.3317352464378605,
+      "signed_mean_10_30_K": -16.268682200637375,
+      "room_used_C": 20.0,
+      "room_source": "default_20C",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -1.8441
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -3.0036
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -4.0701
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -5.0451
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -6.0303
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -6.8771
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -7.8569
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -8.7111
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -9.541
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -10.338
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -11.0234
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -11.7183
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -12.414
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -13.0917
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -13.6723
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -14.2872
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -14.8372
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -15.3735
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -15.9171
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -16.3888
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -16.8397
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -17.2807
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -17.7326
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -18.1864
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -18.5828
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -18.9426
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -19.2767
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -19.6258
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -19.9607
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -20.222
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Langer",
+      "ambient": "A",
+      "model": "C0",
+      "curve_id": "LANGER2018_Abb2-04",
+      "source": "Langer",
+      "T0_C": 80.63,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "k": 0.030056817467022327
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 10.963112878294808,
+      "signed_mean_0_10_K": -4.924540430178672,
+      "signed_mean_10_30_K": -12.6931438957072,
+      "room_used_C": 20.0,
+      "room_source": "default_20C",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -1.7952
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -2.3673
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -3.1078
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -3.9282
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -4.6801
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -5.3548
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -6.0438
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -6.7084
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -7.33
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -7.9297
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -8.5089
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -9.0887
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -9.5704
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -10.1149
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -10.6135
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -11.0773
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -11.5371
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -11.9841
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -12.3892
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -12.7733
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -13.1375
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -13.4924
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -13.8592
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -14.2184
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -14.5711
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -14.8479
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -15.1396
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -15.387
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -15.6608
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -15.8917
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Langer",
+      "ambient": "A",
+      "model": "C0",
+      "curve_id": "LANGER2018_Abb2-05",
+      "source": "Langer",
+      "T0_C": 80.86,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "k": 0.030056817467022327
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 10.384226304697677,
+      "signed_mean_0_10_K": -4.870858495475405,
+      "signed_mean_10_30_K": -11.996567417000493,
+      "room_used_C": 20.0,
+      "room_source": "default_20C",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -1.802
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -2.5007
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -3.2376
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -3.9543
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -4.6522
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -5.2928
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -5.9475
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -6.5576
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -7.1045
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -7.6594
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -8.1536
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -8.7084
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -9.1847
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -9.6639
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -10.087
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -10.5351
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -10.9091
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -11.3102
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -11.6993
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -12.0873
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -12.4151
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -12.7537
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -13.0639
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -13.4266
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -13.7226
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -13.9526
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -14.2174
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -14.4779
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -14.6746
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -14.8883
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Langer",
+      "ambient": "A",
+      "model": "C0",
+      "curve_id": "LANGER2018_Abb2-06",
+      "source": "Langer",
+      "T0_C": 81.9,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "k": 0.030056817467022327
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 12.054986985691977,
+      "signed_mean_0_10_K": -5.435035834208469,
+      "signed_mean_10_30_K": -13.961982469804969,
+      "room_used_C": 20.0,
+      "room_source": "default_20C",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -1.8328
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -2.5614
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -3.4173
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -4.2621
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -5.0773
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -5.9544
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -6.7348
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -7.4799
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -8.181
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -8.8494
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -9.4764
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -10.0933
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -10.6611
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -11.2211
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -11.7844
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -12.2821
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -12.7652
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -13.2348
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -13.6617
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -14.0671
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -14.4519
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -14.8469
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -15.193
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -15.5711
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -15.882
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -16.1866
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -16.5055
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -16.8296
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -17.1396
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -17.3862
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Langer",
+      "ambient": "A",
+      "model": "C1",
+      "curve_id": "LANGER2018_Abb2-01",
+      "source": "Langer",
+      "T0_C": 80.17,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "kc": 0.0002932933768932918,
+        "x": 2.207318693003242
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 8.212105406943946,
+      "signed_mean_0_10_K": -5.5716945073022135,
+      "signed_mean_10_30_K": -9.160680272821459,
+      "room_used_C": 20.0,
+      "room_source": "default_20C",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -2.3749
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -3.2423
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -4.1365
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -4.8779
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -5.6039
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -6.1991
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -6.7262
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -7.1662
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -7.5485
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -7.8414
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -8.1521
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -8.4071
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -8.6019
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -8.7916
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -8.9507
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -9.093
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -9.2022
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -9.2815
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -9.3838
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -9.4416
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -9.4275
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -9.5035
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -9.4616
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -9.4636
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -9.4811
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -9.3957
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -9.3886
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -9.3213
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -9.2549
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -9.2103
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Langer",
+      "ambient": "A",
+      "model": "C1",
+      "curve_id": "LANGER2018_Abb2-02",
+      "source": "Langer",
+      "T0_C": 80.6,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "kc": 0.0002932933768932918,
+        "x": 2.207318693003242
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 10.42466474428145,
+      "signed_mean_0_10_K": -6.774608346906165,
+      "signed_mean_10_30_K": -11.70081460169977,
+      "room_used_C": 20.0,
+      "room_source": "default_20C",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -2.4116
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -3.6211
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -4.9535
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -5.8599
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -6.808
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -7.633
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -8.2779
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -8.9339
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -9.3706
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -9.8766
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -10.2593
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -10.6151
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -10.8599
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -11.1987
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -11.3862
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -11.5563
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -11.6826
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -11.7786
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -11.937
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -12.0106
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -12.0618
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -12.0828
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -12.0756
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -12.1219
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -12.1635
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -12.1319
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -12.1185
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -12.0346
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -11.9714
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -11.9699
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Langer",
+      "ambient": "A",
+      "model": "C1",
+      "curve_id": "LANGER2018_Abb2-03",
+      "source": "Langer",
+      "T0_C": 82.28,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "kc": 0.0002932933768932918,
+        "x": 2.207318693003242
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 13.806866215410881,
+      "signed_mean_0_10_K": -8.213748255181432,
+      "signed_mean_10_30_K": -15.681292075005942,
+      "room_used_C": 20.0,
+      "room_source": "default_20C",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -2.5579
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -4.2649
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -5.7391
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -7.0041
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -8.1797
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -9.1326
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -10.1473
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -10.976
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -11.7293
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -12.4066
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -12.9359
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -13.4442
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -13.9278
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -14.3723
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -14.7024
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -15.0527
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -15.3269
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -15.5786
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -15.831
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -16.0068
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -16.1587
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -16.299
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -16.4498
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -16.603
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -16.7004
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -16.7636
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -16.8042
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -16.8634
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -16.9125
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -16.8927
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Langer",
+      "ambient": "A",
+      "model": "C1",
+      "curve_id": "LANGER2018_Abb2-04",
+      "source": "Langer",
+      "T0_C": 80.63,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "kc": 0.0002932933768932918,
+        "x": 2.207318693003242
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 10.341856679435947,
+      "signed_mean_0_10_K": -6.488749787545922,
+      "signed_mean_10_30_K": -11.671637854392774,
+      "room_used_C": 20.0,
+      "room_source": "default_20C",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -2.4142
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -3.4559
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -4.5403
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -5.5984
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -6.4981
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -7.2445
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -7.9406
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -8.5577
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -9.0854
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -9.5524
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -9.9658
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -10.3525
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -10.6179
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -10.9274
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -11.1754
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -11.3761
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -11.5629
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -11.7293
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -11.8482
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -11.9422
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -12.0138
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -12.0751
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -12.1482
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -12.2149
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -12.2768
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -12.2654
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -12.2723
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -12.2386
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -12.2356
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -12.1943
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Langer",
+      "ambient": "A",
+      "model": "C1",
+      "curve_id": "LANGER2018_Abb2-05",
+      "source": "Langer",
+      "T0_C": 80.86,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "kc": 0.0002932933768932918,
+        "x": 2.207318693003242
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 9.847697180463372,
+      "signed_mean_0_10_K": -6.478635614219532,
+      "signed_mean_10_30_K": -11.03476613789885,
+      "room_used_C": 20.0,
+      "room_source": "default_20C",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -2.434
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -3.613
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -4.7025
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -5.664
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -6.5156
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -7.2326
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -7.8982
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -8.4639
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -8.9194
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -9.3433
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -9.6732
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -10.0356
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -10.2964
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -10.5407
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -10.7133
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -10.898
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -10.9987
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -11.1187
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -11.2208
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -11.3179
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -11.3523
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -11.3963
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -11.4119
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -11.4809
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -11.485
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -11.4257
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -11.4044
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -11.3826
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -11.3013
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -11.2416
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Langer",
+      "ambient": "A",
+      "model": "C1",
+      "curve_id": "LANGER2018_Abb2-06",
+      "source": "Langer",
+      "T0_C": 81.9,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "kc": 0.0002932933768932918,
+        "x": 2.207318693003242
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 11.737352559676141,
+      "signed_mean_0_10_K": -7.24277947657275,
+      "signed_mean_10_30_K": -13.273429559756021,
+      "room_used_C": 20.0,
+      "room_source": "default_20C",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -2.5244
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -3.7823
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -5.031
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -6.1535
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -7.1492
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -8.1244
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -8.9332
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -9.6477
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -10.2682
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -10.8139
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -11.2826
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -11.7113
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -12.0662
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -12.3926
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -12.7054
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -12.9388
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -13.1468
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -13.3327
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -13.4697
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -13.5805
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -13.6677
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -13.7637
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -13.8104
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -13.8898
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -13.9037
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -13.9136
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -13.941
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -13.9773
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -14.0036
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -13.9712
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Sedlacek",
+      "ambient": "B",
+      "model": "C0",
+      "curve_id": "SEDLACEK2010_Fig1",
+      "source": "Sedlacek",
+      "T0_C": 80.25,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "k": 0.015517536652644312,
+        "Tr_fitted_C": 25.238571428571426,
+        "Tr_bounds_C": [
+          15.23857142857143,
+          25.23857142857143
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.4,
+      "measurement_error_C": 0.3,
+      "is_in_sample": false,
+      "rms_K": 7.201424139018184,
+      "signed_mean_0_10_K": 3.786092632590279,
+      "signed_mean_10_30_K": 9.587446083462531,
+      "room_used_C": 25.238571428571426,
+      "room_source": "fitted_shared",
+      "first_time_min": 0.0,
+      "last_time_min": 25.59,
+      "n_points": 7,
+      "partial": true,
+      "residual_vs_time": [
+        {
+          "t_min": 0.0,
+          "resid_K": 0.0
+        },
+        {
+          "t_min": 2.75,
+          "resid_K": 3.0919
+        },
+        {
+          "t_min": 4.65,
+          "resid_K": 4.6604
+        },
+        {
+          "t_min": 9.66,
+          "resid_K": 7.3921
+        },
+        {
+          "t_min": 14.67,
+          "resid_K": 8.8702
+        },
+        {
+          "t_min": 20.58,
+          "resid_K": 10.481
+        },
+        {
+          "t_min": 25.59,
+          "resid_K": 9.4112
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Sedlacek",
+      "ambient": "B",
+      "model": "C1",
+      "curve_id": "SEDLACEK2010_Fig1",
+      "source": "Sedlacek",
+      "T0_C": 80.25,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "kc": 0.0004148322617060558,
+        "x": 1.8467200872567884,
+        "Tr_fitted_C": 15.23857142859007,
+        "Tr_bounds_C": [
+          15.23857142857143,
+          25.23857142857143
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.4,
+      "measurement_error_C": 0.3,
+      "is_in_sample": false,
+      "rms_K": 7.1895921144448005,
+      "signed_mean_0_10_K": 3.625298111365108,
+      "signed_mean_10_30_K": 9.677955893493563,
+      "room_used_C": 15.23857142859007,
+      "room_source": "fitted_shared",
+      "first_time_min": 0.0,
+      "last_time_min": 25.59,
+      "n_points": 7,
+      "partial": true,
+      "residual_vs_time": [
+        {
+          "t_min": 0.0,
+          "resid_K": 0.0
+        },
+        {
+          "t_min": 2.75,
+          "resid_K": 2.936
+        },
+        {
+          "t_min": 4.65,
+          "resid_K": 4.4384
+        },
+        {
+          "t_min": 9.66,
+          "resid_K": 7.1268
+        },
+        {
+          "t_min": 14.67,
+          "resid_K": 8.706
+        },
+        {
+          "t_min": 20.58,
+          "resid_K": 10.5613
+        },
+        {
+          "t_min": 25.59,
+          "resid_K": 9.7665
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Manitoba",
+      "ambient": "B",
+      "model": "C0",
+      "curve_id": "MANITOBA_WORKSHOP_coffee",
+      "source": "Manitoba",
+      "T0_C": 85.56,
+      "room_source_recorded_or_default": "recorded",
+      "fitted_params": {
+        "k": 0.012497961090587794,
+        "Tr_fitted_C": 15.000000000000002,
+        "Tr_bounds_C": [
+          15.0,
+          25.0
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": null,
+      "measurement_error_C": 0.28,
+      "is_in_sample": false,
+      "rms_K": 10.556890010016069,
+      "signed_mean_0_10_K": 4.618312630416045,
+      "signed_mean_10_30_K": 14.467961505967292,
+      "room_used_C": 15.000000000000002,
+      "room_source": "fitted_shared",
+      "first_time_min": 0.0,
+      "last_time_min": 28.0,
+      "n_points": 9,
+      "partial": true,
+      "residual_vs_time": [
+        {
+          "t_min": 0.0,
+          "resid_K": 0.0
+        },
+        {
+          "t_min": 1.0,
+          "resid_K": 3.0136
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": 4.3781
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": 5.7434
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": 9.9564
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": 12.7587
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": 14.1254
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": 15.1521
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": 15.8356
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Manitoba",
+      "ambient": "B",
+      "model": "C1",
+      "curve_id": "MANITOBA_WORKSHOP_coffee",
+      "source": "Manitoba",
+      "T0_C": 85.56,
+      "room_source_recorded_or_default": "recorded",
+      "fitted_params": {
+        "kc": 0.09485163470113932,
+        "x": 0.5000000000000311,
+        "Tr_fitted_C": 15.000000000000076,
+        "Tr_bounds_C": [
+          15.0,
+          25.0
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": null,
+      "measurement_error_C": 0.28,
+      "is_in_sample": false,
+      "rms_K": 10.928907020825744,
+      "signed_mean_0_10_K": 4.808177198990296,
+      "signed_mean_10_30_K": 14.964565984805365,
+      "room_used_C": 15.000000000000076,
+      "room_source": "fitted_shared",
+      "first_time_min": 0.0,
+      "last_time_min": 28.0,
+      "n_points": 9,
+      "partial": true,
+      "residual_vs_time": [
+        {
+          "t_min": 0.0,
+          "resid_K": 0.0
+        },
+        {
+          "t_min": 1.0,
+          "resid_K": 3.0955
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": 4.5355
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": 5.97
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": 10.4399
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": 13.3623
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": 14.7272
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": 15.6445
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": 16.1243
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Langer",
+      "ambient": "B",
+      "model": "C0",
+      "curve_id": "LANGER2018_Abb2-01",
+      "source": "Langer",
+      "T0_C": 80.17,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "k": 0.033805495323053235,
+        "Tr_fitted_C": 25.834999999999997,
+        "Tr_bounds_C": [
+          15.835,
+          25.835
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 8.456727863409135,
+      "signed_mean_0_10_K": -4.121957873642861,
+      "signed_mean_10_30_K": -9.758173186435585,
+      "room_used_C": 25.834999999999997,
+      "room_source": "fitted_shared",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -1.8061
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -2.2422
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -2.8203
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -3.3422
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -3.9299
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -4.4551
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -4.9697
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -5.4452
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -5.9033
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -6.3057
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -6.7537
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -7.1689
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -7.5428
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -7.9266
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -8.2917
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -8.6495
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -8.9811
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -9.2877
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -9.6205
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -9.9107
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -10.1293
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -10.4373
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -10.6258
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -10.8558
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -11.0982
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -11.2339
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -11.4439
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -11.5889
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -11.7298
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -11.8874
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Langer",
+      "ambient": "B",
+      "model": "C0",
+      "curve_id": "LANGER2018_Abb2-02",
+      "source": "Langer",
+      "T0_C": 80.6,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "k": 0.033805495323053235,
+        "Tr_fitted_C": 25.834999999999997,
+        "Tr_bounds_C": [
+          15.835,
+          25.835
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 10.580956760692644,
+      "signed_mean_0_10_K": -5.251229832521426,
+      "signed_mean_10_30_K": -12.204035604217264,
+      "room_used_C": 25.834999999999997,
+      "room_source": "fitted_shared",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -1.8204
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -2.5803
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -3.5817
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -4.2566
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -5.0567
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -5.8041
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -6.4303
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -7.1171
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -7.6261
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -8.239
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -8.7572
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -9.2723
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -9.6957
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -10.2287
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -10.6228
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -11.0091
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -11.359
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -11.6837
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -12.0743
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -12.382
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -12.6678
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -12.9229
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -13.1482
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -13.4248
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -13.6935
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -13.8854
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -14.0913
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -14.222
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -14.3685
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -14.5714
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Langer",
+      "ambient": "B",
+      "model": "C0",
+      "curve_id": "LANGER2018_Abb2-03",
+      "source": "Langer",
+      "T0_C": 82.28,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "k": 0.033805495323053235,
+        "Tr_fitted_C": 25.834999999999997,
+        "Tr_bounds_C": [
+          15.835,
+          25.835
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 13.66540286919389,
+      "signed_mean_0_10_K": -6.394687718372531,
+      "signed_mean_10_30_K": -15.807370166713104,
+      "room_used_C": 25.834999999999997,
+      "room_source": "fitted_shared",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -1.8763
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -3.0601
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -4.1437
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -5.1291
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -6.118
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -6.9625
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -7.9343
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -8.7752
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -9.5868
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -10.3609
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -11.019
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -11.6826
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -12.3431
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -12.9822
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -13.521
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -14.091
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -14.5934
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -15.0795
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -15.5705
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -15.9875
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -16.3818
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -16.7643
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -17.1562
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -17.5484
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -17.882
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -18.1778
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -18.4469
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -18.73
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -18.9982
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -19.1921
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Langer",
+      "ambient": "B",
+      "model": "C0",
+      "curve_id": "LANGER2018_Abb2-04",
+      "source": "Langer",
+      "T0_C": 80.63,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "k": 0.033805495323053235,
+        "Tr_fitted_C": 25.834999999999997,
+        "Tr_bounds_C": [
+          15.835,
+          25.835
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 10.521612024097672,
+      "signed_mean_0_10_K": -4.960202294768763,
+      "signed_mean_10_30_K": -12.168246935690402,
+      "room_used_C": 25.834999999999997,
+      "room_source": "fitted_shared",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -1.8214
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -2.4123
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -3.1646
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -3.9904
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -4.7414
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -5.4096
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -6.0866
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -6.7342
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -7.334
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -7.9076
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -8.4566
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -9.0023
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -9.4464
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -9.95
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -10.4047
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -10.8216
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -11.2321
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -11.6274
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -11.9785
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -12.3067
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -12.6131
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -12.9086
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -13.2144
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -13.5114
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -13.8006
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -14.0129
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -14.2392
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -14.4204
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -14.6272
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -14.7906
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Langer",
+      "ambient": "B",
+      "model": "C0",
+      "curve_id": "LANGER2018_Abb2-05",
+      "source": "Langer",
+      "T0_C": 80.86,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "k": 0.033805495323053235,
+        "Tr_fitted_C": 25.834999999999997,
+        "Tr_bounds_C": [
+          15.835,
+          25.835
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 9.953454260760468,
+      "signed_mean_0_10_K": -4.910324505331713,
+      "signed_mean_10_30_K": -11.480533810317805,
+      "room_used_C": 25.834999999999997,
+      "room_source": "fitted_shared",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -1.8291
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -2.5473
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -3.2968
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -4.0195
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -4.7172
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -5.3518
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -5.9951
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -6.5887
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -7.1143
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -7.6436
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -8.108
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -8.629
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -9.0682
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -9.5068
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -9.8862
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -10.2877
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -10.6127
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -10.9622
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -11.2975
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -11.6297
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -11.9
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -12.1793
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -12.4287
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -12.7293
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -12.9619
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -13.1274
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -13.3269
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -13.5211
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -13.6509
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -13.7971
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Langer",
+      "ambient": "B",
+      "model": "C0",
+      "curve_id": "LANGER2018_Abb2-06",
+      "source": "Langer",
+      "T0_C": 81.9,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "k": 0.033805495323053235,
+        "Tr_fitted_C": 25.834999999999997,
+        "Tr_bounds_C": [
+          15.835,
+          25.835
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 11.65701329434859,
+      "signed_mean_0_10_K": -5.491703196572873,
+      "signed_mean_10_30_K": -13.486026634719991,
+      "room_used_C": 25.834999999999997,
+      "room_source": "fitted_shared",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -1.8636
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -2.6153
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -3.4871
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -4.341
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -5.1589
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -6.0327
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -6.8042
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -7.5351
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -8.2171
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -8.8619
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -9.461
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -10.0458
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -10.578
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -11.0989
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -11.6198
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -12.0722
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -12.5073
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -12.9263
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -13.3004
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -13.6508
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -13.9786
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -14.315
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -14.6008
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -14.9172
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -15.1652
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -15.4056
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -15.6594
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -15.9175
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -16.1607
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -16.3399
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Langer",
+      "ambient": "B",
+      "model": "C1",
+      "curve_id": "LANGER2018_Abb2-01",
+      "source": "Langer",
+      "T0_C": 80.17,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "kc": 7.884063060494562e-05,
+        "x": 2.481342355009628,
+        "Tr_fitted_C": 15.835001435773556,
+        "Tr_bounds_C": [
+          15.835,
+          25.835
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 7.632286746185951,
+      "signed_mean_0_10_K": -5.278433971869721,
+      "signed_mean_10_30_K": -8.48555193826973,
+      "room_used_C": 15.835001435773556,
+      "room_source": "fitted_shared",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -2.314
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -3.1219
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -3.959
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -4.6462
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -5.3212
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -5.8689
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -6.3519
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -6.7511
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -7.0959
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -7.3543
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -7.6336
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -7.8599
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -8.0287
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -8.1948
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -8.3326
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -8.4558
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -8.548
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -8.612
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -8.7009
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -8.7469
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -8.7225
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -8.7896
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -8.7401
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -8.7357
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -8.748
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -8.6584
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -8.6482
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -8.5787
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -8.5108
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -8.4657
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Langer",
+      "ambient": "B",
+      "model": "C1",
+      "curve_id": "LANGER2018_Abb2-02",
+      "source": "Langer",
+      "T0_C": 80.6,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "kc": 7.884063060494562e-05,
+        "x": 2.481342355009628,
+        "Tr_fitted_C": 15.835001435773556,
+        "Tr_bounds_C": [
+          15.835,
+          25.835
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 9.84293846348598,
+      "signed_mean_0_10_K": -6.482587647841005,
+      "signed_mean_10_30_K": -11.02472129984999,
+      "room_used_C": 15.835001435773556,
+      "room_source": "fitted_shared",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -2.3515
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -3.502
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -4.7775
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -5.6298
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -6.5269
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -7.3043
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -7.9049
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -8.5199
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -8.9189
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -9.3903
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -9.7413
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -10.0682
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -10.2868
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -10.6018
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -10.7678
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -10.9187
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -11.0278
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -11.1084
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -11.2532
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -11.3149
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -11.3556
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -11.3676
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -11.3527
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -11.3926
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -11.4289
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -11.393
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -11.3764
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -11.2901
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -11.2254
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -11.2233
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Langer",
+      "ambient": "B",
+      "model": "C1",
+      "curve_id": "LANGER2018_Abb2-03",
+      "source": "Langer",
+      "T0_C": 82.28,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "kc": 7.884063060494562e-05,
+        "x": 2.481342355009628,
+        "Tr_fitted_C": 15.835001435773556,
+        "Tr_bounds_C": [
+          15.835,
+          25.835
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 13.221733494934888,
+      "signed_mean_0_10_K": -7.927701719843722,
+      "signed_mean_10_30_K": -15.002510351343384,
+      "room_used_C": 15.835001435773556,
+      "room_source": "fitted_shared",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -2.5015
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -4.1516
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -5.5701
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -6.7814
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -7.906
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -8.8109
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -9.7807
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -10.5678
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -11.2826
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -11.9244
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -12.4212
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -12.8998
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -13.3564
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -13.7763
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -14.0842
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -14.4145
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -14.6708
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -14.9065
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -15.1447
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -15.308
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -15.449
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -15.5798
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -15.7224
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -15.8688
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -15.9605
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -16.0191
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -16.0561
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -16.1127
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -16.16
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -16.1393
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Langer",
+      "ambient": "B",
+      "model": "C1",
+      "curve_id": "LANGER2018_Abb2-04",
+      "source": "Langer",
+      "T0_C": 80.63,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "kc": 7.884063060494562e-05,
+        "x": 2.481342355009628,
+        "Tr_fitted_C": 15.835001435773556,
+        "Tr_bounds_C": [
+          15.835,
+          25.835
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 9.758931819300413,
+      "signed_mean_0_10_K": -6.196819979142129,
+      "signed_mean_10_30_K": -10.995481497987113,
+      "room_used_C": 15.835001435773556,
+      "room_source": "fitted_shared",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -2.3542
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -3.3369
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -4.3644
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -5.3684
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -6.2171
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -6.9159
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -7.5677
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -8.1438
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -8.6338
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -9.0661
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -9.4479
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -9.8056
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -10.0448
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -10.3305
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -10.5571
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -10.7384
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -10.908
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -11.0591
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -11.1643
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -11.2464
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -11.3075
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -11.3598
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -11.4252
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -11.4854
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -11.542
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -11.5264
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -11.53
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -11.494
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -11.4895
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -11.4475
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Langer",
+      "ambient": "B",
+      "model": "C1",
+      "curve_id": "LANGER2018_Abb2-05",
+      "source": "Langer",
+      "T0_C": 80.86,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "kc": 7.884063060494562e-05,
+        "x": 2.481342355009628,
+        "Tr_fitted_C": 15.835001435773556,
+        "Tr_bounds_C": [
+          15.835,
+          25.835
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 9.266049605693654,
+      "signed_mean_0_10_K": -6.18742167764419,
+      "signed_mean_10_30_K": -10.358144756587498,
+      "room_used_C": 15.835001435773556,
+      "room_source": "fitted_shared",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -2.3744
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -3.4947
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -4.5275
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -5.4349
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -6.2355
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -6.9048
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -7.5261
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -8.0506
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -8.4683
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -8.8575
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -9.1555
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -9.4889
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -9.7234
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -9.9439
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -10.0948
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -10.2602
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -10.3436
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -10.4481
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -10.5365
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -10.6216
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -10.6455
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -10.6804
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -10.6882
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -10.7507
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -10.7494
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -10.6858
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -10.6613
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -10.637
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -10.5542
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -10.4938
+        }
+      ]
+    },
+    {
+      "protocol": "B_leave_one_source_out",
+      "fold": "Langer",
+      "ambient": "B",
+      "model": "C1",
+      "curve_id": "LANGER2018_Abb2-06",
+      "source": "Langer",
+      "T0_C": 81.9,
+      "room_source_recorded_or_default": "default_20C",
+      "fitted_params": {
+        "kc": 7.884063060494562e-05,
+        "x": 2.481342355009628,
+        "Tr_fitted_C": 15.835001435773556,
+        "Tr_bounds_C": [
+          15.835,
+          25.835
+        ]
+      },
+      "starts_converged": "21/21",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "is_in_sample": false,
+      "rms_K": 11.15324111330944,
+      "signed_mean_0_10_K": -6.955223822706948,
+      "signed_mean_10_30_K": -12.595107356564943,
+      "room_used_C": 15.835001435773556,
+      "room_source": "fitted_shared",
+      "first_time_min": 1.0,
+      "last_time_min": 30.0,
+      "n_points": 30,
+      "partial": false,
+      "residual_vs_time": [
+        {
+          "t_min": 1.0,
+          "resid_K": -2.4671
+        },
+        {
+          "t_min": 2.0,
+          "resid_K": -3.6675
+        },
+        {
+          "t_min": 3.0,
+          "resid_K": -4.8602
+        },
+        {
+          "t_min": 4.0,
+          "resid_K": -5.929
+        },
+        {
+          "t_min": 5.0,
+          "resid_K": -6.8736
+        },
+        {
+          "t_min": 6.0,
+          "resid_K": -7.801
+        },
+        {
+          "t_min": 7.0,
+          "resid_K": -8.565
+        },
+        {
+          "t_min": 8.0,
+          "resid_K": -9.238
+        },
+        {
+          "t_min": 9.0,
+          "resid_K": -9.8202
+        },
+        {
+          "t_min": 10.0,
+          "resid_K": -10.3306
+        },
+        {
+          "t_min": 11.0,
+          "resid_K": -10.767
+        },
+        {
+          "t_min": 12.0,
+          "resid_K": -11.1662
+        },
+        {
+          "t_min": 13.0,
+          "resid_K": -11.4942
+        },
+        {
+          "t_min": 14.0,
+          "resid_K": -11.7962
+        },
+        {
+          "t_min": 15.0,
+          "resid_K": -12.087
+        },
+        {
+          "t_min": 16.0,
+          "resid_K": -12.3006
+        },
+        {
+          "t_min": 17.0,
+          "resid_K": -12.4908
+        },
+        {
+          "t_min": 18.0,
+          "resid_K": -12.6609
+        },
+        {
+          "t_min": 19.0,
+          "resid_K": -12.7838
+        },
+        {
+          "t_min": 20.0,
+          "resid_K": -12.8823
+        },
+        {
+          "t_min": 21.0,
+          "resid_K": -12.9587
+        },
+        {
+          "t_min": 22.0,
+          "resid_K": -13.0452
+        },
+        {
+          "t_min": 23.0,
+          "resid_K": -13.0839
+        },
+        {
+          "t_min": 24.0,
+          "resid_K": -13.1566
+        },
+        {
+          "t_min": 25.0,
+          "resid_K": -13.1648
+        },
+        {
+          "t_min": 26.0,
+          "resid_K": -13.1702
+        },
+        {
+          "t_min": 27.0,
+          "resid_K": -13.1941
+        },
+        {
+          "t_min": 28.0,
+          "resid_K": -13.2278
+        },
+        {
+          "t_min": 29.0,
+          "resid_K": -13.2525
+        },
+        {
+          "t_min": 30.0,
+          "resid_K": -13.2192
+        }
+      ]
+    }
+  ]
+}

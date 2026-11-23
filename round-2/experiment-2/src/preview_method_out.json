@@ -1,0 +1,70 @@
+{
+ "metadata": {
+  "method_name": "Newton-type cooling laws C0 (constant rate) and C1 (nonlinear convection)",
+  "description": "Observed 0-30 min curve and out-of-sample predictions (ambient A) per curve.",
+  "window_min": 30.0,
+  "predict_fields": "JSON lists aligned to input.time_min; protocolA = fit on Sedlacek; loso = leave-one-source-out fold"
+ },
+ "datasets": [
+  {
+   "dataset": "Sedlacek",
+   "examples": [
+    {
+     "input": "{\"curve_id\": \"SEDLACEK2010_Fig1\", \"time_min\": [0.0, 2.75, 4.65, 9.66, 14.67, 20.58, 25.59], \"initial_temperature_C\": 80.25, \"room_temperature_C\": 20.0, \"room_temperature_source\": \"default_20C\", \"windo",
+     "output": "[80.25, 74.86, 71.76, 65.2, 60.18, 54.73, 52.81]",
+     "predict_C0_protocolA_ambientA": "[80.25, 76.0162, 73.266, 66.6446, 60.8462, 54.9258, 50.5842]",
+     "predict_C1_protocolA_ambientA": "[80.25, 74.8835, 71.7429, 65.0658, 60.0206, 55.4415, 52.3625]",
+     "predict_C0_loso_ambientA": "[80.25, 77.9805, 76.4626, 72.648, 69.0911, 65.2029, 62.149]",
+     "predict_C1_loso_ambientA": "[80.25, 77.9126, 76.364, 72.5229, 69.005, 65.2272, 62.3073]",
+     "metadata_fold": 1,
+     "metadata_source_id": "Sedlacek",
+     "metadata_curve_id": "SEDLACEK2010_Fig1",
+     "metadata_role": "in_sample_fit_and_score",
+     "metadata_partial": true,
+     "metadata_digitisation_error_C": 0.4,
+     "metadata_measurement_error_C": 0.3
+    }
+   ]
+  },
+  {
+   "dataset": "Manitoba",
+   "examples": [
+    {
+     "input": "{\"curve_id\": \"MANITOBA_WORKSHOP_coffee\", \"time_min\": [0.0, 1.0, 2.0, 3.0, 8.0, 13.0, 18.0, 23.0, 28.0], \"initial_temperature_C\": 85.56, \"room_temperature_C\": 21.67, \"room_temperature_source\": \"recorde",
+     "output": "[85.56, 81.67, 79.44, 77.22, 68.89, 62.22, 57.22, 52.78, 48.89]",
+     "predict_C0_protocolA_ambientA": "[85.56, 83.8894, 82.2626, 80.6782, 73.3566, 66.9435, 61.3261, 56.4057, 52.0958]",
+     "predict_C1_protocolA_ambientA": "[85.56, 83.2028, 81.0274, 79.0131, 70.8192, 64.8118, 60.2049, 56.5513, 53.5776]",
+     "predict_C0_loso_ambientA": "[85.56, 84.6913, 83.8343, 82.9891, 78.932, 75.1433, 71.6054, 68.3015, 65.2162]",
+     "predict_C1_loso_ambientA": "[85.56, 84.7689, 83.9827, 83.2014, 79.369, 75.6598, 72.0738, 68.611, 65.2715]",
+     "metadata_fold": 2,
+     "metadata_source_id": "Manitoba",
+     "metadata_curve_id": "MANITOBA_WORKSHOP_coffee",
+     "metadata_role": "held_out",
+     "metadata_partial": true,
+     "metadata_digitisation_error_C": null,
+     "metadata_measurement_error_C": 0.28
+    }
+   ]
+  },
+  {
+   "dataset": "Langer",
+   "examples": [
+    {
+     "input": "{\"curve_id\": \"LANGER2018_Abb2-01\", \"time_min\": [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0, 21.0, 22.0, 23.0, 24.0, 25.0, 26.0, 27.0,",
+     "output": "[80.17, 78.86, 77.75, 76.64, 75.65, 74.65, 73.69, 72.74, 71.82, 70.89, 70.05, 69.22, 68.39, 67.61, 66.85, 66.12, 65.4, 64.69, 64.04, 63.38, 62.68, 62.1, 61.43, 60.83, 60.27, 59.63, 59.09, 58.51, 57.95",
+     "predict_C0_protocolA_ambientA": "[78.5967, 77.0645, 75.5725, 74.1194, 72.7043, 71.3262, 69.9841, 68.6772, 67.4044, 66.1649, 64.9578, 63.7823, 62.6375, 61.5226, 60.4369, 59.3796, 58.3499, 57.3471, 56.3706, 55.4196, 54.4935, 53.5915, 5",
+     "predict_C1_protocolA_ambientA": "[78.0963, 76.1725, 74.3825, 72.7124, 71.1504, 69.6859, 68.31, 67.0146, 65.7926, 64.6379, 63.545, 62.5087, 61.5248, 60.5893, 59.6986, 58.8495, 58.039, 57.2646, 56.5237, 55.8143, 55.1342, 54.4818, 53.85",
+     "predict_C0_loso_ambientA": "[78.3884, 76.6595, 74.9819, 73.3539, 71.7741, 70.2411, 68.7535, 67.3099, 65.9091, 64.5497, 63.2306, 61.9506, 60.7084, 59.5031, 58.3334, 57.1984, 56.0969, 55.0281, 53.991, 52.9845, 52.0078, 51.0601, 50",
+     "predict_C1_loso_ambientA": "[77.7951, 75.6177, 73.6135, 71.7621, 70.0461, 68.4509, 66.9638, 65.5738, 64.2715, 63.0486, 61.8979, 60.8129, 59.7881, 58.8184, 57.8993, 57.027, 56.1978, 55.4085, 54.6562, 53.9384, 53.2525, 52.5965, 51",
+     "metadata_fold": 3,
+     "metadata_source_id": "Langer",
+     "metadata_curve_id": "LANGER2018_Abb2-01",
+     "metadata_role": "held_out",
+     "metadata_partial": false,
+     "metadata_digitisation_error_C": 0.2,
+     "metadata_measurement_error_C": null
+    }
+   ]
+  }
+ ]
+}

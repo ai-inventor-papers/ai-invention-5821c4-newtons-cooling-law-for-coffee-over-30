@@ -1,0 +1,1111 @@
+{
+  "meta": {
+    "description": "Out-of-sample transfer of Newton-type cooling laws C0 and C1 on published coffee curves.",
+    "window_min": 30.0,
+    "room_temperature_default_C": 20.0,
+    "room_temperature_note": "Sedlacek and Langer report no room temperature; 20 C is used under ambient A and flagged. Ambient B frees room temperature as a fitted shared parameter (bounds T_ref +/- 5 K).",
+    "T0_note": "T0 is each curve's recorded initial temperature. The Langer recorded T0 is 80.2-82.3 C (not 88 C).",
+    "n_starts": 20,
+    "n_bootstrap": 1000,
+    "bootstrap_seed": 0,
+    "block_length": 3,
+    "C1_solver": "closed form; cross-checked against scipy solve_ivp LSODA (rtol 1e-8, atol 1e-10)",
+    "in_sample_reference_iter1_K": {
+      "C0": 1.07,
+      "C1": 0.36
+    },
+    "langer_crossing_time_flag": "Langer 65 C crossing times (18-32 min digitized) disagree with the paper's text (11-22 min); flagged unresolved in the dataset. Not used as a fit or score target; crossing-time comparison absent.",
+    "humidity": "not recorded by any source; humidity and fat-layer terms are out of scope",
+    "llm_calls": 0,
+    "spend_usd": 0.0
+  },
+  "curves": [
+    {
+      "curve_id": "SEDLACEK2010_Fig1",
+      "source": "Sedlacek",
+      "fold": 1,
+      "T0_C": 80.25,
+      "room_C": 20.0,
+      "room_source": "default_20C",
+      "digitisation_error_C": 0.4,
+      "measurement_error_C": 0.3,
+      "in_window_points": 7,
+      "last_time_min": 25.59,
+      "full_span_min": 138.53,
+      "partial": true
+    },
+    {
+      "curve_id": "MANITOBA_WORKSHOP_coffee",
+      "source": "Manitoba",
+      "fold": 2,
+      "T0_C": 85.56,
+      "room_C": 21.67,
+      "room_source": "recorded",
+      "digitisation_error_C": null,
+      "measurement_error_C": 0.28,
+      "in_window_points": 9,
+      "last_time_min": 28.0,
+      "full_span_min": 48.0,
+      "partial": true
+    },
+    {
+      "curve_id": "LANGER2018_Abb2-01",
+      "source": "Langer",
+      "fold": 3,
+      "T0_C": 80.17,
+      "room_C": 20.0,
+      "room_source": "default_20C",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "in_window_points": 30,
+      "last_time_min": 30.0,
+      "full_span_min": 33.0,
+      "partial": false
+    },
+    {
+      "curve_id": "LANGER2018_Abb2-02",
+      "source": "Langer",
+      "fold": 3,
+      "T0_C": 80.6,
+      "room_C": 20.0,
+      "room_source": "default_20C",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "in_window_points": 30,
+      "last_time_min": 30.0,
+      "full_span_min": 33.0,
+      "partial": false
+    },
+    {
+      "curve_id": "LANGER2018_Abb2-03",
+      "source": "Langer",
+      "fold": 3,
+      "T0_C": 82.28,
+      "room_C": 20.0,
+      "room_source": "default_20C",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "in_window_points": 30,
+      "last_time_min": 30.0,
+      "full_span_min": 33.0,
+      "partial": false
+    },
+    {
+      "curve_id": "LANGER2018_Abb2-04",
+      "source": "Langer",
+      "fold": 3,
+      "T0_C": 80.63,
+      "room_C": 20.0,
+      "room_source": "default_20C",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "in_window_points": 30,
+      "last_time_min": 30.0,
+      "full_span_min": 33.0,
+      "partial": false
+    },
+    {
+      "curve_id": "LANGER2018_Abb2-05",
+      "source": "Langer",
+      "fold": 3,
+      "T0_C": 80.86,
+      "room_C": 20.0,
+      "room_source": "default_20C",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "in_window_points": 30,
+      "last_time_min": 30.0,
+      "full_span_min": 33.0,
+      "partial": false
+    },
+    {
+      "curve_id": "LANGER2018_Abb2-06",
+      "source": "Langer",
+      "fold": 3,
+      "T0_C": 81.9,
+      "room_C": 20.0,
+      "room_source": "default_20C",
+      "digitisation_error_C": 0.2,
+      "measurement_error_C": null,
+      "in_window_points": 30,
+      "last_time_min": 30.0,
+      "full_span_min": 33.0,
+      "partial": false
+    }
+  ],
+  "blocks": {
+    "in_sample_reference|Sedlacek|A": {
+      "C0": {
+        "n_curves": 1,
+        "mean_rms_K": 1.260833253246719,
+        "per_curve_rms_K": {
+          "SEDLACEK2010_Fig1": 1.2608
+        },
+        "per_source_mean_rms_K": {
+          "Sedlacek": 1.260833253246719
+        },
+        "interval_mean_rms_K_95": [
+          0.9391365067204522,
+          1.3739779951847657
+        ],
+        "interval_method": "within-curve block bootstrap over time points, block length 3, 1000 resamples, seed 0; not comparable to between-curve intervals"
+      },
+      "C1": {
+        "n_curves": 1,
+        "mean_rms_K": 0.32750775340306404,
+        "per_curve_rms_K": {
+          "SEDLACEK2010_Fig1": 0.3275
+        },
+        "per_source_mean_rms_K": {
+          "Sedlacek": 0.32750775340306404
+        },
+        "interval_mean_rms_K_95": [
+          0.053044577836022004,
+          0.4573603975562358
+        ],
+        "interval_method": "within-curve block bootstrap over time points, block length 3, 1000 resamples, seed 0; not comparable to between-curve intervals"
+      },
+      "paired_C1_minus_C0": {
+        "mean_diff_C1_minus_C0_K": -0.933325499843655,
+        "per_curve_diff_K": {
+          "SEDLACEK2010_Fig1": -0.9333
+        },
+        "count_curves_C1_lower": 1,
+        "n_curves": 1,
+        "interval_mean_diff_95": [
+          -1.2552989508937051,
+          -0.6163903173487485
+        ],
+        "interval_method": "within-curve paired block bootstrap, block length 3, 1000 resamples, seed 0; not comparable to between-curve intervals"
+      }
+    },
+    "in_sample_reference|Sedlacek|B": {
+      "C0": {
+        "n_curves": 1,
+        "mean_rms_K": 1.1238682675882559,
+        "per_curve_rms_K": {
+          "SEDLACEK2010_Fig1": 1.1239
+        },
+        "per_source_mean_rms_K": {
+          "Sedlacek": 1.1238682675882559
+        },
+        "interval_mean_rms_K_95": [
+          0.822698929442774,
+          1.2321171698926485
+        ],
+        "interval_method": "within-curve block bootstrap over time points, block length 3, 1000 resamples, seed 0; not comparable to between-curve intervals"
+      },
+      "C1": {
+        "n_curves": 1,
+        "mean_rms_K": 0.3232276836049024,
+        "per_curve_rms_K": {
+          "SEDLACEK2010_Fig1": 0.3232
+        },
+        "per_source_mean_rms_K": {
+          "Sedlacek": 0.3232276836049024
+        },
+        "interval_mean_rms_K_95": [
+          0.05747774987785113,
+          0.45035790097837997
+        ],
+        "interval_method": "within-curve block bootstrap over time points, block length 3, 1000 resamples, seed 0; not comparable to between-curve intervals"
+      },
+      "paired_C1_minus_C0": {
+        "mean_diff_C1_minus_C0_K": -0.8006405839833535,
+        "per_curve_diff_K": {
+          "SEDLACEK2010_Fig1": -0.8006
+        },
+        "count_curves_C1_lower": 1,
+        "n_curves": 1,
+        "interval_mean_diff_95": [
+          -1.0853983608090574,
+          -0.46412607036889914
+        ],
+        "interval_method": "within-curve paired block bootstrap, block length 3, 1000 resamples, seed 0; not comparable to between-curve intervals"
+      }
+    },
+    "A_transfer|Sedlacek->Manitoba+Langer|A": {
+      "C0": {
+        "n_curves": 7,
+        "mean_rms_K": 8.334859348485987,
+        "per_curve_rms_K": {
+          "MANITOBA_WORKSHOP_coffee": 3.4544,
+          "LANGER2018_Abb2-01": 6.8636,
+          "LANGER2018_Abb2-02": 8.9507,
+          "LANGER2018_Abb2-03": 11.9269,
+          "LANGER2018_Abb2-04": 8.8961,
+          "LANGER2018_Abb2-05": 8.3085,
+          "LANGER2018_Abb2-06": 9.9437
+        },
+        "per_source_mean_rms_K": {
+          "Langer": 9.148265387770264,
+          "Manitoba": 3.454423112780328
+        },
+        "interval_mean_rms_K_95": [
+          6.538624636157838,
+          9.927509266135074
+        ],
+        "interval_method": "bootstrap over 7 curves, 1000 resamples, seed 0"
+      },
+      "C1": {
+        "n_curves": 7,
+        "mean_rms_K": 8.141815995157726,
+        "per_curve_rms_K": {
+          "MANITOBA_WORKSHOP_coffee": 2.659,
+          "LANGER2018_Abb2-01": 6.5719,
+          "LANGER2018_Abb2-02": 8.7682,
+          "LANGER2018_Abb2-03": 12.0922,
+          "LANGER2018_Abb2-04": 8.6853,
+          "LANGER2018_Abb2-05": 8.1816,
+          "LANGER2018_Abb2-06": 10.0345
+        },
+        "per_source_mean_rms_K": {
+          "Langer": 9.055626426104498,
+          "Manitoba": 2.6589534094770912
+        },
+        "interval_mean_rms_K_95": [
+          5.931806497417686,
+          9.964286273625877
+        ],
+        "interval_method": "bootstrap over 7 curves, 1000 resamples, seed 0"
+      },
+      "paired_C1_minus_C0": {
+        "mean_diff_C1_minus_C0_K": -0.1930433533282613,
+        "per_curve_diff_K": {
+          "LANGER2018_Abb2-01": -0.2917,
+          "LANGER2018_Abb2-02": -0.1825,
+          "LANGER2018_Abb2-03": 0.1653,
+          "LANGER2018_Abb2-04": -0.2108,
+          "LANGER2018_Abb2-05": -0.1269,
+          "LANGER2018_Abb2-06": 0.0907,
+          "MANITOBA_WORKSHOP_coffee": -0.7955
+        },
+        "count_curves_C1_lower": 5,
+        "n_curves": 7,
+        "interval_mean_diff_95": [
+          -0.43726266272509373,
+          -0.0033605315603804455
+        ],
+        "interval_method": "bootstrap over 7 curves, 1000 resamples, seed 0"
+      }
+    },
+    "A_transfer|Sedlacek->Manitoba+Langer|B": {
+      "C0": {
+        "n_curves": 7,
+        "mean_rms_K": 8.252434875574533,
+        "per_curve_rms_K": {
+          "MANITOBA_WORKSHOP_coffee": 2.885,
+          "LANGER2018_Abb2-01": 6.8316,
+          "LANGER2018_Abb2-02": 8.9375,
+          "LANGER2018_Abb2-03": 11.9635,
+          "LANGER2018_Abb2-04": 8.8794,
+          "LANGER2018_Abb2-05": 8.3016,
+          "LANGER2018_Abb2-06": 9.9685
+        },
+        "per_source_mean_rms_K": {
+          "Langer": 9.147006627552383,
+          "Manitoba": 2.8850043637074414
+        },
+        "interval_mean_rms_K_95": [
+          6.292322435885532,
+          9.934925999429659
+        ],
+        "interval_method": "bootstrap over 7 curves, 1000 resamples, seed 0"
+      },
+      "C1": {
+        "n_curves": 7,
+        "mean_rms_K": 8.027305141532308,
+        "per_curve_rms_K": {
+          "MANITOBA_WORKSHOP_coffee": 1.8832,
+          "LANGER2018_Abb2-01": 6.5694,
+          "LANGER2018_Abb2-02": 8.765,
+          "LANGER2018_Abb2-03": 12.0852,
+          "LANGER2018_Abb2-04": 8.6819,
+          "LANGER2018_Abb2-05": 8.1779,
+          "LANGER2018_Abb2-06": 10.0285
+        },
+        "per_source_mean_rms_K": {
+          "Langer": 9.051320265968835,
+          "Manitoba": 1.8832143949131583
+        },
+        "interval_mean_rms_K_95": [
+          5.551976506804564,
+          9.959051377216747
+        ],
+        "interval_method": "bootstrap over 7 curves, 1000 resamples, seed 0"
+      },
+      "paired_C1_minus_C0": {
+        "mean_diff_C1_minus_C0_K": -0.22512973404222406,
+        "per_curve_diff_K": {
+          "LANGER2018_Abb2-01": -0.2622,
+          "LANGER2018_Abb2-02": -0.1725,
+          "LANGER2018_Abb2-03": 0.1217,
+          "LANGER2018_Abb2-04": -0.1975,
+          "LANGER2018_Abb2-05": -0.1237,
+          "LANGER2018_Abb2-06": 0.06,
+          "MANITOBA_WORKSHOP_coffee": -1.0018
+        },
+        "count_curves_C1_lower": 5,
+        "n_curves": 7,
+        "interval_mean_diff_95": [
+          -0.5210117268661341,
+          -0.020417507829597923
+        ],
+        "interval_method": "bootstrap over 7 curves, 1000 resamples, seed 0"
+      }
+    },
+    "B_loso|Sedlacek|A": {
+      "C0": {
+        "n_curves": 1,
+        "mean_rms_K": 7.207460208580466,
+        "per_curve_rms_K": {
+          "SEDLACEK2010_Fig1": 7.2075
+        },
+        "per_source_mean_rms_K": {
+          "Sedlacek": 7.207460208580466
+        },
+        "interval_mean_rms_K_95": [
+          4.126168575566362,
+          9.26034919656161
+        ],
+        "interval_method": "within-curve block bootstrap over time points, block length 3, 1000 resamples, seed 0; not comparable to between-curve intervals"
+      },
+      "C1": {
+        "n_curves": 1,
+        "mean_rms_K": 7.1953266475423625,
+        "per_curve_rms_K": {
+          "SEDLACEK2010_Fig1": 7.1953
+        },
+        "per_source_mean_rms_K": {
+          "Sedlacek": 7.1953266475423625
+        },
+        "interval_mean_rms_K_95": [
+          4.047117140293438,
+          9.08480542667195
+        ],
+        "interval_method": "within-curve block bootstrap over time points, block length 3, 1000 resamples, seed 0; not comparable to between-curve intervals"
+      },
+      "paired_C1_minus_C0": {
+        "mean_diff_C1_minus_C0_K": -0.01213356103810348,
+        "per_curve_diff_K": {
+          "SEDLACEK2010_Fig1": -0.0121
+        },
+        "count_curves_C1_lower": 1,
+        "n_curves": 1,
+        "interval_mean_diff_95": [
+          -0.10259943764913082,
+          0.018007132002599846
+        ],
+        "interval_method": "within-curve paired block bootstrap, block length 3, 1000 resamples, seed 0; not comparable to between-curve intervals"
+      }
+    },
+    "B_loso|Manitoba|A": {
+      "C0": {
+        "n_curves": 1,
+        "mean_rms_K": 10.770195169403372,
+        "per_curve_rms_K": {
+          "MANITOBA_WORKSHOP_coffee": 10.7702
+        },
+        "per_source_mean_rms_K": {
+          "Manitoba": 10.770195169403372
+        },
+        "interval_mean_rms_K_95": [
+          4.834021457952117,
+          14.543391900928642
+        ],
+        "interval_method": "within-curve block bootstrap over time points, block length 3, 1000 resamples, seed 0; not comparable to between-curve intervals"
+      },
+      "C1": {
+        "n_curves": 1,
+        "mean_rms_K": 11.0355979292303,
+        "per_curve_rms_K": {
+          "MANITOBA_WORKSHOP_coffee": 11.0356
+        },
+        "per_source_mean_rms_K": {
+          "Manitoba": 11.0355979292303
+        },
+        "interval_mean_rms_K_95": [
+          5.018849957376175,
+          14.539453552522797
+        ],
+        "interval_method": "within-curve block bootstrap over time points, block length 3, 1000 resamples, seed 0; not comparable to between-curve intervals"
+      },
+      "paired_C1_minus_C0": {
+        "mean_diff_C1_minus_C0_K": 0.2654027598269284,
+        "per_curve_diff_K": {
+          "MANITOBA_WORKSHOP_coffee": 0.2654
+        },
+        "count_curves_C1_lower": 0,
+        "n_curves": 1,
+        "interval_mean_diff_95": [
+          0.17130769126348788,
+          0.4383200080427585
+        ],
+        "interval_method": "within-curve paired block bootstrap, block length 3, 1000 resamples, seed 0; not comparable to between-curve intervals"
+      }
+    },
+    "B_loso|Langer|A": {
+      "C0": {
+        "n_curves": 6,
+        "mean_rms_K": 11.230933067255725,
+        "per_curve_rms_K": {
+          "LANGER2018_Abb2-01": 8.9136,
+          "LANGER2018_Abb2-02": 11.0185,
+          "LANGER2018_Abb2-03": 14.0512,
+          "LANGER2018_Abb2-04": 10.9631,
+          "LANGER2018_Abb2-05": 10.3842,
+          "LANGER2018_Abb2-06": 12.055
+        },
+        "per_source_mean_rms_K": {
+          "Langer": 11.230933067255725
+        },
+        "interval_mean_rms_K_95": [
+          10.086966404206274,
+          12.592893421802705
+        ],
+        "interval_method": "bootstrap over 6 curves, 1000 resamples, seed 0"
+      },
+      "C1": {
+        "n_curves": 6,
+        "mean_rms_K": 10.728423797701957,
+        "per_curve_rms_K": {
+          "LANGER2018_Abb2-01": 8.2121,
+          "LANGER2018_Abb2-02": 10.4247,
+          "LANGER2018_Abb2-03": 13.8069,
+          "LANGER2018_Abb2-04": 10.3419,
+          "LANGER2018_Abb2-05": 9.8477,
+          "LANGER2018_Abb2-06": 11.7374
+        },
+        "per_source_mean_rms_K": {
+          "Langer": 10.728423797701957
+        },
+        "interval_mean_rms_K_95": [
+          9.384859839118993,
+          12.184568195421479
+        ],
+        "interval_method": "bootstrap over 6 curves, 1000 resamples, seed 0"
+      },
+      "paired_C1_minus_C0": {
+        "mean_diff_C1_minus_C0_K": -0.5025092695537673,
+        "per_curve_diff_K": {
+          "LANGER2018_Abb2-01": -0.7015,
+          "LANGER2018_Abb2-02": -0.5938,
+          "LANGER2018_Abb2-03": -0.2444,
+          "LANGER2018_Abb2-04": -0.6213,
+          "LANGER2018_Abb2-05": -0.5365,
+          "LANGER2018_Abb2-06": -0.3176
+        },
+        "count_curves_C1_lower": 6,
+        "n_curves": 6,
+        "interval_mean_diff_95": [
+          -0.629705449542687,
+          -0.3680784827973553
+        ],
+        "interval_method": "bootstrap over 6 curves, 1000 resamples, seed 0"
+      }
+    },
+    "B_loso|Sedlacek|B": {
+      "C0": {
+        "n_curves": 1,
+        "mean_rms_K": 7.201424139018184,
+        "per_curve_rms_K": {
+          "SEDLACEK2010_Fig1": 7.2014
+        },
+        "per_source_mean_rms_K": {
+          "Sedlacek": 7.201424139018184
+        },
+        "interval_mean_rms_K_95": [
+          4.091822899080438,
+          9.25014375690234
+        ],
+        "interval_method": "within-curve block bootstrap over time points, block length 3, 1000 resamples, seed 0; not comparable to between-curve intervals"
+      },
+      "C1": {
+        "n_curves": 1,
+        "mean_rms_K": 7.1895921144448005,
+        "per_curve_rms_K": {
+          "SEDLACEK2010_Fig1": 7.1896
+        },
+        "per_source_mean_rms_K": {
+          "Sedlacek": 7.1895921144448005
+        },
+        "interval_mean_rms_K_95": [
+          3.9175436458197272,
+          9.142850088829308
+        ],
+        "interval_method": "within-curve block bootstrap over time points, block length 3, 1000 resamples, seed 0; not comparable to between-curve intervals"
+      },
+      "paired_C1_minus_C0": {
+        "mean_diff_C1_minus_C0_K": -0.011832024573383393,
+        "per_curve_diff_K": {
+          "SEDLACEK2010_Fig1": -0.0118
+        },
+        "count_curves_C1_lower": 1,
+        "n_curves": 1,
+        "interval_mean_diff_95": [
+          -0.21696971795954312,
+          0.06255507256077131
+        ],
+        "interval_method": "within-curve paired block bootstrap, block length 3, 1000 resamples, seed 0; not comparable to between-curve intervals"
+      }
+    },
+    "B_loso|Manitoba|B": {
+      "C0": {
+        "n_curves": 1,
+        "mean_rms_K": 10.556890010016069,
+        "per_curve_rms_K": {
+          "MANITOBA_WORKSHOP_coffee": 10.5569
+        },
+        "per_source_mean_rms_K": {
+          "Manitoba": 10.556890010016069
+        },
+        "interval_mean_rms_K_95": [
+          4.804911729463486,
+          14.225175424884144
+        ],
+        "interval_method": "within-curve block bootstrap over time points, block length 3, 1000 resamples, seed 0; not comparable to between-curve intervals"
+      },
+      "C1": {
+        "n_curves": 1,
+        "mean_rms_K": 10.928907020825744,
+        "per_curve_rms_K": {
+          "MANITOBA_WORKSHOP_coffee": 10.9289
+        },
+        "per_source_mean_rms_K": {
+          "Manitoba": 10.928907020825744
+        },
+        "interval_mean_rms_K_95": [
+          5.005649871668931,
+          14.40006500377116
+        ],
+        "interval_method": "within-curve block bootstrap over time points, block length 3, 1000 resamples, seed 0; not comparable to between-curve intervals"
+      },
+      "paired_C1_minus_C0": {
+        "mean_diff_C1_minus_C0_K": 0.37201701080967453,
+        "per_curve_diff_K": {
+          "MANITOBA_WORKSHOP_coffee": 0.372
+        },
+        "count_curves_C1_lower": 0,
+        "n_curves": 1,
+        "interval_mean_diff_95": [
+          0.21443644178069832,
+          0.5335103048090701
+        ],
+        "interval_method": "within-curve paired block bootstrap, block length 3, 1000 resamples, seed 0; not comparable to between-curve intervals"
+      }
+    },
+    "B_loso|Langer|B": {
+      "C0": {
+        "n_curves": 6,
+        "mean_rms_K": 10.8058611787504,
+        "per_curve_rms_K": {
+          "LANGER2018_Abb2-01": 8.4567,
+          "LANGER2018_Abb2-02": 10.581,
+          "LANGER2018_Abb2-03": 13.6654,
+          "LANGER2018_Abb2-04": 10.5216,
+          "LANGER2018_Abb2-05": 9.9535,
+          "LANGER2018_Abb2-06": 11.657
+        },
+        "per_source_mean_rms_K": {
+          "Langer": 10.8058611787504
+        },
+        "interval_mean_rms_K_95": [
+          9.643931382755758,
+          12.188295300867212
+        ],
+        "interval_method": "bootstrap over 6 curves, 1000 resamples, seed 0"
+      },
+      "C1": {
+        "n_curves": 6,
+        "mean_rms_K": 10.145863540485054,
+        "per_curve_rms_K": {
+          "LANGER2018_Abb2-01": 7.6323,
+          "LANGER2018_Abb2-02": 9.8429,
+          "LANGER2018_Abb2-03": 13.2217,
+          "LANGER2018_Abb2-04": 9.7589,
+          "LANGER2018_Abb2-05": 9.266,
+          "LANGER2018_Abb2-06": 11.1532
+        },
+        "per_source_mean_rms_K": {
+          "Langer": 10.145863540485054
+        },
+        "interval_mean_rms_K_95": [
+          8.80360902145888,
+          11.60066157626825
+        ],
+        "interval_method": "bootstrap over 6 curves, 1000 resamples, seed 0"
+      },
+      "paired_C1_minus_C0": {
+        "mean_diff_C1_minus_C0_K": -0.6599976382653455,
+        "per_curve_diff_K": {
+          "LANGER2018_Abb2-01": -0.8244,
+          "LANGER2018_Abb2-02": -0.738,
+          "LANGER2018_Abb2-03": -0.4437,
+          "LANGER2018_Abb2-04": -0.7627,
+          "LANGER2018_Abb2-05": -0.6874,
+          "LANGER2018_Abb2-06": -0.5038
+        },
+        "count_curves_C1_lower": 6,
+        "n_curves": 6,
+        "interval_mean_diff_95": [
+          -0.7668259038788369,
+          -0.5471998692731308
+        ],
+        "interval_method": "bootstrap over 6 curves, 1000 resamples, seed 0"
+      }
+    }
+  },
+  "fitted_parameters": {
+    "in_sample_reference|Sedlacek|A|C0": {
+      "fit_curves": [
+        "SEDLACEK2010_Fig1"
+      ],
+      "params": {
+        "k": 0.02649543286553719
+      },
+      "fit_rms_on_fit_set_K": 1.2608,
+      "starts_total": 21,
+      "starts_converged_within_1e-6": 21,
+      "parameters_at_bound": []
+    },
+    "in_sample_reference|Sedlacek|A|C1": {
+      "fit_curves": [
+        "SEDLACEK2010_Fig1"
+      ],
+      "params": {
+        "kc": 0.00028187612436524897,
+        "x": 2.1823972144051766
+      },
+      "fit_rms_on_fit_set_K": 0.3275,
+      "starts_total": 21,
+      "starts_converged_within_1e-6": 21,
+      "parameters_at_bound": []
+    },
+    "in_sample_reference|Sedlacek|B|C0": {
+      "fit_curves": [
+        "SEDLACEK2010_Fig1"
+      ],
+      "params": {
+        "k": 0.02978136334215473,
+        "Tr_fitted_C": 24.999999999999996,
+        "Tr_bounds_C": [
+          15.0,
+          25.0
+        ]
+      },
+      "fit_rms_on_fit_set_K": 1.1239,
+      "starts_total": 21,
+      "starts_converged_within_1e-6": 21,
+      "parameters_at_bound": [
+        "Tr"
+      ]
+    },
+    "in_sample_reference|Sedlacek|B|C1": {
+      "fit_curves": [
+        "SEDLACEK2010_Fig1"
+      ],
+      "params": {
+        "kc": 0.0008938214424470254,
+        "x": 1.940267917497158,
+        "Tr_fitted_C": 24.999999999999133,
+        "Tr_bounds_C": [
+          15.0,
+          25.0
+        ]
+      },
+      "fit_rms_on_fit_set_K": 0.3232,
+      "starts_total": 21,
+      "starts_converged_within_1e-6": 21,
+      "parameters_at_bound": [
+        "Tr"
+      ]
+    },
+    "A_transfer|Sedlacek->Manitoba+Langer|A|C0": {
+      "fit_curves": [
+        "SEDLACEK2010_Fig1"
+      ],
+      "params": {
+        "k": 0.02649543278191068
+      },
+      "fit_rms_on_fit_set_K": 1.2608,
+      "starts_total": 21,
+      "starts_converged_within_1e-6": 21,
+      "parameters_at_bound": []
+    },
+    "A_transfer|Sedlacek->Manitoba+Langer|A|C1": {
+      "fit_curves": [
+        "SEDLACEK2010_Fig1"
+      ],
+      "params": {
+        "kc": 0.0002818748303862672,
+        "x": 2.1823984063329664
+      },
+      "fit_rms_on_fit_set_K": 0.3275,
+      "starts_total": 21,
+      "starts_converged_within_1e-6": 21,
+      "parameters_at_bound": []
+    },
+    "A_transfer|Sedlacek->Manitoba+Langer|B|C0": {
+      "fit_curves": [
+        "SEDLACEK2010_Fig1"
+      ],
+      "params": {
+        "k": 0.02978136329775882,
+        "Tr_fitted_C": 24.999999999999996,
+        "Tr_bounds_C": [
+          15.0,
+          25.0
+        ]
+      },
+      "fit_rms_on_fit_set_K": 1.1239,
+      "starts_total": 21,
+      "starts_converged_within_1e-6": 21,
+      "parameters_at_bound": [
+        "Tr"
+      ]
+    },
+    "A_transfer|Sedlacek->Manitoba+Langer|B|C1": {
+      "fit_curves": [
+        "SEDLACEK2010_Fig1"
+      ],
+      "params": {
+        "kc": 0.0008938214606658605,
+        "x": 1.940267912078961,
+        "Tr_fitted_C": 24.999999999999996,
+        "Tr_bounds_C": [
+          15.0,
+          25.0
+        ]
+      },
+      "fit_rms_on_fit_set_K": 0.3232,
+      "starts_total": 21,
+      "starts_converged_within_1e-6": 21,
+      "parameters_at_bound": [
+        "Tr"
+      ]
+    },
+    "B_leave_one_source_out|Sedlacek|A|C0": {
+      "fit_curves": [
+        "MANITOBA_WORKSHOP_coffee",
+        "LANGER2018_Abb2-01",
+        "LANGER2018_Abb2-02",
+        "LANGER2018_Abb2-03",
+        "LANGER2018_Abb2-04",
+        "LANGER2018_Abb2-05",
+        "LANGER2018_Abb2-06"
+      ],
+      "params": {
+        "k": 0.0139621346113868
+      },
+      "fit_rms_on_fit_set_K": 2.7542,
+      "starts_total": 21,
+      "starts_converged_within_1e-6": 21,
+      "parameters_at_bound": []
+    },
+    "B_leave_one_source_out|Sedlacek|A|C1": {
+      "fit_curves": [
+        "MANITOBA_WORKSHOP_coffee",
+        "LANGER2018_Abb2-01",
+        "LANGER2018_Abb2-02",
+        "LANGER2018_Abb2-03",
+        "LANGER2018_Abb2-04",
+        "LANGER2018_Abb2-05",
+        "LANGER2018_Abb2-06"
+      ],
+      "params": {
+        "kc": 0.005054074951758799,
+        "x": 1.2565075310067642
+      },
+      "fit_rms_on_fit_set_K": 2.7511,
+      "starts_total": 21,
+      "starts_converged_within_1e-6": 21,
+      "parameters_at_bound": []
+    },
+    "B_leave_one_source_out|Manitoba|A|C0": {
+      "fit_curves": [
+        "SEDLACEK2010_Fig1",
+        "LANGER2018_Abb2-01",
+        "LANGER2018_Abb2-02",
+        "LANGER2018_Abb2-03",
+        "LANGER2018_Abb2-04",
+        "LANGER2018_Abb2-05",
+        "LANGER2018_Abb2-06"
+      ],
+      "params": {
+        "k": 0.013690739116251956
+      },
+      "fit_rms_on_fit_set_K": 2.0417,
+      "starts_total": 21,
+      "starts_converged_within_1e-6": 21,
+      "parameters_at_bound": []
+    },
+    "B_leave_one_source_out|Manitoba|A|C1": {
+      "fit_curves": [
+        "SEDLACEK2010_Fig1",
+        "LANGER2018_Abb2-01",
+        "LANGER2018_Abb2-02",
+        "LANGER2018_Abb2-03",
+        "LANGER2018_Abb2-04",
+        "LANGER2018_Abb2-05",
+        "LANGER2018_Abb2-06"
+      ],
+      "params": {
+        "kc": 0.09928446475411327,
+        "x": 0.5000000000000018
+      },
+      "fit_rms_on_fit_set_K": 2.0127,
+      "starts_total": 21,
+      "starts_converged_within_1e-6": 21,
+      "parameters_at_bound": [
+        "x"
+      ]
+    },
+    "B_leave_one_source_out|Langer|A|C0": {
+      "fit_curves": [
+        "SEDLACEK2010_Fig1",
+        "MANITOBA_WORKSHOP_coffee"
+      ],
+      "params": {
+        "k": 0.030056817467022327
+      },
+      "fit_rms_on_fit_set_K": 2.0833,
+      "starts_total": 21,
+      "starts_converged_within_1e-6": 21,
+      "parameters_at_bound": []
+    },
+    "B_leave_one_source_out|Langer|A|C1": {
+      "fit_curves": [
+        "SEDLACEK2010_Fig1",
+        "MANITOBA_WORKSHOP_coffee"
+      ],
+      "params": {
+        "kc": 0.0002932933768932918,
+        "x": 2.207318693003242
+      },
+      "fit_rms_on_fit_set_K": 1.3738,
+      "starts_total": 21,
+      "starts_converged_within_1e-6": 21,
+      "parameters_at_bound": []
+    },
+    "B_leave_one_source_out|Sedlacek|B|C0": {
+      "fit_curves": [
+        "MANITOBA_WORKSHOP_coffee",
+        "LANGER2018_Abb2-01",
+        "LANGER2018_Abb2-02",
+        "LANGER2018_Abb2-03",
+        "LANGER2018_Abb2-04",
+        "LANGER2018_Abb2-05",
+        "LANGER2018_Abb2-06"
+      ],
+      "params": {
+        "k": 0.015517536652644312,
+        "Tr_fitted_C": 25.238571428571426,
+        "Tr_bounds_C": [
+          15.23857142857143,
+          25.23857142857143
+        ]
+      },
+      "fit_rms_on_fit_set_K": 2.6963,
+      "starts_total": 21,
+      "starts_converged_within_1e-6": 21,
+      "parameters_at_bound": [
+        "Tr"
+      ]
+    },
+    "B_leave_one_source_out|Sedlacek|B|C1": {
+      "fit_curves": [
+        "MANITOBA_WORKSHOP_coffee",
+        "LANGER2018_Abb2-01",
+        "LANGER2018_Abb2-02",
+        "LANGER2018_Abb2-03",
+        "LANGER2018_Abb2-04",
+        "LANGER2018_Abb2-05",
+        "LANGER2018_Abb2-06"
+      ],
+      "params": {
+        "kc": 0.0004148322617060558,
+        "x": 1.8467200872567884,
+        "Tr_fitted_C": 15.23857142859007,
+        "Tr_bounds_C": [
+          15.23857142857143,
+          25.23857142857143
+        ]
+      },
+      "fit_rms_on_fit_set_K": 2.6793,
+      "starts_total": 21,
+      "starts_converged_within_1e-6": 21,
+      "parameters_at_bound": [
+        "Tr"
+      ]
+    },
+    "B_leave_one_source_out|Manitoba|B|C0": {
+      "fit_curves": [
+        "SEDLACEK2010_Fig1",
+        "LANGER2018_Abb2-01",
+        "LANGER2018_Abb2-02",
+        "LANGER2018_Abb2-03",
+        "LANGER2018_Abb2-04",
+        "LANGER2018_Abb2-05",
+        "LANGER2018_Abb2-06"
+      ],
+      "params": {
+        "k": 0.012497961090587794,
+        "Tr_fitted_C": 15.000000000000002,
+        "Tr_bounds_C": [
+          15.0,
+          25.0
+        ]
+      },
+      "fit_rms_on_fit_set_K": 2.035,
+      "starts_total": 21,
+      "starts_converged_within_1e-6": 21,
+      "parameters_at_bound": [
+        "Tr"
+      ]
+    },
+    "B_leave_one_source_out|Manitoba|B|C1": {
+      "fit_curves": [
+        "SEDLACEK2010_Fig1",
+        "LANGER2018_Abb2-01",
+        "LANGER2018_Abb2-02",
+        "LANGER2018_Abb2-03",
+        "LANGER2018_Abb2-04",
+        "LANGER2018_Abb2-05",
+        "LANGER2018_Abb2-06"
+      ],
+      "params": {
+        "kc": 0.09485163470113932,
+        "x": 0.5000000000000311,
+        "Tr_fitted_C": 15.000000000000076,
+        "Tr_bounds_C": [
+          15.0,
+          25.0
+        ]
+      },
+      "fit_rms_on_fit_set_K": 2.0116,
+      "starts_total": 21,
+      "starts_converged_within_1e-6": 21,
+      "parameters_at_bound": [
+        "x",
+        "Tr"
+      ]
+    },
+    "B_leave_one_source_out|Langer|B|C0": {
+      "fit_curves": [
+        "SEDLACEK2010_Fig1",
+        "MANITOBA_WORKSHOP_coffee"
+      ],
+      "params": {
+        "k": 0.033805495323053235,
+        "Tr_fitted_C": 25.834999999999997,
+        "Tr_bounds_C": [
+          15.835,
+          25.835
+        ]
+      },
+      "fit_rms_on_fit_set_K": 1.7532,
+      "starts_total": 21,
+      "starts_converged_within_1e-6": 21,
+      "parameters_at_bound": [
+        "Tr"
+      ]
+    },
+    "B_leave_one_source_out|Langer|B|C1": {
+      "fit_curves": [
+        "SEDLACEK2010_Fig1",
+        "MANITOBA_WORKSHOP_coffee"
+      ],
+      "params": {
+        "kc": 7.884063060494562e-05,
+        "x": 2.481342355009628,
+        "Tr_fitted_C": 15.835001435773556,
+        "Tr_bounds_C": [
+          15.835,
+          25.835
+        ]
+      },
+      "fit_rms_on_fit_set_K": 0.9767,
+      "starts_total": 21,
+      "starts_converged_within_1e-6": 21,
+      "parameters_at_bound": []
+    }
+  },
+  "decision_rule": {
+    "A": {
+      "C0_early_residual_positive_on_held_out": {
+        "mean_0_10_K": -3.196504068105209,
+        "n_positive": 1,
+        "n_curves": 7,
+        "pass": false
+      },
+      "C1_beats_C0_protocol_A": {
+        "C0_mean_rms_K": 8.334859348485987,
+        "C1_mean_rms_K": 8.141815995157726,
+        "pass": true
+      },
+      "C1_beats_C0_in_at_least_2_of_3_folds": {
+        "folds_where_C1_lower": {
+          "Sedlacek": true,
+          "Manitoba": false,
+          "Langer": true
+        },
+        "pass": true
+      },
+      "accuracy_C1_under_0.5K": {
+        "C1_Manitoba_rms_K": 2.6589534094770912,
+        "C1_Langer_mean_rms_K": 9.055626426104498,
+        "pass": false
+      },
+      "C0_already_adequate_under_0.5K_held_out": {
+        "C0_protocol_A_mean_rms_K": 8.334859348485987,
+        "adequate": false
+      }
+    },
+    "B": {
+      "C0_early_residual_positive_on_held_out": {
+        "mean_0_10_K": -3.3765696632518454,
+        "n_positive": 1,
+        "n_curves": 7,
+        "pass": false
+      },
+      "C1_beats_C0_protocol_A": {
+        "C0_mean_rms_K": 8.252434875574533,
+        "C1_mean_rms_K": 8.027305141532308,
+        "pass": true
+      },
+      "C1_beats_C0_in_at_least_2_of_3_folds": {
+        "folds_where_C1_lower": {
+          "Sedlacek": true,
+          "Manitoba": false,
+          "Langer": true
+        },
+        "pass": true
+      },
+      "accuracy_C1_under_0.5K": {
+        "C1_Manitoba_rms_K": 1.8832143949131583,
+        "C1_Langer_mean_rms_K": 9.051320265968835,
+        "pass": false
+      },
+      "C0_already_adequate_under_0.5K_held_out": {
+        "C0_protocol_A_mean_rms_K": 8.252434875574533,
+        "adequate": false
+      }
+    }
+  },
+  "c1_closed_form_validation": {
+    "max_abs_diff_K": 1.6096896331418975e-06,
+    "per_curve_max_abs_diff_K": {
+      "SEDLACEK2010_Fig1": 1.070044774564849e-06,
+      "MANITOBA_WORKSHOP_coffee": 1.6096896331418975e-06,
+      "LANGER2018_Abb2-01": 1.545756930454445e-06,
+      "LANGER2018_Abb2-02": 1.5593457476370531e-06,
+      "LANGER2018_Abb2-03": 1.6091205452539725e-06,
+      "LANGER2018_Abb2-04": 1.560279542900389e-06,
+      "LANGER2018_Abb2-05": 1.5673790301207191e-06,
+      "LANGER2018_Abb2-06": 1.5982628269739507e-06
+    },
+    "kc": 0.0002818757710119804,
+    "x": 2.1823975398841506
+  },
+  "sample_size_gap": "8 curves from 3 sources; Langer six curves are one lab and one protocol, not six sessions."
+}

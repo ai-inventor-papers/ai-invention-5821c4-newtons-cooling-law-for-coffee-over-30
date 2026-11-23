@@ -1,0 +1,169 @@
+05:24:41 | INFO | Loaded 8 curves from full_data_out.json
+05:24:41 | INFO | Curves: Sedlacek 1, Manitoba 1, Langer 6; partial curves: ['SEDLACEK2010_Fig1', 'MANITOBA_WORKSHOP_coffee']
+05:24:41 | INFO |   SEDLACEK2010_Fig1: n=7 in window, last t=25.6 min, T0=80.25 C, room=20.00 C (default_20C), digitisation err=0.4
+05:24:41 | INFO |   MANITOBA_WORKSHOP_coffee: n=9 in window, last t=28.0 min, T0=85.56 C, room=21.67 C (recorded), digitisation err=None
+05:24:41 | INFO |   LANGER2018_Abb2-01: n=30 in window, last t=30.0 min, T0=80.17 C, room=20.00 C (default_20C), digitisation err=0.2
+05:24:41 | INFO |   LANGER2018_Abb2-02: n=30 in window, last t=30.0 min, T0=80.60 C, room=20.00 C (default_20C), digitisation err=0.2
+05:24:41 | INFO |   LANGER2018_Abb2-03: n=30 in window, last t=30.0 min, T0=82.28 C, room=20.00 C (default_20C), digitisation err=0.2
+05:24:41 | INFO |   LANGER2018_Abb2-04: n=30 in window, last t=30.0 min, T0=80.63 C, room=20.00 C (default_20C), digitisation err=0.2
+05:24:41 | INFO |   LANGER2018_Abb2-05: n=30 in window, last t=30.0 min, T0=80.86 C, room=20.00 C (default_20C), digitisation err=0.2
+05:24:41 | INFO |   LANGER2018_Abb2-06: n=30 in window, last t=30.0 min, T0=81.90 C, room=20.00 C (default_20C), digitisation err=0.2
+05:24:41 | INFO | in_sample_reference Sedlacek amb A C0: params {'k': 0.02649543286553719} fit RMS 1.261 K, converged starts 21/21
+05:24:41 | INFO | in_sample_reference Sedlacek amb A C1: params {'kc': 0.00028187612436524897, 'x': 2.1823972144051766} fit RMS 0.328 K, converged starts 21/21
+05:24:42 | WARNING | C0/B on ['SEDLACEK2010_Fig1']: parameters at bound ['Tr']
+05:24:42 | INFO | in_sample_reference Sedlacek amb B C0: params {'k': 0.02978136334215473, 'Tr_fitted_C': 24.999999999999996, 'Tr_bounds_C': [15.0, 25.0]} fit RMS 1.124 K, converged starts 21/21
+05:24:42 | WARNING | C1/B on ['SEDLACEK2010_Fig1']: parameters at bound ['Tr']
+05:24:42 | INFO | in_sample_reference Sedlacek amb B C1: params {'kc': 0.0008938214424470254, 'x': 1.940267917497158, 'Tr_fitted_C': 24.999999999999133, 'Tr_bounds_C': [15.0, 25.0]} fit RMS 0.323 K, converged starts 21/21
+05:24:42 | INFO | A_transfer Sedlacek->Manitoba+Langer amb A C0: params {'k': 0.02649543278191068} fit RMS 1.261 K, converged starts 21/21
+05:24:43 | INFO | A_transfer Sedlacek->Manitoba+Langer amb A C1: params {'kc': 0.0002818748303862672, 'x': 2.1823984063329664} fit RMS 0.328 K, converged starts 21/21
+05:24:43 | WARNING | C0/B on ['SEDLACEK2010_Fig1']: parameters at bound ['Tr']
+05:24:43 | INFO | A_transfer Sedlacek->Manitoba+Langer amb B C0: params {'k': 0.02978136329775882, 'Tr_fitted_C': 24.999999999999996, 'Tr_bounds_C': [15.0, 25.0]} fit RMS 1.124 K, converged starts 21/21
+05:24:43 | WARNING | C1/B on ['SEDLACEK2010_Fig1']: parameters at bound ['Tr']
+05:24:43 | INFO | A_transfer Sedlacek->Manitoba+Langer amb B C1: params {'kc': 0.0008938214606658605, 'x': 1.940267912078961, 'Tr_fitted_C': 24.999999999999996, 'Tr_bounds_C': [15.0, 25.0]} fit RMS 0.323 K, converged starts 21/21
+05:24:43 | INFO | B_leave_one_source_out Sedlacek amb A C0: params {'k': 0.0139621346113868} fit RMS 2.754 K, converged starts 21/21
+05:24:44 | INFO | B_leave_one_source_out Sedlacek amb A C1: params {'kc': 0.005054074951758799, 'x': 1.2565075310067642} fit RMS 2.751 K, converged starts 21/21
+05:24:44 | INFO | B_leave_one_source_out Manitoba amb A C0: params {'k': 0.013690739116251956} fit RMS 2.042 K, converged starts 21/21
+05:24:45 | WARNING | C1/A on ['SEDLACEK2010_Fig1', 'LANGER2018_Abb2-01', 'LANGER2018_Abb2-02', 'LANGER2018_Abb2-03', 'LANGER2018_Abb2-04', 'LANGER2018_Abb2-05', 'LANGER2018_Abb2-06']: parameters at bound ['x']
+05:24:45 | INFO | B_leave_one_source_out Manitoba amb A C1: params {'kc': 0.09928446475411327, 'x': 0.5000000000000018} fit RMS 2.013 K, converged starts 21/21
+05:24:45 | INFO | B_leave_one_source_out Langer amb A C0: params {'k': 0.030056817467022327} fit RMS 2.083 K, converged starts 21/21
+05:24:45 | INFO | B_leave_one_source_out Langer amb A C1: params {'kc': 0.0002932933768932918, 'x': 2.207318693003242} fit RMS 1.374 K, converged starts 21/21
+05:24:45 | WARNING | C0/B on ['MANITOBA_WORKSHOP_coffee', 'LANGER2018_Abb2-01', 'LANGER2018_Abb2-02', 'LANGER2018_Abb2-03', 'LANGER2018_Abb2-04', 'LANGER2018_Abb2-05', 'LANGER2018_Abb2-06']: parameters at bound ['Tr']
+05:24:45 | INFO | B_leave_one_source_out Sedlacek amb B C0: params {'k': 0.015517536652644312, 'Tr_fitted_C': 25.238571428571426, 'Tr_bounds_C': [15.23857142857143, 25.23857142857143]} fit RMS 2.696 K, converged starts 21/21
+05:24:47 | WARNING | C1/B on ['MANITOBA_WORKSHOP_coffee', 'LANGER2018_Abb2-01', 'LANGER2018_Abb2-02', 'LANGER2018_Abb2-03', 'LANGER2018_Abb2-04', 'LANGER2018_Abb2-05', 'LANGER2018_Abb2-06']: parameters at bound ['Tr']
+05:24:47 | INFO | B_leave_one_source_out Sedlacek amb B C1: params {'kc': 0.0004148322617060558, 'x': 1.8467200872567884, 'Tr_fitted_C': 15.23857142859007, 'Tr_bounds_C': [15.23857142857143, 25.23857142857143]} fit RMS 2.679 K, converged starts 21/21
+05:24:47 | WARNING | C0/B on ['SEDLACEK2010_Fig1', 'LANGER2018_Abb2-01', 'LANGER2018_Abb2-02', 'LANGER2018_Abb2-03', 'LANGER2018_Abb2-04', 'LANGER2018_Abb2-05', 'LANGER2018_Abb2-06']: parameters at bound ['Tr']
+05:24:47 | INFO | B_leave_one_source_out Manitoba amb B C0: params {'k': 0.012497961090587794, 'Tr_fitted_C': 15.000000000000002, 'Tr_bounds_C': [15.0, 25.0]} fit RMS 2.035 K, converged starts 21/21
+05:24:48 | WARNING | C1/B on ['SEDLACEK2010_Fig1', 'LANGER2018_Abb2-01', 'LANGER2018_Abb2-02', 'LANGER2018_Abb2-03', 'LANGER2018_Abb2-04', 'LANGER2018_Abb2-05', 'LANGER2018_Abb2-06']: parameters at bound ['x', 'Tr']
+05:24:48 | INFO | B_leave_one_source_out Manitoba amb B C1: params {'kc': 0.09485163470113932, 'x': 0.5000000000000311, 'Tr_fitted_C': 15.000000000000076, 'Tr_bounds_C': [15.0, 25.0]} fit RMS 2.012 K, converged starts 21/21
+05:24:48 | WARNING | C0/B on ['SEDLACEK2010_Fig1', 'MANITOBA_WORKSHOP_coffee']: parameters at bound ['Tr']
+05:24:48 | INFO | B_leave_one_source_out Langer amb B C0: params {'k': 0.033805495323053235, 'Tr_fitted_C': 25.834999999999997, 'Tr_bounds_C': [15.835, 25.835]} fit RMS 1.753 K, converged starts 21/21
+05:24:49 | INFO | B_leave_one_source_out Langer amb B C1: params {'kc': 7.884063060494562e-05, 'x': 2.481342355009628, 'Tr_fitted_C': 15.835001435773556, 'Tr_bounds_C': [15.835, 25.835]} fit RMS 0.977 K, converged starts 21/21
+05:24:49 | INFO | C1 closed form vs solve_ivp: max abs difference 1.61e-06 K
+05:24:49 | INFO | Decision rule (ambient A): {
+ "C0_early_residual_positive_on_held_out": {
+  "mean_0_10_K": -3.196504068105209,
+  "n_positive": 1,
+  "n_curves": 7,
+  "pass": false
+ },
+ "C1_beats_C0_protocol_A": {
+  "C0_mean_rms_K": 8.334859348485987,
+  "C1_mean_rms_K": 8.141815995157726,
+  "pass": true
+ },
+ "C1_beats_C0_in_at_least_2_of_3_folds": {
+  "folds_where_C1_lower": {
+   "Sedlacek": true,
+   "Manitoba": false,
+   "Langer": true
+  },
+  "pass": true
+ },
+ "accuracy_C1_under_0.5K": {
+  "C1_Manitoba_rms_K": 2.6589534094770912,
+  "C1_Langer_mean_rms_K": 9.055626426104498,
+  "pass": false
+ },
+ "C0_already_adequate_under_0.5K_held_out": {
+  "C0_protocol_A_mean_rms_K": 8.334859348485987,
+  "adequate": false
+ }
+}
+05:24:49 | INFO | Decision rule (ambient B): {
+ "C0_early_residual_positive_on_held_out": {
+  "mean_0_10_K": -3.3765696632518454,
+  "n_positive": 1,
+  "n_curves": 7,
+  "pass": false
+ },
+ "C1_beats_C0_protocol_A": {
+  "C0_mean_rms_K": 8.252434875574533,
+  "C1_mean_rms_K": 8.027305141532308,
+  "pass": true
+ },
+ "C1_beats_C0_in_at_least_2_of_3_folds": {
+  "folds_where_C1_lower": {
+   "Sedlacek": true,
+   "Manitoba": false,
+   "Langer": true
+  },
+  "pass": true
+ },
+ "accuracy_C1_under_0.5K": {
+  "C1_Manitoba_rms_K": 1.8832143949131583,
+  "C1_Langer_mean_rms_K": 9.051320265968835,
+  "pass": false
+ },
+ "C0_already_adequate_under_0.5K_held_out": {
+  "C0_protocol_A_mean_rms_K": 8.252434875574533,
+  "adequate": false
+ }
+}
+05:24:49 | INFO | Wrote results/heldout_scores.json and results/fold_summary.json
+05:24:49 | INFO | Wrote results/method_out.json
+05:24:49 | INFO | protocol                  fold                          amb  model  curve                        RMS K    early     late
+05:24:49 | INFO | in_sample_reference       Sedlacek                      A    C0     SEDLACEK2010_Fig1            1.261    1.027   -0.455
+05:24:49 | INFO | in_sample_reference       Sedlacek                      A    C1     SEDLACEK2010_Fig1            0.328   -0.032    0.035
+05:24:49 | INFO | in_sample_reference       Sedlacek                      B    C0     SEDLACEK2010_Fig1            1.124    0.907   -0.436
+05:24:49 | INFO | in_sample_reference       Sedlacek                      B    C1     SEDLACEK2010_Fig1            0.323   -0.026    0.031
+05:24:49 | INFO | A_transfer                Sedlacek->Manitoba+Langer     A    C0     MANITOBA_WORKSHOP_coffee     3.454    2.593    3.915
+05:24:49 | INFO | A_transfer                Sedlacek->Manitoba+Langer     A    C0     LANGER2018_Abb2-01           6.864   -3.125   -7.921
+05:24:49 | INFO | A_transfer                Sedlacek->Manitoba+Langer     A    C0     LANGER2018_Abb2-02           8.951   -4.240  -10.333
+05:24:49 | INFO | A_transfer                Sedlacek->Manitoba+Langer     A    C0     LANGER2018_Abb2-03          11.927   -5.328  -13.805
+05:24:49 | INFO | A_transfer                Sedlacek->Manitoba+Langer     A    C0     LANGER2018_Abb2-04           8.896   -3.948  -10.295
+05:24:49 | INFO | A_transfer                Sedlacek->Manitoba+Langer     A    C0     LANGER2018_Abb2-05           8.309   -3.890   -9.589
+05:24:49 | INFO | A_transfer                Sedlacek->Manitoba+Langer     A    C0     LANGER2018_Abb2-06           9.944   -4.438  -11.513
+05:24:49 | INFO | A_transfer                Sedlacek->Manitoba+Langer     A    C1     MANITOBA_WORKSHOP_coffee     2.659    1.369    3.509
+05:24:49 | INFO | A_transfer                Sedlacek->Manitoba+Langer     A    C1     LANGER2018_Abb2-01           6.572   -4.490   -7.326
+05:24:49 | INFO | A_transfer                Sedlacek->Manitoba+Langer     A    C1     LANGER2018_Abb2-02           8.768   -5.679   -9.850
+05:24:49 | INFO | A_transfer                Sedlacek->Manitoba+Langer     A    C1     LANGER2018_Abb2-03          12.092   -7.061  -13.765
+05:24:49 | INFO | A_transfer                Sedlacek->Manitoba+Langer     A    C1     LANGER2018_Abb2-04           8.685   -5.392   -9.819
+05:24:49 | INFO | A_transfer                Sedlacek->Manitoba+Langer     A    C1     LANGER2018_Abb2-05           8.182   -5.374   -9.173
+05:24:49 | INFO | A_transfer                Sedlacek->Manitoba+Langer     A    C1     LANGER2018_Abb2-06          10.034   -6.103  -11.372
+05:24:49 | INFO | A_transfer                Sedlacek->Manitoba+Langer     B    C0     MANITOBA_WORKSHOP_coffee     2.885    2.345    3.068
+05:24:49 | INFO | A_transfer                Sedlacek->Manitoba+Langer     B    C0     LANGER2018_Abb2-01           6.832   -3.280   -7.879
+05:24:49 | INFO | A_transfer                Sedlacek->Manitoba+Langer     B    C0     LANGER2018_Abb2-02           8.937   -4.402  -10.307
+05:24:49 | INFO | A_transfer                Sedlacek->Manitoba+Langer     B    C0     LANGER2018_Abb2-03          11.964   -5.515  -13.840
+05:24:49 | INFO | A_transfer                Sedlacek->Manitoba+Langer     B    C0     LANGER2018_Abb2-04           8.879   -4.110  -10.270
+05:24:49 | INFO | A_transfer                Sedlacek->Manitoba+Langer     B    C0     LANGER2018_Abb2-05           8.302   -4.056   -9.572
+05:24:49 | INFO | A_transfer                Sedlacek->Manitoba+Langer     B    C0     LANGER2018_Abb2-06           9.968   -4.619  -11.535
+05:24:49 | INFO | A_transfer                Sedlacek->Manitoba+Langer     B    C1     MANITOBA_WORKSHOP_coffee     1.883    1.106    2.363
+05:24:49 | INFO | A_transfer                Sedlacek->Manitoba+Langer     B    C1     LANGER2018_Abb2-01           6.569   -4.483   -7.325
+05:24:49 | INFO | A_transfer                Sedlacek->Manitoba+Langer     B    C1     LANGER2018_Abb2-02           8.765   -5.669   -9.848
+05:24:49 | INFO | A_transfer                Sedlacek->Manitoba+Langer     B    C1     LANGER2018_Abb2-03          12.085   -7.042  -13.761
+05:24:49 | INFO | A_transfer                Sedlacek->Manitoba+Langer     B    C1     LANGER2018_Abb2-04           8.682   -5.382   -9.817
+05:24:49 | INFO | A_transfer                Sedlacek->Manitoba+Langer     B    C1     LANGER2018_Abb2-05           8.178   -5.363   -9.171
+05:24:49 | INFO | A_transfer                Sedlacek->Manitoba+Langer     B    C1     LANGER2018_Abb2-06          10.028   -6.086  -11.369
+05:24:49 | INFO | B_leave_one_source_out    Sedlacek                      A    C0     SEDLACEK2010_Fig1            7.207    3.818    9.574
+05:24:49 | INFO | B_leave_one_source_out    Sedlacek                      A    C1     SEDLACEK2010_Fig1            7.195    3.745    9.606
+05:24:49 | INFO | B_leave_one_source_out    Manitoba                      A    C0     MANITOBA_WORKSHOP_coffee    10.770    4.645   14.789
+05:24:49 | INFO | B_leave_one_source_out    Manitoba                      A    C1     MANITOBA_WORKSHOP_coffee    11.036    4.820   15.127
+05:24:49 | INFO | B_leave_one_source_out    Langer                        A    C0     LANGER2018_Abb2-01           8.914   -4.094  -10.301
+05:24:49 | INFO | B_leave_one_source_out    Langer                        A    C0     LANGER2018_Abb2-02          11.018   -5.216  -12.730
+05:24:49 | INFO | B_leave_one_source_out    Langer                        A    C0     LANGER2018_Abb2-03          14.051   -6.332  -16.269
+05:24:49 | INFO | B_leave_one_source_out    Langer                        A    C0     LANGER2018_Abb2-04          10.963   -4.925  -12.693
+05:24:49 | INFO | B_leave_one_source_out    Langer                        A    C0     LANGER2018_Abb2-05          10.384   -4.871  -11.997
+05:24:49 | INFO | B_leave_one_source_out    Langer                        A    C0     LANGER2018_Abb2-06          12.055   -5.435  -13.962
+05:24:49 | INFO | B_leave_one_source_out    Langer                        A    C1     LANGER2018_Abb2-01           8.212   -5.572   -9.161
+05:24:49 | INFO | B_leave_one_source_out    Langer                        A    C1     LANGER2018_Abb2-02          10.425   -6.775  -11.701
+05:24:49 | INFO | B_leave_one_source_out    Langer                        A    C1     LANGER2018_Abb2-03          13.807   -8.214  -15.681
+05:24:49 | INFO | B_leave_one_source_out    Langer                        A    C1     LANGER2018_Abb2-04          10.342   -6.489  -11.672
+05:24:49 | INFO | B_leave_one_source_out    Langer                        A    C1     LANGER2018_Abb2-05           9.848   -6.479  -11.035
+05:24:49 | INFO | B_leave_one_source_out    Langer                        A    C1     LANGER2018_Abb2-06          11.737   -7.243  -13.273
+05:24:49 | INFO | B_leave_one_source_out    Sedlacek                      B    C0     SEDLACEK2010_Fig1            7.201    3.786    9.587
+05:24:49 | INFO | B_leave_one_source_out    Sedlacek                      B    C1     SEDLACEK2010_Fig1            7.190    3.625    9.678
+05:24:49 | INFO | B_leave_one_source_out    Manitoba                      B    C0     MANITOBA_WORKSHOP_coffee    10.557    4.618   14.468
+05:24:49 | INFO | B_leave_one_source_out    Manitoba                      B    C1     MANITOBA_WORKSHOP_coffee    10.929    4.808   14.965
+05:24:49 | INFO | B_leave_one_source_out    Langer                        B    C0     LANGER2018_Abb2-01           8.457   -4.122   -9.758
+05:24:49 | INFO | B_leave_one_source_out    Langer                        B    C0     LANGER2018_Abb2-02          10.581   -5.251  -12.204
+05:24:49 | INFO | B_leave_one_source_out    Langer                        B    C0     LANGER2018_Abb2-03          13.665   -6.395  -15.807
+05:24:49 | INFO | B_leave_one_source_out    Langer                        B    C0     LANGER2018_Abb2-04          10.522   -4.960  -12.168
+05:24:49 | INFO | B_leave_one_source_out    Langer                        B    C0     LANGER2018_Abb2-05           9.953   -4.910  -11.481
+05:24:49 | INFO | B_leave_one_source_out    Langer                        B    C0     LANGER2018_Abb2-06          11.657   -5.492  -13.486
+05:24:49 | INFO | B_leave_one_source_out    Langer                        B    C1     LANGER2018_Abb2-01           7.632   -5.278   -8.486
+05:24:49 | INFO | B_leave_one_source_out    Langer                        B    C1     LANGER2018_Abb2-02           9.843   -6.483  -11.025
+05:24:49 | INFO | B_leave_one_source_out    Langer                        B    C1     LANGER2018_Abb2-03          13.222   -7.928  -15.003
+05:24:49 | INFO | B_leave_one_source_out    Langer                        B    C1     LANGER2018_Abb2-04           9.759   -6.197  -10.995
+05:24:49 | INFO | B_leave_one_source_out    Langer                        B    C1     LANGER2018_Abb2-05           9.266   -6.187  -10.358
+05:24:49 | INFO | B_leave_one_source_out    Langer                        B    C1     LANGER2018_Abb2-06          11.153   -6.955  -12.595
+05:24:49 | INFO | In-sample reference (iter_1 numbers, for comparison only): C0 1.07 K, C1 0.36 K

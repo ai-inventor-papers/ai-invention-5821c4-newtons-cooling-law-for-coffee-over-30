@@ -1,0 +1,19 @@
+Recomputed 64 rows. Max abs deviation from stored values: rms 5.66e-07, early 1.20e-06, late 7.78e-07
+
+Protocol A, ambient A (recomputed):
+  C0 mean over 7 curves: 8.335 K
+  C1 mean over 7 curves: 8.142 K
+  Manitoba C0 3.454, C1 2.659; Langer mean C0 9.148, C1 9.056
+  paired C1-C0 mean -0.193 K, C1 lower on 5 of 7 curves
+
+In-sample Sedlacek (ambient A): C0 1.261 K, C1 0.328 K
+
+Placebo (exact sign-flip over 128 patterns):
+  one-sided p for mean difference <= observed -0.193: 0.0625
+  P(C1 lower on >= 5 of 7 curves | no difference) = 0.227
+
+Shuffled-observation placebo on Manitoba (C1 predictions vs permuted observations, 200 draws):
+  real RMS 2.659 K; shuffled median 17.683 K (fraction of shuffles with RMS below real: 0.000)
+
+Stored fold_summary headline (for reference):
+  C0 8.335, C1 8.142, paired -0.193, count 5/7
