@@ -1,0 +1,442 @@
+A physical description of coﬀee cooling in a pot
+Jan Sedl´aˇcek∗
+Czech University of Agriculture in Prague, Technical Faculty,
+Department of Physics, Kam´yck´a 129, 16521 Prague 6, Czech Republic
+Jiˇr´ı Dolejˇs´ı†
+Charles University in Prague, Faculty of Mathematics and Physics,
+Inst. of Particle and Nuclear Physics, V Holeˇsoviˇck´ach 2, 180 00 Prague 8, Czech Republic
+One everyday phenomenon – coﬀee getting cold in a pot – is studied as an example of a typical
+method used in physics. We meet this topic in many articles in which authors usually limit them-
+selves on using of Newtons law of cooling (see references1,2,3,4,5,6,7,8,9). Our eﬀort is aimed at the
+non-professional audience, we suppose only elementary knowledge of the subject and our approach
+should be obvious in the common sense.
+The obvious beginning is to focus attention to the phenomenon and to collect some experience.
+The second step is the experiment in controlled conditions and with diﬀerent variants of studied
+objects. The third step is an attempt to understand the results of the experiment and the nature of
+the phenomenon. To reach that in the case of cooling coﬀee, we try to follow the pathway of heat
+in the studied system within a sequence of models realized as spreadsheets in Excel.
+We can guess that some heat is used for evaporation, some heat is radiated to surroundings and
+other amount of heat accepted from surroundings. We also must not forget the transport of heat
+between liquid and pot, through the pot and ﬁnally between pot and surroundings. We do not
+measure the individual heat ﬂows, but we put them into the model and from the comparison of the
+model prediction for the time-dependent temperature with the data we deduce the role of diﬀerent
+mechanisms and the parameters which enter the model.
+PACS numbers: 01.40.Ej, 01.50.My, 01.50.Pa, 01.50.Qb
+Keywords: Newton’s law of cooling
+Introduction
+A standard situation from the everyday life is a pot
+of coﬀee slowly getting cold when we forget about it (see
+ﬁg. 1). Does it matter what kind of the pot we use? What
+are the physics processes which play some role in this or-
+dinary occurrence?
+Which are more important, which
+less? Can we inﬂuence the evolution in the direction we
+need, like cool faster to drink in a hurry or cool slower
+during our busy activity? Let us turn to experiments. At
+ﬁrst we measure the time-dependent temperature of the
+cooling coﬀee in a china pot on a table. The measurement
+should be done in reasonable intervals, e.g. in every ﬁve
+20
+30
+40
+50
+60
+70
+80
+90
+0
+20
+40
+60
+80
+100
+120
+140
+160
+time (min)
+temperature (°C)
+too hot to drink
+nice
+cold
+FIG. 1: The measured cooling of coﬀee. The personal views
+of the optimal drinking temperature could be diﬀerent, of
+course.
+minutes, either with a usual mercury thermometer (our
+case) or with some more sophisticated equipment. The
+estimated error of our measurement is about 0.3◦C. We
+would like to concentrate to the detailed understanding
+of the measured dependence and to identifying the rele-
+vant physics phenomena contributing to the process. We
+will try to achieve this goal by constructing a suitable
+simulation model and by reﬁning it to ﬁt the data.
+I.
+THE FIRST MODEL
+We will start with a simple assumption that the heat
+transferred from the hot coﬀee to the colder surround-
+ings per unit time is dependent only on the temperature
+diﬀerence and that this dependence is linear:
+∆Q/∆τ = k(tc −ts),
+where k is the coeﬃcient of the heat exchange between
+coﬀee and surroundings, tc is the changing temperature of
+the coﬀee, ts is the constant temperature of surroundings.
+We assume that the temperature of the coﬀee is uniform.
+Than we can write the equation relating the heat loss
+with the change of the coﬀee temperature with time τ in
+the form
+m c ∆tc
+∆τ = ∆Q
+∆τ = k(tc −ts)
+where m is the mass of coﬀee and c is the speciﬁc heat
+capacity of it. This relates to Newtons law of cooling.
+
+=====PAGE=====
+2
+This equation we approximately and naively solve in the
+simplest possible manner doing small steps in time with
+the help of Excel (ignoring all the knowledge on solution
+of diﬀerential equations), we only check that the time
+step is suﬃciently small not to inﬂuence the results. We
+ﬁtted the coeﬃcient k to meet the data (using Solver
+from Excel). As we may conclude from ﬁg. 2, the ﬁrst
+20
+30
+40
+50
+60
+70
+80
+90
+0
+20
+40
+60
+80
+100
+120
+140
+160
+time (min)
+temperature (°C)
+model 1
+experiment
+FIG. 2: The time-dependent temperature from the experi-
+ment confronted with the results of the ﬁrst model (ﬁtted
+k = 0.54 J.s−1.K−1).
+model systematically underestimates the heat loss at the
+early moments and overestimates it later.
+II.
+THE SECOND MODEL
+To improve the agreement of the model and data we
+will try to use the ”brute force method” - we intro-
+duce the arbitrary exponent x into the heat transfer:
+∆Q/∆τ = k(tc −ts)x. The introduction of this expo-
+nent is clearly a substitute for better and more detailed
+description of the process. Both parameters k and x are
+ﬁtted with Excel. The ﬁg. 3 shows better accuracy of
+the second model. The quality of the ﬁt we judge from
+the value of residual sum of squares divided by the num-
+ber of degrees of freedom - ”χ2/NDF”, see any textbook
+on statistical methods, e.g.10. Values much larger than 1
+signalize the poor ﬁt.
+model 1
+model 2
+experiment
+20
+30
+40
+50
+60
+70
+80
+90
+0
+20
+40
+60
+80
+100
+120
+140
+160
+time (min)
+temperature (°C)
+FIG. 3: The measured temperature and the both models.
+Fitted k = 0.17 J.s−1.K−x, x = 1, 34. χ2/NDF changed from
+32.1 for the ﬁrst model to 2.4 for the second model.
+What are the eﬀects which are mimicked by the power
+in the heat transfer? We may expect heat losses by evap-
+oration and related loss of coﬀee mass. Heat could be
+radiated to surroundings and accepted from it. The pot
+is heated ﬁrst and then it cools, it may have the tempera-
+ture diﬀerent from coﬀee. Heat is transferred through all
+the surfaces. Maybe there are other eﬀects still missing
+in our list
+III.
+THE THIRD MODEL
+We will try to introduce all the abovementioned eﬀects:
+• transfer of heat from coﬀee to the pot:
+∆Q1/∆τ = k1(tc −tp);
+• coﬀee evaporation to surroundings:
+∆Q2/∆τ = vlvtcP,
+where v is the speed of evaporation, lv is speciﬁc
+heat of vaporization, P open surface;
+• radiation from coﬀee to surroundings:
+∆Q3/∆τ = ασT 4
+c P,
+where σ is the Stefan-Boltzmann constant, α is the
+absorptivity of coﬀee;
+• radiation from surroundings to coﬀee:
+∆Q4/∆τ = ασT 4
+s P
+• transfer of heat from pot to surroundings:
+∆Q5/∆τ = k2(tp −ts);
+• radiation from pot to surroundings:
+∆Q6/∆τ = βσT 4
+p S,
+where S is the emitting surface of the cup, β is the
+absorptivity of its material;
+• radiation from surroundings to pot:
+∆Q7/∆τ = βσT 4
+s S;
+model 3
+experiment
+20
+30
+40
+50
+60
+70
+80
+90
+0
+20
+40
+60
+80
+100
+120
+140
+160
+time (min)
+temperature (°C)
+FIG. 4:
+The measured temperature and the third model.
+The ﬁtted constants are k1
+=
+31.43
+J.s−1.K−1, k2
+=
+0.31 J.s−1.K−1
+Our model 3 (see ﬁg.
+4) is not yet ideal - the pot is
+still thin (i. e. it has only one temperature). But that
+model is more ”physical” than the former - at least coﬀee
+evaporates. We are lacking any insight into the details
+of evaporation, so we employed the linear dependence on
+
+=====PAGE=====
+3
+tc. All the parameters α, β , v, k1, k2 are ﬁtted within
+reasonable bounds. We are not much successful with this
+model - the residual sum 2/NDF = 81.3 compared to
+2/NDF = 32.1 for the ﬁrst model. Before turning to the
+next model we include one more experimental datum -
+the change of coﬀee weight = the weight of evaporated
+liquid. With this datum included we have χ2/NDF =
+81.6.
+The lack of faster cooling at the beginning persists in
+the model. Maybe the evaporation speed linear in tem-
+perature is unrealistic?
+IV.
+THE FOURTH MODEL
+Although we do not have any detailed knowledge on
+the dependence of evaporation speed on temperature and
+other conditions, we can try to put a free power z in the
+”vaporising” term:
+∆Q2/∆τ = vlvtz
+cP.
+The ﬁt results in z = 3.73! Then the agreement of the
+model and data is remarkable (see ﬁg. 5) - χ2/NDF =
+1.0.
+model 4
+experiment
+20
+30
+40
+50
+60
+70
+80
+90
+0
+20
+40
+60
+80
+100
+120
+140
+160
+time (min)
+temperature (°C)
+FIG. 5: The measured temperature and the fourth model.
+The ﬁtted constants are k1
+=
+29.87
+J.s−1.K−1, k2
+=
+0.18 J.s−1.K−1
+But the natural question appears: Is the funny expo-
+nent 3.73 reasonable? We have made with our colleagues
+a simple dedicated experiment for measuring of the evap-
+oration speed, see ﬁg. 6. The result of the experiment,
+power z = 3.7, really agrees with the above value!
+V.
+THE FIFTH MODEL
+In the next model we suppose the pot with nonzero
+thickness to treat diﬀerent pots.
+It means we assume
+there are an external and an internal temperature of the
+pot. Then we need to adapt the two already used terms
+in the following way:
+∆Q1/∆τ = k1(tc −tpi),
+∆Q5/∆τ = k2(tpe −ts),
+FIG. 6: The measurement of the evaporation speed: The
+immersion heater controlled by the simple switching circuit
+act as thermostat, the pot with water is regularly weighted.
+where tpi, tpe are the internal and the external tempera-
+ture of the pot. We must also introduce another term in
+our model - heat transfer through the pot:
+∆Q8/∆τ = k3(tpi −tpe)
+.
+FIG. 7: The three various experimental pots.
+VI.
+THE COMPARISON OF THE INFLUENCE
+OF DIFFERENT PARAMETERS
+By introduction of the parameters in the sequence of
+our models and by ﬁtting them to meet best the data
+we get sets of parameters, which describe the experiment
+
+=====PAGE=====
+4
+comparatively well. Clearly we need further experiments
+with exactly directed setup for speciﬁcation of diﬀerent
+parameters. To check the importance of the evaporation
+we put some fat on the liquid surface. We use various
+pots with various speciﬁc heat capacities and the heat
+conductivities, see ﬁg. 7. Comparison of dark coﬀee and
+clear water shows us the role of the absorptivity of the
+liquid surface. We performed a set of experiments with
+diﬀerent conditions: At ﬁrst we discovered the results do
+not depend on the surface tension what is important for
+the comparison of coﬀee and water. The next step was
+measurement for:
+• three pots (china, ordinary metal sheet pot and
+vacuum-pot, it means the pot with double wall)
+• three liquids (coﬀee, water and water with fat on
+its surface)
+TABLE I: The ﬁtted parameters of the ﬁfth model.
+α
+β
+v.1011
+k1
+k2
+k3
+Liquid
+Pot
+ kg.◦C
+s.m2
+  J
+s.K
+  J
+s.K
+  J
+s.K
+
+coﬀee
+china 0.990 0.192
+15.8
+2.90 0.360 2.04
+water
+china 0.005 0.192
+15.8
+2.90 0.360 2.04
+w.w.fat
+china 0.005 0.192
+1.94
+2.90 0.360 2.04
+coﬀee
+metal 0.990 0.178
+15.8
+2.90 0.360 2.42
+water
+metal 0.005 0.178
+15.8
+2.90 0.360 2.42
+w.w.fat
+metal 0.005 0.178
+1.94
+2.90 0.360 2.42
+coﬀee
+vac.pot 0.990 0.050
+15.8
+2.90 0.360 0.187
+water
+vac.pot 0.005 0.050
+15.8
+2.90 0.360 0.187
+w.w.fat vac. pot 0.005 0.050
+1.94
+2.90 0.360 0.187
+By determination and matching of all coeﬃcients we
+have justiﬁed following facts (look at values at table I):
+• coﬀee surface (dark) radiates and absorbs heat bet-
+ter than water surface
+• shining stainless pot radiates and absorbs heat
+worse than the dim one
+• fat on the liquid surface prevents evaporation
+• heat transfers through the china pot a little worse
+than through the thin metal pot and much better
+than through the vacuum-pot
+VII.
+CONCLUSION
+This contribution shows the beginning of a story orig-
+inating from one phenomenon of our everyday life. We
+formulated few models to describe the cooling down of a
+cup of coﬀee with rather good ﬁnal result. The sequence
+of approximations shows how we are pushed towards the
+more detailed description and towards the study which
+processes are important and which not. We were forced
+to introduce some nonlinearity; we tried to do it by in-
+troducing power into evaporation speed. We veriﬁed its
+power dependence on the temperature in an independent
+experiment. The whole story shows by simple means the
+path from observation to the description on some level
+and may continue in further studies.
+∗Jan.Sedlacek@tf.czu.cz
+† Jiri.Dolejsi@mff.cuni.cz
+1 M. A. Karls and J. E. Scherschel, Am. J. of Physics 71,
+678 (2003).
+2 S. J. Greenwald and W. C. Bauldry, Coﬀee cooling on
+a ti-cbl unit and in maple, http://www.mathsci.appstate.
+edu/˜sjg/papers/CoﬀeeCooling.pdf.
+3 Cooling a cup of coﬀee, http://hyperphysics.phy-astr.gsu.
+edu/hbase/thermo/coocof2.html.
+4 The coﬀee problem, http://www.rogerfrost.com/cof.htm.
+5 Newton’s law of cooling, http://www.aw-bc.com/ide/ Me-
+dia/pdf/Documents/Part1/Labs/Lab01.pdf.
+6 How to use the newton’s law of cooling: Curve ﬁtting tool,
+http://www.aw-bc.com/ide/Media/JavaTools/nlhcdata.
+html.
+7 J. Martino, Newton’s law of cooling, http://www.math.jhu.
+edu/courses/107/archives/notes/f01coursenotes/node9.
+html.
+8 E. Yanik, Coﬀee, tea or not?, http://archives.math.utk.
+edu/ICTCM/EP-7/SA14/pdf/paper.pdf.
+9 My hot chocolate is too hot!, http://mathforum.org/ cal-
+cpow/solutions/solution.ehtml?puzzle=48 (1999).
+10 S. Brandt, Statistical and computational methods in data
+analysis (North Holland/American Elsevier Publishing
+Company, 1970).
+
+=====PAGE=====

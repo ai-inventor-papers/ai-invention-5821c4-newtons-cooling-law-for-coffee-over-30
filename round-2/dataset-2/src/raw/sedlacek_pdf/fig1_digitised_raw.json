@@ -1,0 +1,269 @@
+{
+  "pdf_sha256_note": "downloaded from ipnp-web.troja.mff.cuni.cz/~dolejsi/outreach/sedlacek_ajp.pdf",
+  "calibration_x": {
+    "a_pt": 70.2244,
+    "b_pt_per_min": 1.38319,
+    "max_residual_pt": 0.084,
+    "labels": {
+      "0": 70.3,
+      "20": 97.82,
+      "40": 125.53,
+      "60": 153.24,
+      "80": 180.94,
+      "100": 208.46,
+      "120": 236.17,
+      "140": 263.88,
+      "160": 291.59
+    }
+  },
+  "calibration_y": {
+    "a_pt": 687.0676,
+    "b_pt_per_C": -1.25805,
+    "max_residual_pt": 0.262,
+    "labels": {
+      "20": 661.98,
+      "30": 649.34,
+      "40": 636.7,
+      "50": 623.9,
+      "60": 611.73,
+      "70": 599.09,
+      "80": 586.45,
+      "90": 573.8
+    }
+  },
+  "n_markers": 29,
+  "points": [
+    {
+      "time_min": -0.3,
+      "temp_C": 80.27,
+      "marker_pdf_xy": [
+        69.81,
+        586.09
+      ]
+    },
+    {
+      "time_min": 2.8,
+      "temp_C": 74.87,
+      "marker_pdf_xy": [
+        74.1,
+        592.88
+      ]
+    },
+    {
+      "time_min": 4.7,
+      "temp_C": 71.77,
+      "marker_pdf_xy": [
+        76.73,
+        596.78
+      ]
+    },
+    {
+      "time_min": 9.71,
+      "temp_C": 65.19,
+      "marker_pdf_xy": [
+        83.66,
+        605.05
+      ]
+    },
+    {
+      "time_min": 14.72,
+      "temp_C": 60.17,
+      "marker_pdf_xy": [
+        90.59,
+        611.37
+      ]
+    },
+    {
+      "time_min": 20.63,
+      "temp_C": 54.71,
+      "marker_pdf_xy": [
+        98.76,
+        618.24
+      ]
+    },
+    {
+      "time_min": 25.64,
+      "temp_C": 52.79,
+      "marker_pdf_xy": [
+        105.69,
+        620.66
+      ]
+    },
+    {
+      "time_min": 30.65,
+      "temp_C": 48.94,
+      "marker_pdf_xy": [
+        112.62,
+        625.5
+      ]
+    },
+    {
+      "time_min": 35.66,
+      "temp_C": 46.58,
+      "marker_pdf_xy": [
+        119.54,
+        628.46
+      ]
+    },
+    {
+      "time_min": 39.71,
+      "temp_C": 45.03,
+      "marker_pdf_xy": [
+        125.15,
+        630.41
+      ]
+    },
+    {
+      "time_min": 44.72,
+      "temp_C": 42.74,
+      "marker_pdf_xy": [
+        132.08,
+        633.3
+      ]
+    },
+    {
+      "time_min": 49.73,
+      "temp_C": 41.19,
+      "marker_pdf_xy": [
+        139.01,
+        635.25
+      ]
+    },
+    {
+      "time_min": 54.74,
+      "temp_C": 40.01,
+      "marker_pdf_xy": [
+        145.94,
+        636.73
+      ]
+    },
+    {
+      "time_min": 59.74,
+      "temp_C": 38.46,
+      "marker_pdf_xy": [
+        152.86,
+        638.68
+      ]
+    },
+    {
+      "time_min": 64.75,
+      "temp_C": 37.28,
+      "marker_pdf_xy": [
+        159.79,
+        640.17
+      ]
+    },
+    {
+      "time_min": 69.76,
+      "temp_C": 36.16,
+      "marker_pdf_xy": [
+        166.72,
+        641.57
+      ]
+    },
+    {
+      "time_min": 74.77,
+      "temp_C": 35.36,
+      "marker_pdf_xy": [
+        173.64,
+        642.59
+      ]
+    },
+    {
+      "time_min": 80.73,
+      "temp_C": 34.18,
+      "marker_pdf_xy": [
+        181.89,
+        644.07
+      ]
+    },
+    {
+      "time_min": 85.74,
+      "temp_C": 33.43,
+      "marker_pdf_xy": [
+        188.82,
+        645.01
+      ]
+    },
+    {
+      "time_min": 89.49,
+      "temp_C": 33.06,
+      "marker_pdf_xy": [
+        194.01,
+        645.47
+      ]
+    },
+    {
+      "time_min": 94.5,
+      "temp_C": 32.26,
+      "marker_pdf_xy": [
+        200.94,
+        646.49
+      ]
+    },
+    {
+      "time_min": 99.51,
+      "temp_C": 31.88,
+      "marker_pdf_xy": [
+        207.86,
+        646.96
+      ]
+    },
+    {
+      "time_min": 104.52,
+      "temp_C": 31.08,
+      "marker_pdf_xy": [
+        214.79,
+        647.97
+      ]
+    },
+    {
+      "time_min": 110.73,
+      "temp_C": 30.71,
+      "marker_pdf_xy": [
+        223.38,
+        648.44
+      ]
+    },
+    {
+      "time_min": 114.48,
+      "temp_C": 29.96,
+      "marker_pdf_xy": [
+        228.58,
+        649.38
+      ]
+    },
+    {
+      "time_min": 120.44,
+      "temp_C": 29.96,
+      "marker_pdf_xy": [
+        236.82,
+        649.38
+      ]
+    },
+    {
+      "time_min": 124.5,
+      "temp_C": 29.59,
+      "marker_pdf_xy": [
+        242.43,
+        649.84
+      ]
+    },
+    {
+      "time_min": 129.51,
+      "temp_C": 28.78,
+      "marker_pdf_xy": [
+        249.36,
+        650.86
+      ]
+    },
+    {
+      "time_min": 138.57,
+      "temp_C": 28.41,
+      "marker_pdf_xy": [
+        261.9,
+        651.33
+      ]
+    }
+  ]
+}

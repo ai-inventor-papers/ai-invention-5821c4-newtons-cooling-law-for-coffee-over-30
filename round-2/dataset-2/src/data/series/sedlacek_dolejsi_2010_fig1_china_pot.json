@@ -1,0 +1,262 @@
+{
+  "source_id": "sedlacek_dolejsi_2010_fig1_china_pot",
+  "provenance": {
+    "citation": "Sedlacek J., Dolejsi J. (2010). A physical description of coffee cooling in a pot. American Journal of Physics (preprint PDF; journal volume not verified from this run).",
+    "url": "https://ipnp-web.troja.mff.cuni.cz/~dolejsi/outreach/sedlacek_ajp.pdf",
+    "source_type": "peer-reviewed article, figure-digitised (vector markers on PDF page 1, Fig. 1)",
+    "pdf_tls_note": "The host serves an incomplete certificate chain; the PDF was fetched with TLS verification disabled. SHA-256 is recorded in README.md.",
+    "measurement_error_C": 0.3,
+    "measurement_error_source": "paper text: 'estimated error of our measurement is about 0.3 C' (mercury thermometer)",
+    "digitisation_method": "PyMuPDF vector drawings; 29 white-filled square markers on page 1; axes calibrated from centres of tick-label text boxes (x 0-160 min, y 20-90 C); overlay check passed",
+    "digitisation_error_C": 0.21,
+    "digitisation_error_min": 0.06,
+    "digitisation_error_basis": "max residual of the tick-label linear calibration (y 0.262 pt over 1.258 pt per C; x 0.084 pt over 1.383 pt per min)",
+    "digitisation_acceptance": "accepted: 0.21 C <= 0.5 C threshold",
+    "stated_in_source": {
+      "time_sampling": "'in every five minutes' (text); read spacing 1-6 min",
+      "initial_liquid_temperature_C": "not stated in text",
+      "room_temperature_C": "not stated in text",
+      "relative_humidity": "not stated in text",
+      "cup_mass_or_evaporation_rate": "not stated per time point; Table I gives fitted parameters only",
+      "pot_geometry": "not stated in text (china pot shown in Fig. 7, raster)",
+      "lid_or_fat_layer": "not stated for this series"
+    },
+    "series_scope_note": "The only measured curve in the PDF is Fig. 1. Metal-pot, vacuum-pot and water-with-fat series are not published as curves (Table I gives fitted parameters only), so they are not digitised.",
+    "earlier_artifact_comparison": "Not performed: the earlier china-pot digitisation (art_-CfKbDAPDpKm) was not available to this executor, so the 0.2 C agreement check was not run.",
+    "langer_2018_note": "Langer et al. 2018 (Zenodo 1402983, CC BY 4.0): no raw time series attached; not included. The 65 C crossing-time conflict is not addressed here."
+  },
+  "points": [
+    {
+      "time_min": -0.3,
+      "temp_C": 80.27,
+      "marker_pdf_xy": [
+        69.81,
+        586.09
+      ]
+    },
+    {
+      "time_min": 2.8,
+      "temp_C": 74.87,
+      "marker_pdf_xy": [
+        74.1,
+        592.88
+      ]
+    },
+    {
+      "time_min": 4.7,
+      "temp_C": 71.77,
+      "marker_pdf_xy": [
+        76.73,
+        596.78
+      ]
+    },
+    {
+      "time_min": 9.71,
+      "temp_C": 65.19,
+      "marker_pdf_xy": [
+        83.66,
+        605.05
+      ]
+    },
+    {
+      "time_min": 14.72,
+      "temp_C": 60.17,
+      "marker_pdf_xy": [
+        90.59,
+        611.37
+      ]
+    },
+    {
+      "time_min": 20.63,
+      "temp_C": 54.71,
+      "marker_pdf_xy": [
+        98.76,
+        618.24
+      ]
+    },
+    {
+      "time_min": 25.64,
+      "temp_C": 52.79,
+      "marker_pdf_xy": [
+        105.69,
+        620.66
+      ]
+    },
+    {
+      "time_min": 30.65,
+      "temp_C": 48.94,
+      "marker_pdf_xy": [
+        112.62,
+        625.5
+      ]
+    },
+    {
+      "time_min": 35.66,
+      "temp_C": 46.58,
+      "marker_pdf_xy": [
+        119.54,
+        628.46
+      ]
+    },
+    {
+      "time_min": 39.71,
+      "temp_C": 45.03,
+      "marker_pdf_xy": [
+        125.15,
+        630.41
+      ]
+    },
+    {
+      "time_min": 44.72,
+      "temp_C": 42.74,
+      "marker_pdf_xy": [
+        132.08,
+        633.3
+      ]
+    },
+    {
+      "time_min": 49.73,
+      "temp_C": 41.19,
+      "marker_pdf_xy": [
+        139.01,
+        635.25
+      ]
+    },
+    {
+      "time_min": 54.74,
+      "temp_C": 40.01,
+      "marker_pdf_xy": [
+        145.94,
+        636.73
+      ]
+    },
+    {
+      "time_min": 59.74,
+      "temp_C": 38.46,
+      "marker_pdf_xy": [
+        152.86,
+        638.68
+      ]
+    },
+    {
+      "time_min": 64.75,
+      "temp_C": 37.28,
+      "marker_pdf_xy": [
+        159.79,
+        640.17
+      ]
+    },
+    {
+      "time_min": 69.76,
+      "temp_C": 36.16,
+      "marker_pdf_xy": [
+        166.72,
+        641.57
+      ]
+    },
+    {
+      "time_min": 74.77,
+      "temp_C": 35.36,
+      "marker_pdf_xy": [
+        173.64,
+        642.59
+      ]
+    },
+    {
+      "time_min": 80.73,
+      "temp_C": 34.18,
+      "marker_pdf_xy": [
+        181.89,
+        644.07
+      ]
+    },
+    {
+      "time_min": 85.74,
+      "temp_C": 33.43,
+      "marker_pdf_xy": [
+        188.82,
+        645.01
+      ]
+    },
+    {
+      "time_min": 89.49,
+      "temp_C": 33.06,
+      "marker_pdf_xy": [
+        194.01,
+        645.47
+      ]
+    },
+    {
+      "time_min": 94.5,
+      "temp_C": 32.26,
+      "marker_pdf_xy": [
+        200.94,
+        646.49
+      ]
+    },
+    {
+      "time_min": 99.51,
+      "temp_C": 31.88,
+      "marker_pdf_xy": [
+        207.86,
+        646.96
+      ]
+    },
+    {
+      "time_min": 104.52,
+      "temp_C": 31.08,
+      "marker_pdf_xy": [
+        214.79,
+        647.97
+      ]
+    },
+    {
+      "time_min": 110.73,
+      "temp_C": 30.71,
+      "marker_pdf_xy": [
+        223.38,
+        648.44
+      ]
+    },
+    {
+      "time_min": 114.48,
+      "temp_C": 29.96,
+      "marker_pdf_xy": [
+        228.58,
+        649.38
+      ]
+    },
+    {
+      "time_min": 120.44,
+      "temp_C": 29.96,
+      "marker_pdf_xy": [
+        236.82,
+        649.38
+      ]
+    },
+    {
+      "time_min": 124.5,
+      "temp_C": 29.59,
+      "marker_pdf_xy": [
+        242.43,
+        649.84
+      ]
+    },
+    {
+      "time_min": 129.51,
+      "temp_C": 28.78,
+      "marker_pdf_xy": [
+        249.36,
+        650.86
+      ]
+    },
+    {
+      "time_min": 138.57,
+      "temp_C": 28.41,
+      "marker_pdf_xy": [
+        261.9,
+        651.33
+      ]
+    }
+  ]
+}

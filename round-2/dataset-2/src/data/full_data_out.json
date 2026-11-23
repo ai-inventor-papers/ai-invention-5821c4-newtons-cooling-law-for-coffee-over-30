@@ -1,0 +1,359 @@
+{
+  "metadata": {
+    "title": "Coffee cooling data from more pots (one measured series)",
+    "provenance": {
+      "citation": "Sedlacek J., Dolejsi J. (2010). A physical description of coffee cooling in a pot. American Journal of Physics (preprint PDF; journal volume not verified from this run).",
+      "url": "https://ipnp-web.troja.mff.cuni.cz/~dolejsi/outreach/sedlacek_ajp.pdf",
+      "source_type": "peer-reviewed article, figure-digitised (vector markers on PDF page 1, Fig. 1)",
+      "pdf_tls_note": "The host serves an incomplete certificate chain; the PDF was fetched with TLS verification disabled. SHA-256 is recorded in README.md.",
+      "measurement_error_C": 0.3,
+      "measurement_error_source": "paper text: 'estimated error of our measurement is about 0.3 C' (mercury thermometer)",
+      "digitisation_method": "PyMuPDF vector drawings; 29 white-filled square markers on page 1; axes calibrated from centres of tick-label text boxes (x 0-160 min, y 20-90 C); overlay check passed",
+      "digitisation_error_C": 0.21,
+      "digitisation_error_min": 0.06,
+      "digitisation_error_basis": "max residual of the tick-label linear calibration (y 0.262 pt over 1.258 pt per C; x 0.084 pt over 1.383 pt per min)",
+      "digitisation_acceptance": "accepted: 0.21 C <= 0.5 C threshold",
+      "stated_in_source": {
+        "time_sampling": "'in every five minutes' (text); read spacing 1-6 min",
+        "initial_liquid_temperature_C": "not stated in text",
+        "room_temperature_C": "not stated in text",
+        "relative_humidity": "not stated in text",
+        "cup_mass_or_evaporation_rate": "not stated per time point; Table I gives fitted parameters only",
+        "pot_geometry": "not stated in text (china pot shown in Fig. 7, raster)",
+        "lid_or_fat_layer": "not stated for this series"
+      },
+      "series_scope_note": "The only measured curve in the PDF is Fig. 1. Metal-pot, vacuum-pot and water-with-fat series are not published as curves (Table I gives fitted parameters only), so they are not digitised.",
+      "earlier_artifact_comparison": "Not performed: the earlier china-pot digitisation (art_-CfKbDAPDpKm) was not available to this executor, so the 0.2 C agreement check was not run.",
+      "langer_2018_note": "Langer et al. 2018 (Zenodo 1402983, CC BY 4.0): no raw time series attached; not included. The 65 C crossing-time conflict is not addressed here."
+    },
+    "n_series": 1,
+    "n_points": 29,
+    "points_first_30_min": 7
+  },
+  "datasets": [
+    {
+      "dataset": "sedlacek_dolejsi_2010_fig1_china_pot",
+      "examples": [
+        {
+          "input": "{\"time_min\": -0.3, \"room_temperature_C\": null, \"relative_humidity_pct\": null, \"cup_mass_g\": null, \"pot\": \"china pot\", \"pot_diameter_cm\": null, \"pot_height_cm\": null, \"pot_volume_ml\": null, \"initial_liquid_temperature_C\": null, \"lid\": null, \"fat_layer\": null}",
+          "output": "80.27",
+          "metadata_fold": "sedlacek_dolejsi_2010_fig1_china_pot",
+          "metadata_row_index": 0,
+          "metadata_task_type": "regression",
+          "metadata_time_uncertainty_min": 0.06,
+          "metadata_output_uncertainty_C": 0.21,
+          "metadata_measurement_error_C": 0.3,
+          "metadata_time_flag": "t<0: first marker reads 0.3 min before the t=0 tick; kept as read"
+        },
+        {
+          "input": "{\"time_min\": 2.8, \"room_temperature_C\": null, \"relative_humidity_pct\": null, \"cup_mass_g\": null, \"pot\": \"china pot\", \"pot_diameter_cm\": null, \"pot_height_cm\": null, \"pot_volume_ml\": null, \"initial_liquid_temperature_C\": null, \"lid\": null, \"fat_layer\": null}",
+          "output": "74.87",
+          "metadata_fold": "sedlacek_dolejsi_2010_fig1_china_pot",
+          "metadata_row_index": 1,
+          "metadata_task_type": "regression",
+          "metadata_time_uncertainty_min": 0.06,
+          "metadata_output_uncertainty_C": 0.21,
+          "metadata_measurement_error_C": 0.3,
+          "metadata_time_flag": ""
+        },
+        {
+          "input": "{\"time_min\": 4.7, \"room_temperature_C\": null, \"relative_humidity_pct\": null, \"cup_mass_g\": null, \"pot\": \"china pot\", \"pot_diameter_cm\": null, \"pot_height_cm\": null, \"pot_volume_ml\": null, \"initial_liquid_temperature_C\": null, \"lid\": null, \"fat_layer\": null}",
+          "output": "71.77",
+          "metadata_fold": "sedlacek_dolejsi_2010_fig1_china_pot",
+          "metadata_row_index": 2,
+          "metadata_task_type": "regression",
+          "metadata_time_uncertainty_min": 0.06,
+          "metadata_output_uncertainty_C": 0.21,
+          "metadata_measurement_error_C": 0.3,
+          "metadata_time_flag": ""
+        },
+        {
+          "input": "{\"time_min\": 9.71, \"room_temperature_C\": null, \"relative_humidity_pct\": null, \"cup_mass_g\": null, \"pot\": \"china pot\", \"pot_diameter_cm\": null, \"pot_height_cm\": null, \"pot_volume_ml\": null, \"initial_liquid_temperature_C\": null, \"lid\": null, \"fat_layer\": null}",
+          "output": "65.19",
+          "metadata_fold": "sedlacek_dolejsi_2010_fig1_china_pot",
+          "metadata_row_index": 3,
+          "metadata_task_type": "regression",
+          "metadata_time_uncertainty_min": 0.06,
+          "metadata_output_uncertainty_C": 0.21,
+          "metadata_measurement_error_C": 0.3,
+          "metadata_time_flag": ""
+        },
+        {
+          "input": "{\"time_min\": 14.72, \"room_temperature_C\": null, \"relative_humidity_pct\": null, \"cup_mass_g\": null, \"pot\": \"china pot\", \"pot_diameter_cm\": null, \"pot_height_cm\": null, \"pot_volume_ml\": null, \"initial_liquid_temperature_C\": null, \"lid\": null, \"fat_layer\": null}",
+          "output": "60.17",
+          "metadata_fold": "sedlacek_dolejsi_2010_fig1_china_pot",
+          "metadata_row_index": 4,
+          "metadata_task_type": "regression",
+          "metadata_time_uncertainty_min": 0.06,
+          "metadata_output_uncertainty_C": 0.21,
+          "metadata_measurement_error_C": 0.3,
+          "metadata_time_flag": ""
+        },
+        {
+          "input": "{\"time_min\": 20.63, \"room_temperature_C\": null, \"relative_humidity_pct\": null, \"cup_mass_g\": null, \"pot\": \"china pot\", \"pot_diameter_cm\": null, \"pot_height_cm\": null, \"pot_volume_ml\": null, \"initial_liquid_temperature_C\": null, \"lid\": null, \"fat_layer\": null}",
+          "output": "54.71",
+          "metadata_fold": "sedlacek_dolejsi_2010_fig1_china_pot",
+          "metadata_row_index": 5,
+          "metadata_task_type": "regression",
+          "metadata_time_uncertainty_min": 0.06,
+          "metadata_output_uncertainty_C": 0.21,
+          "metadata_measurement_error_C": 0.3,
+          "metadata_time_flag": ""
+        },
+        {
+          "input": "{\"time_min\": 25.64, \"room_temperature_C\": null, \"relative_humidity_pct\": null, \"cup_mass_g\": null, \"pot\": \"china pot\", \"pot_diameter_cm\": null, \"pot_height_cm\": null, \"pot_volume_ml\": null, \"initial_liquid_temperature_C\": null, \"lid\": null, \"fat_layer\": null}",
+          "output": "52.79",
+          "metadata_fold": "sedlacek_dolejsi_2010_fig1_china_pot",
+          "metadata_row_index": 6,
+          "metadata_task_type": "regression",
+          "metadata_time_uncertainty_min": 0.06,
+          "metadata_output_uncertainty_C": 0.21,
+          "metadata_measurement_error_C": 0.3,
+          "metadata_time_flag": ""
+        },
+        {
+          "input": "{\"time_min\": 30.65, \"room_temperature_C\": null, \"relative_humidity_pct\": null, \"cup_mass_g\": null, \"pot\": \"china pot\", \"pot_diameter_cm\": null, \"pot_height_cm\": null, \"pot_volume_ml\": null, \"initial_liquid_temperature_C\": null, \"lid\": null, \"fat_layer\": null}",
+          "output": "48.94",
+          "metadata_fold": "sedlacek_dolejsi_2010_fig1_china_pot",
+          "metadata_row_index": 7,
+          "metadata_task_type": "regression",
+          "metadata_time_uncertainty_min": 0.06,
+          "metadata_output_uncertainty_C": 0.21,
+          "metadata_measurement_error_C": 0.3,
+          "metadata_time_flag": ""
+        },
+        {
+          "input": "{\"time_min\": 35.66, \"room_temperature_C\": null, \"relative_humidity_pct\": null, \"cup_mass_g\": null, \"pot\": \"china pot\", \"pot_diameter_cm\": null, \"pot_height_cm\": null, \"pot_volume_ml\": null, \"initial_liquid_temperature_C\": null, \"lid\": null, \"fat_layer\": null}",
+          "output": "46.58",
+          "metadata_fold": "sedlacek_dolejsi_2010_fig1_china_pot",
+          "metadata_row_index": 8,
+          "metadata_task_type": "regression",
+          "metadata_time_uncertainty_min": 0.06,
+          "metadata_output_uncertainty_C": 0.21,
+          "metadata_measurement_error_C": 0.3,
+          "metadata_time_flag": ""
+        },
+        {
+          "input": "{\"time_min\": 39.71, \"room_temperature_C\": null, \"relative_humidity_pct\": null, \"cup_mass_g\": null, \"pot\": \"china pot\", \"pot_diameter_cm\": null, \"pot_height_cm\": null, \"pot_volume_ml\": null, \"initial_liquid_temperature_C\": null, \"lid\": null, \"fat_layer\": null}",
+          "output": "45.03",
+          "metadata_fold": "sedlacek_dolejsi_2010_fig1_china_pot",
+          "metadata_row_index": 9,
+          "metadata_task_type": "regression",
+          "metadata_time_uncertainty_min": 0.06,
+          "metadata_output_uncertainty_C": 0.21,
+          "metadata_measurement_error_C": 0.3,
+          "metadata_time_flag": ""
+        },
+        {
+          "input": "{\"time_min\": 44.72, \"room_temperature_C\": null, \"relative_humidity_pct\": null, \"cup_mass_g\": null, \"pot\": \"china pot\", \"pot_diameter_cm\": null, \"pot_height_cm\": null, \"pot_volume_ml\": null, \"initial_liquid_temperature_C\": null, \"lid\": null, \"fat_layer\": null}",
+          "output": "42.74",
+          "metadata_fold": "sedlacek_dolejsi_2010_fig1_china_pot",
+          "metadata_row_index": 10,
+          "metadata_task_type": "regression",
+          "metadata_time_uncertainty_min": 0.06,
+          "metadata_output_uncertainty_C": 0.21,
+          "metadata_measurement_error_C": 0.3,
+          "metadata_time_flag": ""
+        },
+        {
+          "input": "{\"time_min\": 49.73, \"room_temperature_C\": null, \"relative_humidity_pct\": null, \"cup_mass_g\": null, \"pot\": \"china pot\", \"pot_diameter_cm\": null, \"pot_height_cm\": null, \"pot_volume_ml\": null, \"initial_liquid_temperature_C\": null, \"lid\": null, \"fat_layer\": null}",
+          "output": "41.19",
+          "metadata_fold": "sedlacek_dolejsi_2010_fig1_china_pot",
+          "metadata_row_index": 11,
+          "metadata_task_type": "regression",
+          "metadata_time_uncertainty_min": 0.06,
+          "metadata_output_uncertainty_C": 0.21,
+          "metadata_measurement_error_C": 0.3,
+          "metadata_time_flag": ""
+        },
+        {
+          "input": "{\"time_min\": 54.74, \"room_temperature_C\": null, \"relative_humidity_pct\": null, \"cup_mass_g\": null, \"pot\": \"china pot\", \"pot_diameter_cm\": null, \"pot_height_cm\": null, \"pot_volume_ml\": null, \"initial_liquid_temperature_C\": null, \"lid\": null, \"fat_layer\": null}",
+          "output": "40.01",
+          "metadata_fold": "sedlacek_dolejsi_2010_fig1_china_pot",
+          "metadata_row_index": 12,
+          "metadata_task_type": "regression",
+          "metadata_time_uncertainty_min": 0.06,
+          "metadata_output_uncertainty_C": 0.21,
+          "metadata_measurement_error_C": 0.3,
+          "metadata_time_flag": ""
+        },
+        {
+          "input": "{\"time_min\": 59.74, \"room_temperature_C\": null, \"relative_humidity_pct\": null, \"cup_mass_g\": null, \"pot\": \"china pot\", \"pot_diameter_cm\": null, \"pot_height_cm\": null, \"pot_volume_ml\": null, \"initial_liquid_temperature_C\": null, \"lid\": null, \"fat_layer\": null}",
+          "output": "38.46",
+          "metadata_fold": "sedlacek_dolejsi_2010_fig1_china_pot",
+          "metadata_row_index": 13,
+          "metadata_task_type": "regression",
+          "metadata_time_uncertainty_min": 0.06,
+          "metadata_output_uncertainty_C": 0.21,
+          "metadata_measurement_error_C": 0.3,
+          "metadata_time_flag": ""
+        },
+        {
+          "input": "{\"time_min\": 64.75, \"room_temperature_C\": null, \"relative_humidity_pct\": null, \"cup_mass_g\": null, \"pot\": \"china pot\", \"pot_diameter_cm\": null, \"pot_height_cm\": null, \"pot_volume_ml\": null, \"initial_liquid_temperature_C\": null, \"lid\": null, \"fat_layer\": null}",
+          "output": "37.28",
+          "metadata_fold": "sedlacek_dolejsi_2010_fig1_china_pot",
+          "metadata_row_index": 14,
+          "metadata_task_type": "regression",
+          "metadata_time_uncertainty_min": 0.06,
+          "metadata_output_uncertainty_C": 0.21,
+          "metadata_measurement_error_C": 0.3,
+          "metadata_time_flag": ""
+        },
+        {
+          "input": "{\"time_min\": 69.76, \"room_temperature_C\": null, \"relative_humidity_pct\": null, \"cup_mass_g\": null, \"pot\": \"china pot\", \"pot_diameter_cm\": null, \"pot_height_cm\": null, \"pot_volume_ml\": null, \"initial_liquid_temperature_C\": null, \"lid\": null, \"fat_layer\": null}",
+          "output": "36.16",
+          "metadata_fold": "sedlacek_dolejsi_2010_fig1_china_pot",
+          "metadata_row_index": 15,
+          "metadata_task_type": "regression",
+          "metadata_time_uncertainty_min": 0.06,
+          "metadata_output_uncertainty_C": 0.21,
+          "metadata_measurement_error_C": 0.3,
+          "metadata_time_flag": ""
+        },
+        {
+          "input": "{\"time_min\": 74.77, \"room_temperature_C\": null, \"relative_humidity_pct\": null, \"cup_mass_g\": null, \"pot\": \"china pot\", \"pot_diameter_cm\": null, \"pot_height_cm\": null, \"pot_volume_ml\": null, \"initial_liquid_temperature_C\": null, \"lid\": null, \"fat_layer\": null}",
+          "output": "35.36",
+          "metadata_fold": "sedlacek_dolejsi_2010_fig1_china_pot",
+          "metadata_row_index": 16,
+          "metadata_task_type": "regression",
+          "metadata_time_uncertainty_min": 0.06,
+          "metadata_output_uncertainty_C": 0.21,
+          "metadata_measurement_error_C": 0.3,
+          "metadata_time_flag": ""
+        },
+        {
+          "input": "{\"time_min\": 80.73, \"room_temperature_C\": null, \"relative_humidity_pct\": null, \"cup_mass_g\": null, \"pot\": \"china pot\", \"pot_diameter_cm\": null, \"pot_height_cm\": null, \"pot_volume_ml\": null, \"initial_liquid_temperature_C\": null, \"lid\": null, \"fat_layer\": null}",
+          "output": "34.18",
+          "metadata_fold": "sedlacek_dolejsi_2010_fig1_china_pot",
+          "metadata_row_index": 17,
+          "metadata_task_type": "regression",
+          "metadata_time_uncertainty_min": 0.06,
+          "metadata_output_uncertainty_C": 0.21,
+          "metadata_measurement_error_C": 0.3,
+          "metadata_time_flag": ""
+        },
+        {
+          "input": "{\"time_min\": 85.74, \"room_temperature_C\": null, \"relative_humidity_pct\": null, \"cup_mass_g\": null, \"pot\": \"china pot\", \"pot_diameter_cm\": null, \"pot_height_cm\": null, \"pot_volume_ml\": null, \"initial_liquid_temperature_C\": null, \"lid\": null, \"fat_layer\": null}",
+          "output": "33.43",
+          "metadata_fold": "sedlacek_dolejsi_2010_fig1_china_pot",
+          "metadata_row_index": 18,
+          "metadata_task_type": "regression",
+          "metadata_time_uncertainty_min": 0.06,
+          "metadata_output_uncertainty_C": 0.21,
+          "metadata_measurement_error_C": 0.3,
+          "metadata_time_flag": ""
+        },
+        {
+          "input": "{\"time_min\": 89.49, \"room_temperature_C\": null, \"relative_humidity_pct\": null, \"cup_mass_g\": null, \"pot\": \"china pot\", \"pot_diameter_cm\": null, \"pot_height_cm\": null, \"pot_volume_ml\": null, \"initial_liquid_temperature_C\": null, \"lid\": null, \"fat_layer\": null}",
+          "output": "33.06",
+          "metadata_fold": "sedlacek_dolejsi_2010_fig1_china_pot",
+          "metadata_row_index": 19,
+          "metadata_task_type": "regression",
+          "metadata_time_uncertainty_min": 0.06,
+          "metadata_output_uncertainty_C": 0.21,
+          "metadata_measurement_error_C": 0.3,
+          "metadata_time_flag": ""
+        },
+        {
+          "input": "{\"time_min\": 94.5, \"room_temperature_C\": null, \"relative_humidity_pct\": null, \"cup_mass_g\": null, \"pot\": \"china pot\", \"pot_diameter_cm\": null, \"pot_height_cm\": null, \"pot_volume_ml\": null, \"initial_liquid_temperature_C\": null, \"lid\": null, \"fat_layer\": null}",
+          "output": "32.26",
+          "metadata_fold": "sedlacek_dolejsi_2010_fig1_china_pot",
+          "metadata_row_index": 20,
+          "metadata_task_type": "regression",
+          "metadata_time_uncertainty_min": 0.06,
+          "metadata_output_uncertainty_C": 0.21,
+          "metadata_measurement_error_C": 0.3,
+          "metadata_time_flag": ""
+        },
+        {
+          "input": "{\"time_min\": 99.51, \"room_temperature_C\": null, \"relative_humidity_pct\": null, \"cup_mass_g\": null, \"pot\": \"china pot\", \"pot_diameter_cm\": null, \"pot_height_cm\": null, \"pot_volume_ml\": null, \"initial_liquid_temperature_C\": null, \"lid\": null, \"fat_layer\": null}",
+          "output": "31.88",
+          "metadata_fold": "sedlacek_dolejsi_2010_fig1_china_pot",
+          "metadata_row_index": 21,
+          "metadata_task_type": "regression",
+          "metadata_time_uncertainty_min": 0.06,
+          "metadata_output_uncertainty_C": 0.21,
+          "metadata_measurement_error_C": 0.3,
+          "metadata_time_flag": ""
+        },
+        {
+          "input": "{\"time_min\": 104.52, \"room_temperature_C\": null, \"relative_humidity_pct\": null, \"cup_mass_g\": null, \"pot\": \"china pot\", \"pot_diameter_cm\": null, \"pot_height_cm\": null, \"pot_volume_ml\": null, \"initial_liquid_temperature_C\": null, \"lid\": null, \"fat_layer\": null}",
+          "output": "31.08",
+          "metadata_fold": "sedlacek_dolejsi_2010_fig1_china_pot",
+          "metadata_row_index": 22,
+          "metadata_task_type": "regression",
+          "metadata_time_uncertainty_min": 0.06,
+          "metadata_output_uncertainty_C": 0.21,
+          "metadata_measurement_error_C": 0.3,
+          "metadata_time_flag": ""
+        },
+        {
+          "input": "{\"time_min\": 110.73, \"room_temperature_C\": null, \"relative_humidity_pct\": null, \"cup_mass_g\": null, \"pot\": \"china pot\", \"pot_diameter_cm\": null, \"pot_height_cm\": null, \"pot_volume_ml\": null, \"initial_liquid_temperature_C\": null, \"lid\": null, \"fat_layer\": null}",
+          "output": "30.71",
+          "metadata_fold": "sedlacek_dolejsi_2010_fig1_china_pot",
+          "metadata_row_index": 23,
+          "metadata_task_type": "regression",
+          "metadata_time_uncertainty_min": 0.06,
+          "metadata_output_uncertainty_C": 0.21,
+          "metadata_measurement_error_C": 0.3,
+          "metadata_time_flag": ""
+        },
+        {
+          "input": "{\"time_min\": 114.48, \"room_temperature_C\": null, \"relative_humidity_pct\": null, \"cup_mass_g\": null, \"pot\": \"china pot\", \"pot_diameter_cm\": null, \"pot_height_cm\": null, \"pot_volume_ml\": null, \"initial_liquid_temperature_C\": null, \"lid\": null, \"fat_layer\": null}",
+          "output": "29.96",
+          "metadata_fold": "sedlacek_dolejsi_2010_fig1_china_pot",
+          "metadata_row_index": 24,
+          "metadata_task_type": "regression",
+          "metadata_time_uncertainty_min": 0.06,
+          "metadata_output_uncertainty_C": 0.21,
+          "metadata_measurement_error_C": 0.3,
+          "metadata_time_flag": ""
+        },
+        {
+          "input": "{\"time_min\": 120.44, \"room_temperature_C\": null, \"relative_humidity_pct\": null, \"cup_mass_g\": null, \"pot\": \"china pot\", \"pot_diameter_cm\": null, \"pot_height_cm\": null, \"pot_volume_ml\": null, \"initial_liquid_temperature_C\": null, \"lid\": null, \"fat_layer\": null}",
+          "output": "29.96",
+          "metadata_fold": "sedlacek_dolejsi_2010_fig1_china_pot",
+          "metadata_row_index": 25,
+          "metadata_task_type": "regression",
+          "metadata_time_uncertainty_min": 0.06,
+          "metadata_output_uncertainty_C": 0.21,
+          "metadata_measurement_error_C": 0.3,
+          "metadata_time_flag": ""
+        },
+        {
+          "input": "{\"time_min\": 124.5, \"room_temperature_C\": null, \"relative_humidity_pct\": null, \"cup_mass_g\": null, \"pot\": \"china pot\", \"pot_diameter_cm\": null, \"pot_height_cm\": null, \"pot_volume_ml\": null, \"initial_liquid_temperature_C\": null, \"lid\": null, \"fat_layer\": null}",
+          "output": "29.59",
+          "metadata_fold": "sedlacek_dolejsi_2010_fig1_china_pot",
+          "metadata_row_index": 26,
+          "metadata_task_type": "regression",
+          "metadata_time_uncertainty_min": 0.06,
+          "metadata_output_uncertainty_C": 0.21,
+          "metadata_measurement_error_C": 0.3,
+          "metadata_time_flag": ""
+        },
+        {
+          "input": "{\"time_min\": 129.51, \"room_temperature_C\": null, \"relative_humidity_pct\": null, \"cup_mass_g\": null, \"pot\": \"china pot\", \"pot_diameter_cm\": null, \"pot_height_cm\": null, \"pot_volume_ml\": null, \"initial_liquid_temperature_C\": null, \"lid\": null, \"fat_layer\": null}",
+          "output": "28.78",
+          "metadata_fold": "sedlacek_dolejsi_2010_fig1_china_pot",
+          "metadata_row_index": 27,
+          "metadata_task_type": "regression",
+          "metadata_time_uncertainty_min": 0.06,
+          "metadata_output_uncertainty_C": 0.21,
+          "metadata_measurement_error_C": 0.3,
+          "metadata_time_flag": ""
+        },
+        {
+          "input": "{\"time_min\": 138.57, \"room_temperature_C\": null, \"relative_humidity_pct\": null, \"cup_mass_g\": null, \"pot\": \"china pot\", \"pot_diameter_cm\": null, \"pot_height_cm\": null, \"pot_volume_ml\": null, \"initial_liquid_temperature_C\": null, \"lid\": null, \"fat_layer\": null}",
+          "output": "28.41",
+          "metadata_fold": "sedlacek_dolejsi_2010_fig1_china_pot",
+          "metadata_row_index": 28,
+          "metadata_task_type": "regression",
+          "metadata_time_uncertainty_min": 0.06,
+          "metadata_output_uncertainty_C": 0.21,
+          "metadata_measurement_error_C": 0.3,
+          "metadata_time_flag": ""
+        }
+      ]
+    }
+  ]
+}
