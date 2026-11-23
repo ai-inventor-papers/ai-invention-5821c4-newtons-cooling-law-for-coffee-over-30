@@ -1,0 +1,58 @@
+{
+  "valid": true,
+  "file_errors": [],
+  "schema_errors": [],
+  "content_warnings": [
+    "research_out.json: Sources with uncited indices: [8]",
+    "structured_output: Sources with uncited indices: [8]"
+  ],
+  "files_found": {
+    "research_out.json": {
+      "exists": true,
+      "path": "./research_out.json",
+      "source_count": 11,
+      "size": 12430
+    }
+  },
+  "source_count": 11,
+  "checked_at": "2026-11-23T11:27:32.467210+00:00",
+  "passage_check_scope": "Case/whitespace-normalized text occurrence at the source URL (or archive fallback). Not claim entailment, locator verification, or author/year verification. status=error means unverified, not a misquotation.",
+  "passages": [
+    {
+      "source_index": 1,
+      "source_url": "https://ui.adsabs.harvard.edu/abs/2009EJPh...30.1063V/abstract",
+      "quote": "is mostly valid if temperature differences are below a certain threshold which depends on the experimental conditions",
+      "locator": "Abstract",
+      "status": "valid",
+      "context": "...h a small biot number. it is shown that newton's law of cooling, i.e. simple exponential behaviour, is mostly valid if temperature differences are below a certain threshold which depends on the experimental conditions. for any larger temperature differences appreciable deviations occur which need the complete nonlin...",
+      "match_type": "exact"
+    },
+    {
+      "source_index": 1,
+      "source_url": "https://ui.adsabs.harvard.edu/abs/2009EJPh...30.1063V/abstract",
+      "quote": "The latter does not vary linearly with temperature difference, which leads to deviations from Newton's law.",
+      "locator": "Abstract",
+      "status": "valid",
+      "context": "...y object to its surrounding is not only due to conduction and convection but also due to radiation. the latter does not vary linearly with temperature difference, which leads to deviations from newton's law. this paper presents a theoretical analysis of the cooling of objects with a small biot number. it i...",
+      "match_type": "exact"
+    },
+    {
+      "source_index": 2,
+      "source_url": "https://eric.ed.gov/?id=EJ851827",
+      "quote": "For any larger temperature differences appreciable deviations occur which need the complete nonlinear treatment.",
+      "locator": "Abstract",
+      "status": "valid",
+      "context": "...temperature differences are below a certain threshold which depends on the experimental conditions. for any larger temperature differences appreciable deviations occur which need the complete nonlinear treatment. this is demonstrated by results of some laboratory experiments which use ir imaging to measure surf...",
+      "match_type": "exact"
+    },
+    {
+      "source_index": 6,
+      "source_url": "https://emergent-scientist.edp-open.org/articles/emsci/pdf/2017/01/emsci170007.pdf",
+      "quote": "As expected, the cooling DT is larger when the ambient temperature is high, and the humidity low.",
+      "locator": "Results, cooling-jug prediction (Fig. 5)",
+      "status": "valid",
+      "context": ".... next we use equation (6) to predict the dt for the cooling jug, and plot the results in figure 5. as expected, the cooling dt is larger when the ambient temperature is high, and the humidity low. according to our theory, at tair = 50 °c the temperature difference can reach up to 20 °c, although...",
+      "match_type": "exact"
+    }
+  ]
+}
