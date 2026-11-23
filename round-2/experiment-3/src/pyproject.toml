@@ -1,0 +1,12 @@
+[project]
+name = "coffee-cooling-exponent"
+version = "0.1.0"
+description = "Exponent profile of the one-term nonlinear cooling law against Newton's law for coffee"
+requires-python = "==3.12.*"
+dependencies = [
+    "numpy==2.5.5",
+    "scipy==1.18.1",
+    "loguru==0.8.0",
+    "jsonschema==4.26.0",
+    "pymupdf==2.1",
+]

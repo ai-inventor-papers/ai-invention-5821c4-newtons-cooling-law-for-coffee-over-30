@@ -1,0 +1,26 @@
+{
+  "C0_in_window_rms_K": 1.2608332467151284,
+  "C0_a": 0.02649542739137687,
+  "free_x_in_window": 2.1823962799779153,
+  "free_x_in_window_rms_K": 0.3275077510338404,
+  "profile_min_x_coarse_0p05": 2.200000000000001,
+  "manitoba_S2_C0_rms": 5.301032812009327,
+  "manitoba_S2_xstar_rms": 0.7666126608641207,
+  "manitoba_method_values": {
+    "S2_C0": null
+  },
+  "placebo_shuffled_C0_rms_K": 13.497008175077514,
+  "method_py_values": {
+    "C0_in_window_rms_K": 1.2608332532467177,
+    "free_x_in_window": 2.182396616432539,
+    "free_x_in_window_rms_K": 0.327507753402022,
+    "profile_minimum_x": 2.18,
+    "manitoba_S2_C0_rms_method": 5.301055892477772,
+    "manitoba_S2_xstar_rms_method": 0.7666053051927054
+  },
+  "checks": {
+    "C0_rms_agrees_within_0p02K": true,
+    "free_x_agrees_within_0p05": true,
+    "placebo_worse_than_real_by_2x": true
+  }
+}

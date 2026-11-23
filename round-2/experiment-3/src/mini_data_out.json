@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "title": "Published hot-liquid cooling curves benchmark",
+    "unit_time": "min",
+    "unit_temperature": "degC",
+    "selection": "8 curves from 3 sources",
+    "excluded_langer_styles": [
+      "Abb2-style-07",
+      "Abb2-style-08",
+      "Abb2-style-09",
+      "Abb2-style-10"
+    ],
+    "excluded_note": "not in the 8-curve selection (cap at target); full digitization kept in temp/datasets/langer_abb2_raw.json",
+    "humidity_reporting_sources": 0,
+    "fold_convention": "metadata_fold is the source index (1-3); metadata_source_id names the source"
+  },
+  "datasets": [
+    {
+      "dataset": "SEDLACEK2010",
+      "examples": [
+        {
+          "input": "{\"time_min\": [0.0, 2.75, 4.65, 9.66, 14.67, 20.58, 25.59, 30.59, 35.6, 39.66, 44.67, 49.68, 54.68, 59.69, 64.7, 69.71, 74.72, 80.68, 85.69, 89.44, 94.45, 99.46, 104.47, 110.68, 114.43, 120.39, 124.45, 129.46, 138.53], \"initial_liquid_temp_c\": 80.25, \"room_temp_c\": null, \"relative_humidity_pct\": null, \"cup_material\": \"china pot\", \"volume_ml\": null, \"surface_area_cm2\": null, \"lid_or_fat_condition\": \"open; no measured fat-layer series\"}",
+          "output": "[80.25, 74.86, 71.76, 65.2, 60.18, 54.73, 52.81, 48.97, 46.61, 45.06, 42.77, 41.22, 40.05, 38.5, 37.32, 36.21, 35.4, 34.22, 33.48, 33.11, 32.3, 31.93, 31.13, 30.76, 30.01, 30.01, 29.64, 28.84, 28.46]",
+          "metadata_fold": 1,
+          "metadata_source_id": "SEDLACEK2010",
+          "metadata_curve_id": "SEDLACEK2010_Fig1",
+          "metadata_curve_index": 1,
+          "metadata_liquid": "coffee",
+          "metadata_is_coffee": true,
+          "metadata_time_span_min": [
+            0.0,
+            138.53
+          ],
+          "metadata_n_points": 29,
+          "metadata_provenance": "{\"liquid\": \"coffee\", \"is_coffee\": true, \"source_type\": \"article (venue unverified; secondary listing Trends in Agricultural Engineering 2010, pp. 578-583)\", \"citation\": \"Sedlacek J., Dolejsi J. A physical description of coffee cooling in a pot.\", \"url\": \"https://ipnp-web.troja.mff.cuni.cz/~dolejsi/outreach/sedlacek_ajp.pdf\", \"figure\": \"Fig. 1 measured cooling of coffee in a china pot on a table\", \"cup_material\": \"china pot\", \"volume_ml\": null, \"room_temp_c\": null, \"lid_or_fat_condition\": \"open; no measured fat-layer series\", \"room_temp_note\": \"not reported\", \"humidity_note\": \"not reported\", \"sampling_interval_min\": \"about 5 (stated); digitized marker times\", \"measurement_method\": \"mercury thermometer (stated)\", \"measurement_error_c\": 0.3, \"digitization\": {\"method\": \"vector marker extraction, scripts/digitize_sedlacek_figs.py\", \"axis_calibration\": \"tick-label centres: t=0 and 160 min; T=20 and 90 C\", \"estimated_error_c\": 0.4}, \"validation\": \"Figs 2, 4, 5 repeat this run (mean abs diff 0.02-0.16 C); Fig 3 excluded (different trace, irregular times)\"}"
+        }
+      ]
+    },
+    {
+      "dataset": "MANITOBA_WORKSHOP",
+      "examples": [
+        {
+          "input": "{\"time_min\": [0.0, 1.0, 2.0, 3.0, 8.0, 13.0, 18.0, 23.0, 28.0, 33.0, 38.0, 43.0, 48.0], \"initial_liquid_temp_c\": 85.56, \"room_temp_c\": 21.67, \"relative_humidity_pct\": null, \"cup_material\": \"not reported\", \"volume_ml\": null, \"surface_area_cm2\": null, \"lid_or_fat_condition\": \"not reported\"}",
+          "output": "[85.56, 81.67, 79.44, 77.22, 68.89, 62.22, 57.22, 52.78, 48.89, 46.67, 43.89, 41.67, 40.0]",
+          "metadata_fold": 2,
+          "metadata_source_id": "MANITOBA_WORKSHOP",
+          "metadata_curve_id": "MANITOBA_WORKSHOP_coffee",
+          "metadata_curve_index": 1,
+          "metadata_liquid": "coffee",
+          "metadata_is_coffee": true,
+          "metadata_time_span_min": [
+            0.0,
+            48.0
+          ],
+          "metadata_n_points": 13,
+          "metadata_provenance": "{\"liquid\": \"coffee\", \"is_coffee\": true, \"source_type\": \"teaching lab report / workshop handout (not peer reviewed)\", \"citation\": \"University of Manitoba, Project 1: Measuring Temperature & Newton's Law of Cooling, Coffee Experiment Data.\", \"url\": \"https://server.math.umanitoba.ca/~coopers5/pastcourses_unl_materials/project1_coffee_data.pdf\", \"figure\": \"table\", \"cup_material\": \"not reported\", \"volume_ml\": null, \"room_temp_c\": 21.67, \"lid_or_fat_condition\": \"not reported\", \"room_temp_note\": \"71 F, converted with C = (F - 32) x 5/9\", \"humidity_note\": \"not reported\", \"sampling_interval_min\": \"steps of 1, 1, 1, then 5 min\", \"measurement_method\": \"not reported\", \"measurement_error_c\": 0.28, \"measurement_error_note\": \"whole degrees F; half-degree quantization (not stated by source)\", \"unit_conversion\": \"T_C = (T_F - 32) * 5 / 9\"}"
+        }
+      ]
+    },
+    {
+      "dataset": "LANGER2018",
+      "examples": [
+        {
+          "input": "{\"time_min\": [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0, 21.0, 22.0, 23.0, 24.0, 25.0, 26.0, 27.0, 28.0, 29.0, 30.0, 31.0, 32.0, 33.0], \"initial_liquid_temp_c\": 80.17, \"room_temp_c\": null, \"relative_humidity_pct\": null, \"cup_material\": \"single-use cup class per legend; per-curve mapping not established\", \"volume_ml\": 237, \"surface_area_cm2\": null, \"lid_or_fat_condition\": \"not mapped per curve\"}",
+          "output": "[80.17, 78.86, 77.75, 76.64, 75.65, 74.65, 73.69, 72.74, 71.82, 70.89, 70.05, 69.22, 68.39, 67.61, 66.85, 66.12, 65.4, 64.69, 64.04, 63.38, 62.68, 62.1, 61.43, 60.83, 60.27, 59.63, 59.09, 58.51, 57.95, 57.43, 56.91, 56.36, 55.89]",
+          "metadata_fold": 3,
+          "metadata_source_id": "LANGER2018",
+          "metadata_curve_id": "LANGER2018_Abb2-01",
+          "metadata_curve_index": 1,
+          "metadata_liquid": "hot water dispensed at 88 C (not coffee)",
+          "metadata_is_coffee": false,
+          "metadata_time_span_min": [
+            1.0,
+            33.0
+          ],
+          "metadata_n_points": 33,
+          "metadata_provenance": "{\"liquid\": \"hot water dispensed at 88 C (not coffee)\", \"is_coffee\": false, \"source_type\": \"peer-reviewed article (Deutsche Lebensmittel-Rundschau 114, July 2018)\", \"citation\": \"Langer T., Winkler G., Lachenmeier D.W. (2018). Untersuchungen zum Abkuehlverhalten von Heissgetraenken vor dem Hintergrund des temperaturbedingten Krebsrisikos.\", \"doi\": \"10.5281/zenodo.1402983 (CC-BY-4.0)\", \"url\": \"https://zenodo.org/records/1402983\", \"figure\": \"Abb. 2 single-use cups, 237 mL\", \"cup_material\": \"single-use cup class per legend; per-curve mapping not established\", \"volume_ml\": 237, \"room_temp_c\": null, \"lid_or_fat_condition\": \"not mapped per curve\", \"room_temp_note\": \"not reported\", \"humidity_note\": \"not reported\", \"sampling_interval_min\": \"not reported (logger Voltcraft K204 via SE309)\", \"measurement_method\": \"3 probes inside cup, Voltcraft K204, 0.1 C resolution\", \"measurement_error_note\": \"logger accuracy +/-3% of reading; single trace, no replicate statistics in figure\", \"digitization\": {\"method\": \"vector polyline extraction, scripts/digitize_langer_abb2.py\", \"axis_calibration\": \"tick-label centres: t=0 and 20 min; T=20 and 90 C\", \"estimated_error_c\": 0.2}, \"style\": {\"stroke_colour_rgb\": [0.14, 0.12, 0.13], \"dash_pattern\": \"[ 1 4 1 4 1 4 ] 0\"}, \"validation_flag\": \"digitized 65 C crossing 18-32 min disagrees with 11-22 min in paper text; unresolved\"}"
+        }
+      ]
+    }
+  ]
+}

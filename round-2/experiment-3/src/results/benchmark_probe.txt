@@ -1,0 +1,17 @@
+in-window t: [ 0.    2.75  4.65  9.66 14.67 20.58 25.59] T: [80.25 74.86 71.76 65.2  60.18 54.73 52.81]
+mode=measured Tr=free all in-window  C0 rms=0.460 params={'x': 1.0, 't0': 80.25, 'a': 0.0475, 't_room': 40.0}
+mode=measured Tr=free excl t=0       C0 rms=1.479 params={'x': 1.0, 't0': 74.86, 'a': 0.0123, 't_room': -10.0}
+mode=measured Tr=20.0 all in-window  C0 rms=1.261 params={'x': 1.0, 't_room': 20.0, 't0': 80.25, 'a': 0.0265}
+mode=measured Tr=20.0 excl t=0       C0 rms=1.555 params={'x': 1.0, 't_room': 20.0, 't0': 74.86, 'a': 0.0205}
+mode=measured C1 free-x Tr=20 all in-window  x=2.182 rms=0.328
+mode=measured C1 free-x Tr free all in-window  x=1.201 Tr=40.00 rms=0.307
+mode=measured C1 free-x Tr=20 excl t=0       x=0.500 rms=1.464
+mode=measured C1 free-x Tr free excl t=0       x=0.500 Tr=9.64 rms=1.462
+mode=free     Tr=free all in-window  C0 rms=0.406 params={'x': 1.0, 'a': 0.0467, 't_room': 40.0, 't0': 79.8335}
+mode=free     Tr=free excl t=0       C0 rms=0.627 params={'x': 1.0, 'a': 0.0352, 't_room': 34.5413, 't0': 77.86}
+mode=free     Tr=20.0 all in-window  C0 rms=1.007 params={'x': 1.0, 't_room': 20.0, 'a': 0.025, 't0': 78.8948}
+mode=free     Tr=20.0 excl t=0       C0 rms=0.791 params={'x': 1.0, 't_room': 20.0, 'a': 0.0238, 't0': 77.7814}
+mode=free     C1 free-x Tr=20 all in-window  x=2.187 rms=0.327
+mode=free     C1 free-x Tr free all in-window  x=1.190 Tr=40.00 rms=0.305
+mode=free     C1 free-x Tr=20 excl t=0       x=1.445 rms=0.655
+mode=free     C1 free-x Tr free excl t=0       x=0.789 Tr=40.00 rms=0.604

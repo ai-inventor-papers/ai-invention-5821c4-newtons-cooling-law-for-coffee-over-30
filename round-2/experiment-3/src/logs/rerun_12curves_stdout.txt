@@ -1,0 +1,32 @@
+06:05:56|INFO   |loading full_data_out.json
+06:05:56|INFO   |structure ok: 12 curves; china-pot 29 points 0-138.53 min; Manitoba T_room 21.67 C; Langer first values [80.17, 80.6, 82.28, 80.63, 80.86, 81.9, 81.34, 81.12, 81.41, 79.03]
+06:05:56|WARNING|Langer first recorded values are at t = 1 min, 80.2 to 82.3 C; the 88 C figure is the dispensed temperature, so the planned 'start near 88 C' check is replaced by this observed range (logged deviation).
+06:06:09|INFO   |synthetic x_true=1.25: median x_hat=1.248, within 0.1 in 94% of 50 draws
+06:06:21|INFO   |synthetic x_true=1.94: median x_hat=1.944, within 0.1 in 98% of 50 draws
+06:06:21|INFO   |closed form vs solve_ivp max abs diff (K): {'1.25': 2.935038878604246e-10, '1.94': 1.5376144801848568e-10}
+06:06:21|INFO   |benchmark[measured] C0 RMS all=1.261 K (excl t=0: 1.362); C1 free x=2.182, RMS=0.328 K
+06:06:22|INFO   |benchmark[free] C0 RMS all=1.007 K (excl t=0: 0.937); C1 free x=2.187, RMS=0.327 K
+06:06:22|INFO   |benchmark: measured-mode within tolerance=False, free-mode within tolerance=False
+06:06:22|INFO   |wrote results/benchmark_checks.json (3033 bytes)
+06:06:22|ERROR  |benchmark outside tolerance in the planned measured-T0 convention; see benchmark_checks.json
+06:06:22|WARNING|C0 in-window RMS 1.261 K differs from 1.07 K by more than 0.05 K (plan says stop and debug); the T0 convention and window are reported as measured
+06:06:22|INFO   |fixed x=1.00: a=0.0264954, in-window RMS=1.261 K
+06:06:22|INFO   |fixed x=1.25: a=0.0101572, in-window RMS=0.997 K
+06:06:22|INFO   |fixed x=1.34: a=0.00719059, in-window RMS=0.906 K
+06:06:22|INFO   |fixed x=1.50: a=0.00388998, in-window RMS=0.751 K
+06:06:27|INFO   |profile minimum on 1.00-3.00 grid at x=2.18 (grid edge: False); plan grid 1.00-2.00 minimum at x=2.00 (edge: True); Δχ²=3.84 grid interval [1.95, 2.42]
+06:06:29|INFO   |free x in-window: 2.182 (RMS 0.328 K); T_room freed: x=1.201, T_room=40.00; full record x=1.751
+06:07:56|INFO   |bootstrap x: median 2.209, 95% CI [2.0313025829660285, 2.358634849731217], degenerate 0.0%
+06:08:06|INFO   |wrote results/heldout_scores.json (79342 bytes)
+/Volumes/aii-s20018/work/run_eF8rkCcKVBKN/round-2/experiment-3/src/.venv/lib/python3.12/site-packages/fitz/__init__.py:17: FutureWarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+  warnings.warn(
+06:08:06|INFO   |extracted text from 4 PDF pages
+06:08:06|INFO   |gate: fetch=fetched, pages=4, unverified=['81.3']
+06:08:06|INFO   |wrote results/gate_provenance.json (2774 bytes)
+06:08:06|INFO   |wrote results/exponent_profile.json (44056 bytes)
+06:08:16|INFO   |wrote method_out.json (30055 bytes)
+06:08:16|INFO   |wrote mini_method_out.json (7492 bytes)
+06:08:16|INFO   |wrote preview_method_out.json (6434 bytes)
+06:08:16|INFO   |schema check method_out.json: 0 errors
+06:08:16|INFO   |schema check mini_method_out.json: 0 errors
+06:08:16|INFO   |done

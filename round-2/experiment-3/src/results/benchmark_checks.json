@@ -1,0 +1,117 @@
+{
+  "synthetic": {
+    "ode_closed_form_max_abs_K": {
+      "1.25": 2.935038878604246e-10,
+      "1.94": 1.5376144801848568e-10
+    },
+    "recovery": {
+      "1.25": {
+        "a_true": 0.016091353455983125,
+        "replicates": 50,
+        "median_x_hat": 1.2476887444534546,
+        "fraction_within_0p1": 0.94,
+        "mean_abs_error": 0.03930651115260747
+      },
+      "1.94": {
+        "a_true": 0.001421352899025636,
+        "replicates": 50,
+        "median_x_hat": 1.9444108981327388,
+        "fraction_within_0p1": 0.98,
+        "mean_abs_error": 0.04310132114881395
+      }
+    }
+  },
+  "benchmark": {
+    "measured": {
+      "n_in_window": 7,
+      "C0_rms_K_all_points": 1.2608332532467177,
+      "C0_rms_K_excluding_initial_point": 1.361855563036998,
+      "C0_residuals_first_10_min": [
+        0.0,
+        -1.156,
+        -1.506,
+        -1.445
+      ],
+      "C1_free_x": 2.182396616432539,
+      "C1_free_x_rms_K": 0.327507753402022,
+      "C1_free_x_rms_K_excluding_initial_point": 0.35374880441943485
+    },
+    "free": {
+      "n_in_window": 7,
+      "C0_rms_K_all_points": 1.0074928930318294,
+      "C0_rms_K_excluding_initial_point": 0.9370703508393501,
+      "C0_residuals_first_10_min": [
+        1.355,
+        -0.123,
+        -0.672,
+        -1.061
+      ],
+      "C1_free_x": 2.187393125239546,
+      "C1_free_x_rms_K": 0.3274268812852398,
+      "C1_free_x_rms_K_excluding_initial_point": 0.35359038453333325
+    },
+    "prior_targets": {
+      "C0_in_window_rms_K": 1.07,
+      "C1_in_window_rms_K": 0.36
+    },
+    "tolerance": {
+      "C0_rms_K": [
+        0.95,
+        1.2
+      ],
+      "C1_free_x": [
+        1.8,
+        2.1
+      ]
+    },
+    "measured_mode_within_tolerance": false,
+    "free_mode_within_tolerance": false
+  },
+  "structure": {
+    "n_curves": 12,
+    "folds": {
+      "1": [
+        "SEDLACEK2010_Fig1"
+      ],
+      "2": [
+        "MANITOBA_WORKSHOP_coffee"
+      ],
+      "3": [
+        "LANGER2018_Abb2-01",
+        "LANGER2018_Abb2-02",
+        "LANGER2018_Abb2-03",
+        "LANGER2018_Abb2-04",
+        "LANGER2018_Abb2-05",
+        "LANGER2018_Abb2-06",
+        "LANGER2018_Abb2-07",
+        "LANGER2018_Abb2-08",
+        "LANGER2018_Abb2-09",
+        "LANGER2018_Abb2-10"
+      ]
+    },
+    "china_points": 29,
+    "china_span_min": [
+      0.0,
+      138.53
+    ],
+    "manitoba_t_room_c": 21.67,
+    "langer_first_values_c": [
+      80.17,
+      80.6,
+      82.28,
+      80.63,
+      80.86,
+      81.9,
+      81.34,
+      81.12,
+      81.41,
+      79.03
+    ],
+    "deviation_note": "Langer first recorded values are at t = 1 min, 80.2 to 82.3 C; the 88 C figure is the dispensed temperature, so the planned 'start near 88 C' check is replaced by this observed range (logged deviation)."
+  },
+  "digitization_error_note": {
+    "china_pot_dataset_estimate_C": 0.4,
+    "china_pot_plan_figure_C": 0.15,
+    "note": "the plan cited about 0.15 C from the earlier experiment; the dataset records 0.4 C. This artifact uses the dataset's value and reports both."
+  }
+}
