@@ -1,0 +1,6 @@
+# Heavy-path decisions for this workspace.
+# Only the local virtualenv is heavy; all results, data, code and sources are small text/JSON and need no entry.
+entries:
+  - path: .venv/
+    delete: regenerable
+    source: "uv venv .venv --python 3.12 && uv pip install --python .venv/bin/python -r pyproject.toml"
