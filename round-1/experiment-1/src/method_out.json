@@ -1,0 +1,712 @@
+{
+  "metadata": {
+    "method_name": "Screen of cooling models on the digitized china-pot coffee curve (Sedlacek and Dolejsi)",
+    "description": "Constant-rate Newton law (C0) as baseline, nonlinear convection (C1), two-term convection plus evaporation (C2, C2p, C2_fixed_x), with the source's drawn model-1 curve scored as published. In-sample 30-minute window. Reproduction gate of the source's chi2/NDF values FAILED, so the pre-registered selection rule was not applied.",
+    "data_source": "Sedlacek and Dolejsi, 'A physical description of coffee cooling in a pot', Fig. 1 vector markers (29 points)",
+    "digitization": {
+      "method": "PDF vector marker centres mapped by least-squares axis fits to tick-label centres",
+      "across_figure_median_disagreement_C": 0.15446240029896763,
+      "sigma_used_C": 0.3
+    },
+    "assumptions": {
+      "T_room_C": 20.0,
+      "T_room_source": "not reported in the source; fixed at 20 C (lower axis limit of the source's figures); free-ambient sensitivity reported",
+      "T0_C": 79.6869,
+      "time_origin": "first marker at t = 0 (shift of 0.303 min applied)",
+      "heat_capacity": "absorbed into fitted coefficients; rates, not physical heat-transfer coefficients",
+      "residual_sign": "model minus data"
+    },
+    "reproduction_gate": {
+      "tolerance": 0.3,
+      "pass": false,
+      "rows": {
+        "model 1": {
+          "reported_chi2_per_ndf": 32.1,
+          "digitized_drawn_curve_rss_per_ndf": 3.237052153971465,
+          "ratio": 0.10084274622964065
+        },
+        "model 2": {
+          "reported_chi2_per_ndf": 2.4,
+          "digitized_drawn_curve_rss_per_ndf": 0.6903845809286534,
+          "ratio": 0.2876602420536056
+        },
+        "model 3": {
+          "reported_chi2_per_ndf": 81.3,
+          "digitized_drawn_curve_rss_per_ndf": 8.083432488153836,
+          "ratio": 0.09942721387643094
+        },
+        "model 4": {
+          "reported_chi2_per_ndf": 1.0,
+          "digitized_drawn_curve_rss_per_ndf": 0.25496662423218386,
+          "ratio": 0.25496662423218386
+        },
+        "model 1 (own refit, Tr=20)": {
+          "reported_chi2_per_ndf": 32.1,
+          "digitized_drawn_curve_rss_per_ndf": 9.17667273597375,
+          "ratio": 0.285877655326285
+        },
+        "model 2 (own refit, Tr=20)": {
+          "reported_chi2_per_ndf": 2.4,
+          "digitized_drawn_curve_rss_per_ndf": 0.07236828723425875,
+          "ratio": 0.03015345301427448
+        }
+      },
+      "full_curve_refits": {
+        "model1_C0_Tr20": {
+          "params": {
+            "a_per_min": 0.01982105181264483,
+            "t_room_C": 20.0
+          },
+          "rss_per_ndf_K2": 9.17667273597375
+        },
+        "model2_C1_Tr20": {
+          "params": {
+            "a_per_min": 0.0019420286495213269,
+            "x": 1.679027999568998,
+            "t_room_C": 20.0
+          },
+          "rss_per_ndf_K2": 0.07236828723425875
+        },
+        "model2_C1_TrFree": {
+          "params": {
+            "a_per_min": 0.0010333911977579724,
+            "x": 1.8235804378009994,
+            "t_room_C": 17.85810145819353
+          },
+          "rss_per_ndf_K2": 0.06616355355227944
+        },
+        "model1_C0_TrFree": {
+          "params": {
+            "a_per_min": 0.029813544018159152,
+            "t_room_C": 28.41755069331308
+          },
+          "rss_per_ndf_K2": 0.8412431748413908
+        },
+        "model_C2_plan_form_full_range_diagnostic": {
+          "params": {
+            "a_per_min": 0.0023799390291737283,
+            "x": 1.6046933471496188,
+            "b_evap": 1.1233690551981806e-12,
+            "z": 5.999999999999999,
+            "t_room_C": 20.0
+          },
+          "rss_per_ndf_K2": 0.06460817679929232,
+          "at_bounds": true
+        },
+        "model_C2p_source_form_full_range_diagnostic": {
+          "params": {
+            "a_per_min": 0.0023755207075953594,
+            "x": 1.6052332204932833,
+            "b_evap": 1.120045113502652e-12,
+            "z": 5.999999999999778,
+            "t_room_C": 20.0
+          },
+          "rss_per_ndf_K2": 0.06461744952191043,
+          "at_bounds": true
+        }
+      }
+    },
+    "candidates_30min_window": {
+      "C0": {
+        "n_points": 7,
+        "n_params": 1,
+        "rms_K": 1.067168221684885,
+        "chi2_sigma_0p3_per_ndf": 14.76284461781215,
+        "rss_per_ndf_K2_sourceConvention": 1.3286560156030933,
+        "AIC": 2.910120658357271,
+        "BIC": 2.856030807412584,
+        "mean_resid_first_10min_K": 0.6181996236772989,
+        "mean_resid_last_20min_K": -0.8656300465306863,
+        "params": {
+          "a_per_min": 0.02628583222678598,
+          "t_room_C": 20.0
+        },
+        "at_bounds": false,
+        "rms_30min_K": 1.067168221684885,
+        "bootstrap": {
+          "rms_K_ci95": [
+            0.6006575115586095,
+            1.525551910284819
+          ],
+          "rms_K_boot_mean": 1.0557118553000726
+        }
+      },
+      "C1": {
+        "n_points": 7,
+        "n_params": 2,
+        "rms_K": 0.3591261175958718,
+        "chi2_sigma_0p3_per_ndf": 2.006224396391973,
+        "rss_per_ndf_K2_sourceConvention": 0.18056019567527753,
+        "AIC": -10.337143095669338,
+        "BIC": -10.445322797558712,
+        "mean_resid_first_10min_K": -0.10989034047927267,
+        "mean_resid_last_20min_K": 0.08892556850617339,
+        "params": {
+          "a_per_min": 0.00071346991708328,
+          "x": 1.940845687368346,
+          "t_room_C": 20.0
+        },
+        "at_bounds": false,
+        "rms_30min_K": 0.3591261175958718,
+        "bootstrap": {
+          "rms_K_ci95": [
+            0.09689300320387466,
+            0.5647925329130122
+          ],
+          "rms_K_boot_mean": 0.3466544952450198,
+          "rms_minus_C0_ci95": [
+            -1.1347718715488233,
+            -0.20325467434487968
+          ],
+          "rms_minus_C0_excludes_zero": true,
+          "relative_rms_improvement_vs_C0_point": 0.6634775002680738
+        }
+      },
+      "C2": {
+        "n_points": 7,
+        "n_params": 4,
+        "rms_K": 0.3591261062164588,
+        "chi2_sigma_0p3_per_ndf": 3.343707115419878,
+        "rss_per_ndf_K2_sourceConvention": 0.3009336403877889,
+        "AIC": -6.337143539278916,
+        "BIC": -6.553502943057663,
+        "mean_resid_first_10min_K": -0.10988985538865374,
+        "mean_resid_last_20min_K": 0.0889247398806674,
+        "params": {
+          "a_per_min": 0.0007134715621255709,
+          "x": 1.940845091274277,
+          "b_evap": 4.470106356893388e-18,
+          "z": 1.2536329380876827,
+          "t_room_C": 20.0
+        },
+        "at_bounds": false,
+        "rms_30min_K": 0.3591261062164588,
+        "bootstrap": {
+          "rms_K_ci95": [
+            0.09689264866146989,
+            0.5647923327965952
+          ],
+          "rms_K_boot_mean": 0.3466544729052434,
+          "rms_minus_C0_ci95": [
+            -1.134771325765341,
+            -0.2032551181635316
+          ],
+          "rms_minus_C0_excludes_zero": true,
+          "relative_rms_improvement_vs_C0_point": 0.6634775109312596
+        }
+      },
+      "C2p": {
+        "n_points": 7,
+        "n_params": 4,
+        "rms_K": 0.35912610625296026,
+        "chi2_sigma_0p3_per_ndf": 3.3437071160995835,
+        "rss_per_ndf_K2_sourceConvention": 0.3009336404489625,
+        "AIC": -6.337143537855962,
+        "BIC": -6.553502941634709,
+        "mean_resid_first_10min_K": -0.10989029514914724,
+        "mean_resid_last_20min_K": 0.08892553358198185,
+        "params": {
+          "a_per_min": 0.0007134698322062488,
+          "x": 1.9408457201234273,
+          "b_evap": 3.039419340755415e-13,
+          "z": 2.0554896122557507,
+          "t_room_C": 20.0
+        },
+        "at_bounds": false,
+        "rms_30min_K": 0.35912610625296026,
+        "bootstrap": {
+          "rms_K_ci95": [
+            0.09689297512548486,
+            0.5647925129489234
+          ],
+          "rms_K_boot_mean": 0.34665448269076615,
+          "rms_minus_C0_ci95": [
+            -1.1347718587161544,
+            -0.20325470598063378
+          ],
+          "rms_minus_C0_excludes_zero": true,
+          "relative_rms_improvement_vs_C0_point": 0.6634775108970556
+        }
+      },
+      "C2_fixed_x": {
+        "n_points": 7,
+        "n_params": 3,
+        "rms_K": 0.3735802650365227,
+        "chi2_sigma_0p3_per_ndf": 2.7137097249258613,
+        "rss_per_ndf_K2_sourceConvention": 0.2442338752433275,
+        "AIC": -7.78471356921006,
+        "BIC": -7.946983122044121,
+        "mean_resid_first_10min_K": -0.12436170760436956,
+        "mean_resid_last_20min_K": 0.07932769842245335,
+        "params": {
+          "a_per_min": 1.0000000000380593e-06,
+          "x": 1.2500000009999999,
+          "b_evap": 1.6563197137138316e-05,
+          "z": 2.6802062524590653,
+          "t_room_C": 20.0
+        },
+        "at_bounds": true,
+        "rms_30min_K": 0.3735802650365227,
+        "bootstrap": {
+          "rms_K_ci95": [
+            0.10700912019535004,
+            0.5800366070353457
+          ],
+          "rms_K_boot_mean": 0.361509448334113,
+          "rms_minus_C0_ci95": [
+            -1.11552684076228,
+            -0.1912970144602368
+          ],
+          "rms_minus_C0_excludes_zero": true,
+          "relative_rms_improvement_vs_C0_point": 0.6499331057228257
+        }
+      },
+      "published_model1_curve": {
+        "n_points": 7,
+        "n_params": 1,
+        "rms_K": 2.4216380472008434,
+        "chi2_sigma_0p3_per_ndf": 76.01910337325,
+        "rss_per_ndf_K2_sourceConvention": 6.841719303592499,
+        "AIC": 14.38221866277107,
+        "BIC": 14.328128811826383,
+        "rms_30min_K": 2.4216380472008434,
+        "mean_resid_first_10min_K": 0.9872542518662802,
+        "mean_resid_last_20min_K": 2.4911198958880405,
+        "at_bounds": false,
+        "params": {
+          "note": "curve digitized from Fig. 2 of the source, not refit"
+        }
+      }
+    },
+    "sensitivity": {
+      "C0_ambient_free_window": {
+        "params": {
+          "a_per_min": 0.039463251682184584,
+          "t_room_C": 34.99999999999123
+        },
+        "rms_30min_K": 0.5420812232534234,
+        "n_params": 2
+      },
+      "C1_ambient_free_window": {
+        "params": {
+          "a_per_min": 0.005546320085154283,
+          "x": 1.5035439980100715,
+          "t_room_C": 29.99999999999962
+        },
+        "rms_30min_K": 0.3406948015754674,
+        "n_params": 3
+      }
+    },
+    "forecast_check": {
+      "n_fit_points": 4,
+      "n_forecast_points": 3,
+      "C0_forecast_rms_K": 2.933813478390773,
+      "C1_forecast_rms_K": 0.9358656622914006,
+      "note": "exploratory, few points"
+    },
+    "selection": {
+      "rule": "lowest 30-min RMS among candidates with chi2/NDF (sigma 0.3 C) within 1 of best, and relative RMS improvement over C0 >= 25% with bootstrap interval excluding zero",
+      "applied": false,
+      "survivor": "C1",
+      "rule_pass": true,
+      "descriptive_lowest_30min_RMS": "C2",
+      "eligible_by_chi2": [
+        "C1",
+        "C2_fixed_x"
+      ]
+    },
+    "bootstrap": {
+      "reps": 2000,
+      "block_minutes": 5.0,
+      "n_blocks_in_window": 6,
+      "seed": 20260523,
+      "method": "residual block bootstrap, no refit"
+    },
+    "tests": {
+      "T1_synthetic_recovery": {
+        "k_true": 0.03,
+        "mean_estimate": 0.030012749044056073,
+        "sd_estimate": 0.0002566332271882459,
+        "fraction_within_2sd": 0.96,
+        "pass": true
+      },
+      "T2_sign_check": {
+        "truth": "C1, x = 1.34",
+        "early_mean_resid_K": 0.06953813542772025,
+        "late_mean_resid_K": -0.10295792073310821,
+        "sign_convention": "model minus data",
+        "pass": true,
+        "note": "early positive and late negative: the constant-rate law underpredicts early loss and overpredicts late loss, the pattern the source describes for its model 1"
+      },
+      "T4_solver_vs_closed_form": {
+        "max_relative_error": 1.0539402533864777e-09,
+        "pass": true
+      },
+      "T5_bootstrap_coverage": {
+        "reps": 200,
+        "autocorrelation_rho": 0.6,
+        "coverage_block_bootstrap": 0.77,
+        "coverage_iid_bootstrap": 0.645,
+        "pass": false,
+        "note": "the 3-point block bootstrap is compared with the naive iid bootstrap under AR(1) residuals"
+      },
+      "T6_c0_residual_vs_digitization": {
+        "C0_rms_30min_K": 1.067168221684885,
+        "digitization_error_C": 0.15446240029896763,
+        "ratio": 6.908919061333644,
+        "pass": false,
+        "interpretation": "Plan expected the C0 RMS to be near the digitization error. It is about 6.9 times larger. Across-figure digitization agreement is 0.15 C, and the source's own drawn model-1 curve shows the same early-under, late-over pattern, so the excess is the constant-rate law's misfit and not digitization error. Recorded as a deviation from T6."
+      },
+      "T7_selection_dry_run": {
+        "survivor": "C0",
+        "rule_pass": false,
+        "pass": true
+      },
+      "T3_reproduction_gate": {
+        "pass": false,
+        "note": "see analysis_results.json; the digitized drawn curves and refits disagree with the reported chi2/NDF by more than 30%"
+      }
+    },
+    "not_testable": {
+      "C3_humidity_deficit_evaporation": "humidity not recorded in the source",
+      "C4_geometry_S_over_V": "pot diameter, height and fill are not given in the source text; metal and vacuum curves are not published as data",
+      "cross_pot_check": "only the china curve has measured points; metal and vacuum pots appear only as fitted parameters in Table I",
+      "fat_covered_control": "the source reports a fitted evaporation coefficient for water with fat (Table I) but no fat-covered curve"
+    },
+    "answer_summary": {
+      "C0_30min_rms_K_in_sample": 1.067168221684885,
+      "C0_30min_rms_K_ci95_block_bootstrap": [
+        0.6006575115586095,
+        1.525551910284819
+      ],
+      "published_model1_30min_rms_K": 2.4216380472008434,
+      "C1_30min_rms_K_in_sample": 0.3591261175958718
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "sedlacek_dolejsi_china_pot_fig1_digitized",
+      "examples": [
+        {
+          "input": "Time since first measurement: 0.00 min",
+          "output": "Measured coffee temperature: 79.69 C",
+          "predict_C0_constant_rate_window_fit": "79.69 C",
+          "predict_C1_nonlinear_convection_window_fit": "79.69 C",
+          "predict_source_drawn_model1_curve": "79.30 C",
+          "metadata_in_30min_window": true,
+          "metadata_residual_C0_model_minus_data_K": 0.0,
+          "metadata_residual_C1_model_minus_data_K": -0.0,
+          "metadata_residual_source_model1_model_minus_data_K": -0.3828
+        },
+        {
+          "input": "Time since first measurement: 3.11 min",
+          "output": "Measured coffee temperature: 74.29 C",
+          "predict_C0_constant_rate_window_fit": "75.01 C",
+          "predict_C1_nonlinear_convection_window_fit": "74.06 C",
+          "predict_source_drawn_model1_curve": "75.53 C",
+          "metadata_in_30min_window": true,
+          "metadata_residual_C0_model_minus_data_K": 0.7185,
+          "metadata_residual_C1_model_minus_data_K": -0.2324,
+          "metadata_residual_source_model1_model_minus_data_K": 1.2383
+        },
+        {
+          "input": "Time since first measurement: 5.01 min",
+          "output": "Measured coffee temperature: 71.19 C",
+          "predict_C0_constant_rate_window_fit": "72.32 C",
+          "predict_C1_nonlinear_convection_window_fit": "71.09 C",
+          "predict_source_drawn_model1_curve": "73.30 C",
+          "metadata_in_30min_window": true,
+          "metadata_residual_C0_model_minus_data_K": 1.1361,
+          "metadata_residual_C1_model_minus_data_K": -0.0973,
+          "metadata_residual_source_model1_model_minus_data_K": 2.1062
+        },
+        {
+          "input": "Time since first measurement: 10.02 min",
+          "output": "Measured coffee temperature: 64.61 C",
+          "predict_C0_constant_rate_window_fit": "65.87 C",
+          "predict_C1_nonlinear_convection_window_fit": "64.61 C",
+          "predict_source_drawn_model1_curve": "67.79 C",
+          "metadata_in_30min_window": true,
+          "metadata_residual_C0_model_minus_data_K": 1.2565,
+          "metadata_residual_C1_model_minus_data_K": -0.0027,
+          "metadata_residual_source_model1_model_minus_data_K": 3.181
+        },
+        {
+          "input": "Time since first measurement: 15.02 min",
+          "output": "Measured coffee temperature: 59.59 C",
+          "predict_C0_constant_rate_window_fit": "60.21 C",
+          "predict_C1_nonlinear_convection_window_fit": "59.56 C",
+          "predict_source_drawn_model1_curve": "62.82 C",
+          "metadata_in_30min_window": true,
+          "metadata_residual_C0_model_minus_data_K": 0.6226,
+          "metadata_residual_C1_model_minus_data_K": -0.0336,
+          "metadata_residual_source_model1_model_minus_data_K": 3.2328
+        },
+        {
+          "input": "Time since first measurement: 20.93 min",
+          "output": "Measured coffee temperature: 54.13 C",
+          "predict_C0_constant_rate_window_fit": "54.43 C",
+          "predict_C1_nonlinear_convection_window_fit": "54.86 C",
+          "predict_source_drawn_model1_curve": "57.61 C",
+          "metadata_in_30min_window": true,
+          "metadata_residual_C0_model_minus_data_K": 0.2962,
+          "metadata_residual_C1_model_minus_data_K": 0.7302,
+          "metadata_residual_source_model1_model_minus_data_K": 3.4793
+        },
+        {
+          "input": "Time since first measurement: 25.94 min",
+          "output": "Measured coffee temperature: 52.21 C",
+          "predict_C0_constant_rate_window_fit": "50.18 C",
+          "predict_C1_nonlinear_convection_window_fit": "51.66 C",
+          "predict_source_drawn_model1_curve": "53.71 C",
+          "metadata_in_30min_window": true,
+          "metadata_residual_C0_model_minus_data_K": -2.0275,
+          "metadata_residual_C1_model_minus_data_K": -0.5523,
+          "metadata_residual_source_model1_model_minus_data_K": 1.503
+        },
+        {
+          "input": "Time since first measurement: 30.95 min",
+          "output": "Measured coffee temperature: 48.36 C",
+          "predict_C0_constant_rate_window_fit": "46.46 C",
+          "predict_C1_nonlinear_convection_window_fit": "48.98 C",
+          "predict_source_drawn_model1_curve": "50.26 C",
+          "metadata_in_30min_window": false,
+          "metadata_residual_C0_model_minus_data_K": -1.9043,
+          "metadata_residual_C1_model_minus_data_K": 0.6146,
+          "metadata_residual_source_model1_model_minus_data_K": 1.8935
+        },
+        {
+          "input": "Time since first measurement: 35.96 min",
+          "output": "Measured coffee temperature: 46.01 C",
+          "predict_C0_constant_rate_window_fit": "43.19 C",
+          "predict_C1_nonlinear_convection_window_fit": "46.71 C",
+          "predict_source_drawn_model1_curve": "47.21 C",
+          "metadata_in_30min_window": false,
+          "metadata_residual_C0_model_minus_data_K": -2.8104,
+          "metadata_residual_C1_model_minus_data_K": 0.7006,
+          "metadata_residual_source_model1_model_minus_data_K": 1.2024
+        },
+        {
+          "input": "Time since first measurement: 40.01 min",
+          "output": "Measured coffee temperature: 44.45 C",
+          "predict_C0_constant_rate_window_fit": "40.85 C",
+          "predict_C1_nonlinear_convection_window_fit": "45.10 C",
+          "predict_source_drawn_model1_curve": "45.01 C",
+          "metadata_in_30min_window": false,
+          "metadata_residual_C0_model_minus_data_K": -3.6053,
+          "metadata_residual_C1_model_minus_data_K": 0.651,
+          "metadata_residual_source_model1_model_minus_data_K": 0.5571
+        },
+        {
+          "input": "Time since first measurement: 45.02 min",
+          "output": "Measured coffee temperature: 42.16 C",
+          "predict_C0_constant_rate_window_fit": "38.28 C",
+          "predict_C1_nonlinear_convection_window_fit": "43.37 C",
+          "predict_source_drawn_model1_curve": "42.60 C",
+          "metadata_in_30min_window": false,
+          "metadata_residual_C0_model_minus_data_K": -3.8829,
+          "metadata_residual_C1_model_minus_data_K": 1.209,
+          "metadata_residual_source_model1_model_minus_data_K": 0.4438
+        },
+        {
+          "input": "Time since first measurement: 50.03 min",
+          "output": "Measured coffee temperature: 40.61 C",
+          "predict_C0_constant_rate_window_fit": "36.02 C",
+          "predict_C1_nonlinear_convection_window_fit": "41.85 C",
+          "predict_source_drawn_model1_curve": "40.49 C",
+          "metadata_in_30min_window": false,
+          "metadata_residual_C0_model_minus_data_K": -4.5865,
+          "metadata_residual_C1_model_minus_data_K": 1.2424,
+          "metadata_residual_source_model1_model_minus_data_K": -0.1158
+        },
+        {
+          "input": "Time since first measurement: 55.04 min",
+          "output": "Measured coffee temperature: 39.43 C",
+          "predict_C0_constant_rate_window_fit": "34.05 C",
+          "predict_C1_nonlinear_convection_window_fit": "40.51 C",
+          "predict_source_drawn_model1_curve": "38.65 C",
+          "metadata_in_30min_window": false,
+          "metadata_residual_C0_model_minus_data_K": -5.3841,
+          "metadata_residual_C1_model_minus_data_K": 1.0841,
+          "metadata_residual_source_model1_model_minus_data_K": -0.7762
+        },
+        {
+          "input": "Time since first measurement: 60.05 min",
+          "output": "Measured coffee temperature: 37.88 C",
+          "predict_C0_constant_rate_window_fit": "32.31 C",
+          "predict_C1_nonlinear_convection_window_fit": "39.33 C",
+          "predict_source_drawn_model1_curve": "37.04 C",
+          "metadata_in_30min_window": false,
+          "metadata_residual_C0_model_minus_data_K": -5.5658,
+          "metadata_residual_C1_model_minus_data_K": 1.4478,
+          "metadata_residual_source_model1_model_minus_data_K": -0.8386
+        },
+        {
+          "input": "Time since first measurement: 65.06 min",
+          "output": "Measured coffee temperature: 36.70 C",
+          "predict_C0_constant_rate_window_fit": "30.79 C",
+          "predict_C1_nonlinear_convection_window_fit": "38.27 C",
+          "predict_source_drawn_model1_curve": "35.63 C",
+          "metadata_in_30min_window": false,
+          "metadata_residual_C0_model_minus_data_K": -5.906,
+          "metadata_residual_C1_model_minus_data_K": 1.566,
+          "metadata_residual_source_model1_model_minus_data_K": -1.0717
+        },
+        {
+          "input": "Time since first measurement: 70.06 min",
+          "output": "Measured coffee temperature: 35.58 C",
+          "predict_C0_constant_rate_window_fit": "29.46 C",
+          "predict_C1_nonlinear_convection_window_fit": "37.31 C",
+          "predict_source_drawn_model1_curve": "34.38 C",
+          "metadata_in_30min_window": false,
+          "metadata_residual_C0_model_minus_data_K": -6.1213,
+          "metadata_residual_C1_model_minus_data_K": 1.729,
+          "metadata_residual_source_model1_model_minus_data_K": -1.2003
+        },
+        {
+          "input": "Time since first measurement: 75.07 min",
+          "output": "Measured coffee temperature: 34.78 C",
+          "predict_C0_constant_rate_window_fit": "28.30 C",
+          "predict_C1_nonlinear_convection_window_fit": "36.45 C",
+          "predict_source_drawn_model1_curve": "33.29 C",
+          "metadata_in_30min_window": false,
+          "metadata_residual_C0_model_minus_data_K": -6.4811,
+          "metadata_residual_C1_model_minus_data_K": 1.6754,
+          "metadata_residual_source_model1_model_minus_data_K": -1.4878
+        },
+        {
+          "input": "Time since first measurement: 81.03 min",
+          "output": "Measured coffee temperature: 33.60 C",
+          "predict_C0_constant_rate_window_fit": "27.09 C",
+          "predict_C1_nonlinear_convection_window_fit": "35.53 C",
+          "predict_source_drawn_model1_curve": "32.14 C",
+          "metadata_in_30min_window": false,
+          "metadata_residual_C0_model_minus_data_K": -6.5066,
+          "metadata_residual_C1_model_minus_data_K": 1.9306,
+          "metadata_residual_source_model1_model_minus_data_K": -1.4609
+        },
+        {
+          "input": "Time since first measurement: 86.04 min",
+          "output": "Measured coffee temperature: 32.86 C",
+          "predict_C0_constant_rate_window_fit": "26.22 C",
+          "predict_C1_nonlinear_convection_window_fit": "34.83 C",
+          "predict_source_drawn_model1_curve": "31.28 C",
+          "metadata_in_30min_window": false,
+          "metadata_residual_C0_model_minus_data_K": -6.6369,
+          "metadata_residual_C1_model_minus_data_K": 1.9745,
+          "metadata_residual_source_model1_model_minus_data_K": -1.5713
+        },
+        {
+          "input": "Time since first measurement: 89.80 min",
+          "output": "Measured coffee temperature: 32.48 C",
+          "predict_C0_constant_rate_window_fit": "25.63 C",
+          "predict_C1_nonlinear_convection_window_fit": "34.34 C",
+          "predict_source_drawn_model1_curve": "30.70 C",
+          "metadata_in_30min_window": false,
+          "metadata_residual_C0_model_minus_data_K": -6.8497,
+          "metadata_residual_C1_model_minus_data_K": 1.8599,
+          "metadata_residual_source_model1_model_minus_data_K": -1.7876
+        },
+        {
+          "input": "Time since first measurement: 94.80 min",
+          "output": "Measured coffee temperature: 31.68 C",
+          "predict_C0_constant_rate_window_fit": "24.94 C",
+          "predict_C1_nonlinear_convection_window_fit": "33.74 C",
+          "predict_source_drawn_model1_curve": "29.97 C",
+          "metadata_in_30min_window": false,
+          "metadata_residual_C0_model_minus_data_K": -6.7381,
+          "metadata_residual_C1_model_minus_data_K": 2.0641,
+          "metadata_residual_source_model1_model_minus_data_K": -1.7068
+        },
+        {
+          "input": "Time since first measurement: 99.81 min",
+          "output": "Measured coffee temperature: 31.30 C",
+          "predict_C0_constant_rate_window_fit": "24.33 C",
+          "predict_C1_nonlinear_convection_window_fit": "33.19 C",
+          "predict_source_drawn_model1_curve": "29.31 C",
+          "metadata_in_30min_window": false,
+          "metadata_residual_C0_model_minus_data_K": -6.9746,
+          "metadata_residual_C1_model_minus_data_K": 1.8816,
+          "metadata_residual_source_model1_model_minus_data_K": -1.9923
+        },
+        {
+          "input": "Time since first measurement: 104.82 min",
+          "output": "Measured coffee temperature: 30.50 C",
+          "predict_C0_constant_rate_window_fit": "23.80 C",
+          "predict_C1_nonlinear_convection_window_fit": "32.67 C",
+          "predict_source_drawn_model1_curve": "28.72 C",
+          "metadata_in_30min_window": false,
+          "metadata_residual_C0_model_minus_data_K": -6.7027,
+          "metadata_residual_C1_model_minus_data_K": 2.1743,
+          "metadata_residual_source_model1_model_minus_data_K": -1.7771
+        },
+        {
+          "input": "Time since first measurement: 111.03 min",
+          "output": "Measured coffee temperature: 30.13 C",
+          "predict_C0_constant_rate_window_fit": "23.22 C",
+          "predict_C1_nonlinear_convection_window_fit": "32.09 C",
+          "predict_source_drawn_model1_curve": "28.08 C",
+          "metadata_in_30min_window": false,
+          "metadata_residual_C0_model_minus_data_K": -6.9024,
+          "metadata_residual_C1_model_minus_data_K": 1.9614,
+          "metadata_residual_source_model1_model_minus_data_K": -2.0465
+        },
+        {
+          "input": "Time since first measurement: 114.79 min",
+          "output": "Measured coffee temperature: 29.38 C",
+          "predict_C0_constant_rate_window_fit": "22.92 C",
+          "predict_C1_nonlinear_convection_window_fit": "31.76 C",
+          "predict_source_drawn_model1_curve": "27.74 C",
+          "metadata_in_30min_window": false,
+          "metadata_residual_C0_model_minus_data_K": -6.4608,
+          "metadata_residual_C1_model_minus_data_K": 2.3772,
+          "metadata_residual_source_model1_model_minus_data_K": -1.6443
+        },
+        {
+          "input": "Time since first measurement: 120.75 min",
+          "output": "Measured coffee temperature: 29.38 C",
+          "predict_C0_constant_rate_window_fit": "22.50 C",
+          "predict_C1_nonlinear_convection_window_fit": "31.27 C",
+          "predict_source_drawn_model1_curve": "27.26 C",
+          "metadata_in_30min_window": false,
+          "metadata_residual_C0_model_minus_data_K": -6.8845,
+          "metadata_residual_C1_model_minus_data_K": 1.8893,
+          "metadata_residual_source_model1_model_minus_data_K": -2.1199
+        },
+        {
+          "input": "Time since first measurement: 124.80 min",
+          "output": "Measured coffee temperature: 29.01 C",
+          "predict_C0_constant_rate_window_fit": "22.24 C",
+          "predict_C1_nonlinear_convection_window_fit": "30.96 C",
+          "predict_source_drawn_model1_curve": "26.98 C",
+          "metadata_in_30min_window": false,
+          "metadata_residual_C0_model_minus_data_K": -6.7647,
+          "metadata_residual_C1_model_minus_data_K": 1.9515,
+          "metadata_residual_source_model1_model_minus_data_K": -2.0261
+        },
+        {
+          "input": "Time since first measurement: 129.81 min",
+          "output": "Measured coffee temperature: 28.20 C",
+          "predict_C0_constant_rate_window_fit": "21.97 C",
+          "predict_C1_nonlinear_convection_window_fit": "30.60 C",
+          "predict_source_drawn_model1_curve": "26.69 C",
+          "metadata_in_30min_window": false,
+          "metadata_residual_C0_model_minus_data_K": -6.2348,
+          "metadata_residual_C1_model_minus_data_K": 2.3977,
+          "metadata_residual_source_model1_model_minus_data_K": -1.5147
+        },
+        {
+          "input": "Time since first measurement: 138.88 min",
+          "output": "Measured coffee temperature: 27.83 C",
+          "predict_C0_constant_rate_window_fit": "21.55 C",
+          "predict_C1_nonlinear_convection_window_fit": "30.00 C",
+          "predict_source_drawn_model1_curve": "26.28 C",
+          "metadata_in_30min_window": false,
+          "metadata_residual_C0_model_minus_data_K": -6.2805,
+          "metadata_residual_C1_model_minus_data_K": 2.1718,
+          "metadata_residual_source_model1_model_minus_data_K": -1.5491
+        }
+      ]
+    }
+  ]
+}

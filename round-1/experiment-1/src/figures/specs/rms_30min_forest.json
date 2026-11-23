@@ -1,0 +1,34 @@
+{
+  "type": "forest",
+  "null_line": 0.0,
+  "title": "30-minute RMS error by model (in-sample)",
+  "show_title": false,
+  "xlabel": "RMS error, 0-30 min (K); bars: 95% block-bootstrap half-widths",
+  "aspect": "4:3",
+  "categories": [
+    "C0 constant-rate",
+    "C1 nonlinear convection",
+    "C2 two-term, plan form",
+    "C2 two-term, x = 1.25 fixed",
+    "C2p two-term, source form"
+  ],
+  "series": [
+    {
+      "label": "RMS (K)",
+      "values": [
+        1.067,
+        0.359,
+        0.359,
+        0.374,
+        0.359
+      ],
+      "errors": [
+        0.462,
+        0.234,
+        0.234,
+        0.237,
+        0.234
+      ]
+    }
+  ]
+}

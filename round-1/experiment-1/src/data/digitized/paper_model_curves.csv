@@ -1,0 +1,551 @@
+model,figure,t_min,T_C
+model 1,fig2_model1_vs_experiment,-0.279,79.3041
+model 1,fig2_model1_vs_experiment,1.3653,77.2619
+model 1,fig2_model1_vs_experiment,3.0085,75.2795
+model 1,fig2_model1_vs_experiment,4.6513,73.3559
+model 1,fig2_model1_vs_experiment,6.2945,71.49
+model 1,fig2_model1_vs_experiment,7.9388,69.6809
+model 1,fig2_model1_vs_experiment,9.5849,67.9273
+model 1,fig2_model1_vs_experiment,11.2336,66.2283
+model 1,fig2_model1_vs_experiment,12.8855,64.5829
+model 1,fig2_model1_vs_experiment,14.5414,62.9899
+model 1,fig2_model1_vs_experiment,16.202,61.4484
+model 1,fig2_model1_vs_experiment,17.868,59.9572
+model 1,fig2_model1_vs_experiment,19.5402,58.5154
+model 1,fig2_model1_vs_experiment,21.2193,57.1219
+model 1,fig2_model1_vs_experiment,22.906,55.7756
+model 1,fig2_model1_vs_experiment,24.6011,54.4755
+model 1,fig2_model1_vs_experiment,26.3052,53.2205
+model 1,fig2_model1_vs_experiment,28.0192,52.0097
+model 1,fig2_model1_vs_experiment,29.7436,50.8419
+model 1,fig2_model1_vs_experiment,31.4793,49.7161
+model 1,fig2_model1_vs_experiment,33.227,48.6312
+model 1,fig2_model1_vs_experiment,34.9873,47.5862
+model 1,fig2_model1_vs_experiment,36.7611,46.5801
+model 1,fig2_model1_vs_experiment,38.5491,45.6118
+model 1,fig2_model1_vs_experiment,40.3519,44.6802
+model 1,fig2_model1_vs_experiment,42.1703,43.7844
+model 1,fig2_model1_vs_experiment,44.0051,42.9232
+model 1,fig2_model1_vs_experiment,45.8569,42.0956
+model 1,fig2_model1_vs_experiment,47.7265,41.3006
+model 1,fig2_model1_vs_experiment,49.6145,40.537
+model 1,fig2_model1_vs_experiment,51.5219,39.804
+model 1,fig2_model1_vs_experiment,53.4491,39.1003
+model 1,fig2_model1_vs_experiment,55.3971,38.4251
+model 1,fig2_model1_vs_experiment,57.3665,37.7771
+model 1,fig2_model1_vs_experiment,59.358,37.1554
+model 1,fig2_model1_vs_experiment,61.3724,36.5589
+model 1,fig2_model1_vs_experiment,63.4103,35.9866
+model 1,fig2_model1_vs_experiment,65.4726,35.4375
+model 1,fig2_model1_vs_experiment,67.5599,34.9103
+model 1,fig2_model1_vs_experiment,69.673,34.4043
+model 1,fig2_model1_vs_experiment,71.8125,33.9182
+model 1,fig2_model1_vs_experiment,73.9793,33.451
+model 1,fig2_model1_vs_experiment,76.174,33.0017
+model 1,fig2_model1_vs_experiment,78.3974,32.5692
+model 1,fig2_model1_vs_experiment,80.6502,32.1526
+model 1,fig2_model1_vs_experiment,82.9331,31.7506
+model 1,fig2_model1_vs_experiment,85.2469,31.3623
+model 1,fig2_model1_vs_experiment,87.5922,30.9867
+model 1,fig2_model1_vs_experiment,89.9698,30.6227
+model 1,fig2_model1_vs_experiment,92.3805,30.2692
+model 1,fig2_model1_vs_experiment,94.5174,29.9677
+model 1,fig2_model1_vs_experiment,95.9395,29.7735
+model 1,fig2_model1_vs_experiment,97.3599,29.5853
+model 1,fig2_model1_vs_experiment,98.7786,29.4029
+model 1,fig2_model1_vs_experiment,100.1953,29.2263
+model 1,fig2_model1_vs_experiment,101.6097,29.0555
+model 1,fig2_model1_vs_experiment,103.0218,28.8902
+model 1,fig2_model1_vs_experiment,104.4313,28.7306
+model 1,fig2_model1_vs_experiment,105.8379,28.5763
+model 1,fig2_model1_vs_experiment,107.2415,28.4275
+model 1,fig2_model1_vs_experiment,108.6419,28.2839
+model 1,fig2_model1_vs_experiment,110.0389,28.1456
+model 1,fig2_model1_vs_experiment,111.4322,28.0124
+model 1,fig2_model1_vs_experiment,112.8217,27.8842
+model 1,fig2_model1_vs_experiment,114.2071,27.7609
+model 1,fig2_model1_vs_experiment,115.5883,27.6426
+model 1,fig2_model1_vs_experiment,116.965,27.529
+model 1,fig2_model1_vs_experiment,118.337,27.4201
+model 1,fig2_model1_vs_experiment,119.7041,27.3159
+model 1,fig2_model1_vs_experiment,121.0662,27.2162
+model 1,fig2_model1_vs_experiment,122.423,27.1209
+model 1,fig2_model1_vs_experiment,123.7743,27.03
+model 1,fig2_model1_vs_experiment,125.1198,26.9434
+model 1,fig2_model1_vs_experiment,126.4595,26.861
+model 1,fig2_model1_vs_experiment,127.793,26.7828
+model 1,fig2_model1_vs_experiment,129.1203,26.7085
+model 1,fig2_model1_vs_experiment,130.441,26.6382
+model 1,fig2_model1_vs_experiment,131.7549,26.5718
+model 1,fig2_model1_vs_experiment,133.062,26.5091
+model 1,fig2_model1_vs_experiment,134.3618,26.4501
+model 1,fig2_model1_vs_experiment,135.6544,26.3948
+model 1,fig2_model1_vs_experiment,136.9393,26.343
+model 1,fig2_model1_vs_experiment,138.2165,26.2946
+model 1,fig2_model1_vs_experiment,139.4858,26.2496
+model 1,fig2_model1_vs_experiment,140.7468,26.2079
+model 1,fig2_model1_vs_experiment,141.9995,26.1693
+model 1,fig2_model1_vs_experiment,143.2436,26.1339
+model 1,fig2_model1_vs_experiment,144.4788,26.1015
+model 1,fig2_model1_vs_experiment,145.7051,26.072
+model 1,fig2_model1_vs_experiment,146.9222,26.0454
+model 1,fig2_model1_vs_experiment,148.1298,26.0216
+model 1,fig2_model1_vs_experiment,149.3279,26.0004
+model 1,fig2_model1_vs_experiment,150.5161,25.9819
+model 1,fig2_model1_vs_experiment,151.6943,25.9659
+model 1,fig2_model1_vs_experiment,152.8622,25.9523
+model 1,fig2_model1_vs_experiment,154.0197,25.9411
+model 1,fig2_model1_vs_experiment,155.1665,25.9322
+model 1,fig2_model1_vs_experiment,156.3025,25.9254
+model 1,fig2_model1_vs_experiment,157.4274,25.9207
+model 1,fig2_model1_vs_experiment,158.5411,25.9181
+model 1 (repeat),fig3_model2_vs_experiment,0.3774,79.723
+model 1 (repeat),fig3_model2_vs_experiment,2.017,77.6219
+model 1 (repeat),fig3_model2_vs_experiment,3.6588,75.5842
+model 1 (repeat),fig3_model2_vs_experiment,5.3034,73.6088
+model 1 (repeat),fig3_model2_vs_experiment,6.9513,71.6945
+model 1 (repeat),fig3_model2_vs_experiment,8.6029,69.8403
+model 1 (repeat),fig3_model2_vs_experiment,10.2588,68.0449
+model 1 (repeat),fig3_model2_vs_experiment,11.9195,66.3072
+model 1 (repeat),fig3_model2_vs_experiment,13.5855,64.6261
+model 1 (repeat),fig3_model2_vs_experiment,15.2573,63.0003
+model 1 (repeat),fig3_model2_vs_experiment,16.9354,61.4288
+model 1 (repeat),fig3_model2_vs_experiment,18.6203,59.9104
+model 1 (repeat),fig3_model2_vs_experiment,20.3126,58.444
+model 1 (repeat),fig3_model2_vs_experiment,22.0128,57.0283
+model 1 (repeat),fig3_model2_vs_experiment,23.7213,55.6624
+model 1 (repeat),fig3_model2_vs_experiment,25.4387,54.3449
+model 1 (repeat),fig3_model2_vs_experiment,27.1654,53.0748
+model 1 (repeat),fig3_model2_vs_experiment,28.9021,51.8509
+model 1 (repeat),fig3_model2_vs_experiment,30.6492,50.6721
+model 1 (repeat),fig3_model2_vs_experiment,32.4071,49.5372
+model 1 (repeat),fig3_model2_vs_experiment,34.1765,48.445
+model 1 (repeat),fig3_model2_vs_experiment,35.9578,47.3945
+model 1 (repeat),fig3_model2_vs_experiment,37.7516,46.3845
+model 1 (repeat),fig3_model2_vs_experiment,39.5583,45.4137
+model 1 (repeat),fig3_model2_vs_experiment,41.3785,44.4812
+model 1 (repeat),fig3_model2_vs_experiment,43.2126,43.5857
+model 1 (repeat),fig3_model2_vs_experiment,45.0612,42.726
+model 1 (repeat),fig3_model2_vs_experiment,46.9248,41.9011
+model 1 (repeat),fig3_model2_vs_experiment,48.804,41.1097
+model 1 (repeat),fig3_model2_vs_experiment,50.6991,40.3508
+model 1 (repeat),fig3_model2_vs_experiment,52.6107,39.6232
+model 1 (repeat),fig3_model2_vs_experiment,54.5394,38.9257
+model 1 (repeat),fig3_model2_vs_experiment,56.4856,38.2572
+model 1 (repeat),fig3_model2_vs_experiment,58.4499,37.6165
+model 1 (repeat),fig3_model2_vs_experiment,60.4327,37.0026
+model 1 (repeat),fig3_model2_vs_experiment,62.4346,36.4141
+model 1 (repeat),fig3_model2_vs_experiment,64.4561,35.8501
+model 1 (repeat),fig3_model2_vs_experiment,66.4976,35.3093
+model 1 (repeat),fig3_model2_vs_experiment,68.5598,34.7906
+model 1 (repeat),fig3_model2_vs_experiment,70.6431,34.2928
+model 1 (repeat),fig3_model2_vs_experiment,72.748,33.8148
+model 1 (repeat),fig3_model2_vs_experiment,74.875,33.3555
+model 1 (repeat),fig3_model2_vs_experiment,77.0247,32.9137
+model 1 (repeat),fig3_model2_vs_experiment,79.1975,32.4883
+model 1 (repeat),fig3_model2_vs_experiment,81.3939,32.078
+model 1 (repeat),fig3_model2_vs_experiment,83.6146,31.6818
+model 1 (repeat),fig3_model2_vs_experiment,85.8599,31.2985
+model 1 (repeat),fig3_model2_vs_experiment,88.1304,30.927
+model 1 (repeat),fig3_model2_vs_experiment,90.4266,30.5661
+model 1 (repeat),fig3_model2_vs_experiment,92.749,30.2146
+model 1 (repeat),fig3_model2_vs_experiment,94.8031,29.9139
+model 1 (repeat),fig3_model2_vs_experiment,96.0593,29.7362
+model 1 (repeat),fig3_model2_vs_experiment,97.3273,29.5635
+model 1 (repeat),fig3_model2_vs_experiment,98.6063,29.3957
+model 1 (repeat),fig3_model2_vs_experiment,99.8958,29.2328
+model 1 (repeat),fig3_model2_vs_experiment,101.1952,29.0748
+model 1 (repeat),fig3_model2_vs_experiment,102.5038,28.9216
+model 1 (repeat),fig3_model2_vs_experiment,103.821,28.773
+model 1 (repeat),fig3_model2_vs_experiment,105.1461,28.6292
+model 1 (repeat),fig3_model2_vs_experiment,106.4787,28.4899
+model 1 (repeat),fig3_model2_vs_experiment,107.818,28.3552
+model 1 (repeat),fig3_model2_vs_experiment,109.1634,28.225
+model 1 (repeat),fig3_model2_vs_experiment,110.5143,28.0992
+model 1 (repeat),fig3_model2_vs_experiment,111.8701,27.9778
+model 1 (repeat),fig3_model2_vs_experiment,113.2302,27.8606
+model 1 (repeat),fig3_model2_vs_experiment,114.5939,27.7478
+model 1 (repeat),fig3_model2_vs_experiment,115.9607,27.6391
+model 1 (repeat),fig3_model2_vs_experiment,117.3298,27.5346
+model 1 (repeat),fig3_model2_vs_experiment,118.7007,27.4342
+model 1 (repeat),fig3_model2_vs_experiment,120.0728,27.3377
+model 1 (repeat),fig3_model2_vs_experiment,121.4455,27.2453
+model 1 (repeat),fig3_model2_vs_experiment,122.818,27.1567
+model 1 (repeat),fig3_model2_vs_experiment,124.1899,27.072
+model 1 (repeat),fig3_model2_vs_experiment,125.5604,26.9911
+model 1 (repeat),fig3_model2_vs_experiment,126.929,26.9139
+model 1 (repeat),fig3_model2_vs_experiment,128.2951,26.8403
+model 1 (repeat),fig3_model2_vs_experiment,129.6579,26.7704
+model 1 (repeat),fig3_model2_vs_experiment,131.017,26.7041
+model 1 (repeat),fig3_model2_vs_experiment,132.3716,26.6412
+model 1 (repeat),fig3_model2_vs_experiment,133.7212,26.5817
+model 1 (repeat),fig3_model2_vs_experiment,135.0651,26.5257
+model 1 (repeat),fig3_model2_vs_experiment,136.4028,26.4729
+model 1 (repeat),fig3_model2_vs_experiment,137.7336,26.4234
+model 1 (repeat),fig3_model2_vs_experiment,139.0568,26.3772
+model 1 (repeat),fig3_model2_vs_experiment,140.3719,26.334
+model 1 (repeat),fig3_model2_vs_experiment,141.6782,26.294
+model 1 (repeat),fig3_model2_vs_experiment,142.9752,26.2569
+model 1 (repeat),fig3_model2_vs_experiment,144.2621,26.2229
+model 1 (repeat),fig3_model2_vs_experiment,145.5384,26.1917
+model 1 (repeat),fig3_model2_vs_experiment,146.8035,26.1634
+model 1 (repeat),fig3_model2_vs_experiment,148.0567,26.1379
+model 1 (repeat),fig3_model2_vs_experiment,149.2974,26.1151
+model 1 (repeat),fig3_model2_vs_experiment,150.525,26.095
+model 1 (repeat),fig3_model2_vs_experiment,151.7389,26.0775
+model 1 (repeat),fig3_model2_vs_experiment,152.9385,26.0626
+model 1 (repeat),fig3_model2_vs_experiment,154.1231,26.0502
+model 1 (repeat),fig3_model2_vs_experiment,155.292,26.0402
+model 1 (repeat),fig3_model2_vs_experiment,156.4448,26.0326
+model 1 (repeat),fig3_model2_vs_experiment,157.5808,26.0273
+model 1 (repeat),fig3_model2_vs_experiment,158.6993,26.0242
+model 2,fig3_model2_vs_experiment,0.1724,80.0527
+model 2,fig3_model2_vs_experiment,1.1203,78.5165
+model 2,fig3_model2_vs_experiment,2.0767,77.0176
+model 2,fig3_model2_vs_experiment,3.0418,75.5556
+model 2,fig3_model2_vs_experiment,4.0152,74.1299
+model 2,fig3_model2_vs_experiment,4.997,72.7399
+model 2,fig3_model2_vs_experiment,5.9869,71.3852
+model 2,fig3_model2_vs_experiment,6.9848,70.0652
+model 2,fig3_model2_vs_experiment,7.9907,68.7793
+model 2,fig3_model2_vs_experiment,9.0043,67.5271
+model 2,fig3_model2_vs_experiment,10.0256,66.308
+model 2,fig3_model2_vs_experiment,11.0544,65.1215
+model 2,fig3_model2_vs_experiment,12.0906,63.967
+model 2,fig3_model2_vs_experiment,13.1341,62.8441
+model 2,fig3_model2_vs_experiment,14.1848,61.7521
+model 2,fig3_model2_vs_experiment,15.2424,60.6907
+model 2,fig3_model2_vs_experiment,16.3069,59.6591
+model 2,fig3_model2_vs_experiment,17.3782,58.657
+model 2,fig3_model2_vs_experiment,18.4561,57.6837
+model 2,fig3_model2_vs_experiment,19.5406,56.7388
+model 2,fig3_model2_vs_experiment,20.6314,55.8217
+model 2,fig3_model2_vs_experiment,21.7284,54.9318
+model 2,fig3_model2_vs_experiment,22.8316,54.0688
+model 2,fig3_model2_vs_experiment,23.9408,53.2319
+model 2,fig3_model2_vs_experiment,25.0558,52.4208
+model 2,fig3_model2_vs_experiment,26.1765,51.6348
+model 2,fig3_model2_vs_experiment,27.3029,50.8735
+model 2,fig3_model2_vs_experiment,28.4348,50.1362
+model 2,fig3_model2_vs_experiment,29.572,49.4226
+model 2,fig3_model2_vs_experiment,30.7144,48.732
+model 2,fig3_model2_vs_experiment,31.8619,48.0639
+model 2,fig3_model2_vs_experiment,33.0145,47.4178
+model 2,fig3_model2_vs_experiment,34.1718,46.7931
+model 2,fig3_model2_vs_experiment,35.3339,46.1894
+model 2,fig3_model2_vs_experiment,36.5005,45.6061
+model 2,fig3_model2_vs_experiment,37.6716,45.0427
+model 2,fig3_model2_vs_experiment,38.847,44.4986
+model 2,fig3_model2_vs_experiment,40.0267,43.9733
+model 2,fig3_model2_vs_experiment,41.2104,43.4662
+model 2,fig3_model2_vs_experiment,42.3981,42.977
+model 2,fig3_model2_vs_experiment,43.5895,42.5049
+model 2,fig3_model2_vs_experiment,44.7847,42.0496
+model 2,fig3_model2_vs_experiment,45.9835,41.6104
+model 2,fig3_model2_vs_experiment,47.1856,41.1868
+model 2,fig3_model2_vs_experiment,48.3911,40.7783
+model 2,fig3_model2_vs_experiment,49.5998,40.3844
+model 2,fig3_model2_vs_experiment,50.8115,40.0046
+model 2,fig3_model2_vs_experiment,52.0262,39.6383
+model 2,fig3_model2_vs_experiment,53.2436,39.2849
+model 2,fig3_model2_vs_experiment,54.4637,38.944
+model 2,fig3_model2_vs_experiment,55.5334,38.6555
+model 2,fig3_model2_vs_experiment,56.3187,38.4492
+model 2,fig3_model2_vs_experiment,57.1058,38.2466
+model 2,fig3_model2_vs_experiment,57.8945,38.0477
+model 2,fig3_model2_vs_experiment,58.6848,37.8522
+model 2,fig3_model2_vs_experiment,59.4766,37.6603
+model 2,fig3_model2_vs_experiment,60.2697,37.4718
+model 2,fig3_model2_vs_experiment,61.064,37.2867
+model 2,fig3_model2_vs_experiment,61.8594,37.105
+model 2,fig3_model2_vs_experiment,62.6559,36.9265
+model 2,fig3_model2_vs_experiment,63.4532,36.7512
+model 2,fig3_model2_vs_experiment,64.2513,36.5792
+model 2,fig3_model2_vs_experiment,65.0501,36.4102
+model 2,fig3_model2_vs_experiment,65.8495,36.2443
+model 2,fig3_model2_vs_experiment,66.6493,36.0815
+model 2,fig3_model2_vs_experiment,67.4495,35.9215
+model 2,fig3_model2_vs_experiment,68.2499,35.7645
+model 2,fig3_model2_vs_experiment,69.0504,35.6103
+model 2,fig3_model2_vs_experiment,69.8509,35.459
+model 2,fig3_model2_vs_experiment,70.6514,35.3103
+model 2,fig3_model2_vs_experiment,71.4516,35.1644
+model 2,fig3_model2_vs_experiment,72.2516,35.021
+model 2,fig3_model2_vs_experiment,73.051,34.8803
+model 2,fig3_model2_vs_experiment,73.85,34.7421
+model 2,fig3_model2_vs_experiment,74.6483,34.6063
+model 2,fig3_model2_vs_experiment,75.4459,34.4729
+model 2,fig3_model2_vs_experiment,76.2426,34.3419
+model 2,fig3_model2_vs_experiment,77.0383,34.2132
+model 2,fig3_model2_vs_experiment,77.8329,34.0868
+model 2,fig3_model2_vs_experiment,78.6263,33.9625
+model 2,fig3_model2_vs_experiment,79.4184,33.8404
+model 2,fig3_model2_vs_experiment,80.2091,33.7204
+model 2,fig3_model2_vs_experiment,80.9983,33.6024
+model 2,fig3_model2_vs_experiment,81.7858,33.4863
+model 2,fig3_model2_vs_experiment,82.5716,33.3722
+model 2,fig3_model2_vs_experiment,83.3555,33.26
+model 2,fig3_model2_vs_experiment,84.1375,33.1495
+model 2,fig3_model2_vs_experiment,84.9174,33.0409
+model 2,fig3_model2_vs_experiment,85.695,32.9339
+model 2,fig3_model2_vs_experiment,86.4704,32.8286
+model 2,fig3_model2_vs_experiment,87.2434,32.7248
+model 2,fig3_model2_vs_experiment,88.0138,32.6226
+model 2,fig3_model2_vs_experiment,88.7816,32.5219
+model 2,fig3_model2_vs_experiment,89.5467,32.4226
+model 2,fig3_model2_vs_experiment,90.3089,32.3247
+model 2,fig3_model2_vs_experiment,91.0682,32.2281
+model 2,fig3_model2_vs_experiment,91.8244,32.1328
+model 2,fig3_model2_vs_experiment,92.5774,32.0387
+model 2,fig3_model2_vs_experiment,93.3271,31.9458
+model 2,fig3_model2_vs_experiment,94.0734,31.8539
+model 2,fig3_model2_vs_experiment,94.7235,31.7744
+model 2,fig3_model2_vs_experiment,96.0304,31.6176
+model 2,fig3_model2_vs_experiment,97.3454,31.4648
+model 2,fig3_model2_vs_experiment,98.6681,31.3159
+model 2,fig3_model2_vs_experiment,99.9981,31.1709
+model 2,fig3_model2_vs_experiment,101.3347,31.0299
+model 2,fig3_model2_vs_experiment,102.6774,30.8927
+model 2,fig3_model2_vs_experiment,104.0257,30.7593
+model 2,fig3_model2_vs_experiment,105.3792,30.6297
+model 2,fig3_model2_vs_experiment,106.7372,30.5038
+model 2,fig3_model2_vs_experiment,108.0993,30.3817
+model 2,fig3_model2_vs_experiment,109.465,30.2633
+model 2,fig3_model2_vs_experiment,110.8337,30.1485
+model 2,fig3_model2_vs_experiment,112.2049,30.0373
+model 2,fig3_model2_vs_experiment,113.5781,29.9298
+model 2,fig3_model2_vs_experiment,114.9528,29.8257
+model 2,fig3_model2_vs_experiment,116.3284,29.7252
+model 2,fig3_model2_vs_experiment,117.7045,29.6282
+model 2,fig3_model2_vs_experiment,119.0805,29.5347
+model 2,fig3_model2_vs_experiment,120.456,29.4445
+model 2,fig3_model2_vs_experiment,121.8303,29.3577
+model 2,fig3_model2_vs_experiment,123.2029,29.2743
+model 2,fig3_model2_vs_experiment,124.5735,29.1942
+model 2,fig3_model2_vs_experiment,125.9413,29.1174
+model 2,fig3_model2_vs_experiment,127.306,29.0438
+model 2,fig3_model2_vs_experiment,128.6669,28.9735
+model 2,fig3_model2_vs_experiment,130.0237,28.9063
+model 2,fig3_model2_vs_experiment,131.3757,28.8423
+model 2,fig3_model2_vs_experiment,132.7224,28.7814
+model 2,fig3_model2_vs_experiment,134.0634,28.7236
+model 2,fig3_model2_vs_experiment,135.398,28.6688
+model 2,fig3_model2_vs_experiment,136.7259,28.617
+model 2,fig3_model2_vs_experiment,138.0464,28.5683
+model 2,fig3_model2_vs_experiment,139.359,28.5224
+model 2,fig3_model2_vs_experiment,140.6633,28.4795
+model 2,fig3_model2_vs_experiment,141.9587,28.4395
+model 2,fig3_model2_vs_experiment,143.2447,28.4023
+model 2,fig3_model2_vs_experiment,144.5208,28.3679
+model 2,fig3_model2_vs_experiment,145.7865,28.3363
+model 2,fig3_model2_vs_experiment,147.0411,28.3074
+model 2,fig3_model2_vs_experiment,148.2843,28.2813
+model 2,fig3_model2_vs_experiment,149.5155,28.2578
+model 2,fig3_model2_vs_experiment,150.7342,28.237
+model 2,fig3_model2_vs_experiment,151.9398,28.2188
+model 2,fig3_model2_vs_experiment,153.1319,28.2032
+model 2,fig3_model2_vs_experiment,154.31,28.1901
+model 2,fig3_model2_vs_experiment,155.4734,28.1795
+model 2,fig3_model2_vs_experiment,156.6217,28.1714
+model 2,fig3_model2_vs_experiment,157.7544,28.1657
+model 2,fig3_model2_vs_experiment,158.871,28.1624
+model 3,fig4_model3_vs_experiment,-0.2677,79.7673
+model 3,fig4_model3_vs_experiment,1.414,77.6717
+model 3,fig4_model3_vs_experiment,3.1132,75.6368
+model 3,fig4_model3_vs_experiment,4.8294,73.6617
+model 3,fig4_model3_vs_experiment,6.5621,71.7453
+model 3,fig4_model3_vs_experiment,8.3107,69.8865
+model 3,fig4_model3_vs_experiment,10.0746,68.0845
+model 3,fig4_model3_vs_experiment,11.8534,66.3381
+model 3,fig4_model3_vs_experiment,13.6464,64.6464
+model 3,fig4_model3_vs_experiment,15.4532,63.0083
+model 3,fig4_model3_vs_experiment,17.2732,61.4228
+model 3,fig4_model3_vs_experiment,19.1058,59.8889
+model 3,fig4_model3_vs_experiment,20.9505,58.4056
+model 3,fig4_model3_vs_experiment,22.8067,56.9719
+model 3,fig4_model3_vs_experiment,24.6739,55.5867
+model 3,fig4_model3_vs_experiment,26.5516,54.2491
+model 3,fig4_model3_vs_experiment,28.4392,52.958
+model 3,fig4_model3_vs_experiment,30.3362,51.7124
+model 3,fig4_model3_vs_experiment,32.2419,50.5113
+model 3,fig4_model3_vs_experiment,34.156,49.3537
+model 3,fig4_model3_vs_experiment,36.0777,48.2385
+model 3,fig4_model3_vs_experiment,38.0067,47.1648
+model 3,fig4_model3_vs_experiment,39.9423,46.1315
+model 3,fig4_model3_vs_experiment,41.884,45.1376
+model 3,fig4_model3_vs_experiment,43.8312,44.1822
+model 3,fig4_model3_vs_experiment,45.7834,43.2641
+model 3,fig4_model3_vs_experiment,47.7401,42.3823
+model 3,fig4_model3_vs_experiment,49.7006,41.536
+model 3,fig4_model3_vs_experiment,51.6646,40.7239
+model 3,fig4_model3_vs_experiment,53.6313,39.9452
+model 3,fig4_model3_vs_experiment,55.6003,39.1988
+model 3,fig4_model3_vs_experiment,57.5711,38.4836
+model 3,fig4_model3_vs_experiment,59.543,37.7988
+model 3,fig4_model3_vs_experiment,61.5156,37.1432
+model 3,fig4_model3_vs_experiment,63.4882,36.5158
+model 3,fig4_model3_vs_experiment,65.4604,35.9157
+model 3,fig4_model3_vs_experiment,67.4315,35.3417
+model 3,fig4_model3_vs_experiment,69.4012,34.793
+model 3,fig4_model3_vs_experiment,71.3687,34.2684
+model 3,fig4_model3_vs_experiment,73.3336,33.767
+model 3,fig4_model3_vs_experiment,75.2953,33.2878
+model 3,fig4_model3_vs_experiment,77.2532,32.8297
+model 3,fig4_model3_vs_experiment,79.2069,32.3917
+model 3,fig4_model3_vs_experiment,81.1558,31.9727
+model 3,fig4_model3_vs_experiment,83.0992,31.5719
+model 3,fig4_model3_vs_experiment,85.0368,31.1882
+model 3,fig4_model3_vs_experiment,86.9679,30.8204
+model 3,fig4_model3_vs_experiment,88.892,30.4678
+model 3,fig4_model3_vs_experiment,90.8085,30.1291
+model 3,fig4_model3_vs_experiment,92.717,29.8035
+model 3,fig4_model3_vs_experiment,94.3798,29.5284
+model 3,fig4_model3_vs_experiment,95.6362,29.3252
+model 3,fig4_model3_vs_experiment,96.9042,29.1235
+model 3,fig4_model3_vs_experiment,98.1833,28.9236
+model 3,fig4_model3_vs_experiment,99.4728,28.7254
+model 3,fig4_model3_vs_experiment,100.7721,28.5291
+model 3,fig4_model3_vs_experiment,102.0806,28.3348
+model 3,fig4_model3_vs_experiment,103.3977,28.1427
+model 3,fig4_model3_vs_experiment,104.7227,27.9527
+model 3,fig4_model3_vs_experiment,106.0551,27.7651
+model 3,fig4_model3_vs_experiment,107.3942,27.5798
+model 3,fig4_model3_vs_experiment,108.7395,27.3971
+model 3,fig4_model3_vs_experiment,110.0902,27.2171
+model 3,fig4_model3_vs_experiment,111.4458,27.0397
+model 3,fig4_model3_vs_experiment,112.8057,26.8652
+model 3,fig4_model3_vs_experiment,114.1693,26.6937
+model 3,fig4_model3_vs_experiment,115.5358,26.5251
+model 3,fig4_model3_vs_experiment,116.9048,26.3598
+model 3,fig4_model3_vs_experiment,118.2756,26.1977
+model 3,fig4_model3_vs_experiment,119.6476,26.0389
+model 3,fig4_model3_vs_experiment,121.0201,25.8837
+model 3,fig4_model3_vs_experiment,122.3926,25.732
+model 3,fig4_model3_vs_experiment,123.7644,25.5839
+model 3,fig4_model3_vs_experiment,125.1349,25.4397
+model 3,fig4_model3_vs_experiment,126.5036,25.2994
+model 3,fig4_model3_vs_experiment,127.8697,25.163
+model 3,fig4_model3_vs_experiment,129.2327,25.0307
+model 3,fig4_model3_vs_experiment,130.592,24.9027
+model 3,fig4_model3_vs_experiment,131.9468,24.7789
+model 3,fig4_model3_vs_experiment,133.2968,24.6596
+model 3,fig4_model3_vs_experiment,134.6411,24.5447
+model 3,fig4_model3_vs_experiment,135.9792,24.4345
+model 3,fig4_model3_vs_experiment,137.3104,24.329
+model 3,fig4_model3_vs_experiment,138.6343,24.2284
+model 3,fig4_model3_vs_experiment,139.95,24.1326
+model 3,fig4_model3_vs_experiment,141.2571,24.042
+model 3,fig4_model3_vs_experiment,142.5549,23.9564
+model 3,fig4_model3_vs_experiment,143.8428,23.8761
+model 3,fig4_model3_vs_experiment,145.1202,23.8012
+model 3,fig4_model3_vs_experiment,146.3864,23.7317
+model 3,fig4_model3_vs_experiment,147.6409,23.6678
+model 3,fig4_model3_vs_experiment,148.8829,23.6096
+model 3,fig4_model3_vs_experiment,150.112,23.5571
+model 3,fig4_model3_vs_experiment,151.3275,23.5105
+model 3,fig4_model3_vs_experiment,152.5288,23.4699
+model 3,fig4_model3_vs_experiment,153.7152,23.4354
+model 3,fig4_model3_vs_experiment,154.8862,23.4071
+model 3,fig4_model3_vs_experiment,156.0411,23.3851
+model 3,fig4_model3_vs_experiment,157.1793,23.3694
+model 3,fig4_model3_vs_experiment,158.3002,23.3603
+model 4,fig5_model4_vs_experiment,-0.0962,79.6179
+model 4,fig5_model4_vs_experiment,0.8096,77.52
+model 4,fig5_model4_vs_experiment,1.7965,75.4863
+model 4,fig5_model4_vs_experiment,2.862,73.5156
+model 4,fig5_model4_vs_experiment,4.0036,71.6068
+model 4,fig5_model4_vs_experiment,5.2188,69.7588
+model 4,fig5_model4_vs_experiment,6.505,67.9704
+model 4,fig5_model4_vs_experiment,7.8598,66.2406
+model 4,fig5_model4_vs_experiment,9.2805,64.5682
+model 4,fig5_model4_vs_experiment,10.7647,62.9521
+model 4,fig5_model4_vs_experiment,12.3099,61.3911
+model 4,fig5_model4_vs_experiment,13.9135,59.8842
+model 4,fig5_model4_vs_experiment,15.5731,58.4302
+model 4,fig5_model4_vs_experiment,17.286,57.0279
+model 4,fig5_model4_vs_experiment,19.0498,55.6763
+model 4,fig5_model4_vs_experiment,20.862,54.3742
+model 4,fig5_model4_vs_experiment,22.72,53.1206
+model 4,fig5_model4_vs_experiment,24.6213,51.9142
+model 4,fig5_model4_vs_experiment,26.5634,50.7539
+model 4,fig5_model4_vs_experiment,28.5438,49.6387
+model 4,fig5_model4_vs_experiment,30.5599,48.5674
+model 4,fig5_model4_vs_experiment,32.6093,47.5388
+model 4,fig5_model4_vs_experiment,34.6894,46.5519
+model 4,fig5_model4_vs_experiment,36.7976,45.6055
+model 4,fig5_model4_vs_experiment,38.9316,44.6986
+model 4,fig5_model4_vs_experiment,41.0887,43.8298
+model 4,fig5_model4_vs_experiment,43.2664,42.9983
+model 4,fig5_model4_vs_experiment,45.4622,42.2027
+model 4,fig5_model4_vs_experiment,47.6736,41.442
+model 4,fig5_model4_vs_experiment,49.8981,40.7151
+model 4,fig5_model4_vs_experiment,52.1331,40.0209
+model 4,fig5_model4_vs_experiment,54.3761,39.3581
+model 4,fig5_model4_vs_experiment,56.6246,38.7258
+model 4,fig5_model4_vs_experiment,58.8762,38.1227
+model 4,fig5_model4_vs_experiment,61.1281,37.5477
+model 4,fig5_model4_vs_experiment,63.3781,36.9998
+model 4,fig5_model4_vs_experiment,65.6234,36.4777
+model 4,fig5_model4_vs_experiment,67.8617,35.9804
+model 4,fig5_model4_vs_experiment,70.0903,35.5068
+model 4,fig5_model4_vs_experiment,72.3067,35.0556
+model 4,fig5_model4_vs_experiment,74.5086,34.6259
+model 4,fig5_model4_vs_experiment,76.6932,34.2163
+model 4,fig5_model4_vs_experiment,78.8581,33.826
+model 4,fig5_model4_vs_experiment,81.0008,33.4536
+model 4,fig5_model4_vs_experiment,83.1188,33.0981
+model 4,fig5_model4_vs_experiment,85.2094,32.7583
+model 4,fig5_model4_vs_experiment,87.2703,32.4332
+model 4,fig5_model4_vs_experiment,89.2989,32.1216
+model 4,fig5_model4_vs_experiment,91.2927,31.8223
+model 4,fig5_model4_vs_experiment,93.2491,31.5343
+model 4,fig5_model4_vs_experiment,94.9283,31.2907
+model 4,fig5_model4_vs_experiment,96.1842,31.1125
+model 4,fig5_model4_vs_experiment,97.4509,30.9389
+model 4,fig5_model4_vs_experiment,98.7278,30.7696
+model 4,fig5_model4_vs_experiment,100.0143,30.6047
+model 4,fig5_model4_vs_experiment,101.3098,30.444
+model 4,fig5_model4_vs_experiment,102.6137,30.2875
+model 4,fig5_model4_vs_experiment,103.9254,30.1351
+model 4,fig5_model4_vs_experiment,105.2443,29.9867
+model 4,fig5_model4_vs_experiment,106.5699,29.8422
+model 4,fig5_model4_vs_experiment,107.9015,29.7016
+model 4,fig5_model4_vs_experiment,109.2386,29.5648
+model 4,fig5_model4_vs_experiment,110.5805,29.4316
+model 4,fig5_model4_vs_experiment,111.9267,29.3021
+model 4,fig5_model4_vs_experiment,113.2765,29.1761
+model 4,fig5_model4_vs_experiment,114.6294,29.0536
+model 4,fig5_model4_vs_experiment,115.9849,28.9345
+model 4,fig5_model4_vs_experiment,117.3422,28.8186
+model 4,fig5_model4_vs_experiment,118.7008,28.706
+model 4,fig5_model4_vs_experiment,120.0601,28.5965
+model 4,fig5_model4_vs_experiment,121.4196,28.4901
+model 4,fig5_model4_vs_experiment,122.7786,28.3867
+model 4,fig5_model4_vs_experiment,124.1365,28.2861
+model 4,fig5_model4_vs_experiment,125.4928,28.1884
+model 4,fig5_model4_vs_experiment,126.8468,28.0934
+model 4,fig5_model4_vs_experiment,128.1979,28.0011
+model 4,fig5_model4_vs_experiment,129.5457,27.9114
+model 4,fig5_model4_vs_experiment,130.8894,27.8242
+model 4,fig5_model4_vs_experiment,132.2285,27.7394
+model 4,fig5_model4_vs_experiment,133.5624,27.657
+model 4,fig5_model4_vs_experiment,134.8905,27.5768
+model 4,fig5_model4_vs_experiment,136.2122,27.4989
+model 4,fig5_model4_vs_experiment,137.5269,27.423
+model 4,fig5_model4_vs_experiment,138.834,27.3492
+model 4,fig5_model4_vs_experiment,140.133,27.2773
+model 4,fig5_model4_vs_experiment,141.4232,27.2073
+model 4,fig5_model4_vs_experiment,142.704,27.1391
+model 4,fig5_model4_vs_experiment,143.9749,27.0726
+model 4,fig5_model4_vs_experiment,145.2353,27.0077
+model 4,fig5_model4_vs_experiment,146.4845,26.9444
+model 4,fig5_model4_vs_experiment,147.722,26.8826
+model 4,fig5_model4_vs_experiment,148.9472,26.8221
+model 4,fig5_model4_vs_experiment,150.1595,26.763
+model 4,fig5_model4_vs_experiment,151.3583,26.7051
+model 4,fig5_model4_vs_experiment,152.5429,26.6484
+model 4,fig5_model4_vs_experiment,153.713,26.5928
+model 4,fig5_model4_vs_experiment,154.8677,26.5381
+model 4,fig5_model4_vs_experiment,156.0066,26.4844
+model 4,fig5_model4_vs_experiment,157.129,26.4315
+model 4,fig5_model4_vs_experiment,158.2343,26.3794

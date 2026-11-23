@@ -1,0 +1,125 @@
+{
+  "source_pdf": "data/source/sedlacek_dolejsi.pdf",
+  "method": "vector marker centres (2.4 pt squares) mapped with least-squares fits to tick-label centres",
+  "figures": {
+    "fig1_china_measured": {
+      "name": "fig1_china_measured",
+      "page": 1,
+      "n_markers": 29,
+      "x_calibration": {
+        "min_per_pt": 0.7229639589206727,
+        "offset": -50.769682744907165,
+        "label_rms_min": 0.028756772994380952,
+        "labels": 9
+      },
+      "y_calibration": {
+        "C_per_pt": -0.7948682321825296,
+        "offset": 545.5495225321216,
+        "label_rms_C": 0.07310852768052768,
+        "labels": 8
+      }
+    },
+    "fig2_model1_vs_experiment": {
+      "name": "fig2_model1_vs_experiment",
+      "page": 2,
+      "n_markers": 29,
+      "x_calibration": {
+        "min_per_pt": 0.7229638379091652,
+        "offset": -51.12146503926635,
+        "label_rms_min": 0.02880299685608063,
+        "labels": 9
+      },
+      "y_calibration": {
+        "C_per_pt": -0.7771215301907749,
+        "offset": 209.96069641190573,
+        "label_rms_C": 0.07136475852406594,
+        "labels": 8
+      }
+    },
+    "fig3_model2_vs_experiment": {
+      "name": "fig3_model2_vs_experiment",
+      "page": 2,
+      "n_markers": 29,
+      "x_calibration": {
+        "min_per_pt": 0.7100178884919854,
+        "offset": -47.53493592729122,
+        "label_rms_min": 0.06328690777415841,
+        "labels": 8
+      },
+      "y_calibration": {
+        "C_per_pt": -0.7886664949698835,
+        "offset": 522.9519481936089,
+        "label_rms_C": 6.54605949660251e-05,
+        "labels": 8
+      }
+    },
+    "fig4_model3_vs_experiment": {
+      "name": "fig4_model3_vs_experiment",
+      "page": 2,
+      "n_markers": 29,
+      "x_calibration": {
+        "min_per_pt": 0.7201362742627065,
+        "offset": -239.63163018921156,
+        "label_rms_min": 0.055274652383995336,
+        "labels": 9
+      },
+      "y_calibration": {
+        "C_per_pt": -0.8049312918862014,
+        "offset": 496.75475332645897,
+        "label_rms_C": 0.07435578965620158,
+        "labels": 8
+      }
+    },
+    "fig5_model4_vs_experiment": {
+      "name": "fig5_model4_vs_experiment",
+      "page": 3,
+      "n_markers": 29,
+      "x_calibration": {
+        "min_per_pt": 0.7201390255514091,
+        "offset": -50.54048850341869,
+        "label_rms_min": 0.05530690334166279,
+        "labels": 9
+      },
+      "y_calibration": {
+        "C_per_pt": -0.8129189596794317,
+        "offset": 376.80646303777,
+        "label_rms_C": 0.07933761819184164,
+        "labels": 8
+      }
+    }
+  },
+  "cross_figure_check_vs_fig1": {
+    "fig2_model1_vs_experiment": {
+      "n": 29,
+      "median_abs_dt_min": 0.00026972841038741535,
+      "max_abs_dt_min": 0.001195791910532762,
+      "median_abs_dT_C": 0.013189096042083293,
+      "rms_dT_C": 0.013355427563437524,
+      "max_abs_dT_C": 0.0164595207597813
+    },
+    "fig3_model2_vs_experiment": {
+      "n": 29,
+      "median_abs_dt_min": 0.46787205821641464,
+      "max_abs_dt_min": 0.6610528715213206,
+      "median_abs_dT_C": 0.19760459319854817,
+      "rms_dT_C": 0.25446838466271643,
+      "max_abs_dT_C": 0.4830333640498452
+    },
+    "fig4_model3_vs_experiment": {
+      "n": 29,
+      "median_abs_dt_min": 0.09248907494593084,
+      "max_abs_dt_min": 0.2553774284343717,
+      "median_abs_dT_C": 0.13633512764357647,
+      "rms_dT_C": 0.16512722221819265,
+      "max_abs_dT_C": 0.4226268094702732
+    },
+    "fig5_model4_vs_experiment": {
+      "n": 29,
+      "median_abs_dt_min": 0.10711035034856309,
+      "max_abs_dt_min": 1.673851042706815,
+      "median_abs_dT_C": 0.10993538437401185,
+      "rms_dT_C": 0.1437975783797426,
+      "max_abs_dT_C": 0.2768873233314366
+    }
+  }
+}

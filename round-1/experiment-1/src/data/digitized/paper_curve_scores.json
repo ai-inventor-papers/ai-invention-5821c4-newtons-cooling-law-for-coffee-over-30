@@ -1,0 +1,77 @@
+{
+  "model 1": {
+    "figure": "fig2_model1_vs_experiment",
+    "reported_chi2_per_ndf": 32.1,
+    "n_params_reported_or_assumed": 1,
+    "digitized_rss_K2": 90.63746031120102,
+    "digitized_rss_over_ndf_K2": 3.237052153971465,
+    "ratio_to_reported": 0.10084274622964065,
+    "curve_t_range_min": [
+      -0.27902982883849603,
+      159.5060887671388
+    ],
+    "how_identified": "Bezier 'cc' drawn in the model-1 panel",
+    "mean_residual_first_10min_K": 1.5341994461938988,
+    "mean_residual_after_20min_K": -0.735894217814006
+  },
+  "model 1 (repeat)": {
+    "figure": "fig3_model2_vs_experiment",
+    "reported_chi2_per_ndf": 32.1,
+    "n_params_reported_or_assumed": 1,
+    "digitized_rss_K2": 117.81175243913371,
+    "digitized_rss_over_ndf_K2": 4.207562587111918,
+    "ratio_to_reported": 0.13107671610940555,
+    "curve_t_range_min": [
+      0.37742567705956986,
+      159.66320453763691
+    ],
+    "how_identified": "first 'cc' path in the Fig. 3 box",
+    "mean_residual_first_10min_K": 2.3830204469217406,
+    "mean_residual_after_20min_K": -0.576344617321658
+  },
+  "model 2": {
+    "figure": "fig3_model2_vs_experiment",
+    "reported_chi2_per_ndf": 2.4,
+    "n_params_reported_or_assumed": 2,
+    "digitized_rss_K2": 18.64038368507364,
+    "digitized_rss_over_ndf_K2": 0.6903845809286534,
+    "ratio_to_reported": 0.2876602420536056,
+    "curve_t_range_min": [
+      0.17244614748393872,
+      159.83431694197716
+    ],
+    "how_identified": "'ccc' path in the Fig. 3 box",
+    "mean_residual_first_10min_K": 1.5029903174936692,
+    "mean_residual_after_20min_K": 0.09943964248870607
+  },
+  "model 3": {
+    "figure": "fig4_model3_vs_experiment",
+    "reported_chi2_per_ndf": 81.3,
+    "n_params_reported_or_assumed": 6,
+    "digitized_rss_K2": 185.91894722753824,
+    "digitized_rss_over_ndf_K2": 8.083432488153836,
+    "ratio_to_reported": 0.09942721387643094,
+    "curve_t_range_min": [
+      -0.26767716603035296,
+      159.26628649700044
+    ],
+    "how_identified": "'cc' path in the Fig. 4 box",
+    "mean_residual_first_10min_K": 2.0603660125560275,
+    "mean_residual_after_20min_K": -0.7464304306788279
+  },
+  "model 4": {
+    "figure": "fig5_model4_vs_experiment",
+    "reported_chi2_per_ndf": 1.0,
+    "n_params_reported_or_assumed": 7,
+    "digitized_rss_K2": 5.609265733108045,
+    "digitized_rss_over_ndf_K2": 0.25496662423218386,
+    "ratio_to_reported": 0.25496662423218386,
+    "curve_t_range_min": [
+      -0.09619254696007573,
+      159.18705829493405
+    ],
+    "how_identified": "'cc' path in the Fig. 5 box",
+    "mean_residual_first_10min_K": -0.48400395675030694,
+    "mean_residual_after_20min_K": -0.23514631683363355
+  }
+}

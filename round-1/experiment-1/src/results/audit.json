@@ -1,0 +1,47 @@
+{
+  "independent_read": {
+    "n_markers": 29,
+    "n_window": 7,
+    "first_marker_raw_time_min": -0.30311442460254057
+  },
+  "C0_rms_30min_K": 1.0671523144632262,
+  "C0_fit_a_per_min": 0.026285885667490808,
+  "C1_rms_30min_K": 0.3591134562010968,
+  "C1_fit_a_x": [
+    0.0007135119359012419,
+    1.940830778745299
+  ],
+  "published_model1_rms_30min_K": 2.4186602259090626,
+  "C1_minus_C0_block_ci95": [
+    -1.164995013390976,
+    -0.14013088692335546
+  ],
+  "placebo_C0_vs_C0_ci95": [
+    0.0,
+    0.0
+  ],
+  "real_relative_rms_improvement_C1_over_C0": 0.6634843486407753,
+  "placebo_permuted_time_improvement_median": 0.027785709513697465,
+  "placebo_permuted_time_improvement_max": 0.18608915621905153,
+  "placebo_permutation_p_value": 0.009900990099009901,
+  "placebo_n_permutations": 100,
+  "placebo_pass": true,
+  "comparison_with_original": {
+    "C0_rms": {
+      "independent": 1.0671523144632262,
+      "original": 1.067168221684885,
+      "agree": true
+    },
+    "C1_rms": {
+      "independent": 0.3591134562010968,
+      "original": 0.3591261175958718,
+      "agree": true
+    },
+    "published_rms": {
+      "independent": 2.4186602259090626,
+      "original": 2.4216380472008434,
+      "agree": true
+    }
+  },
+  "all_headline_agree": true
+}

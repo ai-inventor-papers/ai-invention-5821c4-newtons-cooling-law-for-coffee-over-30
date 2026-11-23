@@ -1,0 +1,45 @@
+{
+  "T1_synthetic_recovery": {
+    "k_true": 0.03,
+    "mean_estimate": 0.030012749044056073,
+    "sd_estimate": 0.0002566332271882459,
+    "fraction_within_2sd": 0.96,
+    "pass": true
+  },
+  "T2_sign_check": {
+    "truth": "C1, x = 1.34",
+    "early_mean_resid_K": 0.06953813542772025,
+    "late_mean_resid_K": -0.10295792073310821,
+    "sign_convention": "model minus data",
+    "pass": true,
+    "note": "early positive and late negative: the constant-rate law underpredicts early loss and overpredicts late loss, the pattern the source describes for its model 1"
+  },
+  "T4_solver_vs_closed_form": {
+    "max_relative_error": 1.0539402533864777e-09,
+    "pass": true
+  },
+  "T5_bootstrap_coverage": {
+    "reps": 200,
+    "autocorrelation_rho": 0.6,
+    "coverage_block_bootstrap": 0.77,
+    "coverage_iid_bootstrap": 0.645,
+    "pass": false,
+    "note": "the 3-point block bootstrap is compared with the naive iid bootstrap under AR(1) residuals"
+  },
+  "T6_c0_residual_vs_digitization": {
+    "C0_rms_30min_K": 1.067168221684885,
+    "digitization_error_C": 0.15446240029896763,
+    "ratio": 6.908919061333644,
+    "pass": false,
+    "interpretation": "Plan expected the C0 RMS to be near the digitization error. It is about 6.9 times larger. Across-figure digitization agreement is 0.15 C, and the source's own drawn model-1 curve shows the same early-under, late-over pattern, so the excess is the constant-rate law's misfit and not digitization error. Recorded as a deviation from T6."
+  },
+  "T7_selection_dry_run": {
+    "survivor": "C0",
+    "rule_pass": false,
+    "pass": true
+  },
+  "T3_reproduction_gate": {
+    "pass": false,
+    "note": "see analysis_results.json; the digitized drawn curves and refits disagree with the reported chi2/NDF by more than 30%"
+  }
+}
