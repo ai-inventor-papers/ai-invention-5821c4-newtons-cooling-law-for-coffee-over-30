@@ -1,0 +1,99 @@
+{
+  "type": "panel",
+  "panel_labels": true,
+  "aspect": "16:9",
+  "ncols": 2,
+  "panels": [
+    {
+      "type": "bar",
+      "title": "Manitoba: Newton 5.30 K, power 0.77 K",
+      "xlabel": "Curve",
+      "ylabel": "RMS error, minutes 10 to 30 (K)",
+      "aspect": "4:3",
+      "categories": [
+        "Manitoba coffee"
+      ],
+      "ylim": [
+        0,
+        6.4
+      ],
+      "annotate": true,
+      "fmt": ".2f",
+      "legend_loc": "upper right",
+      "series": [
+        {
+          "label": "Newton's law, refitted",
+          "values": [
+            5.301
+          ]
+        },
+        {
+          "label": "Power law, refitted (x = 2.18)",
+          "values": [
+            0.767
+          ]
+        }
+      ]
+    },
+    {
+      "type": "bar",
+      "title": "Langer 01 to 10; mean of ten: 0.18 K and 0.59 K",
+      "xlabel": "Curve",
+      "ylabel": "RMS error, minutes 10 to 30 (K)",
+      "aspect": "4:3",
+      "categories": [
+        "Langer 01",
+        "Langer 02",
+        "Langer 03",
+        "Langer 04",
+        "Langer 05",
+        "Langer 06",
+        "Langer 07",
+        "Langer 08",
+        "Langer 09",
+        "Langer 10"
+      ],
+      "ylim": [
+        0,
+        1.75
+      ],
+      "legend_loc": "upper right",
+      "series": [
+        {
+          "label": "Newton's law, refitted",
+          "values": [
+            0.294,
+            0.146,
+            0.258,
+            0.223,
+            0.192,
+            0.086,
+            0.063,
+            0.076,
+            0.226,
+            0.191
+          ]
+        },
+        {
+          "label": "Power law, refitted (x = 2.18)",
+          "values": [
+            0.595,
+            0.228,
+            0.315,
+            1.092,
+            0.031,
+            1.421,
+            0.723,
+            0.253,
+            0.855,
+            0.35
+          ]
+        }
+      ]
+    }
+  ],
+  "color_map": {
+    "Newton's law, refitted": "#0173B2",
+    "Power law, refitted (x = 2.18)": "#DE8F05"
+  }
+}

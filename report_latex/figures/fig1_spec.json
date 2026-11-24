@@ -1,0 +1,28 @@
+{
+  "type": "line",
+  "xlabel": "Time (min)",
+  "ylabel": "Model minus data (K)",
+  "aspect": "16:9",
+  "series": [
+    {
+      "label": "C0 constant-rate (fitted, 0-30 min)",
+      "x": [0.0, 3.11, 5.01, 10.02, 15.02, 20.93, 25.94],
+      "values": [0.0, 0.7185, 1.1361, 1.2565, 0.6226, 0.2962, -2.0275]
+    },
+    {
+      "label": "C1 nonlinear convection (fitted, 0-30 min)",
+      "x": [0.0, 3.11, 5.01, 10.02, 15.02, 20.93, 25.94],
+      "values": [0.0, -0.2324, -0.0973, -0.0027, -0.0336, 0.7302, -0.5523]
+    },
+    {
+      "label": "Source model 1 curve (not refit)",
+      "x": [0.0, 3.11, 5.01, 10.02, 15.02, 20.93, 25.94],
+      "values": [-0.3828, 1.2383, 2.1062, 3.181, 3.2328, 3.4793, 1.503]
+    }
+  ],
+  "color_map": {
+    "C0 constant-rate (fitted, 0-30 min)": "#949494",
+    "C1 nonlinear convection (fitted, 0-30 min)": "#0173B2",
+    "Source model 1 curve (not refit)": "#DE8F05"
+  }
+}

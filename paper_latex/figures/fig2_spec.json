@@ -1,0 +1,34 @@
+{
+  "type": "bar",
+  "title": "Frozen-transfer error for each held-out curve",
+  "aspect": "16:9",
+  "xlabel": "Held-out curve",
+  "ylabel": "RMS error over 0 to 30 min (K)",
+  "ylim": [0, 14],
+  "annotate": true,
+  "fmt": ".2f",
+  "legend_loc": "upper right",
+  "color_map": {
+    "Newton law": "#0173B2",
+    "Power law, x = 2.18": "#DE8F05"
+  },
+  "categories": [
+    "Manitoba coffee",
+    "Langer 01",
+    "Langer 02",
+    "Langer 03",
+    "Langer 04",
+    "Langer 05",
+    "Langer 06"
+  ],
+  "series": [
+    {
+      "label": "Newton law",
+      "values": [3.454, 6.864, 8.951, 11.927, 8.896, 8.309, 9.944]
+    },
+    {
+      "label": "Power law, x = 2.18",
+      "values": [2.659, 6.572, 8.768, 12.092, 8.685, 8.182, 10.034]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage{graphicx, geometry, amsmath, hyperref, url, booktabs, xcolor, tabularx, float}
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black}
+\sloppy
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.75}
+
+\title{Newton's Cooling Law Fitted to One Coffee Curve Does Not Transfer Between Cups}
+\author{Executive summary of the internal research report}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section*{Headline}
+
+Over a held-out set of seven scored curves (Manitoba coffee, plus six Langer hot-water cups), the nonlinear convection law's mean 30-minute error is 0.19 K lower than Newton's law (paired 95\% interval -0.44 to -0.00 K). This is one pre-registered criterion, recorded as passed on its sign threshold. It is not established: a sign-flip placebo gives $p = 0.0625$ for the mean, the advantage reverses sign when the Manitoba coffee cup is held out, and the set has only one coffee curve. The source is the held-out transfer test of Iteration~2 (gen\_art\_experiment\_2, Ambient A). The record grades the result as a lead, not a finding.
+
+The accuracy question is answered by the frozen test, and that test failed. Newton's law has a mean 30-minute error of 8.33 K (95\% interval 6.54 to 9.93 K) over the seven held-out curves, against a pre-registered target of 0.5 K. When the constant was refitted to the first 10 minutes of each curve (Iteration~2, gen\_art\_experiment\_3), the mean error over eleven curves fell to 0.64 K, but the one coffee cup stayed at 5.30 K. The scope is one measured coffee curve and no humidity data. A 30-minute accuracy figure for Newton's law describes the cup it was fitted to, not cups in general.
+
+\section*{Goal}
+
+The run asked how accurately Newton's law of cooling predicts the temperature of an open cup of coffee over 30 minutes, measured against published data. The hypothesis was that the constant-rate law misses the early part of the curve, that a two-term model with a nonlinear convective term and a temperature-dependent evaporative term corrects this, and that humidity may enter the evaporative term. The run could not collect new measurements, so it worked from published cooling curves and a literature search.
+
+\section*{What was tried}
+
+\begin{itemize}
+\item \textbf{Iteration 1.} A literature screen (gen\_art\_research\_1) found no verified source with a measured 30-minute accuracy figure for coffee, and none that records humidity or cup mass with cooling curves. A held-out dataset (gen\_art\_dataset\_1) assembled eight published curves from three sources, without fitting. A fitting experiment (gen\_art\_experiment\_1) fitted Newton's law and the nonlinear law to the first 30 minutes of one porcelain-pot coffee curve. The reproduction gate failed, and the review graded the result a lead.
+\item \textbf{Iteration 2.} A re-reading of the porcelain-pot curve (gen\_art\_dataset\_2) gave 29 points, and found no humidity or evaporation series. A held-out test (gen\_art\_experiment\_2) froze the in-sample fits and scored them on seven held-out curves. A stability test of the exponent (gen\_art\_experiment\_3) profiled the exponent, ran held-out fits and benchmark checks. The review graded the coverage partial and the evidence a lead.
+\end{itemize}
+
+\section*{Key results}
+
+All values below are read from the artifacts' output files. Iteration 1 values are those that iteration recorded; Iteration 2 values were checked against the Iteration 2 files.
+
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Key results with source artifact and grade as the record gives them.}
+\begin{tabularx}{\linewidth}{p{5.6cm}p{2.9cm}X}
+\toprule
+Result & Value & Source and grade \\
+\midrule
+Newton's law, in-sample 30-min RMS, porcelain-pot curve, room T 20 C & 1.26 K (1.07 K in Iteration 1) & gen\_art\_experiment\_2 (Iteration 1 value: gen\_art\_experiment\_1); lead, one curve \\
+Nonlinear law, in-sample 30-min RMS, same window & 0.33 K, exponent $x = 2.18$ & gen\_art\_experiment\_2; lead \\
+Exponent profile interval ($\Delta\chi^2 = 3.84$) & 1.95 to 2.42 & gen\_art\_experiment\_3; not a stable constant \\
+Newton's law, held-out Manitoba coffee, 30-min RMS (ambient A) & 3.45 K & gen\_art\_experiment\_2; frozen test failed \\
+Nonlinear law, held-out Manitoba coffee, 30-min RMS (ambient A) & 2.66 K & gen\_art\_experiment\_2; frozen test failed \\
+Held-out mean, seven curves, Newton's law / nonlinear law & 8.33 K / 8.14 K & gen\_art\_experiment\_2; paired difference $-0.19$ K, 95\% interval -0.44 to -0.00 K, sign-flip $p = 0.0625$ \\
+Six Langer hot-water cups, both laws (ambient A) & about 9 K each & gen\_art\_experiment\_2; frozen transfer fails \\
+Refit to 0--10 min, eleven curves, Newton's law / nonlinear law at $x = 2.18$ & 0.64 K / 0.60 K & gen\_art\_experiment\_3; nonlinear law better on 2 of 11 curves \\
+Refit, Manitoba coffee only, Newton's law / nonlinear law & 5.30 K / 0.77 K & gen\_art\_experiment\_3; carries the refit mean \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The full report (19 pages, read from its compiled PDF) holds the complete tables, including the window fits, full-record fits, agreement test and validation checks.
+
+\section*{What failed}
+
+\begin{itemize}
+\item \textbf{Frozen transfer to coffee and to hot water.} Porcelain-pot parameters applied to held-out curves miss by 2.7 to 3.5 K on Manitoba and by about 9 K on the Langer cups. The 0.5 K target was not met under any strict transfer.
+\item \textbf{The nonlinear law's advantage.} It is small (0.19 K), not significant under the sign-flip placebo, and reverses when the Manitoba curve is held out. On ten Langer cups, the refitted Newton's law is better than the nonlinear law at $x = 2.18$ on nine.
+\item \textbf{A stable exponent.} Across fits the exponent runs from 1.20 to 2.18. The fixed value 1.94 from Iteration 1 is not a stable constant.
+\item \textbf{The agreement test with the source's own $\chi^2$/NDF values.} Its ratios range from 0.03 to 0.29, so the source's selection ordering was not used.
+\item \textbf{Literature screen.} Most candidate sources were blocked; the screen gave no benchmark and rests on abstracts for its verified statements.
+\item \textbf{Benchmark gate.} The prior-round targets (Newton's law 1.07 K; exponent 1.94) were not reproduced, and the 0.54 K free-ambient value could not be matched to any output.
+\end{itemize}
+
+\section*{Open questions}
+
+\begin{itemize}
+\item Whether the 1.07 K and 1.26 K in-sample values differ because of a time shift between two readings of the same figure (0.30 to 0.40 min), which was not tested.
+\item Whether the Manitoba error is a difference between cups or a room-temperature effect, using its recorded room temperature.
+\item Whether the source's Figure~3 legend and its evaporation constant match the value used in the hypothesis motivation.
+\item Humidity, the covering layer and pot geometry remain untested. No source read records those series. A 0.5 K accuracy claim for coffee needs more held-out coffee curves with recorded room temperature.
+\end{itemize}
+
+\end{document}

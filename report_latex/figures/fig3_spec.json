@@ -1,0 +1,31 @@
+{
+  "type": "bar",
+  "title": "Held-out 30-min RMS, constant-rate vs nonlinear law",
+  "xlabel": "Held-out curve",
+  "ylabel": "30-min RMS (K)",
+  "aspect": "16:9",
+  "ylim": [0, 15],
+  "categories": [
+    "Manitoba coffee",
+    "Langer 01",
+    "Langer 02",
+    "Langer 03",
+    "Langer 04",
+    "Langer 05",
+    "Langer 06"
+  ],
+  "series": [
+    {
+      "label": "Constant-rate law",
+      "values": [3.454, 6.864, 8.951, 11.927, 8.896, 8.309, 9.944]
+    },
+    {
+      "label": "Nonlinear law, x = 2.18 fixed from porcelain pot fit",
+      "values": [2.659, 6.572, 8.768, 12.092, 8.685, 8.182, 10.034]
+    }
+  ],
+  "color_map": {
+    "Constant-rate law": "#949494",
+    "Nonlinear law, x = 2.18 fixed from porcelain pot fit": "#0173B2"
+  }
+}
