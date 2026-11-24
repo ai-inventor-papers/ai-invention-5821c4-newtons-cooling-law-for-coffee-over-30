@@ -1,0 +1,6 @@
+{
+  "fig1": {
+    "title": "Residuals of three cooling laws, first 30 minutes",
+    "caption": "Residual (model minus data, K) against time for the constant-rate law C0 (fitted), the nonlinear convection law C1 (fitted) and the source's drawn model 1 curve (not refitted), over the first 30 minutes of the china-pot coffee curve. Seven window points. Lines join the points. C0 is positive from 0 to about 15 min and crosses zero between about 21 and 26 min; C1 stays within about 0.7 K."
+  }
+}

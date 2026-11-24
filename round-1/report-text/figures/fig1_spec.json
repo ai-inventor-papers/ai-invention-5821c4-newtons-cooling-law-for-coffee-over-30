@@ -1,0 +1,8 @@
+{"type": "line", "title": "Residuals of three cooling laws, first 30 minutes",
+ "xlabel": "Time (min)", "ylabel": "Model minus data (K)",
+ "x": [0.0, 3.11, 5.01, 10.02, 15.02, 20.93, 25.94],
+ "series": [
+  {"label": "C0 constant-rate (fitted, 0-30 min)", "values": [0.0, 0.718, 1.136, 1.257, 0.623, 0.296, -2.027]},
+  {"label": "C1 nonlinear convection (fitted, 0-30 min)", "values": [-0.0, -0.232, -0.097, -0.003, -0.034, 0.73, -0.552]},
+  {"label": "Source model 1 curve (not refit)", "values": [-0.383, 1.238, 2.106, 3.181, 3.233, 3.479, 1.503]}
+ ]}
