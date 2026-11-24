@@ -1,0 +1,150 @@
+Measurement of the Newton’s cooling law
+time-constant by Arduino: an idea for STEM
+education in High Schools
+Fausto Casaburo
+Sapienza Università di Roma, Dipartimento di Fisica
+Istituto Nazionale di Fisica Nucleare (INFN) Sezione Roma
+E-mail: fausto.casaburo@uniroma1.it-fausto.casaburo@roma1.infn.it
+March 2022
+Abstract.
+Commercial electronic measuring devices used in physics usually have
+high costs. In recent years, thanks to its low cost and the high number of available
+sensors, the Arduino board has been used for many educational purposes in physics
+education. In this paper a method to measure the Newton’s cooling law time-constant
+by the Arduino board is presented.
+Keywords: Arduino board, COVID-19, Physics teaching, Physics education.
+Introduction
+D
+espite laboratory practice being essential for physics, due to lack of time and/or
+resources, it is often neglected at High School. Many schools do not have adequately
+equipped laboratories.
+During the last few years, many science communicators published educational
+articles that can easily made by students of High Schools using the Arduino [1] board.
+Some examples of these articles regard a body in free-fall [2], the time constant of a
+Resistor Capacitor (RC) circuit [3], the kinetic friction coeﬃcient [4], and many more.
+Arduino is an open source platform made of electronic boards, sensors and
+expansion boards. With an Arduino, students can acquire additional competences, as
+for example coding and programming [5, 6]. Original Arduino boards can be bought very
+cheaply, but there are even cheaper clones available. Both the board and the sensors can
+be easily bought on-line or in electronics stores [6]. There are also many kits including
+the board and common sensors available for just 50-60 euro. Thanks to the low cost,
+the Arduino board and related components can be bought directly by students or by
+schools to be provided to students.
+In this paper we present an Arduino-based experiment on Newton’s cooling law,
+allowing High School students to replicate it.
+arXiv:2107.09527v3  [physics.ed-ph]  28 Jul 2022
+
+Measurement of the Newton’s cooling law time-constant by Arduino: an idea for STEM education in High Sch
+It consists of the measurement of the cooling time-constant of a liquid. By doing the
+experiment, students have the opportunity to show the exponential trend of the cooling
+law, estimate uncertainties, interpolate data and work with the exponential function.
+The latter is is an important function for physics also describing other physics laws as
+in the RC circuit.
+1. Theory
+Newton’s law of cooling (Eq. 1) describes the rate at which an exposed body changes
+temperature by radiation. According to this law, the trends over time of the temperature
+depends on the initial temperature of the body T0 and the environment temperature
+Tenv as:
+T (t) = Tenv + (T0 −Tenv) e−t/τ
+(1)
+Deﬁning m and c as respectively the mass and the speciﬁc heat of the body, the
+time-constant is given by [7, 8]:
+τ ∝mc
+(2)
+The value of the time constant depends on the composition of the body (and its
+container) and represents the time after which the the diﬀerence T0 −Tenv is reduced
+to approximately 63% of its original value. After 5τ we expect that the body reaches
+room temperature. It is similar to an RC circuit. The exponential dependency of the
+temperature on the time can be veriﬁed and the time-constant τ can be estimated
+measuring the temperatures of body and environment.
+2. Experimental setup and procedure
+The experimental setup (Fig. 1) consists of an Arduino UNO R3 board, a temperature
+sensor DS18B20, a 10 kΩresistor, a room thermometer, a stove, a computer, a
+breadboard, Dupont cables and a cup.
+The working range of the DS18B20 is
+[218.15 K; 398.15 K] and the sensitivity is ±0.5 K in the range [263.15 K; 358.15 K]. The
+resistor, the breadboard and the Dupont cables could be found in a typical Arduino kit.
+The sensor temperature must be purchased separately.
+
+Measurement of the Newton’s cooling law time-constant by Arduino: an idea for STEM education in High Sch
+Figure 1: Experimental setup.
+The temperature sensor is connected to the Arduino by Dupont cables. The sensor
+has three cables: the ﬁrst one to be connected to the GND pin of the Arduino, the second
+one to the Vcc pin (both the 3.3 V or 5 V can be used) and the last one to be connected
+to a digital one. The resistor is inserted between the digital and the Vcc pins as shown in
+Figure 1. Lastly, the Arduino board is connected to the computer for data acquisition
+by the USB cable. The cup has been ﬁlled with a mass m = (9.9 ± 0.1) · 10−2 kg (the
+speciﬁc heat of water is c = 4186
+J
+kg·K) and has been placed on the stove to be heated.
+The temperature sensor has been inserted in the cup to measure the water temperature
+during the cooling.
+The water has been heated up to T0 = (349.0 ± 0.5) K, then it has been left cooling
+up to Tf = (300.2 ± 0.5) K. To measure the temperature, it has been written a sketch
+(code) for Arduino. The sketch allows the user to measure the temperature over time.
+Then, values of time and temperature are printed on the terminal to be analysed.
+The environment temperature has been measured by the room thermometer to
+ensure a constant temperature during the experiment.
+3. Data analysis and results
+From Eq. 1, by deﬁning
+y = ln
+ T (t) −Tenv
+T0 −Tenv
+!
+(3)
+we get:
+y = kt
+(4)
+where
+k = −1
+τ
+(5)
+
+Measurement of the Newton’s cooling law time-constant by Arduino: an idea for STEM education in High Sch
+It follows that, to estimate the time-constant k by measured data, we can assume
+the linear dependency (Eq. 4), interpolate data by it (Fig. 2a) and estimate the time-
+constant as:
+τ = −1
+k
+(6)
+(a)
+(b)
+Figure 2: (a) Data interpolation. (b) Cooling trend up the liquid reaches the room
+temperature
+The slope k resulting by interpolation and the estimated τ value are given in Tab.
+1.
+Table 1: Fit result slope and obtained τ value.
+k (s−1)
+τ (s)
+(−9.625 ± 0.01) · 10−4
+1039 ± 2
+As expected, in Figure 2b we observe that after 5τ the liquid reaches room
+temperature.
+Conclusions
+In this paper a technique has been presented to measure the Newton’s cooling law time-
+constant by using an Arduino. The article goal is to encourage teachers to propose
+the experiment to their students in order to carry on laboratory practice even in
+this pandemic period. In particular we encourage readers to replicate the experiment
+changing the body (water in this case) and environment conditions in order to estimate
+the time-constant for several materials and conditions.
+Acknowledgements
+The author acknowledges the Lab2Go- Fisica [9] collaboration.
+
+Measurement of the Newton’s cooling law time-constant by Arduino: an idea for STEM education in High Sch
+References
+[1] Arduino collaboration. https://www.arduino.cc/.
+[2] F. Casaburo, “Teaching physics by arduino during covid-19 pandemic:
+The free falling body
+experiment,” 2021.
+[3] N. S. A. Pereira, “Measuring theRCtime constant with arduino,” Physics Education, vol. 51,
+p. 065007, sep 2016.
+[4] A. Çoban, “Determination of kinetic friction coeﬃcient using an arduino,” Physics Education, vol. 55,
+p. 063009, oct 2020.
+[5] G. Organtini, “Arduino as a tool for physics experiments,” Journal of Physics: Conference Series,
+vol. 1076, p. 012026, sep 2018.
+[6] G. Organtini, Fisica con Arduino. Zanichelli, 2021.
+[7] M. Vollmer, “Newton's law of cooling revisited,” European Journal of Physics, vol. 30, pp. 1063–
+1084, jul 2009.
+[8] M. I. Davidzon, “Newton’s law of cooling and its interpretation,” International Journal of Heat and
+Mass Transfer, vol. 55, no. 21, pp. 5397–5402, 2012.
+[9] Lab2Go collaboration. https://web.infn.it/lab2go/.

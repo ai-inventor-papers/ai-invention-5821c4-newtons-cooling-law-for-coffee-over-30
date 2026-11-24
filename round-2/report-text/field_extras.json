@@ -1,0 +1,38 @@
+[
+ {
+  "extra": "Thermal camera record of the cooling surface, giving temperature fields and cooling curves",
+  "claim_kind": "measurement of spatial temperature",
+  "seen_in": [
+   "Cooling of an object by forced convection (2024)"
+  ],
+  "needs_during_run": "a per-frame temperature record of the cooling body, not only a single probe",
+  "delivered_in": "paper"
+ },
+ {
+  "extra": "Linear fits of dimensionless temperature against time, with correlation coefficient reported per condition",
+  "claim_kind": "fit quality per condition",
+  "seen_in": [
+   "Cooling of an object by forced convection (2024)"
+  ],
+  "needs_during_run": "per-condition residuals and the correlation coefficient for each fit",
+  "delivered_in": "paper"
+ },
+ {
+  "extra": "Low-cost Arduino or thermistor setup and a time-constant measurement suitable for classroom use",
+  "claim_kind": "reproducibility of the measurement",
+  "seen_in": [
+   "Measurement of the Newton's cooling law time-constant by Arduino (2021)"
+  ],
+  "needs_during_run": "the sensor, sampling interval and calibration of the logger",
+  "delivered_in": "paper"
+ },
+ {
+  "extra": "Analytical expressions for the convective coefficient derived from energy and entropy transfer",
+  "claim_kind": "theoretical derivation of a fitted constant",
+  "seen_in": [
+   "Integrity of Newton's cooling law based on thermal convection theory of heat transfer and entropy transfer (2022)"
+  ],
+  "needs_during_run": "not an experiment output; would need the coefficient measured on the same flow",
+  "delivered_in": "paper"
+ }
+]

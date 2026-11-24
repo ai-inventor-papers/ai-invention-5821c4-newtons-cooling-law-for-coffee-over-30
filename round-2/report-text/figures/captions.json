@@ -1,0 +1,14 @@
+{
+  "fig2": {
+    "title": "In-window RMS against convective exponent",
+    "caption": "30-minute in-window RMS of the one-term cooling law against the fixed convective exponent x on the porcelain pot coffee curve, with the scale fitted at each x (profile over x from 1.00 to 3.00). The minimum is at x = 2.18; the interval at Δχ² = 3.84 is 1.95 to 2.42 at σ = 0.3 C. The line is drawn through the ten profile points listed in the content."
+  },
+  "fig3": {
+    "title": "Held-out 30-min RMS, constant-rate vs nonlinear law",
+    "caption": "Held-out 30-minute RMS for the constant-rate law and the nonlinear law at x = 2.182, both fixed from the porcelain pot fit, under ambient A (recorded room temperature where reported, 20 C otherwise). Bars are per-curve RMS over 0 to 30 min for the seven held-out curves; no interval is drawn. The nonlinear law bar is lower on Manitoba and on Langer curves 01, 02, 04 and 05, and higher on Langer 03 and 06."
+  },
+  "fig1": {
+    "title": "Residuals of three cooling laws, first 30 minutes",
+    "caption": "Residual (model minus data, K) against time for the constant-rate law C0 (fitted), the nonlinear convection law C1 (fitted) and the source's drawn model 1 curve (not refitted), over the first 30 minutes of the china-pot coffee curve. Seven window points. Lines join the points. C0 is positive from 0 to about 15 min and crosses zero between about 21 and 26 min; C1 stays within about 0.7 K."
+  }
+}

@@ -1,0 +1,328 @@
+Skip to main content
+
+Thank you for visiting nature.com. You are using a browser version with limited support for CSS. To obtain the best experience, we recommend you use a more up to date browser (or turn off compatibility mode in Internet Explorer). In the meantime, to ensure continued support, we are displaying the site without styles and JavaScript.
+
+Advertisement
+
+[ ](//pubads.g.doubleclick.net/gampad/jump?iu=/285/scientific_reports/article&sz=728x90&c=-1216529274&t=pos%3Dtop%26type%3Darticle%26artid%3Ds41598-022-18961-8%26doi%3D10.1038/s41598-022-18961-8%26subjmeta%3D2795,530,639,766,951%26kwrd%3DPhase+transitions+and+critical+phenomena,Thermodynamics)
+
+[ ](/srep)
+
+  * [ View all journals ](https://www.nature.com/siteindex)
+  * [ Saved research ](/saved-research)
+  * Search
+  * [Log in](https://idp.nature.com/auth/personal/springernature?redirect_uri=https://www.nature.com/articles/s41598-022-18961-8)
+
+
+
+  * Content Explore content
+  * About the journal
+  * Publish with us
+
+
+  * [ Sign up for alerts ](https://journal-alerts.springernature.com/subscribe?journal_id=41598)
+  * [ RSS feed ](https://www.nature.com/srep.rss)
+
+
+
+  1. [nature](/)
+  2. [scientific reports](/srep)
+  3. [articles](/srep/articles?type=article)
+  4. article
+
+
+
+# Integrity of Newton’s cooling law based on thermal convection theory of heat transfer and entropy transfer
+
+  * Article
+  * [Open access](https://www.springernature.com/gp/open-science/about/the-fundamentals-of-open-access-and-open-research)
+  * Published: 29 September 2022
+  * Volume 12, article number 16292 (2022) 
+  * Cite this article
+
+
+
+You have full access to this open access article
+
+[ Download PDF ](/articles/s41598-022-18961-8.pdf)
+
+Save article
+
+[ View saved research ](/saved-research)
+
+Integrity of Newton’s cooling law based on thermal convection theory of heat transfer and entropy transfer 
+
+[ Download PDF ](/articles/s41598-022-18961-8.pdf)
+
+  * Bo Zhao1,2
+
+
+
+  * 11k Accesses
+
+  * 44 Citations
+
+  * [Explore all metrics ](/articles/s41598-022-18961-8/metrics)
+
+
+
+
+## Abstract
+
+Although thermal convection is omnipresent in nature and technology and serves important purposes in various energy transport systems, whether convection can be viewed as an independent heat transfer means has long been argued The constant coefficient in the original version or convective heat transfer coefficient defined in the modern version of Newton’s cooling law quantifies the ratio of the surface heat flux to the temperature difference between a body surface and an adjacent fluid. However, none of the consistent analytical expressions for these two coefficients are present in Newton’s cooling law. The inherently complex relationship between these pending coefficients and convective heat flux vectors makes revealing the convective mechanism extremely difficult. Theoretical determination of these coefficients would bring new insights to thermal convection and direct applications to thermal management. Here we theoretically show consistent analytical expressions for the constant and convective heat transfer coefficients for various flows to make Newton’s cooling law a complete scientific law. For this purpose, a three-dimensional (3D) energy transfer theory of thermal convection is developed, and the convective heat flux vector, entropy flux vector and entropy generation rate inside the system are derived for both single-phase and phase-change flows. By recasting a control volume system into an equivalent control mass system and employing the first and second laws of thermodynamics, the fundamental advective heat transfer mode characterized by temperature differences and entropy changes is demonstrated. The physical implications underlying the 3D convective formulae are elucidated. Comparisons of the analytical results with laminar experiments and turbulent flow measurement benchmark data validate our theoretical findings. Our 3D heat and entropy transfer theory will broaden the research area of thermal convection processes and open up a new arena for the design and thermal management of convective heat transfer in single-phase and phase-change flows.
+
+### Similar content being viewed by others
+
+###  [New method for transient cold wall heat flux measurements for unlimited exposure times ](https://www.nature.com/articles/s41598-025-03245-8?fromPaywallRec=false)
+
+Article Open access 29 May 2025
+
+###  [Heating and cooling are fundamentally asymmetric and evolve along distinct pathways ](https://www.nature.com/articles/s41567-023-02269-z?fromPaywallRec=false)
+
+Article Open access 03 January 2024
+
+###  [Velocity-dependent heat transfer controls temperature in fracture networks ](https://www.nature.com/articles/s41467-023-36034-w?fromPaywallRec=false)
+
+Article Open access 23 January 2023
+
+### Explore related subjects
+
+Discover the latest articles and news in related subjects.
+
+  * [Phase transitions and critical phenomena](/subjects/phase-transitions-and-critical-phenomena)
+  * [Thermodynamics](/subjects/thermodynamics)
+  * [Heat Transfer Phenomena in Non-Equilibrium Systems](/subjects/heat-transfer-phenomena-in-non-equilibrium-systems)
+
+
+
+## Introduction
+
+Thermal convection is universal phenomena in nature1,2,3,4,5,6,7,8,9,[10](/articles/s41598-022-18961-8#ref-CR10 "Jiang, Y. et al. Parametric study on the distribution of flow rate and heat sink utilization in cooling channels of advanced aero-engines. Energy 138, 1056–1068. 
+                  https://doi.org/10.1016/j.energy.2017.07.091
+                  
+                 \(2017\)."), and a basic law of convective heat flux underlies the design, calculation and optimization of any convection heat transfer process11,12,13,14,15,16,[17](/articles/s41598-022-18961-8#ref-CR17 "Wong, K. V. Thermodynamics for Engineers \(CRC Press, 2012\)."), which should render the unambiguous property relationship between a heat flux vector and its thermal driving force18,19,20,21,22,23,24,25,[26](/articles/s41598-022-18961-8#ref-CR26 "Kays, W. M. & Crawford, M. E. Convective Heat and Mass Transfer \(McGraw-Hill, 1993\)."). The total convective heat flux (i.e., the thermal energy flow per unit time and unit area[27](/articles/s41598-022-18961-8#ref-CR27 "Kaviany, M. Essentials of heat transfer: principles, materials, and applications \(Cambridge Univ, 2011\).")) is the superposition of two single heat transfer modes: advection due to macroscopic motion of a fluid and conduction due to random molecular motion (hereafter, _convection_ refers to this cumulative transport, and _advection_ refers to transport due to bulk fluid motion)25,26,27,28,29,30,[31](/articles/s41598-022-18961-8#ref-CR31 "Zhao, B., Li, K., Wang, Y. & Wang, Z. Theoretical analysis of convective heat flux in an incompressible turbulent boundary layer on a porous plate with uniform injection and suction. Int. J. Therm. Sci. 171, 107264. 
+                  https://doi.org/10.1016/j.ijthermalsci.2021.107264
+                  
+                 \(2022\)."). In 1701, Newton described his cooling law for convective (or advective) heat transfer as follows21,22,23,[24](/articles/s41598-022-18961-8#ref-CR24 "Davidzon, M. I. Newton’s law of cooling and its interpretation. Int. J. Heat Mass Transf. 55, 5397–5402. 
+                  https://doi.org/10.1016/j.ijheatmasstransfer.2012.03.035
+                  
+                 \(2012\)."): _the rate of cooling of a warm body at any moment is proportional to the temperature difference between the body and its ambient fluid_ (\\(- C/A{{{\text{d}}T_{s} } \mathord{\left/ {\vphantom {{{\text{d}}T_{s} } {{\text{d}}\tau }}} \right. \kern-\nulldelimiterspace} {{\text{d}}\tau }} = \alpha (T_{s} - T_{\infty } )\\), where _C_ , _A_ and _T_ s are the heat capacity, surface area and temperature of the body, respectively, _T_ ∞ and _τ_ are the constant fluid temperature and time, respectively, and the proportional coefficient _α_ is called the advective constant and is associated with the fluid properties only). Unlike the original version, the modern version of Newton’s cooling law was incorporated by Fourier[22](/articles/s41598-022-18961-8#ref-CR22 "Cheng, K. C. & Fujii, T. Heat in history: Isaac Newton and heat transfer. Heat Transfer Eng. 19, 9–21. 
+                  https://doi.org/10.1080/01457639808939932
+                  
+                 \(1998\)."),[32](/articles/s41598-022-18961-8#ref-CR32 "Bejan, A. Convection Heat Transfer \(John Wiley & Sons, 2013\)."),[33](/articles/s41598-022-18961-8#ref-CR33 "Fourier, J. The Analytical Theory of Heat \(translated with notes \(1878\) by Freeman A., Cambridge, 1955\).") as the convective boundary condition on the wall surface (\\(- k\left. {{{\partial T} \mathord{\left/ {\vphantom {{\partial T} {\partial x_{2} }}} \right. \kern-\nulldelimiterspace} {\partial x_{2} }}} \right|_{{x_{2} = 0}} = h(T_{s} - T_{\infty } )\\), where _k_ is the thermal conductivity of the fluid, and _h_ is defined as the convective heat transfer coefficient). Unlike _α_ , _h_ is not a property of the fluid, and its magnitude depends on all the variables that may influence the convective heat transfer process[26](/articles/s41598-022-18961-8#ref-CR26 "Kays, W. M. & Crawford, M. E. Convective Heat and Mass Transfer \(McGraw-Hill, 1993\)."),[28](/articles/s41598-022-18961-8#ref-CR28 "Incropera, F. P., Dewitt, D. P., Bergman, T. L. & Lavine, A. S. Fundamentals of Heat and Mass Transfer. \(John Wiley & Sons, 2007\)."),34,35,36,[37](/articles/s41598-022-18961-8#ref-CR37 "Umbricht, G., Rubio D., Echarri R. & El Hasi, C. A technique to estimate the transient coefficient of heat transfer by convection. Lat. Am. Appl. Res. 50, 229–234. 
+                  https://doi.org/10.52292/j.laar.2020.179
+                  
+                 \(2020\)."). However, neither of the magnitudes of _α_ and _h_ is present in Newton’s law of cooling. Developing analytical expressions for _h_ and _α_ has always been a central focus and a difficulty of convective heat transfer problems. This development will eventually depend on the unclear energy transfer mechanism of thermal convection yet to be revealed. Some scientists regard convection as “conduction enhanced by fluid motion15,16,17,[18](/articles/s41598-022-18961-8#ref-CR18 "Guo, Z. Y., Li, D. Y. & Wang, B. X. A novel concept for convective heat transfer enhancement. Int. J. Heat Mass Transf. 41, 2221–2225. 
+                  https://doi.org/10.1016/S0017-9310\(97\)00272-X
+                  
+                 \(1998\).")” or as a means for “internal energy transport[20](/articles/s41598-022-18961-8#ref-CR20 "Reynolds, W. C. & Colonna, P. Thermodynamics fundamentals and engineering applications \(Cambridge Univ, 2018\).")” since the “convection” of energy owing to mass flow is not directly driven by a temperature difference[16](/articles/s41598-022-18961-8#ref-CR16 "Çengel, Y. A. & Turner, R. H. Fundamentals of Thermal-Fluid Sciences \(McGraw-Hill, 2005\)."),[19](/articles/s41598-022-18961-8#ref-CR19 "Burmeister, L. C. Convective Heat Transfer \(John-Wiley & Sons, 1983\)."),[38](/articles/s41598-022-18961-8#ref-CR38 "Hatsopoulos, G. N. & Keenan, J. H. Principles of General Thermodynamics \(Krieger, 1981\)."). Additionally, due to its inherent complexity, a unified heat transfer theory for general thermal convection has not been established thus far. Many attempts have been made to propose various convective heat flux theories4,5,[6](/articles/s41598-022-18961-8#ref-CR6 "Wulff, W. The energy conservation equation for living tissue. IEEE Trans. Biomed. Eng. BME-21, 494–495. 
+                  https://doi.org/10.1109/TBME.1974.324342
+                  
+                 \(1974\)."),[18](/articles/s41598-022-18961-8#ref-CR18 "Guo, Z. Y., Li, D. Y. & Wang, B. X. A novel concept for convective heat transfer enhancement. Int. J. Heat Mass Transf. 41, 2221–2225. 
+                  https://doi.org/10.1016/S0017-9310\(97\)00272-X
+                  
+                 \(1998\)."),[25](/articles/s41598-022-18961-8#ref-CR25 "Zhao, B. Derivation of unifying formulae for convective heat transfer in compressible flow fields. Sci. Rep. 11, 16762. 
+                  https://doi.org/10.1038/s41598-021-95810-0
+                  
+                 \(2021\)."),[27](/articles/s41598-022-18961-8#ref-CR27 "Kaviany, M. Essentials of heat transfer: principles, materials, and applications \(Cambridge Univ, 2011\)."),29,30,[31](/articles/s41598-022-18961-8#ref-CR31 "Zhao, B., Li, K., Wang, Y. & Wang, Z. Theoretical analysis of convective heat flux in an incompressible turbulent boundary layer on a porous plate with uniform injection and suction. Int. J. Therm. Sci. 171, 107264. 
+                  https://doi.org/10.1016/j.ijthermalsci.2021.107264
+                  
+                 \(2022\)."),[36](/articles/s41598-022-18961-8#ref-CR36 "Eckert, E. R. G. & Drake, R. M. Analysis of Heat and Mass Transfer \(McGraw-Hill, 1972\)."),39,40,[41](/articles/s41598-022-18961-8#ref-CR41 "Tao, W., He, Y. & Chen, L. A comprehensive review and comparison on heatline concept and field synergy principle. Int. J. Heat Mass Transf. 135, 436–459. 
+                  https://doi.org/10.1016/j.ijheatmasstransfer.2019.01.143
+                  
+                 \(2019\)."); however, analytical determination of the convective heat transfer coefficient and the advective constant based on the advective heat flux vector in single-phase and phase-change flows[13](/articles/s41598-022-18961-8#ref-CR13 "Lee, J. & Mudawar, I. Low-temperature two-phase microchannel cooling for high-heat-flux thermal management of defense electronics. IEEE Trans. Compon. Packag. Technol. 32, 453–465. 
+                  https://doi.org/10.1109/TCAPT.2008.2005783
+                  
+                 \(2009\)."),[14](/articles/s41598-022-18961-8#ref-CR14 "Rabiee, R., Rajabloo, B., Désilets, M. & Proulx, P. Heat transfer analysis of boiling and condensation inside a horizontal heat pipe. Int. J. Heat Mass Transf. 139, 526–536. 
+                  https://doi.org/10.1016/j.ijheatmasstransfer.2019.05.046
+                  
+                 \(2019\)."),42,43,44,[45](/articles/s41598-022-18961-8#ref-CR45 "Kimball, T. K., Allen, J. S. & Hermanson, J. C. Convective structure and heat transfer in transient, evaporating films. J. Thermophys. Heat Transf. 32, 103–110. 
+                  https://doi.org/10.2514/1.T4773
+                  
+                 \(2018\).") has rarely been explored.
+
+Here we theoretically show consistent analytical expressions for the advective constant and convective heat transfer coefficients determined from the proposed general 3D energy transfer theory of thermal convection. By recasting a control volume system into an equivalent control mass system and employing the first and second laws of thermodynamics, an independent advection heat transfer mode characterized by temperature differences and entropy changes is demonstrated. The convective heat flux vector, entropy flux vector and entropy generation rate inside the system are derived for both single-phase and phase-change flows. The physical mechanism of thermal convection underlying these formulae is elucidated and clarified. The validity of the convective heat flux formulae is validated by comparison with laminar experiments and turbulent flow benchmark measurements. Our analysis reveals a clear physical implication of advective heat transfer due to bulk fluid motion and provides a unified theoretical approach to calculate the convective heat transfer coefficients for single-phase and phase-change flows.
+
+## 3D energy transfer theory of thermal convection
+
+### Independent advection heat transfer mode
+
+A steady flow of a single-phase, isotropic, compressible Newtonian fluid in a tube is considered. The control volume (CV) system, as shown in Fig. [1](/articles/s41598-022-18961-8#Fig1)a, is enclosed by tube inlet section _I_ , arbitrary section _II_ within the fluid stream along the tube, and rigid wall surface _III_ between _I_ and _II_. The fluid moves at constant mass flow rate \\(\dot{m}\\), where _m_ is the mass entering (leaving) the CV, _i_ ∞, _e_ _m_ ∞, _T_ ∞, _p_ ∞, _υ_ ∞, and _s_ ∞ represent the constant uniform specific enthalpy, specific mechanical energy, temperature, pressure, specific volume, and specific entropy maintained at inlet section _I_ , respectively; _i_ , _e_ _m_ , _T_ , _p_ , _υ_ , and _s_ are the specific enthalpy, specific mechanical energy, temperature, pressure, specific volume, and specific entropy at section _II_ , respectively. At some initial time _τ,_ the control mass (CM) system (Fig. [1](/articles/s41598-022-18961-8#Fig1)d,e) is the sum of the mass within the CV at that instant and the mass _m_ adjacent to inlet section _I_. At time _τ_ \+ Δ _τ_ this CM has moved such that all the mass originally in the region adjacent to the inlet is now just inside the CV. In the same time interval, part of the CM (equal to _m_ for steady flow) has been pushed out of the CV into the region adjacent to section _II_. The mass flow rate \\(\dot{m} = \int_{S} {\rho {\mathbf{U}} \cdot {\mathbf{n}}} {\text{d}}S\\), where _ρ_ is the fluid density, \\({\mathbf{U}} = \left\\{ {u_{1} ,u_{2} ,u_{3} } \right\\}\\) designates the velocity vector at section _II_ , and **n** is the unit vector pointing outward, normal to the cross-sectional area _A_ of surface _II._ No shaft work and thermal radiation occur. All the parameters, including temperature, are considered to be uniform and constant within the inlet section (imagining that there exists an exterior heat source maintaining constant temperature _T_ ∞ at the inlet for the continuous flowing fluid). Additionally, the temperature gradient in any direction is assumed to be zero so that no thermal conduction occurs, hence the heat transfer rate \\(\dot{Q}_{\infty }\\) at the inlet surface is zero. Assuming local thermodynamic equilibrium[19](/articles/s41598-022-18961-8#ref-CR19 "Burmeister, L. C. Convective Heat Transfer \(John-Wiley & Sons, 1983\)."),[44](/articles/s41598-022-18961-8#ref-CR44 "Lu, W. Q. & Xu, K. Theoretical study on the interaction between constant-pressure specific heat and nonequilibrium phase change process in two-phase flow. Int. J. Thermophys. 31, 1952–1963. 
+                  https://doi.org/10.1007/s10765-008-0515-9
+                  
+                 \(2010\)."),[46](/articles/s41598-022-18961-8#ref-CR46 "Wark, K. Thermodynamics \(McGraw-Hill, 1977\).") and applying the first and second laws of thermodynamics[38](/articles/s41598-022-18961-8#ref-CR38 "Hatsopoulos, G. N. & Keenan, J. H. Principles of General Thermodynamics \(Krieger, 1981\)."),46,47,48,49,[50](/articles/s41598-022-18961-8#ref-CR50 "Fuchs, H. U. The Dynamics of Heat: A Unified Approach to Thermodynamics and Heat Transfer \(Springer, 2010\).") to the control volume (CV) system (Fig. [1](/articles/s41598-022-18961-8#Fig1)a–c) and its equivalent control mass (CM) system (Fig. [1](/articles/s41598-022-18961-8#Fig1)d,e), respectively, it gives
+
+$$\dot{Q}_{s} + \dot{Q}_{k} + \dot{Q}_{\infty } + \dot{E}_{g} = \dot{m}\left[ {(i + e_{m} ) - (i_{\infty } + e_{m\infty } )} \right], \, \dot{S}_{g} + \dot{m}(s_{\infty } - s) + \dot{Q}_{s} /T_{s} + \dot{Q}_{k} /T + \dot{Q}_{\infty } /T_{\infty } = 0$$
+
+(1) 
+
+$$\dot{Q}_{s} + \dot{Q}_{k} + \dot{Q}_{\infty } + \dot{E}_{g} = \dot{Q}_{u} , \, \dot{S}_{g} - {{\dot{Q}_{u} } \mathord{\left/ {\vphantom {{\dot{Q}_{u} } T}} \right. \kern-\nulldelimiterspace} T} + {{\dot{Q}_{s} } \mathord{\left/ {\vphantom {{\dot{Q}_{s} } {T_{s} }}} \right. \kern-\nulldelimiterspace} {T_{s} }} + {{\dot{Q}_{k} } \mathord{\left/ {\vphantom {{\dot{Q}_{k} } T}} \right. \kern-\nulldelimiterspace} T} + {{\dot{Q}_{\infty } } \mathord{\left/ {\vphantom {{\dot{Q}_{\infty } } {T_{\infty } }}} \right. \kern-\nulldelimiterspace} {T_{\infty } }} = 0$$
+
+(2) 
+
+where \\(\dot{Q}_{s}\\) and \\(\dot{Q}_{k}\\) are the conductive heat transfer rates across rigid wall surface _III_ and arbitrary flow surface _II_ , respectively, \\(\dot{E}_{g}\\), \\(\dot{S}_{g}\\), and _T_ _s_ are the thermal energy generation rate, entropy generation rate inside the system, and wall surface temperature, respectively, and \\(\dot{Q}_{u}\\) is defined as the rate of energy transfer leaving across surface _II_ for the CM system. Combining Eqs. ([1](/articles/s41598-022-18961-8#Equ1)) and ([2](/articles/s41598-022-18961-8#Equ2)) yields
+
+$$\dot{Q}_{u} = \dot{m}\left[ {(i + e_{m} ) - (i_{\infty } + e_{m\infty } )} \right] = \dot{m}T(s - s_{\infty } )$$
+
+(3) 
+
+**Figure 1**
+
+[ Full size image](/articles/s41598-022-18961-8/figures/1)
+
+Advective heat transfer between two surfaces induced by mass flow. (**a**) Energy transfer due to mass flow in a Cartesian coordinate system. (**b**) CV system for a steady, compressible flow in a stationary tube with one inlet and one outlet, and its energy transfer at time _τ_ and (**c**) at time _τ_ \+ Δ _τ_. (**d**) Equivalent CM system recast from the above CV system for a steady compressible flow and its heat transfer at time _τ_ and _τ_ \+ Δ _τ_. (**e**) Heat transfer rates and heat flux vector at any surface _II_ across which advection and conduction occur for the CM system, where **U** ∞ is the constant velocity vector within the inlet section.
+
+The above equation not only indicates that the energy transfer rate \\(\dot{Q}_{u}\\) which is defined only in the CM system (Fig. [1](/articles/s41598-022-18961-8#Fig1)d,e), is the _net transfer rate of total energy_ (specific total energy _e_ _t_ =  _i_ \+  _e_ _m_) between surface _II_ and the inlet surface with different temperatures via mass flow, but also implies that \\(\dot{Q}_{u}\\) equals the product of the fluid temperature and the change in entropy transfer. Energy can cross the boundary of a CM system only in the form of heat or work transfer[16](/articles/s41598-022-18961-8#ref-CR16 "Çengel, Y. A. & Turner, R. H. Fundamentals of Thermal-Fluid Sciences \(McGraw-Hill, 2005\)."),[17](/articles/s41598-022-18961-8#ref-CR17 "Wong, K. V. Thermodynamics for Engineers \(CRC Press, 2012\)."),[20](/articles/s41598-022-18961-8#ref-CR20 "Reynolds, W. C. & Colonna, P. Thermodynamics fundamentals and engineering applications \(Cambridge Univ, 2018\)."),[28](/articles/s41598-022-18961-8#ref-CR28 "Incropera, F. P., Dewitt, D. P., Bergman, T. L. & Lavine, A. S. Fundamentals of Heat and Mass Transfer. \(John Wiley & Sons, 2007\)."),46,47,[48](/articles/s41598-022-18961-8#ref-CR48 "Huang, F. F. Engineering Thermodynamics Fundamentals and Applications \(Macmillan, 1976\)."). It is demonstrated from Eq. ([3](/articles/s41598-022-18961-8#Equ3)) that the _net_ total energy transfer by mass (\\(\dot{m}(e_{t} - e_{t\infty } )\\), where \\(e_{t\infty } = i_{\infty } + e_{m\infty }\\)) is driven by the temperature difference[25](/articles/s41598-022-18961-8#ref-CR25 "Zhao, B. Derivation of unifying formulae for convective heat transfer in compressible flow fields. Sci. Rep. 11, 16762. 
+                  https://doi.org/10.1038/s41598-021-95810-0
+                  
+                 \(2021\).") and is accompanied by entropy transfer; according to the thermodynamic definition of heat transfer[16](/articles/s41598-022-18961-8#ref-CR16 "Çengel, Y. A. & Turner, R. H. Fundamentals of Thermal-Fluid Sciences \(McGraw-Hill, 2005\)."),[38](/articles/s41598-022-18961-8#ref-CR38 "Hatsopoulos, G. N. & Keenan, J. H. Principles of General Thermodynamics \(Krieger, 1981\)."), the energy transfer rate \\(\dot{Q}_{u}\\) should be identified as heat transfer rather than work transfer. Note that \\(\dot{Q}_{u}\\) equals the _net_ total energy transfer rate between the arbitrary surface and the inlet surface due to bulk fluid motion (Fig. [1](/articles/s41598-022-18961-8#Fig1)d,e). Therefore, \\(\dot{Q}_{u}\\) is referred to as the _advective heat transfer rate_ , and _Q_ _u_ is accordingly called the _advective heat transfer_ , which represents the net exchange of total energy by mass _m_ between sections _II_ and _I_ with different temperatures, as if the common CV region were stationary (see Fig. [1](/articles/s41598-022-18961-8#Fig1)d).
+
+From Eqs. ([1](/articles/s41598-022-18961-8#Equ1))–([3](/articles/s41598-022-18961-8#Equ2)), the net specific entropy transfer _s_ −  _s_ ∞ due to the advective heat transfer rate \\(\dot{Q}_{u}\\) and the entropy generation rate \\(\dot{S}_{g}\\) within the system can be derived as
+
+$$s - s_{\infty } = {{\left[ {(i + e_{m} ) - (i_{\infty } + e_{m\infty } )} \right]} \mathord{\left/ {\vphantom {{\left[ {(i + e_{m} ) - (i_{\infty } + e_{m\infty } )} \right]} T}} \right. \kern-\nulldelimiterspace} T}, \, \dot{S}_{g} = {{\dot{E}_{g} } \mathord{\left/ {\vphantom {{\dot{E}_{g} } {T_{s} }}} \right. \kern-\nulldelimiterspace} {T_{s} }} + (\dot{Q}_{u} - \dot{Q}_{k} )({1 \mathord{\left/ {\vphantom {1 T}} \right. \kern-\nulldelimiterspace} T} - {1 \mathord{\left/ {\vphantom {1 {T_{s} }}} \right. \kern-\nulldelimiterspace} {T_{s} }})$$
+
+(4) 
+
+As derived above, heat advection is unambiguously distinguished from other energy transfer interactions, including mass flow and heat conduction. Based on this analysis, advective heat transfer can be considered a fundamental heat transfer mode in addition to conduction and radiation. This conclusion also clearly clarifies the previous controversy as to whether advection can be considered an independent heat transfer means. Notably, advective heat transfer occurs only if _net_ energy transfer by mass occurs between _two_ surfaces (such as sections _II_ and _I_ in Fig. [1](/articles/s41598-022-18961-8#Fig1)d,e) with different temperatures in a fluid flow field. There cannot be any advective heat transfer across only _one_ flow section where energy transport only occurs in the form of mass (for instance, at some arbitrary surface _II_ , the _net_ rate of energy transfer by mass \\(\dot{Q}_{u} = \dot{m}\left[ {(i + e_{m} ) - (i_{\infty } + e_{m\infty } )} \right]\\), while the rate of energy transfer by mass is \\(\dot{m}(i + e_{m} )\\)). From an energy transfer perspective, advection is similar to _net radiation_ between _two_ surfaces rather than conduction across _one_ surface.
+
+### Convection in single-phase flows
+
+Generally, the thermal energy being transferred includes the sensible energy in single-phase flows and the latent energy in phase-change flows[16](/articles/s41598-022-18961-8#ref-CR16 "Çengel, Y. A. & Turner, R. H. Fundamentals of Thermal-Fluid Sciences \(McGraw-Hill, 2005\)."),[28](/articles/s41598-022-18961-8#ref-CR28 "Incropera, F. P., Dewitt, D. P., Bergman, T. L. & Lavine, A. S. Fundamentals of Heat and Mass Transfer. \(John Wiley & Sons, 2007\)."),[32](/articles/s41598-022-18961-8#ref-CR32 "Bejan, A. Convection Heat Transfer \(John Wiley & Sons, 2013\)."). We first examine the case of the convective heat flux vector and entropy flux vector in single-phase flows. Considering the Gibbs equations, Maxwell relation[27](/articles/s41598-022-18961-8#ref-CR27 "Kaviany, M. Essentials of heat transfer: principles, materials, and applications \(Cambridge Univ, 2011\)."),[47](/articles/s41598-022-18961-8#ref-CR47 "Bejan, A. Advanced Engineering Thermodynamics \(John Wiley & Sons, 2016\)."),[48](/articles/s41598-022-18961-8#ref-CR48 "Huang, F. F. Engineering Thermodynamics Fundamentals and Applications \(Macmillan, 1976\)."), and advective heat transfer rate \\(\dot{Q}_{u} = \int_{S} {({\mathbf{q}}_{u} \cdot {\mathbf{n}}){\text{d}}S}\\), the heat flux vector of advection **q** _u_ (W/m2) leaving across any surface _II_ in a compressible flow is derived as[25](/articles/s41598-022-18961-8#ref-CR25 "Zhao, B. Derivation of unifying formulae for convective heat transfer in compressible flow fields. Sci. Rep. 11, 16762. 
+                  https://doi.org/10.1038/s41598-021-95810-0
+                  
+                 \(2021\).") (see Appendix)
+
+$${\mathbf{q}}_{u} = \rho {\mathbf{U}}\left( {\int_{{T_{\infty } }}^{T} {c_{p} {\text{d}}T^{\prime}} - \int_{{p_{\infty } }}^{p} {{{\beta T} \mathord{\left/ {\vphantom {{\beta T} \rho }} \right. \kern-\nulldelimiterspace} \rho }{\text{d}}p^{\prime}} } \right), \, {\mathbf{q}}_{u} = \rho {\mathbf{U}}\left( {\int_{{T_{\infty } }}^{T} {c_{\upsilon } {\text{d}}T^{\prime}} + \int_{{\upsilon_{\infty } }}^{\upsilon } {{{\beta T} \mathord{\left/ {\vphantom {{\beta T} \kappa }} \right. \kern-\nulldelimiterspace} \kappa }{\text{d}}\upsilon^{\prime}} } \right)$$
+
+(5) 
+
+where _β_ is the volumetric coefficient of thermal expansion, _κ_ is the isothermal compressibility, and _c_ _p_ and _c_ _υ_ are the specific heat capacity at constant pressure and constant volume, respectively. For 3D flow without internal heat source and viscous dissipation, we have demonstrated[25](/articles/s41598-022-18961-8#ref-CR25 "Zhao, B. Derivation of unifying formulae for convective heat transfer in compressible flow fields. Sci. Rep. 11, 16762. 
+                  https://doi.org/10.1038/s41598-021-95810-0
+                  
+                 \(2021\).") that an unsteady energy equation[27](/articles/s41598-022-18961-8#ref-CR27 "Kaviany, M. Essentials of heat transfer: principles, materials, and applications \(Cambridge Univ, 2011\)."),[36](/articles/s41598-022-18961-8#ref-CR36 "Eckert, E. R. G. & Drake, R. M. Analysis of Heat and Mass Transfer \(McGraw-Hill, 1972\)."),[52](/articles/s41598-022-18961-8#ref-CR52 "Schlichting, H. & Gersten, K. Boundary-Layer Theory \(Springer-Verlag, 2017\)."),[57](/articles/s41598-022-18961-8#ref-CR57 "Ren, Z. Convection Heat Transfer \(Higher Education Press, 1998\). \(in Chinese\)") can be recast into \\(\frac{{{\text{d(}}\rho e_{t} )}}{{{\text{d}}\tau }} + \nabla \cdot {\mathbf{q}} = 0\\), where _e_ _t_ is the specific total energy and **q** is the total convective heat flux vector **q** = **q** _u_ \+ **q** _k_ , with the conductive heat flux **q** _k_ determined by Fourier’s law[33](/articles/s41598-022-18961-8#ref-CR33 "Fourier, J. The Analytical Theory of Heat \(translated with notes \(1878\) by Freeman A., Cambridge, 1955\)."). We define the entropy flux vector **J** _s_ (W/(m2 K)) as the entropy flow per unit time and unit area crossing a surface[51](/articles/s41598-022-18961-8#ref-CR51 "De Groot, S. R. & Mazur, P. Non-Equilibrium Thermodynamics \(North-Holland, 1962\)."); thus, the entropy flux vector[47](/articles/s41598-022-18961-8#ref-CR47 "Bejan, A. Advanced Engineering Thermodynamics \(John Wiley & Sons, 2016\)."),49,50,[51](/articles/s41598-022-18961-8#ref-CR51 "De Groot, S. R. & Mazur, P. Non-Equilibrium Thermodynamics \(North-Holland, 1962\).") due to advection is \\({\mathbf{J}}_{s} = {\mathbf{q}}_{u} /T\\). From the foregoing relation \\(s - s_{\infty } = {{\left[ {(i + e_{m} ) - (i_{\infty } + e_{m\infty } )} \right]} \mathord{\left/ {\vphantom {{\left[ {(i + e_{m} ) - (i_{\infty } + e_{m\infty } )} \right]} T}} \right. \kern-\nulldelimiterspace} T}\\) in Eq. ([4](/articles/s41598-022-18961-8#Equ4)), the net specific entropy transfer (_s_ −  _s_ ∞) due to advection is
+
+$$s - s_{\infty } = {{\left( {\int_{{T_{\infty } }}^{T} {c_{p} {\text{d}}T^{\prime}} - \int_{{p_{\infty } }}^{p} {{{\beta T} \mathord{\left/ {\vphantom {{\beta T} \rho }} \right. \kern-\nulldelimiterspace} \rho }{\text{d}}p^{\prime}} } \right)} \mathord{\left/ {\vphantom {{\left( {\int_{{T_{\infty } }}^{T} {c_{p} {\text{d}}T^{\prime}} - \int_{{p_{\infty } }}^{p} {{{\beta T} \mathord{\left/ {\vphantom {{\beta T} \rho }} \right. \kern-\nulldelimiterspace} \rho }{\text{d}}p^{\prime}} } \right)} T}} \right. \kern-\nulldelimiterspace} T} = {{\left( {\int_{{T_{\infty } }}^{T} {c_{\upsilon } {\text{d}}T^{\prime}} + \int_{{\upsilon_{\infty } }}^{\upsilon } {{{\beta T} \mathord{\left/ {\vphantom {{\beta T} \kappa }} \right. \kern-\nulldelimiterspace} \kappa }{\text{d}}\upsilon^{\prime}} } \right)} \mathord{\left/ {\vphantom {{\left( {\int_{{T_{\infty } }}^{T} {c_{\upsilon } {\text{d}}T^{\prime}} + \int_{{\upsilon_{\infty } }}^{\upsilon } {{{\beta T} \mathord{\left/ {\vphantom {{\beta T} \kappa }} \right. \kern-\nulldelimiterspace} \kappa }{\text{d}}\upsilon^{\prime}} } \right)} T}} \right. \kern-\nulldelimiterspace} T}$$
+
+(6) 
+
+If _c_ _p_ and _c_ _υ_ remain constant in Eq. ([5](/articles/s41598-022-18961-8#Equ5)), then \\({\mathbf{q}}_{u} = \rho c_{p} {\mathbf{U}}\left( {T - T_{\infty } - \int_{{p_{\infty } }}^{p} {\frac{\beta T}{{\rho c_{p} }}{\text{d}}p^{\prime}} } \right)\\) or \\({\mathbf{q}}_{u} = \rho c_{\upsilon } {\mathbf{U}}\left( {T - T_{\infty } - \int_{{\upsilon_{\infty } }}^{\upsilon } {\frac{ - \beta T}{{\kappa c_{\upsilon } }}{\text{d}}\upsilon^{\prime}} } \right)\\). The temperature changes caused by the density or dynamic pressure variations in a compressible flow are important for its heat balance[52](/articles/s41598-022-18961-8#ref-CR52 "Schlichting, H. & Gersten, K. Boundary-Layer Theory \(Springer-Verlag, 2017\)."). By using some permissible simplifications[25](/articles/s41598-022-18961-8#ref-CR25 "Zhao, B. Derivation of unifying formulae for convective heat transfer in compressible flow fields. Sci. Rep. 11, 16762. 
+                  https://doi.org/10.1038/s41598-021-95810-0
+                  
+                 \(2021\)."),[52](/articles/s41598-022-18961-8#ref-CR52 "Schlichting, H. & Gersten, K. Boundary-Layer Theory \(Springer-Verlag, 2017\)."), the last term within the above parentheses represents the temperature difference in the adiabatic (isentropic) process caused by variations in pressure or density in the single-phase compressible flow[25](/articles/s41598-022-18961-8#ref-CR25 "Zhao, B. Derivation of unifying formulae for convective heat transfer in compressible flow fields. Sci. Rep. 11, 16762. 
+                  https://doi.org/10.1038/s41598-021-95810-0
+                  
+                 \(2021\).") (for example, the temperature increase due to adiabatic compression). Therefore, it must be deducted from the total temperature difference[52](/articles/s41598-022-18961-8#ref-CR52 "Schlichting, H. & Gersten, K. Boundary-Layer Theory \(Springer-Verlag, 2017\).") Δ _T_ =  _T_ −  _T_ ∞. For this purpose, we define this adiabatic temperature _T_ _ad_ as the _potential temperature_[25](/articles/s41598-022-18961-8#ref-CR25 "Zhao, B. Derivation of unifying formulae for convective heat transfer in compressible flow fields. Sci. Rep. 11, 16762. 
+                  https://doi.org/10.1038/s41598-021-95810-0
+                  
+                 \(2021\)."). Hence,
+
+$${\mathbf{q}}_{u} = \rho c_{p} {\mathbf{U}}(T - T_{ad,p} ), \, {\mathbf{q}}_{u} = \rho c_{\upsilon } {\mathbf{U}}(T - T_{ad,\upsilon } ); \, s - s_{\infty } = c_{p} (1 - {{T_{ad,p} } \mathord{\left/ {\vphantom {{T_{ad,p} } T}} \right. \kern-\nulldelimiterspace} T}) = c_{\upsilon } (1 - {{T_{ad,\upsilon } } \mathord{\left/ {\vphantom {{T_{ad,\upsilon } } T}} \right. \kern-\nulldelimiterspace} T})$$
+
+(7) 
+
+where \\({\text{d}}T_{ad,p}^{{}} = \frac{{\beta T_{ad,p}^{{}} }}{{\rho c_{p} }}{\text{d}}p\\), \\({\text{d}}T_{ad,\upsilon }^{{}} = - \frac{{\beta T_{ad,\upsilon }^{{}} }}{{\kappa c_{\upsilon } }}{\text{d}}\upsilon\\), and **q** _u_ has the same or opposite direction as **U**. Note that _T_ _ad_ ,_p_ becomes the stagnation temperature[52](/articles/s41598-022-18961-8#ref-CR52 "Schlichting, H. & Gersten, K. Boundary-Layer Theory \(Springer-Verlag, 2017\).") when the velocity reduces to zero (\\(c_{p} (T_{ad,p} - T_{\infty } ) = \int_{{p_{\infty } }}^{p} {1/\rho {\text{d}}p} = (u_{\infty }^{2} - u^{2} )/2\\) provided that _βT_ _ad,p_ = 1, where _u_ ∞ is the free-stream velocity) in high-velocity compressible flows. Furthermore, the conductive heat flux **q** _k_ can be given from Fourier’s law[33](/articles/s41598-022-18961-8#ref-CR33 "Fourier, J. The Analytical Theory of Heat \(translated with notes \(1878\) by Freeman A., Cambridge, 1955\)."): \\({\mathbf{q}}_{k} = - k\nabla T\\). Therefore, for a single-phase, isotropic, compressible Newtonian fluid, the convective heat flux vector **q**(_x_ 1, _x_ 2, _x_ 3) = {_q_ 1, _q_ 2, _q_ 3} (Fig. [1](/articles/s41598-022-18961-8#Fig1)d,e) is the resultant[25](/articles/s41598-022-18961-8#ref-CR25 "Zhao, B. Derivation of unifying formulae for convective heat transfer in compressible flow fields. Sci. Rep. 11, 16762. 
+                  https://doi.org/10.1038/s41598-021-95810-0
+                  
+                 \(2021\)."),27,28,[29](/articles/s41598-022-18961-8#ref-CR29 "Vadasz, P. Heat flux vector potential in convective heat transfer. ASME J. Heat Transfer 140, 051701. 
+                  https://doi.org/10.1115/1.4038553
+                  
+                 \(2018\)."),[39](/articles/s41598-022-18961-8#ref-CR39 "Kimura, S. & Bejan, A. The, “heatline” visualization of convective heat transfer. ASME J. Heat Transfer 105, 916–919. 
+                  https://doi.org/10.1115/1.3245684
+                  
+                 \(1983\)."),[40](/articles/s41598-022-18961-8#ref-CR40 "Morega, A. M. & Bejan, A. Heatline visualization of forced convection in porous media. Int. J. Heat Fluid Fl. 15, 42–47. 
+                  https://doi.org/10.1016/0142-727X\(94\)90029-9
+                  
+                 \(1994\).") of the advective heat flux **q** _u_ and conductive heat flux **q** _k_ :
+
+$${\mathbf{q}} = {\mathbf{q}}_{u} + {\mathbf{q}}_{k} = \rho c_{p} {\mathbf{U}}(T - T_{ad,p} ) - k\nabla T,{\mathbf{q}} = {\mathbf{q}}_{u} + {\mathbf{q}}_{k} = \rho c_{\upsilon } {\mathbf{U}}(T - T_{ad,\upsilon } ) - k\nabla T$$
+
+(8) 
+
+These two formulae for a compressible flow have the potential to be applied to actively cooled structures such as rocket engines[9](/articles/s41598-022-18961-8#ref-CR9 "Kim, S., Joh, M., Choi, H. S. & Park, T. S. Multidisciplinary simulation of a regeneratively cooled thrust chamber of liquid rocket engine: turbulent combustion and nozzle flow. Int. J. Heat Mass Transf. 70, 1066–1077. 
+                  https://doi.org/10.1016/j.ijheatmasstransfer.2013.10.046
+                  
+                 \(2014\)."),[10](/articles/s41598-022-18961-8#ref-CR10 "Jiang, Y. et al. Parametric study on the distribution of flow rate and heat sink utilization in cooling channels of advanced aero-engines. Energy 138, 1056–1068. 
+                  https://doi.org/10.1016/j.energy.2017.07.091
+                  
+                 \(2017\).") and hypersonic vehicles under high aerodynamic thermal loads[8](/articles/s41598-022-18961-8#ref-CR8 "Ilegbusi, O. J. Turbulent boundary layer on a porous flat plate with severe injection at various angles to the surface. Int. J. Heat Mass Transf. 32, 761–765. 
+                  https://doi.org/10.1016/0017-9310\(89\)90223-8
+                  
+                 \(1989\)."),53,54,55,[56](/articles/s41598-022-18961-8#ref-CR56 "Munk, D. J., Selzer, M., Steven, G. P. & Vio, G. A. Topology optimization applied to transpiration cooling. AIAA J. 57, 297–312. 
+                  https://doi.org/10.2514/1.J057411
+                  
+                 \(2019\).").
+
+We examine **q** _u_ in natural convection. Generally, the density _ρ_ is a function of _p_ and _T_ , but the dependence of density on pressure can be ignored in flows that are affected by gravitation[52](/articles/s41598-022-18961-8#ref-CR52 "Schlichting, H. & Gersten, K. Boundary-Layer Theory \(Springer-Verlag, 2017\)."). If _T_ does not deviate too much from _T_ ∞, then use of the relation \\(\rho - \rho_{\infty } = - \beta \rho (T - T_{\infty } )\\) is permissible[16](/articles/s41598-022-18961-8#ref-CR16 "Çengel, Y. A. & Turner, R. H. Fundamentals of Thermal-Fluid Sciences \(McGraw-Hill, 2005\)."),[26](/articles/s41598-022-18961-8#ref-CR26 "Kays, W. M. & Crawford, M. E. Convective Heat and Mass Transfer \(McGraw-Hill, 1993\)."),[28](/articles/s41598-022-18961-8#ref-CR28 "Incropera, F. P., Dewitt, D. P., Bergman, T. L. & Lavine, A. S. Fundamentals of Heat and Mass Transfer. \(John Wiley & Sons, 2007\)."),[36](/articles/s41598-022-18961-8#ref-CR36 "Eckert, E. R. G. & Drake, R. M. Analysis of Heat and Mass Transfer \(McGraw-Hill, 1972\)."). Substituting this into \\({\text{d}}T_{ad,\upsilon }^{{}} = - \frac{{\beta T_{ad,\upsilon }^{{}} }}{{\kappa c_{\upsilon } }}{\text{d}}\upsilon\\) and integrating from _υ_ ∞ to _υ_ , one obtains the difference in potential temperature as \\(T_{ad,\upsilon } - T_{\infty } = \frac{{\upsilon - \upsilon_{\infty } }}{{\kappa c_{\upsilon } }}\left[ {\frac{1}{2}(1 - \rho_{\infty } \upsilon ) - \beta T_{\infty } } \right]\\). From Eq. ([7](/articles/s41598-022-18961-8#Equ7)), the advective heat flux vectors for free convection are obtained as follows
+
+$${\mathbf{q}}_{u} = \rho c_{p} {\mathbf{U}}(T - T_{\infty } ) + \frac{{\rho {\mathbf{U}}\beta^{2} }}{{2\kappa \rho_{\infty } }}(T - T_{\infty } )^{2} , \, {\mathbf{q}}_{u} = \rho {\mathbf{U}}\left( {\frac{{\rho_{\infty } }}{\rho } - 1} \right)\left[ {\frac{{c_{p} }}{\beta } + \frac{1}{2\kappa }\left( {\frac{1}{\rho } - \frac{1}{{\rho_{\infty } }}} \right)} \right]$$
+
+(9) 
+
+We now consider **q** _u_ for an incompressible flow. If the fluid velocity is not higher than one quarter the speed of sound, then the variations in pressure and specific volume can be neglected[36](/articles/s41598-022-18961-8#ref-CR36 "Eckert, E. R. G. & Drake, R. M. Analysis of Heat and Mass Transfer \(McGraw-Hill, 1972\)."),[57](/articles/s41598-022-18961-8#ref-CR57 "Ren, Z. Convection Heat Transfer \(Higher Education Press, 1998\). \(in Chinese\)"), and the fluid can be treated as an incompressible medium. Hence, _c_ _p_ ≈ _c_ _υ_ =  _c_ , _β_ = 0, and the potential temperature _T_ _ad_ degenerates into _T_ ∞[25](/articles/s41598-022-18961-8#ref-CR25 "Zhao, B. Derivation of unifying formulae for convective heat transfer in compressible flow fields. Sci. Rep. 11, 16762. 
+                  https://doi.org/10.1038/s41598-021-95810-0
+                  
+                 \(2021\)."). If we let _θ_ denote the temperature difference _θ_ =  _T_ −  _T_ ∞, then Eqs. ([7](/articles/s41598-022-18961-8#Equ7)) and ([8](/articles/s41598-022-18961-8#Equ8)) reduce to
+
+$${\mathbf{q}}_{u} = \rho c{\mathbf{U}}\theta ; \, {\mathbf{q}} = {\mathbf{q}}_{u} + {\mathbf{q}}_{k} = \rho c{\mathbf{U}}\theta - k\nabla \theta ; \, s - s_{\infty } = c(1 - {{T_{\infty } } \mathord{\left/ {\vphantom {{T_{\infty } } T}} \right. \kern-\nulldelimiterspace} T})$$
+
+(10) 
+
+From \\(\dot{S}_{g} = {{\dot{E}_{g} } \mathord{\left/ {\vphantom {{\dot{E}_{g} } {T_{s} }}} \right. \kern-\nulldelimiterspace} {T_{s} }} + (\dot{Q}_{u} - \dot{Q}_{k} )({1 \mathord{\left/ {\vphantom {1 T}} \right. \kern-\nulldelimiterspace} T} - {1 \mathord{\left/ {\vphantom {1 {T_{s} }}} \right. \kern-\nulldelimiterspace} {T_{s} }})\\) in Eq. ([4](/articles/s41598-022-18961-8#Equ4)), the entropy generation rate inside the system becomes
+
+$$\dot{S}_{g} = {{\dot{E}_{g} } \mathord{\left/ {\vphantom {{\dot{E}_{g} } {T_{s} }}} \right. \kern-\nulldelimiterspace} {T_{s} }} + ({1 \mathord{\left/ {\vphantom {1 T}} \right. \kern-\nulldelimiterspace} T} - {1 \mathord{\left/ {\vphantom {1 {T_{s} }}} \right. \kern-\nulldelimiterspace} {T_{s} }})\int_{S} {{\mathbf{q}} \cdot {\mathbf{n}}{\text{d}}S} = {{\dot{E}_{g} } \mathord{\left/ {\vphantom {{\dot{E}_{g} } {T_{s} }}} \right. \kern-\nulldelimiterspace} {T_{s} }} + ({1 \mathord{\left/ {\vphantom {1 T}} \right. \kern-\nulldelimiterspace} T} - {1 \mathord{\left/ {\vphantom {1 {T_{s} }}} \right. \kern-\nulldelimiterspace} {T_{s} }})\int_{S} {(\rho c{\mathbf{U}}\theta - k\nabla \theta ) \cdot {\mathbf{n}}{\text{d}}S}$$
+
+(11) 
+
+For a 3D steady flow without internal heat source and viscous dissipation, its energy equation can be expressed by ∇∙**q** = ∇∙**q** _u_ \+ ∇∙**q** _k_ = 0, or **U** ∙**q** _k_ −  _a_ ∇∙**q** _k_ = 0, where ∇∙**q** _u_ = − (**U** ∙**q** _k_)/_a_ and _a_ =  _k_ /(_ρc_) is the thermal diffusivity. This implies that the divergence of **q** _u_ is thus _equivalent_ to **q** _k_ enhanced by the velocity vector **U** , which well explains the foregoing argument on advection being “conduction enhanced by fluid motion”15,16,17,18,[19](/articles/s41598-022-18961-8#ref-CR19 "Burmeister, L. C. Convective Heat Transfer \(John-Wiley & Sons, 1983\)."),[58](/articles/s41598-022-18961-8#ref-CR58 "Maxwell, J. C. Theory of Heat \(Longmans, Green, and Co., 1871\)."). However, we have demonstrated that advection is an independent heat transfer mechanism that is completely different from conduction: advection is the net total energy transfer due to gross fluid movement, while conduction is the heat transfer due to random molecular motion.
+
+In addition, Eq. ([10](/articles/s41598-022-18961-8#Equ10)) can be given in terms of its vectorial components in the cylindrical coordinate system[25](/articles/s41598-022-18961-8#ref-CR25 "Zhao, B. Derivation of unifying formulae for convective heat transfer in compressible flow fields. Sci. Rep. 11, 16762. 
+                  https://doi.org/10.1038/s41598-021-95810-0
+                  
+                 \(2021\)."):
+
+$$q_{r} = \rho cu_{r} \theta - k\frac{\partial \theta }{{\partial r}}, \, q_{\varphi } = \rho cu_{\varphi } \theta - \frac{k}{r}\frac{\partial \theta }{{\partial \varphi }}, \, q_{x} = \rho cu_{x} \theta - k\frac{\partial \theta }{{\partial x}}$$
+
+(12) 
+
+where _q_ _r_ , _q_ _φ_ , and _q_ _x_ are the heat flux components and _u_ _r_ , _u_ _φ_ , and _u_ _x_ are the radial, circumferential and axial components of the velocity, respectively. Furthermore, in the turbulent flow of an incompressible fluid considering the fluctuations of velocity and temperature components, Eq. ([10](/articles/s41598-022-18961-8#Equ10)) can be recast in terms of heat flux components[30](/articles/s41598-022-18961-8#ref-CR30 "Zhao, B., Long, W. & Zhou, R. A convective analytical model in turbulent boundary layer on a flat plate based on the unifying heat flux formula. Int. J. Therm. Sci. 163, 106784. 
+                  https://doi.org/10.1016/j.ijthermalsci.2020.106784
+                  
+                 \(2021\)."),[31](/articles/s41598-022-18961-8#ref-CR31 "Zhao, B., Li, K., Wang, Y. & Wang, Z. Theoretical analysis of convective heat flux in an incompressible turbulent boundary layer on a porous plate with uniform injection and suction. Int. J. Therm. Sci. 171, 107264. 
+                  https://doi.org/10.1016/j.ijthermalsci.2021.107264
+                  
+                 \(2022\)."):
+
+$$q_{{x_{j} }} = \rho c\overline{u}_{j} (\overline{T} - T_{\infty } ){ + }\rho c\overline{{u^{\prime}_{j} T^{\prime}}} - k\frac{{\partial \overline{T}}}{{\partial x_{j} }}$$
+
+(13) 
+
+where _j_ = 1,2,3, \\(u^{\prime}_{j}\\) is the velocity fluctuation term in the _x_ _j_ direction, \\(T^{\prime}\\) is the temperature fluctuation, and the overbar denotes the time-mean value; the detailed calculation of the fluctuation terms can be seen in references[30](/articles/s41598-022-18961-8#ref-CR30 "Zhao, B., Long, W. & Zhou, R. A convective analytical model in turbulent boundary layer on a flat plate based on the unifying heat flux formula. Int. J. Therm. Sci. 163, 106784. 
+                  https://doi.org/10.1016/j.ijthermalsci.2020.106784
+                  
+                 \(2021\)."),[31](/articles/s41598-022-18961-8#ref-CR31 "Zhao, B., Li, K., Wang, Y. & Wang, Z. Theoretical analysis of convective heat flux in an incompressible turbulent boundary layer on a porous plate with uniform injection and suction. Int. J. Therm. Sci. 171, 107264. 
+                  https://doi.org/10.1016/j.ijthermalsci.2021.107264
+                  
+                 \(2022\)."),[59](/articles/s41598-022-18961-8#ref-CR59 "Priestley, C. H. B. & Swinbank, W. C. Vertical transport of heat by turbulence in the atmosphere. P. Roy. Soc. A: Math. Phy. 189, 543–561. 
+                  https://doi.org/10.1098/rspa.1947.0057
+                  
+                 \(1947\).") and[60](/articles/s41598-022-18961-8#ref-CR60 "Montgomery, R. B. Vertical eddy flux of heat in the atmosphere. J. Meteor. 5, 265–274. 
+                  https://doi.org/10.1175/1520-0469\(1948\)0052.0.CO;2
+                  
+                 \(1948\)."). We emphasize that Eqs. ([10](/articles/s41598-022-18961-8#Equ10)), ([12](/articles/s41598-022-18961-8#Equ12)) and ([13](/articles/s41598-022-18961-8#Equ13)) can also describe convective heat transfer (conduction plus advection) through a porous or permeable wall surface[31](/articles/s41598-022-18961-8#ref-CR31 "Zhao, B., Li, K., Wang, Y. & Wang, Z. Theoretical analysis of convective heat flux in an incompressible turbulent boundary layer on a porous plate with uniform injection and suction. Int. J. Therm. Sci. 171, 107264. 
+                  https://doi.org/10.1016/j.ijthermalsci.2021.107264
+                  
+                 \(2022\)."),[55](/articles/s41598-022-18961-8#ref-CR55 "Munk, D. J., Selzer, M., Böhrk, H., Schweikert, S. & Vio, G. A. Numerical modeling of transpiration-cooled turbulent channel flow with comparisons to experimental data. J. Thermophys. Heat Transf. 32, 713–735. 
+                  https://doi.org/10.2514/1.T5266
+                  
+                 \(2018\)."),[56](/articles/s41598-022-18961-8#ref-CR56 "Munk, D. J., Selzer, M., Steven, G. P. & Vio, G. A. Topology optimization applied to transpiration cooling. AIAA J. 57, 297–312. 
+                  https://doi.org/10.2514/1.J057411
+                  
+                 \(2019\)."),[61](/articles/s41598-022-18961-8#ref-CR61 "Moffat, R. J. & Kays, W. M. The turbulent boundary layer on a porous plate: Experimental heat transfer with uniform blowing and suction. Int. J. Heat Mass Transf. 11, 1547–1566. 
+                  https://doi.org/10.1016/0017-9310\(68\)90116-6
+                  
+                 \(1968\)."),[62](/articles/s41598-022-18961-8#ref-CR62 "Simpson, R. L., Moffat, R. J. & Kays, W. M. The turbulent boundary layer on a porous plate: experimental skin friction with variable injection and suction. Int. J. Heat Mass Transf. 12, 771–789. 
+                  https://doi.org/10.1016/0017-9310\(69\)90181-1
+                  
+                 \(1969\).").
+
+### Co

@@ -1,0 +1,6 @@
+4 word(s) and 0 phrase(s) are not in the domain vocabulary built from 13 papers of this field (domain_vocabulary.json).
+- death (x1): "Newton's law, dT/dt = −k (T − T_room), is the standard model for hot drinks, for food-safety timing, and for time-of-death estimates."
+- permutation (x3): "A permutation control that shuffled the window temperatures and fitted both models gave a median relative RMS gain of 0.03 (maximum 0.19),…"
+- shuffled (x2): "A permutation control that shuffled the window temperatures and fitted both models gave a median relative RMS gain of 0.03 (maximum 0.19),…"
+- kc (x2): "The two laws are the constant-rate Newton law and the one-term nonlinear convection law dT/dt = −kc (T − T_room)^x, with kc and x fitted."
+For each one: replace it with a word the field's papers use for the same thing (`lookup` tests candidates against the corpus and shows a sentence for each). When no corpus word fits, find a paper of this field that uses the word, save its text and run `add-word` with it; when many ordinary words are missing, save one or two more full papers of the field into the corpus and rebuild instead. Never substitute wording of your own that is not on the list. A term this paper coins is defined once at first use ("we call ...").

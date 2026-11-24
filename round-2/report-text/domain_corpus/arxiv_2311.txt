@@ -1,0 +1,1276 @@
+Reproducible Parameter Inference
+Using Bagged Posteriors
+Jonathan H. Huggins1 and Jeffrey W. Miller2
+1Department of Mathematics & Statistics, Boston University, e-mail: huggins@bu.edu
+2Department of Biostatistics, Harvard University, e-mail: jwmiller@hsph.harvard.edu
+Abstract: Under model misspecification, it is known that Bayesian posteriors often
+do not properly quantify uncertainty about true or pseudo-true parameters. Even more
+fundamentally, misspecification leads to a lack of reproducibility in the sense that the
+same model will yield contradictory posteriors on independent data sets from the true
+distribution. To define a criterion for reproducible uncertainty quantification under
+misspecification, we consider the probability that two confidence sets constructed from
+independent data sets have nonempty overlap, and we establish a lower bound on this
+overlap probability that holds for any valid confidence sets. We prove that credible
+sets from the standard posterior can strongly violate this bound, particularly in high-
+dimensional settings (i.e., with dimension increasing with sample size), indicating that
+it is not internally coherent under misspecification. To improve reproducibility in an
+easy-to-use and widely applicable way, we propose to apply bagging to the Bayesian
+posterior (“BayesBag”); that is, to use the average of posterior distributions condi-
+tioned on bootstrapped datasets. We motivate BayesBag from first principles based
+on Jeffrey conditionalization and show that the bagged posterior typically satisfies the
+overlap lower bound. Further, we prove a Bernstein–Von Mises theorem for the bagged
+posterior, establishing its asymptotic normal distribution. We demonstrate the benefits
+of BayesBag via simulation experiments and an application to crime rate prediction.
+Keywords and phrases: Bagging, Bernstein–Von Mises theorem, Bootstrap, Model
+misspecification, Overlap probability, Uncertainty calibration.
+1. Introduction
+It is widely acknowledged that statistical models are usually not exactly correct in prac-
+tice (Box, 1979, 1980; Cox, 1990; Lehmann, 1990). This model misspecification is known
+to lead to unreliable inferences, and in particular, Bayesian posteriors can be unstable and
+poorly calibrated under misspecification (Greco, Racugno and Ventura, 2008; Jewson, Smith
+and Holmes, 2018; Kleijn and van der Vaart, 2012). Unfortunately, this leads to a lack of
+reproducibility, even when using the same method on a replicate data set from the same
+distribution (Huggins and Miller, 2023; Yang and Zhu, 2018). In this paper, we propose a
+criterion for reproducible uncertainty quantification and a general technique for achieving
+it.
+Defining valid uncertainty quantification in misspecified models presents a conceptual
+problem since there is no “”true parameter” that indexes a model with distribution equal to
+the data-generating distribution. The usual solution is to focus on a pseudo-true parameter,
+typically defined as the asymptotically optimal parameter in terms of Kullback–Leibler
+(KL) divergence (Gr¨unwald, 2012; Kleijn and van der Vaart, 2012; M¨uller, 2013; Walker
+and Hjort, 2001). However, depending on the objectives of the analysis, it might not be
+desirable to concentrate at the KL-optimal parameter (Bissiri, Holmes and Walker, 2016;
+Jewson, Smith and Holmes, 2018; Miller and Dunson, 2018). Thus, rather than adopting a
+1
+arXiv:2311.02019v1  [stat.ME]  3 Nov 2023
+
+J. H. Huggins and J. W. Miller / Reproducible Parameter Inference
+2
+particular definition of pseudo-truth, we introduce a truth-agnostic approach to assessing
+reproducibility. Specifically, we consider the probability that two credible sets constructed
+from independent data sets have nonempty overlap, and we establish a simple lower bound
+on this overlap probability that holds for any valid confidence sets. Under misspecification,
+we show that credible sets from the standard posterior can strongly violate this bound –
+particularly when the dimension grows with the number of observations – indicating that it
+exhibits poor reproducibility.
+To improve the reproducibility of Bayesian inference under misspecification, we pro-
+pose to use BayesBag (B¨uhlmann, 2014; Douady et al., 2003; Waddell, Kishino and Ota,
+2002). The idea of BayesBag is to apply bagging (Breiman, 1996) to the Bayesian poste-
+rior. More precisely, the bagged posterior π∗(θ | x) is defined by taking bootstrapped copies
+x∗:= (x∗
+1, . . . , x∗
+M) of the original dataset x := (x1, . . . , xN) and averaging over the posteri-
+ors obtained by treating each bootstrap dataset as the observed data:
+π∗(θ | x) :=
+1
+N M
+X
+x∗
+π(θ | x∗),
+(1)
+where π(θ | x∗) ∝π0(θ) QM
+m=1 pθ(x∗
+m) is the standard posterior density given data x∗and
+the sum is over all N M possible bootstrap datasets of M samples drawn with replacement
+from the original dataset. In this work, we focus on parameter inference and prediction,
+complementing our work on BayesBag for model selection (Huggins and Miller, 2023). In
+theory and experiments, we consider both the case of fixed finite-dimensional parameters as
+well as high-dimensional cases where the dimension grows with the sample size.
+We motivate the bagged posterior from first principles using Jeffrey conditionalization
+and show that bagged posterior credible sets typically satisfy our lower bound on the over-
+lap probability, indicating that the bagged posterior quantifies uncertainty in a more re-
+producible way. These results illustrate how the bagged posterior integrates the attractive
+features of Bayesian inference—such as flexible hierarchical modeling, automatic integra-
+tion over nuisance parameters, and the use of prior information—with the distributional
+robustness of frequentist methods, nonparametrically accounting for sampling variability
+and model misspecification. Simulation experiments validate our theory and demonstrate
+the bagged posterior is particularly important for stability in high-dimensional settings. An
+application to crime rate prediction using a Poisson regression model with a horseshoe prior
+to induce approximate sparsity demonstrate that BayesBag-based analysis can also lead to
+different conclusions – and better predictions – than a standard Bayesian analysis.
+In practice, we suggest approximating π∗(θ | x) by generating B independent bootstrap
+datasets x∗
+(1), . . . , x∗
+(B), where x∗
+(b) consists of M samples drawn with replacement from x,
+yielding the approximation
+π∗(θ | x) ≈1
+B
+B
+X
+b=1
+π(θ | x∗
+(b)).
+(2)
+Since the bagged posterior is just the average of standard Bayesian posteriors, one can use
+any algorithm for standard posterior inference to compute each of the B posteriors, and
+then aggregate across them. While this requires B times as much computation as a single
+posterior, it is trivial to parallelize the computation of the B posteriors. Since Eq. (2) is a
+simple Monte Carlo approximation, the error of this approximation can easily be estimated
+in order to choose B appropriately (Huggins and Miller, 2023).
+
+J. H. Huggins and J. W. Miller / Reproducible Parameter Inference
+3
+Despite its many attractive features, there has been little practical or theoretical investi-
+gation of bagged posteriors prior to Huggins and Miller (2023). In the only previous work of
+which we are aware, B¨uhlmann (2014) presented some simulation results for a simple Gaus-
+sian location model, while Waddell, Kishino and Ota (2002) and Douady et al. (2003) used
+bagged posteriors for phylogenetic tree inference in papers focused primarily on speeding
+up model selection and comparing Bayesian inference versus the bootstrap.
+The article is organized as follows. In Section 2, we motivate the use of BayesBag for
+reproducible uncertainty quantification in terms of our overlap criterion as well as a Jeffrey
+conditionalization derivation. In Section 3, we prove that the standard posterior often fails
+to satisfy the overlap criterion, whereas the bagged posterior typically satisfies it, focusing
+on Gaussian location models, regular finite-dimensional models, and linear regression. In
+Section 4, we prove a general Bernstein–Von Mises theorem establishing the asymptotic
+normal distribution of the bagged posterior, which is employed in the overlap theory of the
+preceding section. Section 5 evaluates the performance of the bagged posterior in simulation
+studies, and Section 6 illustrates with an application to crime rate prediction using Poisson
+regression. We close with a discussion in Section 7.
+2. Motivation
+When misspecified, a Bayesian model can be so unstable that it contradicts itself. Specif-
+ically, given two independent data sets from the same distribution, the resulting two
+posteriors—for the same model—can place nearly all their mass on disjoint sets. Figure 1a
+provides a simple illustration of the problem. Intuitively, it seems clear that this must violate
+some principle of coherent uncertainty quantification. But if there is no true parameter for
+which the model is correct, then what is a posterior quantifying uncertainty about? In most
+previous work, this question is dealt with by focusing on the pseudo-true parameter—that
+is, the model parameter value that is closest in Kullback–Leibler divergence to the true dis-
+tribution (De Blasi and Walker, 2013; Hoff and Wakefield, 2012; Kleijn and van der Vaart,
+2012; Walker, 2013). However, this choice—or any choice of pseudo-truth—is somewhat ar-
+bitrary and entails implicit assumptions about the goal of the analysis, such as minimizing
+a certain loss function.
+In this section, we instead formulate a criterion for reproducible uncertainty quantification
+that does not require any assumptions of what is true in terms of models or parameters. The
+basic idea is that two valid confidence sets constructed from independent data sets must
+intersect with a certain minimal probability. We prove a simple lower bound on this overlap
+probability that holds for any valid confidence sets, for any definition of pseudo-truth, and
+for any data distribution. We then use this criterion to motivate the use of BayesBag via
+Jeffrey conditionalization. Figure 1b illustrates how the bagged posterior does not suffer
+from the instability exhibited by the standard posterior.
+2.1. Overlap criterion for reproducible uncertainty quantification
+Suppose x 7→Ax is a method of constructing confidence sets that takes data x and produces
+a set Ax that is intended to provide coverage of some unknown quantity of interest, η. For
+any fixed value of η, let X | η be a random data set. Here, η does not have to be a model
+parameter. Rather, it is simply some quantity that X depends on.
+
+J. H. Huggins and J. W. Miller / Reproducible Parameter Inference
+4
+0.5
+0.0
+0.5
+1.0
+0
+1
+2
+3
+4
+(
+x)
+Bayes
+(a)
+2
+0
+2
+0.0
+0.2
+0.4
+0.6
+0.8
+* (
+x)
+BayesBag
+(b)
+Fig 1: Standard and bagged posterior distributions of the mean for a Gaussian location model
+assuming the data are i.i.d. N(µ, 1), when the data are actually i.i.d. N(0, 52). Posteriors
+for six randomly generated data sets of size N = 100 are shown. (a) Many pairs of posterior
+distributions have essentially no overlap with each other, and 5 out 6 do not contain the
+true mean in their 95% central credible sets. (b) All pairs of bagged posterior distributions
+have significant overlap and 6 out of 6 contain the true mean in their 95% central credible
+sets.
+Definition 2.1. We say that x 7→Ax has coverage 1 −α with respect to X | η if for all η,
+we have P(η ∈AX | η) ≥1 −α.
+This definition is agnostic to making any assumptions of what is true in terms of models
+or parameters.
+Proposition 2.2. Let X and Y be independent data sets, given η. If x 7→Ax and y 7→By
+have coverage 1 −α and 1 −α′ with respect to X | η and Y | η, respectively, then
+P(AX ∩BY̸ = ∅| η) ≥(1 −α)(1 −α′).
+(3)
+This provides a lower bound on the probability that two valid confidence sets intersect.
+For example, if the coverage is 1−α = 1−α′ = 0.95, then the lower bound on the probability
+of intersection is 0.9025. We refer to P(AX ∩BY̸ = ∅| η) as the overlap probability, and
+satisfying the bound is referred to as the overlap criterion. Failing to satisfy this criterion
+indicates a lack of stability and reproducibility across plausible datasets. While satisfying
+this bound is a necessary condition for coherent uncertainty quantification, it is not sufficient.
+For example, choosing Ax = A, a constant, would satisfy the bound but would clearly be
+an ineffective method for inference.
+2.2. Jeffrey conditionalization for reproducibility leads to BayesBag
+For reproducibility, one needs to represent uncertainty across data sets from the true distri-
+bution. A natural way to do this is via Jeffrey conditionalization, which turns out to lead
+to the bagged posterior. This interpretation elegantly unifies the Bayesian and frequentist
+elements of the bagged posterior that might otherwise seem challenging to interpret together
+in a principled way.
+
+J. H. Huggins and J. W. Miller / Reproducible Parameter Inference
+5
+To explain, suppose we have a model p(x, y) of two variables x and y. In the absence
+of any other data or knowledge, we would quantify our uncertainty in x and y via the
+marginal distributions p(x) =
+R
+p(x | y)p(y)dy and p(y) =
+R
+p(y | x)p(x)dx, respectively.
+Now, suppose we are informed that the true distribution of x is p◦(x), but we are not
+given any samples of x or y. We would then quantify our uncertainty in x via p◦(x), and a
+natural way to quantify our uncertainty in y is via q(y) :=
+R
+p(y | x)p◦(x)dx. The idea is
+that q(x, y) := p(y | x)p◦(x) updates the model to have the correct distribution of x, while
+remaining as close as possible to the original model p(x, y). This is referred to as Jeffrey
+conditionalization (Diaconis and Zabell, 1982; Jeffrey, 1968, 1990).
+Suppose x = x1:N := (x1, . . . , xN) is the data and y = θ is a parameter, so that p(x, y) =
+p(x1:N, θ) is the joint distribution of the data and the parameter. If we are informed that
+the true distribution of the data is p◦N(x1:N), then the Jeffrey conditionalization approach
+is to quantify our uncertainty in θ by
+q(θ) =
+Z
+p(θ | x1:N)p◦N(x1:N)dx1:N.
+(4)
+Now, suppose we are not informed of the true distribution exactly, but we are given
+data X1, . . . , XN i.i.d. ∼p◦. Since the empirical distribution PN := N −1 PN
+n=1 δXn is a
+consistent estimator of p◦, and p◦N(x1:N) = QN
+n=1 p◦(xn), it is natural to plug in QN
+n=1 PN
+to approximate p◦N in Eq. (4). Doing so, we arrive at the bagged posterior π∗(θ | x) from
+Eq. (1), in the case of M = N:
+q(θ) ≈
+Z
+p(θ | x1:N)
+N
+Y
+n=1
+PN(dxn) = E
+
+p(θ | X∗
+1:N) | X1:N
+	
+= π∗(θ | x),
+where X∗
+1, . . . , X∗
+N i.i.d. ∼PN given X1:N. Thus, the bagged posterior represents uncertainty
+in θ, integrating over data sets drawn from an approximation to the true distribution. Hence,
+the bagged posterior naturally improves reproducibility across data sets.
+2.3. BayesBag combines Bayesian and frequentist uncertainty
+In Eq. (4), p(θ | x1:N) represents Bayesian model-based uncertainty and integrating with
+respect to p◦N(x1:N) represents frequentist sampling uncertainty. Remarkably, these two
+sources of uncertainty combine additively in the bagged posterior whenever θ ∈RD.
+To see this, let X∗| x be a random bootstrap dataset given data x, and let ϑ∗| X∗∼
+π(θ | X∗) be distributed according to the standard posterior given data X∗. Marginaliz-
+ing out X∗, we have ϑ∗| x ∼π∗(θ | x). Let ϑ | x ∼π(θ | x) and define µ(x) := E(ϑ | x) =
+R
+θ π(θ | x)dθ to be the standard posterior mean given x. By the law of total expectation,
+the mean of the bagged posterior is
+E(ϑ∗| x) = E
+
+E(ϑ∗| X∗) | x
+	
+= E{µ(X∗) | x} =
+1
+N M
+X
+x∗
+µ(x∗).
+By the law of total covariance, the covariance matrix of the bagged posterior is
+Cov(ϑ∗| x) = E
+
+Cov(ϑ∗| X∗) | x
+	
++ Cov
+
+E(ϑ∗| X∗) | x
+	
+= E{Σ(X∗) | x} + Cov{µ(X∗) | x},
+
+J. H. Huggins and J. W. Miller / Reproducible Parameter Inference
+6
+where Σ(x) := Cov(ϑ | x) =
+R
+{θ −µ(x)}{θ −µ(x)}⊤π(θ | x)dθ is the standard posterior
+covariance. In this decomposition of Cov(ϑ∗| x), the first term approximates the mean of
+the posterior covariance matrix under the sampling distribution, and the second term ap-
+proximates the covariance of the posterior mean under the sampling distribution. Thus, the
+first term reflects Bayesian model-based uncertainty averaged with respect to frequentist
+sampling variability, and the second term reflects frequentist sampling-based uncertainty of
+a Bayesian model-based point estimate.
+3. Reproducibility using overlap probability
+We now investigate if and when the standard and bagged posteriors satisfy the overlap
+criterion for reproducible uncertainty quantification. We focus on Gaussian location models,
+regular finite-dimensional models, and linear regression as representative cases, and consider
+settings where the dimension is fixed or growing with the sample size. We show that under
+misspecification, the bagged posterior typically satisfies the overlap criterion whereas the
+standard posterior does not. But, for correctly specified models, both the standard and
+bagged posteriors usually satisfy the criterion.
+First, however, as a check on the reasonableness of our criterion, we establish that for
+any correctly specified Bayesian model, the overlap criterion is satisfied in expectation with
+respect to the prior.
+Theorem 3.1. Consider any model for data X|ϑ and any prior π on ϑ. Suppose x 7→Ax
+is a 100(1 −α)% posterior credible set for ϑ under this model and prior, that is, P(ϑ ∈Ax |
+x) ≥1 −α for all x. If ϑ ∼π, and X | ϑ, ˜X | ϑ are independent data from the assumed
+model, then E
+
+P(AX ∩A ˜
+X̸ = ∅| ϑ)
+	
+≥(1 −α)2.
+Theorem 3.1 is a direct analogue of the classical result that posterior credible sets have
+correct frequentist coverage in expectation under the assumed prior. All proofs are in Ap-
+pendix D.
+3.1. Gaussian location model
+We first consider the simple Gaussian location model in which observations xn are modeled
+as i.i.d. N(θ, V ) with fixed positive definite covariance matrix V , and assume a conjugate
+prior, θ ∼N(0, V0). Given data x = (x1, . . . , xN), the posterior is θ | x ∼N(RN ¯xN, VN),
+where ¯xN := N −1 PN
+n=1 xn, RN := (V −1
+0
+V/N + I)−1, and VN := (V −1
+0
++ NV −1)−1. For
+intuition, one can think of RN ≈I since ∥RN −I∥= O(N −1). The bagged posterior mean
+and covariance are
+E(ϑ∗| x) = E(RM ¯X∗
+M | x) = RM ¯xN
+Cov(ϑ∗| x) = E(VM | x) + Cov(RM ¯X∗
+M | x) = VM + M −1RM ˆΣNRM,
+where ˆΣN
+:= N −1 PN
+n=1(xn −¯xN)(xn −¯xN)⊤is the sample covariance. In particu-
+lar, when M = N, these expressions simplify to E(ϑ∗| x) = E(ϑ | x) and Cov(ϑ∗| x) =
+Cov(ϑ | x) + N −1RN ˆΣNRN. Unlike the standard posterior, which simply assumes the data
+have covariance V , the bagged posterior accounts for the true covariance of the data through
+the inclusion of the term involving ˆΣN.
+
+J. H. Huggins and J. W. Miller / Reproducible Parameter Inference
+7
+3.1.1. Overlap probability for Gaussian location model with fixed dimension
+Consider the Gaussian location model above. Fix α ∈(0, 1) and u ∈RD \{0}, and let Ax1:N
+be a 100(1 −α)% central credible interval for u⊤θ given data x1:N. For BayesBag, let A∗
+x1:N
+denote the 100(1 −α)% central interval for the normal distribution matching the mean
+and variance of the bagged posterior distribution of u⊤θ given x1:N. For readability, we
+abbreviate p(overlap) := P(AX1:N ∩AY1:N̸ = ∅) and p∗(overlap) := P(A∗
+X1:N ∩A∗
+Y1:N̸ = ∅).
+Theorem 3.2. Suppose the true data distribution P◦has positive definite covariance Σ◦.
+Let X1, X2, . . . i.i.d. ∼P◦and Y1, Y2, . . . i.i.d. ∼P◦independently. Define W ∼N(0, 1)
+and zα/2 ∈R such that P(|W| > zα/2) = α. Then as N →∞, for the standard posterior,
+p(overlap) −→P
+
+|W| ≤zα/2
+√
+2
+ u⊤V u
+u⊤Σ◦u
+1/2
+;
+and, assuming M = M(N) satisfies limN→∞M/N = c > 0, for the bagged posterior,
+p∗(overlap) −→P
+
+|W| ≤zα/2
+√
+2
+u⊤((V + Σ◦)/c)u
+u⊤Σ◦u
+1/2
+,
+If the model is correct then V = Σ◦, so the standard and bagged posteriors have the
+same asymptotic behavior when M = 2N, specifically, the overlap probability converges
+to P(|W| ≤zα/2
+√
+2 ). However, in misspecified cases where u⊤V u < u⊤Σ◦u, the overlap
+probability for the standard posterior can be arbitrarily small. On the other hand, the
+bagged posterior satisfies limN→∞p∗(overlap) ≥P(|W| ≤zα/2) = 1 −α when 0 < c ≤2
+since u⊤V u ≥0. Thus, BayesBag is guaranteed to satisfy the overlap criterion necessary for
+reproducible uncertainty quantification (Eq. (3)) when 0 < c ≤2, while standard Bayes is
+not.
+3.1.2. Overlap probability for Gaussian location model with growing dimension
+To study the case of growing dimension D in the Gaussian location model, we establish
+finite sample expressions for the overlap probability in the special case of V = I and a flat
+prior (V −1
+0
+= 0), assuming Gaussian data.
+Theorem 3.3. Consider the same setup as in Theorem 3.2. Suppose P◦= N(0, Σ◦), V = I,
+V −1
+0
+= 0, and ∥u∥= 1. Then for the standard posterior,
+p(overlap) = P
+
+|W| ≤
+zα/2
+√
+2
+(u⊤Σ◦u)1/2
+
+(5)
+where W ∼N(0, 1), and for the BayesBag posterior, when N ≥2,
+p∗(overlap) ≥P
+ |T2N−2| ≤zα/2
+p
+(N −1)/M
+
+(6)
+where T2N−2 is t-distributed with 2N −2 degrees of freedom.
+Note that the right-hand side of Eq. (5) does not depend on N, and the right-hand side
+of Eq. (6) does not depend on D. Eq. (5) can be arbitrarily small as D grows, since u⊤Σ◦u
+can be arbitrarily large. For instance, this will often be the case when Σ◦has order D2
+nonnegligible entries. Thus, as the dimension D grows, the standard posterior can severely
+violate the overlap criterion. Meanwhile, if M/N →1 as N →∞, then the lower bound in
+Eq. (6) converges to P(|W| ≤zα/2) = 1 −α > (1 −α)2 since T2N−2
+D
+→N(0, 1) as N →∞.
+Therefore, for all N sufficiently large, for all D, BayesBag satisfies the overlap criterion.
+
+J. H. Huggins and J. W. Miller / Reproducible Parameter Inference
+8
+3.2. Regular finite-dimensional models
+Asymptotically, sufficiently regular finite-dimensional models behave like the Gaussian loca-
+tion model. We have N 1/2(ϑ−ˆθN) | X1:N
+D
+→N(0, J−1
+θ◦) by the Bernstein–Von Mises theorem,
+and N 1/2(ˆθN −θ◦)
+D
+→N(0, J−1
+θ◦Iθ◦J−1
+θ◦) by classical theory, where ˆθN is the maximum likeli-
+hood estimator, θ◦is the Kullback–Leibler optimal parameter, and Jθ◦, Iθ◦are information
+matrices; see Section 4 for details. In Section 4, we prove that for the bagged posterior,
+N 1/2(ϑ∗−ˆθN) | X1:N
+D
+→N(0, J−1
+θ◦/c + J−1
+θ◦Iθ◦J−1
+θ◦/c) where c := limN→∞M/N.
+Fix u ∈RD \{0} and α ∈(0, 1). Let p∞(overlap) and p∗
+∞(overlap) denote the asymptotic
+overlap probabilities of 100(1−α)% central credible intervals for u⊤θ under these asymptotic
+normal distributions for the standard and bagged posteriors, respectively, assuming Jθ◦and
+Iθ◦are positive definite.
+Theorem 3.4. Let W ∼N(0, 1). For the standard posterior,
+p∞(overlap) = P
+
+|W| ≤zα/2
+√
+2
+
+u⊤J−1
+θ◦u
+u⊤J−1
+θ◦Iθ◦J−1
+θ◦u
+1/2
+,
+and for the bagged posterior,
+p∗
+∞(overlap) = P
+
+|W| ≤zα/2
+√
+2
+u⊤(J−1
+θ◦/c + J−1
+θ◦Iθ◦J−1
+θ◦/c)u
+u⊤J−1
+θ◦Iθ◦J−1
+θ◦u
+1/2
+≥P(|W| ≤zα/2
+p
+2/c ).
+In general, the ratio (u⊤J−1
+θ◦u)/(u⊤J−1
+θ◦Iθ◦J−1
+θ◦u) can be arbitrarily large or small. In
+particular, p∞(overlap) can be arbitrarily small, implying that the asymptotic standard
+posterior can strongly violate the overlap criterion in Eq. (3). On the other hand, as long as
+c ≤2, we have p∗
+∞(overlap) ≥1−α, implying that the asymptotic bagged posterior satisfies
+the overlap criterion.
+3.3. Linear regression model
+Consider data consisting of regressors Zn ∈RD and outcomes Yn ∈R (n = 1, . . . , N), and
+let Z ∈RN×D denote the complete design matrix, and Y ∈RN the vector of outcomes. We
+analyze the linear regression model
+Y | Z, β ∼N(Zβ, σ2I),
+where β ∈RD is the vector of coefficients, σ2 > 0 is the outcome variance, To simplify the
+analysis, assume Z⊤Z is invertible, σ2 is fixed but possibly unknown, and β is given a flat
+prior. For any u ∈RD \ {0}, the resulting posterior on u⊤β is
+u⊤β | Z, Y ∼N(v⊤Y, σ2∥v∥2)
+where v := Z(Z⊤Z)−1u. Now, suppose the true distribution is Y | Z ∼N(µ†, Σ†) where µ†
+and Σ† are functions of Z, say, µ† = m(Z) and Σ† = K(Z). Note that the model is correctly
+specified when m(Z) = Zβ and K(Z) = σ2I.
+
+J. H. Huggins and J. W. Miller / Reproducible Parameter Inference
+9
+Consider two replicate experiments with data Y | Z ∼N(m(Z), K(Z)) and ˜Y | ˜Z ∼
+N(m( ˜Z), K( ˜Z)), respectively, where Z⊤Z and ˜Z⊤˜Z are invertible and the model variances
+are σ2 and ˜σ2. Letting A = v⊤Y ±zα/2σ∥v∥and ˜A = ˜v⊤˜Y ±zα/2˜σ∥˜v∥be the corresponding
+100(1 −α)% central credible sets for u⊤β, the overlap probability is p(overlap | Z, ˜Z) =
+P(A ∩˜A̸ = ∅| Z, ˜Z).
+Theorem 3.5. Consider the linear regression model above and let W ∼N(0, 1).
+1. If m(Z) = Zβ† and K(Z) = σ2
+†I, then
+p(overlap | Z, ˜Z) = P
+
+|W| ≤zα/2(σ∥v∥+ ˜σ∥˜v∥)
+σ†(∥v∥2 + ∥˜v∥2)1/2
+
+.
+(7)
+2. If Z = ˜Z, but we make no assumptions on the form of m(Z) or K(Z), then
+p(overlap | Z, ˜Z) = P
+
+|W| ≤
+zα/2 (σ + ˜σ)∥v∥
+√
+2 (v⊤K(Z)v)1/2
+
+.
+(8)
+3. If K(Z) = σ2
+†I, but we make no assumptions on the form of m(Z), then
+p(overlap | Z, ˜Z) ≤P
+W + v⊤m(Z) −˜v⊤m( ˜Z)
+σ† (∥v∥2 + ∥˜v∥2)1/2
+ ≤zα/2
+√
+σ2 + ˜σ2
+σ†
+
+.
+(9)
+Eq. (7) shows that if the linear regression model is correctly specified, then the standard
+posterior satisfies the overlap criterion (Eq. (3)), since σ = ˜σ = σ† and therefore p(overlap |
+Z, ˜Z) ≥P(|W| ≤zα/2) = 1 −α > (1 −α)2, by the fact that ∥v∥+ ∥˜v∥≥(∥v∥2 + ∥˜v∥2)1/2.
+If the model is correct but the variance is unknown, and consistent estimators of σ2
+† are
+plugged in for σ2 and ˜σ2, then the overlap criterion is satisfied for all N sufficiently large.
+However, when either the covariance K(Z) or the mean function m(Z) is misspecified,
+the standard posterior can violate the overlap criterion. Consider the case where Z = ˜Z,
+that is, the design matrix is the same across replicates; we refer to this as a fixed design
+setting. Eq. (8) shows that p(overlap | Z, ˜Z) does not depend on m(Z), so misspecification of
+the mean function has no effect on the overlap probability in this case. Nonetheless, Eq. (8)
+shows that p(overlap | Z, ˜Z) can be arbitrarily small when the covariance is misspecified,
+because the ratio (σ + ˜σ)∥v∥/(v⊤K(Z)v)1/2 can be arbitrarily small. Clearly, this ratio will
+be small if σ2 and ˜σ2 are blindly set too low, but it can also be small if these variances are
+estimated from the data. For instance, if the true distribution exhibits heteroskedasticity
+(that is, K(Z) has a nonconstant diagonal), then p(overlap | Z, ˜Z) can violate the overlap
+criterion even when σ2 and ˜σ2 are estimated; see Section 5.
+Finally, consider the case where Z and ˜Z are not necessarily equal and we make no
+assumptions on m(Z). To avoid trivial failure modes in which the choice of Z and ˜Z leads
+to a nonnegligible differential bias v⊤m(Z) −˜v⊤m( ˜Z) as N grows, assume a random design
+setting where the rows of Z and ˜Z are independent and identically distributed. Then even if
+K(Z) = σ2
+†I, so that there is no heteroskedasticity and no correlation among outcomes, the
+overlap criterion can still be violated. As before, p(overlap | Z, ˜Z) can be arbitrarily small if
+σ2 and ˜σ2 are blindly set too low, but it can also be small if these variances are estimated.
+By Eq. (9), p(overlap | Z, ˜Z) will be small if the magnitude of
+v⊤m(Z) −˜v⊤m( ˜Z)
+(∥v∥2 + ∥˜v∥2)1/2
+=
+u⊤Z+f(Z)β† −u⊤˜Z+f( ˜Z)β†
+ u⊤(Z⊤Z)−1u + u⊤( ˜Z⊤˜Z)−1u
+1/2
+(10)
+
+J. H. Huggins and J. W. Miller / Reproducible Parameter Inference
+10
+is large relative to
+√
+σ2 + ˜σ2 , where Z+ = (Z⊤Z)−1Z⊤is the pseudoinverse. A trivial way
+this can occur is if the entries of β† are large. More interestingly, however, Eq. (10) can
+be large if the dimension D grows with N, even if each entry of β† has fixed magnitude.
+Specifically, in Section 5 we present experiments demonstrating this when β† consists of the
+first D entries of a fixed sequence β†,1, β†,2, . . . such that PD
+d=1 β2
+†,d →∞as D →∞.
+4. Asymptotic normality of the bagged posterior
+In this section, we establish a Bernstein–Von Mises theorem for the bagged posterior under
+sufficiently regular finite-dimensional models (Theorem 4.1). In particular, we show that
+while the standard posterior may be arbitrarily under- or over-confident when the model
+is misspecified, the bagged posterior avoids overconfident uncertainty quantification by ac-
+counting for sampling variability.
+More formally, consider a model {Pθ : θ ∈Θ} for independent and identically distributed
+(i.i.d.) data x1, . . . , xN, where xn ∈X and Θ ⊂RD is open. Suppose pθ is the density of Pθ
+with respect to some reference measure. The standard Bayesian posterior distribution given
+x1:N is
+Π(dθ | x1:N) :=
+QN
+n=1 pθ(xn)
+p(x1:N)
+Π0(dθ),
+where Π0(dθ) is the prior distribution and p(x1:N) :=
+R
+{QN
+n=1 pθ(xn)}Π0(dθ) is the marginal
+likelihood. We often use the shorthand notation ΠN := Π(· | x1:N).
+Assume the observed data X1, . . . , XN is generated i.i.d. from some unknown distribution
+P◦. Suppose there is a unique parameter θ◦that minimizes the Kullback–Leibler divergence
+from P◦to the model, or equivalently, θ◦= arg maxθ∈Θ E{log pθ(X1)}. Under regularity con-
+ditions, the maximum likelihood estimator ˆθN := arg maxθ
+QN
+n=1 pθ(Xn) is asymptotically
+normal in the sense that
+N 1/2(ˆθN −θ◦)
+D
+→N(0, J−1
+θ◦Iθ◦J−1
+θ◦),
+(11)
+where Jθ := −E{∇2
+θ log pθ(X1)}, Iθ := Cov{∇θ log pθ(X1)}, and J−1
+θ◦Iθ◦J−1
+θ◦
+is known as
+the sandwich covariance (White, 1982). Under mild conditions, the Bernstein–Von Mises
+theorem (van der Vaart, 1998, Ch. 10 and Kleijn and van der Vaart, 2012) guarantees that
+for ϑ ∼ΠN,
+N 1/2(ϑ −ˆθN) | X1:N
+D
+→N(0, J−1
+θ◦).
+(12)
+Hence, the standard posterior is correctly calibrated, asymptotically, if the covariance matri-
+ces of the Gaussian distributions in Eqs. (11) and (12) coincide – that is, if J−1
+θ◦Iθ◦J−1
+θ◦= J−1
+θ◦,
+which is implied by Iθ◦= Jθ◦. In particular, if Iθ◦= Jθ◦, then Bayesian credible sets are
+(asymptotically) valid confidence sets in the frequentist sense: sets of posterior probability
+1 −α contain the true parameter with P ∞
+◦-probability 1 −α, under mild conditions.
+If the model is well-specified, that is, if P◦= Pθ† for some parameter θ† ∈Θ (and thus
+θ◦= θ† by the uniqueness assumption), then Iθ◦= Jθ◦under very mild conditions. On the
+other hand, if the model is misspecified – that is, if P◦̸ = Pθ for all θ ∈Θ – then although
+Eq. (12) still holds, typically Iθ◦̸ = Jθ◦. If Iθ◦̸ = Jθ◦, then the standard posterior is not
+correctly calibrated, and in fact, asymptotic Bayesian credible sets may be arbitrarily over-
+or under-confident.
+
+J. H. Huggins and J. W. Miller / Reproducible Parameter Inference
+11
+Our Bernstein–von Mises theorem shows that the bagged posterior does not suffer from
+the overconfidence of the standard posterior. Let X∗
+1:M denote a bootstrapped copy of X1:N
+with M observations; that is, each observation Xn is replicated Kn times in X∗
+1:M, where
+K1:N ∼Multi(M, 1/N) is a multinomial-distributed count vector of length N. We formally
+define the bagged posterior Π∗(· | X1:N) as
+Π∗(A | X1:N) := E{Π(A | X∗
+1:M) | X1:N}
+for all measurable A ⊆Θ; this is equivalent to the informal definition in Eq. (1). To avoid
+notational clutter, we suppress the dependence of Π∗(· | X1:N) on M. We use the shorthand
+notation Π∗
+N := Π∗(· | X1:N) and we let ϑ∗| X1:N ∼Π∗
+N denote a random variable distributed
+according to the bagged posterior. We assume ΠN and Π∗
+N have densities πN and π∗
+N,
+respectively, with respect to Lebesgue measure. Note that π∗
+N exists if πN exists.
+For a measure ν and function f, we use the shorthand ν(f) :=
+R
+fdν. Let X1:∞denote
+the infinite sequence (X1, X2, . . . ), and abbreviate ℓθ := log pθ.
+Theorem 4.1. Suppose X1, X2, . . . i.i.d. ∼P◦and assume that:
+(i) (θ, x) 7→ℓθ(x) is measurable and θ 7→ℓθ(X1) is differentiable at θ◦with probability 1;
+(ii) there is an open neighborhood U of θ◦and a function mθ◦: X →R such that for some
+δ > 0 P◦(m2+δ
+θ◦) < ∞and for all θ, θ′ ∈U, |ℓθ −ℓθ′| ≤mθ◦∥θ −θ′∥2 a.s.[P◦];
+(iii) −P◦(ℓθ −ℓθ◦) = 1
+2(θ −θ◦)⊤Jθ◦(θ −θ◦) + o(∥θ −θ◦∥2
+2) as θ →θ◦;
+(iv) Jθ◦is an invertible matrix;
+(v) conditionally on X1:∞, for almost every X1:∞, for every sequence of constants CN →
+∞,
+E
+
+Π({θ ∈Θ : ∥θ −θ◦∥2 > CN/M 1/2} | X∗
+1:M)
+ X1:N
+
+→0;
+and
+(vi) c := limN→∞M/N ∈(0, ∞).
+Then, letting ϑ∗∼Π∗
+N, we have that conditionally on X1:∞, for almost every X1:∞,
+N 1/2(ϑ∗−θ◦) −∆N | X1:N
+D
+→N(0, J−1
+θ◦/c + J−1
+θ◦Iθ◦J−1
+θ◦/c),
+where ∆N := N 1/2J−1
+θ◦(PN −P◦)∇θℓθ◦and PN := N −1 PN
+n=1 δXn.
+The result also holds in the regression setting with random regressors where the data take
+the form Xn = (Yn, Zn) and the models pθ(y | z) are conditional, so ℓθ(x) := log pθ(y | z).
+The proof of Theorem 4.1 is in Appendix D. Theorem C.1 is a simpler version of the
+same result for the univariate Gaussian location model, for which the statement and our
+proof technique are more transparent. Our technical assumptions are essentially the same as
+those used by Kleijn and van der Vaart (2012) to prove the Bernstein–Von Mises theorem
+under misspecification for the standard posterior. Of particular note, Kleijn and van der
+Vaart (2012) require that (and give conditions under which) for every sequence of constants
+CN →∞,
+E
+
+Π({θ ∈Θ : ∥θ −θ◦∥2 > CN/N 1/2} | X1:N)
+
+→0.
+We conjecture that under reasonable regularity assumptions, this expected posterior con-
+centration condition implies our condition (v).
+
+J. H. Huggins and J. W. Miller / Reproducible Parameter Inference
+12
+To interpret this result, it is helpful to compare it to the behavior of the standard pos-
+terior. Under the conditions of Theorem 4.1, if ϑ ∼ΠN, then N 1/2(ϑ −θ◦) −∆N | X1:N
+D
+→
+N(0, J−1
+θ◦) in probability by Kleijn and van der Vaart (2012, Theorem 2.1 and Lemma 2.1).
+Thus, the bagged posterior and the standard posterior for N 1/2(θ−θ◦) have the same asymp-
+totic mean, ∆N, but the bagged posterior has asymptotic covariance J−1
+θ◦/c + J−1
+θ◦Iθ◦J−1
+θ◦/c
+instead of J−1
+θ◦. Hence, asymptotically, the bagged posterior is never overconfident if c = 1
+(for instance, if M = N) and by Theorem 3.4, we expect 100(1 −α)% credible sets of the
+bagged posteriors to have overlap probability of at least 1 −α when 0 < c ≤2.
+5. Simulations
+In this section, we validate our theoretical results through a simulation study with a linear
+regression model, which is ideal for investigating the properties of BayesBag since all compu-
+tations of posterior quantities can be done in closed form. The setup is similar to the linear
+regression model from Section 3.3 except we place proper priors on the regression coeffi-
+cients and the outcome variance σ2. The data consist of regressors Zn ∈RD and outcomes
+Yn ∈R (n = 1, . . . , N), and the parameter is θ = (θ0, . . . , θD) = (log σ2, β1, . . . , βD) ∈RD+1.
+Using conjugate priors, the assumed model is
+σ2 ∼Γ−1(a0, b0)
+βd | σ2 i.i.d.
+∼N(0, σ2/λ)
+d = 1, . . . , D,
+Yn | Zn, β, σ2 indep
+∼N(Z⊤
+n β, σ2)
+n = 1, . . . , N,
+where a0 = 2, b0 = 1, and λ = 1 are fixed hyperparameters.
+Data generating distribution.
+We simulated data for a random design scenario by
+generating Zn
+i.i.d.
+∼G, ϵn
+i.i.d.
+∼N(0, 1), and
+Yn = f(Zn)⊤β† + ϵn
+(13)
+for n = 1, . . . , N, where β†d = 4/
+√
+d for d = 1, . . . , D and we used two settings for each of
+f and G.
+• Regression function f. By default, we used a linear function f(z) = z to simulate
+data for the well-specified setting. Alternatively, we used the nonlinear function f(z) =
+(z3
+1, . . . , z3
+D)⊤for a misspecified setting.
+• Regressor distribution G. By default, we used G = N(0, I) to simulate data; we
+refer to this as the uncorrelated setting. Alternatively, we used a correlated-κ setting,
+where, for h = 10, Z ∼G was defined by generating ξ ∼χ2(h) and then Z | ξ ∼N(0, Σ)
+where Σdd′ = exp{−(d −d′)2/κ2}/(ξdξd′) and ξd =
+p
+ξ/(h −2) 1(d is odd). The moti-
+vation for the correlated-κ sampling procedure is to generate correlated regressors that
+have different tail behaviors while still having the same first two moments, since regres-
+sors are typically standardized to have mean 0 and variance 1. Note that, marginally,
+Z1, Z3, . . . are each rescaled t-distributed random variables with h degrees of freedom
+such that Var(Z1) = 1, and Z2, Z4, . . . are standard normal.
+
+J. H. Huggins and J. W. Miller / Reproducible Parameter Inference
+13
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+p(overlap)
+0
+2
+4
+6
+8
+10
+(a) N = D = 250, Bayes
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+p * (overlap)
+0
+5
+10
+15
+20
+1
+0.5
+0.8
+0.9
+0.95
+(b) N = D = 250, BayesBag
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+p(overlap)
+0
+2
+4
+6
+8
+(c) N = D = 500, Bayes
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+p * (overlap)
+0
+5
+10
+15
+20
+1
+0.5
+0.8
+0.9
+0.95
+(d) N = D = 500, BayesBag
+Fig 2: Histograms of the probability of overlap of 1 −α credible sets for (Ztest
+i
+)⊤β (i =
+1, . . . , 100) for the linear regression model with nonlinear-uncorrelated data. Vertical dotted
+lines indicate the overlap lower bounds (1 −α)2.
+Overlap probabilities.
+The primary objective in these experiments is to validate
+that the BayesBag posterior does not violate the probability of overlap lower bounds
+while the Bayesian posterior sometimes does. Thus, for each data-generating distribu-
+tion of interest, we estimate overlap probabilities by generating R pairs of datasets
+{(Z(r,1)
+1:N , Y (r,1)
+1:N , Z(r,2)
+1:N , Y (r,2)
+1:N )}R
+r=1 plus an additional 100 test points Ztest
+1
+, . . . , Ztest
+100 ∼G.
+If the 1 −α posterior credible intervals for (Ztest
+i
+)⊤β conditioned on (Z(r,1)
+1:N , Y (r,1)
+1:N ) and
+(Z(r,2)
+1:N , Y (r,2)
+1:N ) overlap, set the overlap indicator variable O(r)
+α (Ztest
+i
+) = 1. Otherwise set
+O(r)
+α (Ztest
+i
+) = 0. For each i ∈{1, . . . , 100}, we estimate the probability of overlap for Ztest
+i
+as
+P
+
+overlap of (Ztest
+i
+)⊤β at level 1 −α
+
+≈R−1
+R
+X
+r=1
+O(r)
+α (Ztest
+i
+).
+For all experiments we use R = 100. Figure 2 shows that for nonlinear-uncorrelated data,
+BayesBag never violates the overlap lower bounds while Bayes always or often violates the
+lower bounds, depending on the value of 1 −α (larger 1 −α leads to more violations). Fig-
+ures B.1 to B.3 in the Supplementary Material show similar results for nonlinear-correlated-κ
+data, although the problem with Bayes is less severe as the correlation increases. Moreover,
+
+J. H. Huggins and J. W. Miller / Reproducible Parameter Inference
+14
+100, 100
+250, 250
+500, 500
+N, D
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+Pr {p(overlap) > (1
+)2}
+100, 100
+250, 100
+500, 100
+N, D
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+Pr {p(overlap) > (1
+)2}
+1
+0.5
+0.8
+0.9
+0.95
+(a) nonlinear-uncorrelated
+100, 100
+250, 250
+500, 500
+N, D
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+Pr {p(overlap) > (1
+)2}
+100, 100
+250, 100
+500, 100
+N, D
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+Pr {p(overlap) > (1
+)2}
+1
+0.5
+0.8
+0.9
+0.95
+(b) nonlinear-correlated-2
+Fig 3: Proportion of test points Ztest
+i
+for which the Bayes overlap probability satisfies the
+lower bound. For BayesBag, the proportion is 1 in all cases.
+as shown in Fig. 3, the problem becomes more severe as N and D jointly increase, but
+improves or stays the same if D is fixed and N increases. These results emphasize how the
+misspecified high-dimensional regime is particularly problematic for the reproducibility of
+the standard posterior. We find similar results in the case of a fixed design matrix with
+heteroskedastic noise (see Appendix B.2 in the Supplementary Material).
+Predictive performance.
+To complement our overlap probability analysis, we also com-
+puted the mean log predictive densities at the same test points. Figure 4 shows that while
+in well-specified linear settings the standard posterior can slightly outperform BayesBag (by
+roughly 0.2 nats or less), in the misspecified nonlinear settings BayesBag can be far superior
+(by 0.2 to nearly 10 nats).
+6. Application
+We next consider an application to community-level crime data from the United States using
+a Poisson regression model with log link function and the spike-and-slab prior proposed
+by Piironen and Vehtari (2017). The data consist of N = 1994 observations containing
+100 community-level covariates such as demographic summaries and local law enforcement
+statistics such as the number of police officers per capita. The goal is to predict the number
+of violent crimes per 100,000 persons in the population. We chose M = N and used B =
+
+J. H. Huggins and J. W. Miller / Reproducible Parameter Inference
+15
+100
+250
+500
+N
+0.2
+0.1
+0.0
+MLPD difference
+linear
+100
+250
+500
+N
+0.0
+2.5
+5.0
+7.5
+10.0
+nonlinear
+uncorrelated
+correlated-2
+correlated-4
+correlated-8
+Fig 4: 99% confidence intervals for difference in the mean log predictive densities of the stan-
+dard and BayesBag posteriors (paired t intervals), with values greater than zero indicating
+superior performance by BayesBag. Note the different scales for linear versus nonlinear.
+50 bootstrap samples to approximate the bagged posterior. Nearly identical results were
+obtained with B = 25, indicating that B = 50 was sufficiently large.
+To compute overlap probabilities, we held out 20% of the observations as test points and
+randomly split the remaining observations into two equally sized data sets, from which we
+computed two posteriors to compare. We generated R = 50 replicate experiments in this
+way, and followed the procedure in Section 5 to approximate the overlap probability for each
+replicate.
+Figure 5 validates our theoretical results: the standard posterior is unstable across
+datasets, with overlap probabilities below (1 −α)2 for 1 −α ∈{0.8, 0.9, 0.95} in the vast
+majority of replicates. The bagged posteriors, on the other hand, have overlap greater than
+(1−α)2 in all replicates. Moreover, BayesBag has superior predictive performance: the mean
+log predictive densities for the standard and bagged posteriors are, respectively, −5.4 and
+−4.3 with a 99% confidence interval for difference of (1.043, 1.093) (paired t interval).
+To explore how using the bagged rather than the standard posterior might result in
+different conclusions, we compared the posterior marginals of the regression coefficients,
+with some representative results shown in Figs. 6 and 7. In all cases, the bagged posteriors
+were more diffuse, as would be expected. In several cases, however, the BayesBag results
+are qualitatively different from the standard posterior results. The standard posterior for
+the coefficient of Upper Quartile Rent is symmetric and concentrated below zero while
+for the bagged posterior it has a sharp peak at zero and is skewed left (Fig. 6). Similarly,
+the standard posteriors are symmetric for the coefficients of covariates related to percent
+of different racial and ethnic groups (Fig. 7). Meanwhile, the bagged posterior for the co-
+efficients of Percent Asian and Percent Hispanic are multimodal and have significantly
+more mass centered at zero. These examples illustrate how the bagged and standard poste-
+riors may yield substantively different results in practice – BayesBag is not merely inflating
+the posterior uncertainty.
+
+J. H. Huggins and J. W. Miller / Reproducible Parameter Inference
+16
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+p(overlap)
+0
+1
+2
+3
+4
+5
+6
+(a) Bayes
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+p * (overlap)
+0
+5
+10
+15
+20
+1
+0.5
+0.8
+0.9
+0.95
+(b) BayesBag
+Fig 5: For crime data using a sparse Poisson regression model, shown are histograms of
+the overlap probability for Z⊤β where Z is drawn from a held-out test set. For most
+replicates, the overlap probabilities for the standard posteriors are below (1 −α)2 for
+1−α ∈{0.8, 0.9, 0.95}. Meanwhile, for all replicates, the overlap probabilities for the bagged
+posteriors are greater than (1 −α)2.
+0.6
+0.4
+0.2
+0.0
+0
+2
+4
+6
+8
+10
+12
+Bayes
+BayesBag
+(a) Lower Quartile Rent
+0.50
+0.25
+0.00
+0.25
+0.50
+0.75
+0.0
+2.5
+5.0
+7.5
+10.0
+12.5
+15.0
+17.5
+Bayes
+BayesBag
+(b) Median Rent
+0.6
+0.4
+0.2
+0.0
+0.2
+0
+2
+4
+6
+8
+Bayes
+BayesBag
+(c) Upper Quartile Rent
+Fig 6: The standard and bagged posterior marginals for three coefficients related to rental
+cost for the data and model from Section 6.
+
+J. H. Huggins and J. W. Miller / Reproducible Parameter Inference
+17
+0.0
+0.1
+0.2
+0.3
+0
+5
+10
+15
+20
+25
+Bayes
+BayesBag
+(a) Percent Black
+0.1
+0.0
+0.1
+0.2
+0
+5
+10
+15
+20
+25
+30
+35
+Bayes
+BayesBag
+(b) Percent White
+0.05
+0.00
+0.05
+0.10
+0
+5
+10
+15
+20
+25
+30
+35
+Bayes
+BayesBag
+(c) Percent Asian
+0.0
+0.1
+0.2
+0
+5
+10
+15
+20
+Bayes
+BayesBag
+(d) Percent Hispanic
+Fig 7: The standard and bagged posterior marginals for three coefficients related to race for
+the data and model from Section 6.
+7. Discussion
+We conclude by first situating BayesBag in the wider literature on robust Bayesian inference,
+and then, with that additional context in place, highlighting the strengths of our approach
+and suggest fruitful directions for future development.
+7.1. Bayesian bagging
+Despite the similar sounding names, BayesBag is very different than Bayesian bagging (Clyde
+and Lee, 2001; Lee and Clyde, 2004). Bayesian bagging consists of applying the Bayesian
+bootstrap to a point estimator of a classification or regression model, such as ordinary least
+squares. In other words, it is a slight variant of traditional bagging where, instead of multi-
+nomial weights, one uses continuous weights drawn uniformly from the probability simplex.
+In contrast, BayesBag uses traditional bagging on the posterior of an arbitrary Bayesian
+model. In short, Bayesian bagging performs bagging using Bayes, whereas BayesBag per-
+forms Bayes using bagging. Relatedly, in the same way that bagging expands the model
+space for a classification or regression method (Domingos, 1997), BayesBag expands the
+posterior space for a Bayesian model.
+
+J. H. Huggins and J. W. Miller / Reproducible Parameter Inference
+18
+7.2. Bayesian uncertainty quantification with the bootstrap
+The bootstrap has previously been employed to perform uncertainty quantification in
+Bayesian settings. See Laird and Louis (1987) and references therein for uses of the boot-
+strap to adjust for underestimated uncertainties when using empirical Bayesian methods.
+Similar in spirit to the present work, Efron (2015) develops a variety of methods for obtain-
+ing frequentist uncertainty quantification of Bayesian point estimates, including some that
+rely on bootstrapping.
+7.3. Robust Bayesian inference
+Two common themes emerge when surveying existing methods for robust Bayesian inference.
+First, many methods require choosing a free parameter, and the proposals for choosing
+free parameters tend to be either (a) heuristic, (b) strongly dependent on being in the
+asymptotic regime, or (c) computationally prohibitive for most real-world problems. Second,
+those methods without a free parameter lose key parts of what makes the Bayesian approach
+attractive. For example, they strongly rely on asymptotic assumptions, make a Gaussian
+assumption, or do not incorporate a prior distribution.
+The power posterior is perhaps the most widely studied method for making the posterior
+robust to model misspecification (Gr¨unwald, 2012; Gr¨unwald and van Ommen, 2017; Holmes
+and Walker, 2017; Lyddon, Holmes and Walker, 2019; Miller and Dunson, 2018; Syring and
+Martin, 2019). For a likelihood function L(θ), prior distribution Π0, and any ζ ≥0, the ζ-
+power posterior is defined as Π(ζ)(dθ) ∝L(θ)ζΠ0(dθ). Hence, Π(1) is equal to the standard
+posterior and Π(0) is equal to the prior. Typically, ζ is set to a value between these two
+extremes, as there is significant theoretical support for the use of power posteriors with ζ ∈
+(0, 1) (Bhattacharya, Pati and Yang, 2019; Gr¨unwald, 2012; Miller and Dunson, 2018; Royall
+and Tsou, 2003; Walker and Hjort, 2001). However, there are two significant methodological
+challenges. First, computing the power posterior often requires new computational methods
+or additional approximations, particularly in latent variable models (Antoniano-Villalobos
+and Walker, 2013; Miller and Dunson, 2018). Second, choosing an appropriate value of ζ
+can be difficult. Gr¨unwald (2012) proposes SafeBayes, a theoretically sound method which
+is evaluated empirically in Gr¨unwald and van Ommen (2017) and de Heide et al. (2019).
+However, SafeBayes is computationally prohibitive except with simple models and very small
+datasets. In addition, the underlying theory relies on strong assumptions on the model class.
+Many other methods for choosing ζ have been suggested, but they are either heuristic or
+rely on strong asymptotic assumptions such as the accuracy of the plug-in estimator for the
+sandwich covariance (Holmes and Walker, 2017; Lyddon, Holmes and Walker, 2019; Miller
+and Dunson, 2018; Royall and Tsou, 2003; Syring and Martin, 2019).
+More in the spirit of BayesBag are a number of bootstrapped point estimation ap-
+proaches (Chamberlain and Imbens, 2003; Lyddon, Holmes and Walker, 2019; Lyddon,
+Walker and Holmes, 2018; Newton and Raftery, 1994; Rubin, 1981). However, unlike Bayes-
+Bag, these methods compute a collection of maximum a posteriori (MAP) or maximum
+likelihood (ML) estimates. The weighted likelihood bootstrap of Newton and Raftery (1994)
+and a generalization proposed by Lyddon, Holmes and Walker (2019) do not incorporate a
+prior, and therefore lose many of the benefits of Bayesian inference. The related approach
+of Lyddon, Walker and Holmes (2018), which includes the weighted likelihood bootstrap
+and standard Bayesian inference as limiting cases, draws the bootstrap samples partially
+from the posterior and partially from the empirical distribution. Unfortunately, there is
+
+J. H. Huggins and J. W. Miller / Reproducible Parameter Inference
+19
+no accompanying theory to guide how much the empirical distribution and posterior dis-
+tribution should be weighted relative to each other – nor rigorous robustness guarantees.
+Moreover, bootstrapped point estimation methods can behave poorly when the MAP and
+ML estimates are not well-behaved – for example, due to the likelihood being peaked (or
+even tending to infinity) in a region of low posterior probability.
+M¨uller (2013) suggests replacing the standard posterior by a Gaussian distribution with
+covariance proportional to a plug-in estimate of the sandwich covariance. A benefit of our
+approach is that it does not rely on a Gaussian approximation and does not require esti-
+mation of the sandwich covariance, making it suitable for small-sample settings. W

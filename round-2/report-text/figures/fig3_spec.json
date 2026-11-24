@@ -1,0 +1,12 @@
+{
+  "type": "bar",
+  "title": "Held-out 30-min RMS, Newton law (C0) vs x-law",
+  "xlabel": "Held-out curve",
+  "ylabel": "30-min RMS (K)",
+  "aspect": "16:9",
+  "categories": ["Manitoba coffee", "Langer 01", "Langer 02", "Langer 03", "Langer 04", "Langer 05", "Langer 06"],
+  "series": [
+    {"label": "C0 constant-rate", "values": [3.454, 6.864, 8.951, 11.927, 8.896, 8.309, 9.944]},
+    {"label": "C1 nonlinear, x = 2.18 fixed from china-pot fit", "values": [2.659, 6.572, 8.768, 12.092, 8.685, 8.182, 10.034]}
+  ]
+}

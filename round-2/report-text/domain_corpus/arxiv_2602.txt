@@ -1,0 +1,1271 @@
+The Mpemba effect in the Descartes protocol: a time-delayed Newton’s law of cooling
+approach
+Andrés Santos1
+1Departamento de Física, Universidad de Extremadura, E-06006 Badajoz,
+Spain and Instituto de Computación Cientíﬁca Avanzada (ICCAEx),
+Universidad de Extremadura, E-06006 Badajoz, Spain
+(*andres@unex.es)
+(Dated: April 9, 2026)
+We investigate the direct and inverse Mpemba effects within the framework of the time-delayed
+Newton’s law of cooling by introducing and analyzing the Descartes protocol, a three-reservoir ther-
+mal scheme in which each sample undergoes a single-step quench at different times. This protocol
+enables a transparent separation of the roles of the delay time τ, the waiting time tw, and the nor-
+malized warm temperature ω, thus providing a ﬂexible setting to characterize anomalous thermal
+relaxation. For instantaneous quenches, exact conditions for the existence of the Mpemba effect are
+obtained as bounds on ω for given τ and tw. Within those bounds, the effect becomes maximal at a
+speciﬁc value ω = eω(tw), and its magnitude is quantiﬁed by the extremal value of the temperature-
+difference function at this optimum. Accurate and compact approximations for both eω(tw) and the
+maximal magnitude Mp(tw) are derived, showing in particular that the absolute maximum at ﬁxed
+τ is reached for tw = τ. A comparison with a previously studied two-reservoir protocol reveals that,
+despite its additional control parameter, the Descartes protocol yields a smaller maximal magnitude
+of the effect. The analysis is extended to ﬁnite-rate quenches, where strict equality of bath conditions
+prevents a genuine Mpemba effect, although an approximate one survives when the bath time scale
+is sufﬁciently short. The developed framework offers a uniﬁed and analytically tractable approach
+that can be readily applied to other multi-step thermal protocols.
+I.
+INTRODUCTION
+The Mpemba effect is the counterintuitive phenomenon in which, under certain conditions, a system initially pre-
+pared at a higher temperature relaxes to equilibrium faster than an identical system prepared at a lower temperature.
+Although qualitative observations date back to Aristotle [1], the effect was brought to modern scientiﬁc attention by
+the experiments of Mpemba and Osborne on water freezing [2]. For decades, it was considered a curiosity speciﬁc
+to water, with explanations invoking evaporation, convection, dissolved gases, or supercooling [3–19].
+In recent years, however, the Mpemba effect has attracted renewed interest as a genuinely nonequilibrium phe-
+nomenon of broad relevance [20]. It has been theoretically predicted and experimentally observed in a variety of
+systems, including granular ﬂuids [21–31], spin models [32–38], colloidal suspensions [39–43], Markov jump pro-
+cesses [36, 41, 44–47], and quantum systems [48–59]. This broader perspective has led to the identiﬁcation of gener-
+alized and inverse Mpemba effects, as well as to a unifying theoretical framework based on the spectral properties
+of the relaxation dynamics. Consequently, the Mpemba effect is now recognized as a sensitive probe of nonequilib-
+rium relaxation pathways, placing it at the forefront of current research in statistical mechanics and nonequilibrium
+thermodynamics [20].
+A simple phenomenological framework for studying memory effects in thermal relaxation is provided by the
+time-delayed Newton’s cooling law [60–62]:
+˙T(t) = −λ[T(t −τ) −Tb(t)].
+(1)
+Here, λ is the heat transfer coefﬁcient, Tb(t) is the time-dependent temperature of the bath, and 0 < τ < e−1 ≃0.368
+is the delay time. In this formulation, the system’s temperature evolution depends on its past state rather than
+solely on its instantaneous deviation from the bath temperature, with the delay parameter τ playing a central role in
+capturing nontrivial thermal relaxation dynamics.
+The parameter τ can be interpreted as an effective memory scale accounting for the ﬁnite response time of the
+thermal environment or for the elimination of additional internal degrees of freedom. In this sense, the delayed
+equation should be viewed as a minimal phenomenological description of non-Markovian relaxation, where the
+instantaneous rate of change of the temperature depends on its past history. Such a description may arise, for
+instance, in systems with thermal inertia, in situations where heat exchange is mediated by intermediate subsystems,
+or in coarse-grained approaches where fast variables have been integrated out.
+In two recent papers [61, 62], I analyzed the conditions under which equation (1) predicts a Mpemba effect between
+two samples (A and B) using only two reservoirs. The protocol was as follows: sample A was ﬁrst thermalized at the
+arXiv:2602.03790v2  [cond-mat.stat-mech]  8 Apr 2026
+
+2
+ A
+ B
+Tcold
+Tcold
+Thot
+Tb(t)
+-tw     0                 t
+(a)
+ A
+ B
+Twarm
+Tcold
+Thot
+Tb(t)
+-tw     0                 t
+(b)
+ A
+ B
+Twarm
+Tcold
+Thot
+Tb(t)
+-tw     0                 t
+(c)
+FIG. 1. Schematic representation of three protocols applied to samples A and B. Panel (a) depicts the two-reservoir protocol of
+[61, 62], where sample A undergoes a single-step quench at t = −tw and sample B a double-step quench at t = −tw and t = 0.
+Panel (b) illustrates the Pontus protocol [59, 63], in which three thermal reservoirs are used: sample B undergoes a single-step
+quench and sample A a double-step quench. Panel (c) shows the Descartes protocol, where three reservoirs are again used but
+both samples undergo single-step quenches at t = −tw (sample A) and t = 0 (sample B).
+hot temperature Thot and then quenched to the cold temperature Tcold at t = −tw. Sample B was initially thermalized
+at Tcold, quenched to Thot at t = −tw, and ﬁnally quenched again to Tcold at t = 0, resulting in a double-step quench of
+sample B. Hereafter, this scheme will be referred to as the two-reservoir protocol, to emphasize that only the extreme
+temperatures Thot and Tcold are employed. Figure 1(a) schematically illustrates this protocol. [61] showed that, for a
+given λ, the relevant parameter space is two-dimensional (delay time τ and waiting time tw), and the Mpemba effect
+occurs only within a speciﬁc region of this plane.
+A different two-step quench protocol, inspired by Aristotle’s account of ﬁshing habits in the Pontus region [1], has
+also been proposed [59, 63]. The Pontus protocol, shown in ﬁgure 1(b), begins by equilibrating both samples at a
+common warm temperature Twarm. At time t = −tw, sample A is quenched to Thot and sample B to Tcold. Then, at
+t = 0, sample A undergoes a second quench to Tcold. In contrast to the two-reservoir protocol illustrated in ﬁgure 1(a),
+the Pontus protocol involves three different reservoirs.
+An alternative and simpler protocol is sketched in ﬁgure 1(c). In this case, both samples undergo a single-step
+quench, and, as in the Pontus protocol, three temperatures (Thot, Twarm, and Tcold) are involved. This preparation of
+samples A and B is reminiscent of Descartes’ prescription [64]:
+
+3
+‘In order to perform this experiment properly, the water must be allowed to cool down after it has boiled,
+until it has attained the same degree of coldness as water from a spring. After taking the temperature
+with a thermometer, you should take some water from a spring and pour equal quantities of the two
+sorts of water into identical vessels.’
+In this description, Thot, Twarm, and Tcold correspond to the boiling temperature, the spring water temperature,
+and the freezing temperature of water, respectively. In Descartes’ original experiment, the waiting time tw is chosen
+such that TA(0) = TB(0) = Twarm. Here, however, we will treat tw as a control parameter independent of Thot, Twarm,
+and Tcold.
+Throughout this paper, the protocol illustrated in ﬁgure 1(c) will be referred to as the Descartes protocol. The
+aim is to analyze this protocol within the framework of equation (1). As will be seen, the parameter space is three-
+dimensional: besides the delay time τ and the waiting time tw, an additional control parameter is the normalized
+warm temperature
+ω ≡Twarm −Tcold
+Thot −Tcold
+.
+(2)
+This dimensionless parameter represents the relative position of the intermediate temperature Twarm between the
+hot (Thot) and cold (Tcold) temperatures, quantifying how close Twarm is to either extreme. It ranges from ω = 0 (if
+Twarm = Tcold) to ω = 1 (if Twarm = Thot).
+The paper is organized as follows. The Descartes protocol for the direct Mpemba effect is analyzed in detail in
+section II, while the inverse Mpemba effect is considered in section III. Section IV discusses the inﬂuence of ﬁnite-rate
+quenches. The paper concludes with a summary and outlook in section V.
+II.
+THE DESCARTES PROTOCOL FOR THE DIRECT MPEMBA EFFECT
+For simplicity, we henceforth set λ−1 = 1 as the unit of time. Since the delay time τ is inherent to the delayed
+Newton’s cooling law, equation (1), rather than to any particular solution, its explicit dependence will be omitted in
+the notation throughout this paper for clarity.
+A.
+Solution of the time-delayed Newton’s cooling equation
+As illustrated in ﬁgure 1(c), in the Descartes cooling protocol, sample A remains in thermal equilibrium with a
+reservoir at the hot temperature Thot until t = −tw, when it is quenched to the cold temperature Tcold. Sample B, on
+the other hand, is equilibrated with a reservoir at the warm temperature Twarm until t = 0, when it is also quenched
+to Tcold. If the initial post-quench temperatures satisfy TA(0) > TB(0), a Mpemba effect occurs provided that the
+temperatures cross at some time t× > 0, i.e., TA(t×) = TB(t×), and subsequently satisfy TA(t) < TB(t) for t > t×.
+From the general solution to equation (1) [62], the time evolution of the sample temperatures is
+TA(t) =
+(
+Thot,
+t ≤−tw,
+Tcold + (Thot −Tcold)E(t + tw),
+t ≥−tw,
+(3a)
+TB(t) =
+(
+Twarm,
+t ≤0,
+Tcold + (Twarm −Tcold)E(t),
+t ≥0,
+(3b)
+where E(t) is the quasi-exponential (τ-exp) function
+E(t) = 1 +
+⌊t/τ⌋
+∑
+n=0
+(nτ −t)n+1
+(n + 1)!
+,
+t ≥0,
+=
+
+
+
+
+
+
+
+
+
+
+
+1 −t,
+0 ≤t ≤τ,
+1 −t + (τ−t)2
+2
+,
+τ ≤t ≤2τ,
+1 −t + (τ−t)2
+2
++ (2τ−t)3
+3!
+,
+2τ ≤t ≤3τ,
+··· ,
+···
+(4)
+
+4
+-1.0
+-0.5
+0.0
+0.5
+1.0
+1.5
+2.0
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+t=0.36
+B4
+B3
+B2
+B1
+q(t)
+t
+(a)
+A
+-1.0
+-0.5
+0.0
+0.5
+1.0
+1.5
+2.0
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+A2
+A3
+A1
+B
+q(t)
+t
+(b)
+A4
+t=0.36
+FIG. 2. Normalized temperature θ(t) for different samples of type A and type B with a delay time τ = 0.36. In panel (a), the
+waiting time is tw = 0.5 for sample A, while the normalized warm temperature is ω = 0.60, 0.51, 0.45, and 0.30 in samples B1,
+B2, B3, and B4, respectively. In panel (b), the normalized warm temperature is ω = 0.60 for sample B, while the waiting time is
+tw = 0.50, 0.40, 0.35, and 0.20 in samples A1, A2, A3, and A4, respectively.
+with ⌊·⌋denoting the ﬂoor function. Note that
+∂tE(t) = −E(t −τ),
+(5)
+with the convention E(t) = 1 for t ≤0.
+For asymptotically long times [61, 62],
+E(t) ≈κ−1
+0 e−κ0t
+1 −κ0τ −κ−1
+1 e−κ1t
+κ1τ −1 ,
+t ≫1,
+(6)
+where κ0 = −τ−1W0(−τ) and κ1 = −τ−1W−1(−τ), with W0(z) and W−1(z) being the principal and lower branches
+of the Lambert function [65]. These roots satisfy 1 < κ0 < e ≃2.718 < τ−1 < κ1. For long times, the ﬁrst term on the
+right-hand side of equation (6) dominates, while the second term improves the accuracy of E(t) even at relatively
+short times.
+For t ≥0, equations (3) yield
+θA(t) = E(t + tw),
+θB(t) = ωE(t),
+t ≥0,
+(7)
+in terms of the normalized temperature
+θ(t) ≡T(t) −Tcold
+Thot −Tcold
+.
+(8)
+As an example, ﬁgure 2 shows the evolution of θ(t) for different choices of samples of types A and B. The gen-
+uine Descartes protocol, in which TA(0) = TB(0) = Twarm, corresponds to the pairs (A,B2) and (A2,B). The Mpemba
+crossover is observed in the cases (A,B3) and (A3,B).
+In the cases (A,B1) and (A1,B), the waiting time and/or the warm temperature are sufﬁciently large that TA(0) <
+TB(0), preventing a Mpemba effect. Conversely, in the cases (A,B4) and (A4,B), the waiting time and/or the warm
+temperature are too small to allow sample A to catch up with sample B.
+To analyze the conditions for the Mpemba effect, we deﬁne the difference function
+∆(t;tw,ω) ≡θA(t) −θB(t),
+t ≥0.
+(9)
+
+5
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+t=0.3
+(d)
+w
+tw
+0.00 0.05 0.10 0.15 0.20 0.25 0.30 0.35
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+tw=0.4
+(e)
+w
+t
+0.00 0.05 0.10 0.15 0.20 0.25 0.30 0.35
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+(f)
+tw
+t
+w=0.4
+FIG. 3. Phase space for the direct Mpemba effect. In the top panels (a), (b), (c), the upper surface corresponds to the locus
+ω = E(tw), while the lower surface represents ω = e−κ0tw. The planes shown are (a) τ = 0.3, (b) tw = 0.4, and (c) ω = 0.4. The
+region ω > E(tw) is characterized by ∆(t ≥0;tw,ω) < 0, whereas ∆(t ≥0;tw,ω) > 0 holds in the region ω < e−κ0tw. Consequently,
+a Mpemba effect occurs if and only if condition (14) is satisﬁed. Panels (d), (e), (f) show two-dimensional cross-sections of the
+three-dimensional phase space at τ = 0.3, tw = 0.4, and ω = 0.4, respectively. Dashed lines indicate the loci where the Mpemba
+effect is maximal (see section II C and equation (26)).
+From equation (7), we then have
+∆(t;tw,ω) = E(t + tw) −ωE(t),
+(10)
+whose time derivative satisﬁes
+∂t∆(t;tw,ω) = −∆(t −τ,tw,ω).
+(11)
+Notably, with the deﬁnitions in equations (8) and (9), the difference function obtained from the two-reservoir
+protocol illustrated in ﬁgure 1(a) coincides exactly with twice the difference function of the Descartes protocol for
+the special case ω = 1/2. Consequently, the results on the Mpemba effect reported in [61, 62] are recovered as a
+particular limit of the present analysis when ω = 1/2.
+B.
+Conditions for the Mpemba effect
+We now analyze the conditions for the existence of a Mpemba effect. The ﬁrst basic requirement is ∆(0;tw,ω) > 0,
+as occurs for the pairs (A,B3), (A,B4), (A3,B), and (A4,B) in ﬁgure 2. The second requirement is that ∆(t;tw,ω) < 0
+after a certain crossover time t×, as observed for the pairs (A,B3) and (A3,B).
+At t = 0,
+∆(0;tw,ω) = E(tw) −ω.
+(12)
+Hence, ∆(0;tw,ω) > 0 if ω < E(tw).
+
+6
+On the other hand, for long times, using equation (6),
+∆(t;tw,ω) ≈
+ e−κ0tw −ω
+ κ−1
+0 e−κ0t
+1 −κ0τ ,
+t ≫1.
+(13)
+Therefore, ∆(t;tw,ω) approaches zero from below if ω > e−κ0tw.
+In summary, a Mpemba effect occurs if and only if the normalized warm temperature ω lies within the interval
+e−κ0tw < ω < E(tw).
+(14)
+Using the relation E(t) = 1 −t for t < τ, this condition reduces, for small tw, to
+tw < 1 −ω < κ0tw,
+tw ≪1.
+(15)
+If condition (14) is satisﬁed, the difference function ∆(t;tw,ω) must vanish at a crossover time t = t×(tw,ω),
+deﬁned by
+ω = E(t× + tw)
+E(t×)
+.
+(16)
+This equation must generally be solved numerically. In the limiting case where ω is slightly below its upper bound
+E(tw), an approximate solution is
+t×(tw,ω) ≈
+E(tw)
+E(tw −τ) −E(tw)
+
+1 −
+ω
+E(tw)
+
+.
+(17)
+The complementary case, where ω is slightly above its lower bound e−κ0tw, requires retaining both the leading
+and subleading terms in equation (6). After some algebra, the resulting approximation is
+t×(tw,ω) ≈
+1
+κ1 −κ0
+ln
+"
+1 −κ0τ
+κ1τ −1
+1 −e−(κ1−κ0)tw
+ωeκ0tw −1
+#
+−τ.
+(18)
+After the crossover time, −∆(t;tw,ω) reaches a maximum at a time tM(tw,ω), deﬁned by ∂t∆(t;tw,ω) = 0. Using
+equation (11), we have
+tM(tw,ω) = t×(tw,ω) + τ.
+(19)
+The region in the three-dimensional parameter space τ,tw,ω that satisﬁes equation (14) is illustrated in ﬁg-
+ures 3(a)–(c), while ﬁgures 3(d)–(f) show the corresponding two-dimensional projections obtained by intersecting
+this 3D space with the planes τ = 0.3, tw = 0.4, and ω = 0.4, respectively.
+The upper and lower surfaces in ﬁgures 3(a)–(c) meet along the lines (tw,ω) = (0,1) and (τ,ω) = (0,e−tw). These
+intersections correspond to the points (tw,ω) = (0,1), (τ,ω) = (0,0.67), and (τ,tw) = (0,0.92) in ﬁgures 3(d)–(f),
+respectively.
+For τ = 0.36 and tw = 0.5, the bounds of the Mpemba interval are ω = e−κ0tw ≃0.33 and ω ≃E(tw) ≃0.51.
+This explains why a Mpemba effect is observed in ﬁgure 2(a) only for the case (A,B3). Similarly, for τ = 0.36 and
+ω = 0.6, the existence of a Mpemba effect requires 0.23 < tw < 0.40, justifying the crossover seen for the case (A3,B)
+in ﬁgure 2(b).
+C.
+Optimal waiting time
+Figure 3(d) shows that, for a ﬁxed delay time τ, the width of the ω-interval,
+δω(tw) ≡E(tw) −e−κ0tw,
+(20)
+vanishes in the limits tw →0 and tw →∞. Using equations (4) and (6), one ﬁnds the asymptotic behaviors
+δω(tw) ≈(κ0 −1)tw,
+tw ≪1,
+(21a)
+
+7
+0
+1
+2
+3
+4
+5
+0.00
+0.05
+0.10
+0.15
+0.20
+t=0.20
+t=0.30
+dw(tw)
+tw/t
+(a)
+t=0.36
+0.00
+0.05
+0.10
+0.15
+0.20
+0.25
+0.30
+0.35
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+dw(tw=t)
+dw, w
+t
+(b)
+w(tw=t)
+FIG. 4. (a) Width δω(tw) as a function of tw/τ for τ = 0.20, 0.30, and 0.36. (b) Plot of δω(tw = τ) = 1 −τ −κ−1
+0
+and eω(tw = τ)
+(see section II C and equation (37b)) versus τ.
+δω(tw) ≈
+ 
+κ−1
+0
+1 −κ0τ −1
+!
+e−κ0tw,
+tw ≫1.
+(21b)
+This implies the existence of an optimal waiting time tw = topt
+w that maximizes the width δω(tw). To determine it,
+note that
+∂twδω(tw) = κ0e−κ0tw −E(tw −τ),
+(22)
+which vanishes at tw = τ. Hence, for a given delay time τ, the optimal waiting time is precisely
+topt
+w = τ.
+(23)
+This resonance-like effect is illustrated in ﬁgure 4(a) for τ = 0.20, 0.30, and 0.36. The peak of δω(tw) at tw = τ
+becomes more pronounced as the delay time τ increases. The height of this peak is
+δω(tw = τ) = 1 −τ −κ−1
+0 ,
+(24)
+and is plotted in ﬁgure 4(b). Its maximum value, 1 −2e−1 ≃0.264, occurs at τ = τmax = e−1.
+D.
+Magnitude of the Mpemba effect
+1.
+Maximal effect
+After identifying the Mpemba region in parameter space, the next step is to assess the magnitude of the effect. If
+ω is only slightly smaller than E(tw), the Mpemba effect is weak: TA(0) is only marginally larger than TB(0), the
+crossover occurs at very short times (see equation (17)), and the temperature curves TA(t) and TB(t) remain close
+throughout the evolution. Conversely, if ω is only slightly larger than e−κ0tw, the effect is also weak because the
+crossover occurs at long times (see equation (18)), when both TA(t) and TB(t) have nearly equilibrated with the bath
+temperature Tcold.
+Given two of the three free parameters (τ, tw, and ω), the effect is maximized when the maximum positive and
+minimum negative values of ∆(t;tw,ω) are equal in magnitude (but opposite in sign), i.e.,
+∆(0;tw,ω) = −∆(t×(tw,ω) + τ;tw,ω),
+(25)
+
+8
+as proposed in [61]. This condition for the maximal Mpemba effect leads to
+ω = E(tw) + E(t×(tw,ω) + τ + tw)
+1 + E(t×(tw,ω) + τ)
+.
+(26)
+The curves deﬁned by equation (26) are plotted as dashed lines in ﬁgures 3(d)–(f). Notably, the surface described
+by equation (26) lies closer to the upper surface in ﬁgures 3(a)–(c) than to the lower surface.
+For given τ and tw, let eω(tw) denote the solution to equation (26), and let et×(tw) ≡t×(tw, eω(tw)) denote the
+corresponding crossover time. It can be observed that et×(tw) < τ, so that, using equation (4),
+E(et×(tw)) = 1 −et×(tw),
+(27a)
+E(et×(tw) + τ) = 1 −τ −et×(tw) +
+et2×(tw)
+2
+.
+(27b)
+As a consequence, equations (16) and (26) yield
+E(et×(tw) + tw)
+1 −et×(tw)
+= E(tw) + E(et×(tw) + τ + tw)
+2 −τ −et×(tw) + et2×(tw)/2 ,
+(28a)
+eω(tw) = E(et×(tw) + tw)
+1 −et×(tw)
+.
+(28b)
+Equation (28a) is a closed equation for et×(tw) that can be solved numerically. Substituting the solution into equa-
+tion (28b) then provides the optimal value of the normalized warm temperature, eω(tw).
+Figures 5(a) and 5(b) illustrate the dependence of eω(tw) and et×(tw), respectively, on the waiting time tw for
+τ = 0.20, 0.30, and 0.36. As tw increases, eω(tw) decreases toward zero, while et×(tw) approaches a well-deﬁned
+plateau
+bt× ≡lim
+tw→∞
+et×(tw).
+(29)
+Using equations (6) and (21b), one ﬁnds
+e−κ0bt×
+1 −bt×
+=
+1 + κ−1
+0 e−κ0bt×
+2 −τ −bt× + bt2×/2,
+(30a)
+eω(tw) ≈
+κ−1
+0
+1 −κ0τ
+e−κ0(bt×+tw)
+1 −bt×
+,
+tw ≫1,
+(30b)
+lim
+tw→∞
+eω(tw)
+δω(tw) =
+1
+1 −κ0(1 −κ0τ)
+e−κ0bt×
+1 −bt×
+.
+(30c)
+2.
+Quantifying the magnitude of the effect
+For given τ and tw, equations (28) determine the value eω(tw) that maximizes the Mpemba effect in the sense
+that the minimum negative value of ∆(t;tw,ω) is equal in magnitude to its maximum positive value. We take this
+common absolute value as a measure of the Mpemba effect, denoted hereafter by Mp(tw). Using equation (12), this
+is simply
+Mp(tw) = E(tw) −eω(tw).
+(31)
+
+9
+0
+1
+2
+3
+4
+5
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+t=0.20
+t=0.30
+w(tw)
+tw/t
+(a)
+t=0.36
+0
+1
+2
+3
+4
+5
+0.00
+0.05
+0.10
+0.15
+0.20
+t=0.20
+t=0.30
+t (tw)
+tw/t
+(b)
+t=0.36
+0
+1
+2
+3
+4
+5
+0.00
+0.01
+0.02
+0.03
+0.04
+t=0.20
+t=0.30
+Mp(tw)
+tw/t
+(c)
+t=0.36
+FIG. 5. Plots of (a) the optimal normalized warm temperature eω(tw), (b) the corresponding crossover time et×(tw), and (c) the
+magnitude of the Mpemba effect, Mp(tw), all as functions of tw/τ for τ = 0.20, 0.30, and 0.36. In each panel, the dashed lines
+show the approximate results obtained from equations (36), (30a), and (35), respectively.
+Figure 5(c) shows Mp(tw) for τ = 0.20, 0.30, and 0.36. The magnitude exhibits a nonmonotonic dependence on the
+waiting time tw. In the limit tw →∞, one ﬁnds
+lim
+tw→∞
+Mp(tw)
+eω(tw) = (1 −bt×)eκ0bt× −1.
+(32)
+A striking qualitative similarity with ﬁgure 4(a) is apparent: both δω(tw) and Mp(tw) reach their maximum at
+tw = τ. To make this connection more precise, note that from equations (30c) and (32), one obtains
+lim
+tw→∞
+Mp(tw)
+δω(tw) = 1 −e−κ0bt×/(1 −bt×)
+1 −κ0(1 −κ0τ)
+.
+(33)
+The right-hand side of equation (33) provides an excellent approximation for all tw, particularly for smaller values
+of τ.
+A further simpliﬁcation is obtained by formally taking et× →0 on the right-hand side of equation (30a), which
+allows the approximation
+e−κ0bt×
+1 −bt×
+→1 + κ−1
+0
+2 −τ .
+(34)
+
+10
+0.0
+0.5
+1.0
+1.5
+2.0
+-0.04
+-0.02
+0.00
+0.02
+0.04
+t=0.36
+(a)
+tw=0.36
+tw=0.60
+D(t;tw,w(tw))
+t
+tw=0.20
+0.0
+0.5
+1.0
+1.5
+2.0
+-0.10
+-0.05
+0.00
+0.05
+0.10
+0.15
+0.20
+w=0.60
+w=0.62
+w=0.58
+w=0.65
+tw=t=0.36
+(b)
+D(t;tw=t,w)
+t
+w=0.44
+FIG. 6. (a) ∆(t;tw,ω) for τ = 0.36 and three waiting times: tw = 0.20, 0.36, and 0.60. In each case, the normalized warm temperature
+is set to ω = eω(tw) ≃0.77, 0.60, and 0.39, respectively, ensuring that the maximum positive and minimum negative values of
+∆(t;tw,ω) are equal in magnitude. The corresponding magnitudes of the Mpemba effect are approximately Mp(tw) = 0.033,
+0.041, and 0.036. (b) ∆(t;tw,ω) for τ = tw = 0.36 and ﬁve values of the normalized warm temperature: ω = 0.44, 0.58, 0.60, 0.62,
+and 0.65. Note that eω(τ = 0.36) ≃0.60.
+This leads to the compact expression
+Mp(tw) ≃1 −τ −κ−1
+0
+2 −τ
+δω(tw)
+1 −κ0(1 −κ0τ)
+= 1 −τ −κ−1
+0
+2 −τ
+E(tw) −e−κ0tw
+1 −κ0(1 −κ0τ),
+(35)
+which does not require solving equation (30a).
+Inserting this result into equation (31) immediately yields an approximate expression for the optimal normalized
+warm temperature,
+eω(tw) ≃E(tw) −1 −τ −κ−1
+0
+2 −τ
+E(tw) −e−κ0tw
+1 −κ0(1 −κ0τ).
+(36)
+As seen in ﬁgure 5(a), equation (36) provides an excellent approximation for eω(tw), while ﬁgure 5(c) shows that
+equation (35) accurately captures the magnitude of the Mpemba effect.
+Out of all possible waiting times at ﬁxed τ, the maximum of Mp(tw) is reached at tw = τ. In this case, equations (35)
+and (36) simplify to
+Mp(tw = τ) ≃
+(1 −τ −κ−1
+0 )2
+(2 −τ)[1 −κ0(1 −κ0τ)],
+(37a)
+eω(tw = τ) ≃1 −τ −
+(1 −τ −κ−1
+0 )2
+(2 −τ)[1 −κ0(1 −κ0τ)].
+(37b)
+Here we have used the properties E(τ) = 1 −τ and e−κ0τ = κ−1
+0 . The function eω(tw = τ) is plotted in ﬁgure 4(b).
+The advantage of selecting tw = τ to maximize the Mpemba effect is illustrated in ﬁgure 6. Figure 6(a) shows
+∆(t;tw,ω) for a delay time τ = 0.36 and three waiting times (tw = 0.20, 0.36, and 0.60), with the normalized warm
+temperature set to ω = eω(tw) in each case. In all three cases, the maximum positive and minimum negative values
+of ∆(t;tw,ω) are equal in magnitude, but this common value reaches its highest point when tw = τ.
+
+11
+0.00
+0.05
+0.10
+0.15
+0.20
+0.25
+0.30
+0.35
+1.0
+1.2
+1.4
+1.6
+1.8
+2.0
+(a)
+R
+t
+0.0
+0.5
+1.0
+1.5
+2.0
+-0.10
+-0.05
+0.00
+0.05
+0.10
+t=0.36
+(b)
+two-reservoir
+Descartes
+qA(t)-qB(t)
+t
+FIG. 7. (a) Ratio between the magnitude of the Mpemba effect in the two-reservoir protocol and the maximum magnitude
+in the Descartes protocol (see equation (38)). (b) Solid line (Descartes protocol): θA −θB = ∆(t;tw,ω) for τ = tw = 0.36 and
+ω = eω(tw) ≃0.60; dashed line (two-reservoir protocol): θA −θB = 2∆(t;tw,ω) for τ = 0.36, ω = 1/2, and tw = etw ≃0.47. In both
+cases the temperature difference is normalized with respect to Thot −Tcold.
+Figure 6(b) presents ∆(t;tw,ω) for τ = tw = 0.36 and ﬁve values of ω: 0.44, 0.58, 0.60, 0.62, and 0.65. For these
+parameters, a Mpemba effect occurs if κ−1
+0
+≃0.45 < ω < 1 −τ = 0.64. This explains why no effect is observed for
+ω = 0.44 (where ∆(t) > 0 for all t) or ω = 0.65 (where ∆(t) < 0 for all t). Additionally, ω = 0.58 corresponds to a case
+where the initial positive ∆exceeds the absolute value of its minimum, whereas the opposite occurs for ω = 0.62.
+Let us summarize the results thus far. For given values of τ and tw, the existence of a Mpemba effect requires
+that the normalized warm temperature ω lies within the interval deﬁned by equation (14). Within this interval, the
+effect is maximal at ω = eω(tw), and the magnitude of this maximal effect is given by Mp(tw). Accurate and practical
+approximations for both quantities are provided by equations (35) and (36).
+3.
+Maximum magnitude of the Mpemba effect in the Descartes and two-reservoir protocols
+Given the delay time τ, we have seen that the maximum magnitude of the Mpemba effect in the Descartes protocol
+is obtained for tw = τ and ω = eω(tw = τ) (see equation (37)).
+As noted above, the difference function θA −θB associated with the two-reservoir protocol of ﬁgure 1(a) is exactly
+twice that of the Descartes protocol with ω = 1/2 and the same values of τ and tw. This comparison is made using the
+same deﬁnition of the difference function, normalized with respect to the extreme temperature difference Thot −Tcold
+(see equation (8)(. For that value of the normalized warm temperature, the optimal Mpemba effect is obtained with
+a waiting time tw = etw, where etw is the solution to eω(etw) = 1/2.
+To compare the magnitudes of the Mpemba effect in the two-reservoir and the Descartes protocols, we introduce
+the ratio
+R = 2Mp(tw = etw)
+Mp(tw = τ) .
+(38)
+It is plotted in ﬁgure 7(a) as a function of the delay time τ. We observe that, even though the Descartes protocol
+includes ω as an additional control parameter, its maximum Mpemba magnitude is always smaller than that of the
+two-reservoir protocol with the same delay time. This is further illustrated in ﬁgure 7(b) for τ = 0.36.
+
+12
+ A
+ B
+Twarm
+Tcold
+Thot
+Tb(t)
+-tw     0                 t
+(a)
+-1.0
+-0.5
+0.0
+0.5
+1.0
+1.5
+2.0
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+t=0.36
+B1
+B2
+B3
+B4
+q(t)
+t
+(b)
+A
+FIG. 8. (a) Schematic representation of the Descartes heating protocol. (b) Normalized temperature θ(t) for a sample of type A
+and different samples of type B with delay time τ = 0.36. The waiting time is tw = 0.5 for sample A, while the normalized warm
+temperature is ω = 0.40, 0.49, 0.55, and 0.70 for samples B1, B2, B3, and B4, respectively.
+III.
+THE DESCARTES HEATING PROTOCOL FOR THE INVERSE MPEMBA EFFECT
+While the Descartes protocol was originally proposed for the conventional cooling scenario, it can be straightfor-
+wardly adapted to the heating case. In this variant, sample A remains in thermal equilibrium with a reservoir at a
+cold temperature Tcold until time t = −tw, when it is quenched to a hot temperature Thot. Sample B is equilibrated
+with a reservoir at an intermediate warm temperature Twarm until t = 0, when it is also quenched to the same hot
+temperature Thot as sample A. This heating protocol is sketched in ﬁgure 8(a). If the initial post-quench temperatures
+satisfy TA(0) < TB(0), an inverse Mpemba effect takes place provided that TA(t×) = TB(t×) at some crossover time
+t×, and subsequently TA(t) > TB(t) for t > t×.
+The equations for the heating process can be obtained from those of the cooling process by performing the formal
+change Tcold ↔Thot. In particular, from equation (9) one obtains
+TB(t) −TA(t)
+Thot −Tcold
+= ∆(t;tw,ω),
+t ≥0,
+(39)
+where ω is still deﬁned by equation (2) and the difference function is now
+∆(t;tw,ω) =∆(t;tw,1 −ω)
+=E(t + tw) −(1 −ω)E(t).
+(40)
+The condition for the existence of an inverse Mpemba effect follows from equation (14) with the replacement ω →
+1 −ω:
+1 −E(tw) < ω < 1 −e−κ0tw.
+(41)
+The rest of the results presented in section II remain valid, except for the replacement ω →1 −ω. In particular,
+ﬁgure 8(b) represents the counterpart of ﬁgure 2(a). For τ = 0.36 and tw = 0.5, the bounds of the inverse Mpemba
+interval are 1 −E(tw) ≃0.49 and 1 −e−κ0tw ≃0.67. This agrees with ﬁgure 8(b), where an inverse Mpemba effect is
+observed for ω = 0.55, but not for ω = 0.40 or ω = 0.70. The case ω = 0.49 corresponds to the heating version of the
+genuine Descartes protocol, where TA(0) = TB(0) = Twarm.
+
+13
+IV.
+INFLUENCE OF FINITE-RATE QUENCHES
+Thus far, we have assumed that, in the Descartes cooling protocol, the bath temperatures experience instantaneous
+quenches from Thot to Tcold at t = −tw (in the case of sample A) and from Twarm to Tcold at t = 0 (in the case of sample
+B). However, it is more realistic to assume that the quenches take place at a ﬁnite rate with a characteristic time σ [62],
+i.e.,
+Tb,A(t) =
+(
+Thot,
+t ≤−tw,
+Tcold + (Thot −Tcold)e−(t+tw)/σ,
+t ≥−tw,
+(42a)
+Tb,B(t) =
+(
+Twarm,
+t ≤0,
+Tcold + (Twarm −Tcold)e−t/σ,
+t ≥0.
+(42b)
+Consequently, for t ≥0,
+Tb,A(t) −Tb,B(t)
+Thot −Tcold
+=
+
+e−tw/σ −ω
+
+e−t/σ,
+t ≥0.
+(43)
+The corresponding time-dependence of the temperature samples is again given by equation (3), except that the
+function E(t) is now replaced by [62]
+Eσ(t) = E(t) + Fσ(t),
+(44)
+where the function Fσ(t) is given by
+Fσ(t) = −
+⌊t/τ⌋
+∑
+n=0
+σn+1Rn((t −nτ)/σ),
+(45a)
+Rn(x) ≡e−x −
+n
+∑
+k=0
+(−x)k
+k!
+.
+(45b)
+A practical approximate form for Eσ(t) is
+Eσ(t) ≈
+κ−1
+0 e−κ0t
+(1 −κ0σ)(1 −κ0τ) +
+σe−t/σ
+σeτ/σ −1 −
+κ−1
+1 e−κ1t
+(1 −κ1σ)(κ1τ −1),
+t ≫1.
+(46)
+This expression reduces to equation (6) in the limit of instantaneous quenches (σ = 0). In the long-time limit, the ﬁrst
+term dominates over the second one if κ0σ < 1, whereas the opposite occurs if κ0σ > 1.
+The relative temperature difference for t ≥0 is given by a straightforward extension of equation (9):
+TA(t) −TB(t)
+Thot −Tcold
+= ∆σ(t;tw,ω),
+t ≥0,
+(47a)
+∆σ(t;tw,ω) = Eσ(t + tw) −ωEσ(t).
+(47b)
+From equation (46), we see that the asymptotic form of ∆σ(t) is
+∆σ(t;tw,ω) ≈κ−1
+0 (e−κ0tw −ω)e−κ0t
+(1 −κ0σ)(1 −κ0τ)
++ σ(e−tw/σ −ω)e−t/σ
+σeτ/σ −1
+−κ−1
+1 (e−κ1tw −ω)e−κ1t
+(1 −κ1σ)(κ1τ −1) ,
+t ≫1.
+(48)
+Following a reasoning similar to that of section II, one ﬁnds that the condition for the existence of a direct Mpemba
+effect changes from equation (14) to
+e−tw min(κ0,σ−1) < ω < Eσ(tw).
+(49)
+
+14
+Since Eσ(t) > E(t), equation (49) suggests that the window of values of the normalized warm temperature ω
+for which a Mpemba effect exists widens as σ departs from 0. However, this is misleading because, as shown by
+equation (43), the environmental conditions for samples A and B are, in general, different if σ̸ = 0.
+An unbiased Mpemba effect would require Tb,A(t) = Tb,B(t) for t > 0, but this is only possible (apart from the case
+σ = 0) if the waiting time tw and the quench characteristic time σ are coupled by
+tw = σlnω−1.
+(50)
+It can be checked that ω−1Eσ(tw = σlnω−1) is always larger than 1, so that, if tw = σlnω−1, the upper bound in
+equation (49) is satisﬁed for any τ and ω. Let us see that, on the other hand, the lower bound is incompatible with
+equation (50). The ﬁrst inequality in equation (49) is equivalent to twmin(κ0,σ−1) > lnω−1. Inserting equation (50),
+this condition becomes min(κ0σ,1) > 1, which is impossible to satisfy.
+To reach the same conclusion from an alternative viewpoint, note that the origin of the ﬁrst inequality in equa-
+tion (49) lies in the condition
+lim
+t→∞∆σ(t;tw,ω) < 0.
+(51)
+In the special case of equation (50), the second term on the right-hand side of equation (48) vanishes identically, so
+that
+lim
+t→∞
+∆σ(t;σlnω−1,ω)
+e−κ0t
+=
+κ−1
+0
+1 −κ0τ
+ωκ0σ −ω
+1 −κ0σ .
+(52)
+Since ω < 1, the right-hand side of equation (52) is strictly positive, thus contradicting the condition in equation (51).
+While, strictly speaking, a Mpemba effect is not possible with ﬁnite-rate quenches because of the physical require-
+ment of equal bath conditions for both samples, the differences in the environmental conditions become negligible
+within a tolerable range if σ is sufﬁciently small. This approximate equivalence allows the Mpemba effect observed
+under instantaneous quenches to persist, albeit imperfectly [61].
+V.
+CONCLUSIONS
+In this work, the direct and inverse Mpemba effects have been investigated within the framework of the time-
+delayed Newton’s law of cooling by means of the Descartes protocol, a three-reservoir scheme in which each sample
+undergoes a single thermal quench at different times. This protocol allows one to disentangle the roles of the delay
+time τ, the waiting time tw, and the normalized warm temperature ω, providing a transparent and ﬂexible setting
+to analyze the phenomenon.
+For instantaneous quenches, we have derived exact conditions for the existence of both the direct and inverse
+Mpemba effects, expressed as bounds on ω for given τ and tw. Within those bounds, the effect becomes maximal
+at a speciﬁc value ω = eω(tw), determined by the condition that the initial difference equals in magnitude the subse-
+quent minimum of ∆(t;tw,ω). At this optimum, the Mpemba magnitude is deﬁned by this common extremal value.
+Practical and accurate approximations for both eω(tw) and the maximal magnitude Mp(tw) have been obtained, lead-
+ing to compact expressions that do not require the numerical solution of transcendental equations. A particularly
+relevant result is that the absolute maximum of the Mpemba effect at ﬁxed τ is reached for tw = τ.
+The Descartes protocol has also been compared with the previously studied two-reservoir protocol. Although
+the Descartes scheme introduces ω as an additional control parameter, the maximum attainable magnitude of the
+Mpemba effect is found to be systematically smaller than that of the two-reservoir protocol with the same delay time.
+This comparison clariﬁes the relative efﬁciency of both protocols and highlights the nontrivial interplay between the
+number of reservoirs and the achievable strength of the effect.
+The analysis has been extended to the more realistic situation of ﬁnite-rate quenches characterized by a bath time
+scale σ. While ﬁnite-rate quenches formally enlarge the interval of ω values for which a sign change in ∆(t) may
+occur, the requirement of identical bath conditions for both samples after t = 0 imposes a coupling between tw and σ
+that ultimately precludes a strict Mpemba effect. Nevertheless, when σ is sufﬁciently small, the environmental differ-
+ences become negligible and the behavior approaches that of the instantaneous-quench limit, so that an approximate
+Mpemba effect can still be observed.
+Time-delayed relaxation laws can be effectively realized in systems where the coupling to the thermal environment
+is not instantaneous, such as feedback-controlled setups, mesoscopic devices with ﬁnite environmental response
+times, or engineered platforms in which delays are deliberately introduced. In these contexts, the delay time τ
+is expected to be small but ﬁnite compared to the intrinsic relaxation time, which is precisely the regime where
+
+15
+the present analysis predicts observable signatures of Mpemba-type behavior. Although the model is intentionally
+minimal, it provides a controlled framework to assess how memory effects alone can induce anomalous relaxation.
+Overall, the Descartes protocol provides a uniﬁed and analytically tractable framework to characterize the
+Mpemba effect and its inverse counterpart, as well as to quantify their magnitude and parametric dependence.
+An additional conceptual outcome of this work is that Mpemba-type behavior does not require a breakdown of
+Newton’s law of cooling, but can instead emerge naturally within a generalized version that incorporates memory
+effects through a ﬁnite delay time. The methodology developed here can be naturally applied to other multi-step
+thermal protocols. In particular, a systematic study of the Pontus protocol using the same analytical tools appears
+as a promising direction for future work, which may further clarify the inﬂuence of protocol structure and reservoir
+sequencing on the emergence and strength of anomalous thermal relaxation.
+ACKNOWLEDGMENTS
+I acknowledge ﬁnancial support from Grant No. PID2024-156352NB-I00funded by MCIU/AEI/10.13039/501100011033
+and by ERDF/EU, and from Grant No. GR24022 funded by the Junta de Extremadura (Spain).
+DATA AVAILABILITY STATEMENT
+The data that support the ﬁndings of this study are openly available at the following URL/DOI:
+https://github.com/AndresSantosR/The-Mpemba-effect-in-the-Descartes-protocol-A-time-delayed-Newton-s-law-of-cooling-
+[66].
+[1] Aristotle, The Works of Aristotle (Translated into English under the editorship of W.D. Ross), Vol. III, edited by W. D. Ross (Claren-
+don Press, Oxford, 1931).
+[2] E. B. Mpemba and D. G. Osborne, Cool?, Phys. Educ. 4, 172 (1969).
+[3] G. S. Kell, The freezing of hot and cold water, Am. J. Phys. 37, 564 (1969).
+[4] I. Firth, Cooler?, Phys. Educ. 6, 32 (1971).
+[5] E. Deeson, Cooler-lower down, Phys. Educ. 6, 42 (1971).
+[6] J. Walker, Hot water freezes faster than cold water. Why does it do so?, Sci. Am. 237, 246 (1977).
+[7] M. Freeman, Cooler still—an answer?, Phys. Educ. 14, 417 (1979).
+[8] B.
+Wojciechowski,
+I.
+Owczarek,
+and
+G.
+Bednarz,
+Freezing
+of
+aqueous
+solutions
+containing
+gases,
+Cryst. Res. Technol. 23, 843 (1988).
+[9] D. Auerbach, Supercooling and the Mpemba effect: When hot water freezes quicker than cold, Am. J. Phys. 63, 882 (1995).
+[10] P. K. Maciejewski, Evidence of a convective instability allowing warm water to freeze in less time than cold water,
+J. Heat Transf. 118, 65 (1996).
+[11] S. Esposito, R. De Risi, and L. Somma, Mpemba effect and phase transitions in the adiabatic cooling of water before freezing,
+Physica A 387, 757 (2008).
+[12] J. I. Katz, When hot water freezes before cold, Am. J. Phys. 77, 27 (2009).
+[13] M. Vynnycky and S. L. Mitchell, Evaporative cooling and the Mpemba effect, Heat Mass Transf. 46, 881 (2010).
+[14] M. Vynnycky and N. Maeno, Axisymmetric natural convection-driven evaporation of hot water and the Mpemba effect,
+Intl. J. Heat Mass Transf. 55, 7297 (2012).
+[15] X. Zhang, Y. Huang, Z. Ma, Y. Zhou, J. Zhou, W. Zheng, Q. Jiang, and C. Q. Sun, Hydrogen-bond memory and water-skin
+supersolidity resolving the Mpemba paradox, Phys. Chem. Chem. Phys. 16, 22995 (2014).
+[16] M.
+Vynnycky
+and
+S.
+Kimura,
+Can
+natural
+convection
+alone
+explain
+the
+Mpemba
+effect?,
+Intl. J. Heat Mass Transf. 80, 243 (2015).
+[17] J. Jin and W. A. Goddard, Mechanisms underlying the Mpemba effect in water from molecular dynamics simulations,
+J. Phys. Chem. C 119, 2622 (2015).
+[18] R. T. Ibekwe and J. P. Cullerne, Investigating the Mpemba effect:
+When hot water freezes faster than cold water,
+Phys. Educ. 51, 025011 (2016).
+[19] C. Q. Sun, Y. L. Huang, X. Zhang, Z. S. Ma, and B. Wang, The physics behind water irregularity, Phys. Rep. 998, 1 (2023).
+[20] G. Teza, J. Bechhoefer, A. Lasanta, O. Raz, and M. Vucelja, Speedups in nonequilibrium thermal relaxation: Mpemba and
+related effects, Phys. Rep. 1164, 1 (2026).
+[21] A. Lasanta, F. Vega Reyes, A. Prados, and A. Santos, When the hotter cools more quickly: Mpemba effect in granular ﬂuids,
+Phys. Rev. Lett. 119, 148001 (2017).
+[22] A. Torrente, M. A. López-Castaño, A. Lasanta, F. Vega Reyes, A. Prados, and A. Santos, Large Mpemba-like effect in a gas of
+inelastic rough hard spheres, Phys. Rev. E 99, 060901(R) (2019).
+
+16
+[23] A.
+Biswas,
+V.
+V.
+Prasad,
+O.
+Raz,
+and
+R.
+Rajesh,
+Mpemba
+effect
+in
+driven
+granular
+Maxwell
+gases,
+Phys. Rev. E 102, 012906 (2020).
+[24] E. Mompó, M. A. López Castaño, A. Torrente, F. Vega Reyes, and A. Lasanta, Memory effects in a gas of viscoelastic particles,
+Phys. Fluids 33, 062005 (2021).
+[25] R. Gómez González, N. Khalil, and V. Garzó, Mpemba-like effect in driven binary mixtures, Phys. Fluids 33, 053301 (2021).
+[26] R.
+Gómez
+González
+and
+V.
+Garzó,
+Time-dependent
+homogeneous
+states
+of
+binary
+granular
+suspensions,
+Phys. Fluids 33, 093315 (2021).
+[27] A. Biswas, V. V. Prasad, and R. Rajesh, Mpemba effect in an anisotropically driven granular gas, EPL 136, 46001 (2021).
+[28] A.
+Biswas,
+V.
+V.
+Prasad,
+and
+R.
+Rajesh,
+Mpemba
+effect
+in
+anisotropically
+driven
+inelastic
+Maxwell
+gases,
+J. Stat. Phys. 186, 45 (2022).
+[29] A. Megías and A. Santos, Kinetic theory and memory effects of homogeneous inelasticgranular gases under nonlinear drag,
+Entropy 24, 1436 (2022).
+[30] A. Megías and A. Santos, Mpemba-like effect protocol for granular gases of inelastic and rough hard disks,
+Front. Phys. 10, 971671 (2022).
+[31] A. Patrón, B. Sánchez-Rey, C. A. Plata, and A. Prados, Non-equilibrium memory effects: Granular ﬂuids and beyond,
+EPL 143, 61002 (2023).
+[32] M. Baity-Jesi, E. Calore, A. Cruz, L. A. Fernandez, J. M. Gil-Narvión, A. Gordillo-Guerrero, D. Iñiguez, A. Lasanta, A. Maio-
+rano, E. Marinari, V. Martin-Mayor, J. Moreno-Gordo, A. Muñoz-Sudupe, D. Navarro, G. Parisi, S. Perez-Gaviro, F. Ricci-
+Tersenghi, J. J. Ruiz-Lorenzo, S. F. Schifano, B. Seoane, A. Tarancón, R. Tripiccione, and D. Yllanes, The Mpemba effect in
+spin glasses is a persistent memory effect, Proc. Natl. Acad. Sci. U.S.A. 116, 15350 (2019).
+[33] I. González-Adalid Pemartín, E. Mompó, A. Lasanta, V. Martín-Mayor, and J. Salas, Slow growth of magnetic domains helps
+fast evolution routes for out-of-equilibrium dynamics, Phys. Rev. E 104, 044114 (2021).
+[34] N. Vadakkayila and S. K. Das, Should a hotter paramagnet transform quicker to a ferromagnet? Monte Carlo simulation
+results for Ising model, Phys. Chem. Chem. Phys. 23, 11186 (2021).
+[35] G.
+Teza,
+R.
+Yaacoby,
+and
+O.
+Raz,
+Eigenvalue
+crossing
+as
+a
+phase
+transition
+in
+relaxation
+dynamics,
+Phys. Rev. Lett. 130, 207103 (2023).
+[36] G. Teza, R. Yaacoby, and O. Raz, Relaxation shortcuts through boundary coupling, Phys. Rev. Lett. 131, 017101 (2023).
+[37] S. K. Das, Perspectives on a few puzzles in phase transformations:
+When should the farthest reach the earliest?,
+Langmuir 39, 10715 (2023).
+[38] I. González-Adalid Pemartín, E. Mompó, A. Lasanta, V. Martín-Mayor, and J. Salas, Shortcuts of freely relaxing systems using
+equilibrium physical observables, Phys. Rev. Lett. 132, 117102 (2024).
+[39] A. Kumar and J. Bechhoefer, Exponentially faster cooling in a colloidal system, Nature (Lond.) 584, 64 (2020).
+[40] J. Bechhoefer, A. Kumar, and R. Chétrite, A fresh understanding of the Mpemba effect, Nat. Rev. Phys. 3, 534 (2021).
+[41] R. Chétrite, A. Kumar, and J. Bechhoefer, The metastable Mpemba effect corresponds to a non-monotonic temperature de-
+pendence of extractable work, Front. Phys. 9, 654271 (2021).
+[42] A.
+Kumar,
+R.
+Chétrite,
+and
+J.
+Bechhoefer,
+Anomalous
+heating
+in
+a
+colloidal
+system,
+Proc. Natl. Acad. Sci. U.S.A. 119, e2118484119 (2022).
+[43] M. Ibáñez, C. Dieball, A. Lasanta, A. Godec, and A. Rica, Heating and cooling are fundamentally asymmetric and evolve
+along distinct pathways, Nature Phys. 20, 135 (2024).
+[44] Z.
+Lu
+and
+O.
+Raz,
+Nonequilibrium
+thermodynamics
+of
+the
+Markovian
+Mpemba
+effect
+and
+its
+inverse,
+Proc. Natl. Acad. Sci. U.S.A. 114, 5083 (2017).
+[45] I. Klich, O. Raz, O. Hirschberg, and M. Vucelja, Mpemba index and anomalous relaxation, Phys. Rev. X 9, 021060 (2019).
+[46] D. M. Busiello, D. Gupta, and A. Maritan, Inducing and optimizing Markovian Mpemba effect with stochastic reset,
+New J. Phys. 23, 103012 (2021).
+[47] J. Lin,
+K. Li,
+J. He,
+J. Ren, and J. Wang, Power statistics of Otto heat engines with the Mpemba effect,
+Phys. Rev. E 105, 014104 (2022).
+[48] F. Carollo, A. Lasanta, and I. Lesanovsky, Exponentially accelerated approach to stationarity in Markovian open quantum
+systems through the Mpemba effect, Phys. Rev. Lett. 127, 060401 (2021).
+[49] A. K. Chatterjee,
+S. Takada, and H. Hayakawa, Quantum Mpemba effect in a quantum dot with reservoirs,
+Phys. Rev. Lett. 131, 080402 (2023).
+[50] A. K. Chatterjee, S. Takada, and H. Hayakawa, Multiple quantum Mpemba effect: exceptional points and oscillations,
+Phys. Rev. A 110, 022213 (2024).
+[51] S. Murciano, F. Ares, I. Klich, and P. Calabrese, Entanglement asymmetry and quantum Mpemba effect in the XY spin chain,
+J. Stat. Mech. 2024, 013103 (2024).
+[52] L. K. Joshi, J. Franke, A. Rath, F. Ares, S. Murciano, F. Kranzl, R. Blatt, P. Zoller, B. Vermersch, P. Calabrese, C. F. Roos, and
+M. K. Joshi, Observing the quantum Mpemba effect in quantum simulations, Phys. Rev. Lett. 133, 010402 (2024).
+[53] S. A. Shapira, Y. Shapira, J. Markov, G. Teza, N. Akerman, O. Raz, and R. Ozeri, The Mpemba effect demonstrated on a single
+trapped ion qubit, Phys. Rev. Lett. 133, 010403 (2024).
+[54] X. Wang and J. Wang, Mpemba effects in nonequilibrium open quantum systems, Phys. Rev. Res. 6, 033330 (2024).
+[55] F. Caceffo, S. Murciano, and V. Alba, Entangled multiplets, asymmetry, and quantum Mpemba effect in dissipative systems,
+J. Stat. Mech. 2024, 063103 (2024).
+[56] S. Yamashika, F. Ares, and P. Calabrese, Entanglement asymmetry and quantum Mpemba effect in two-dimensional free-
+fermion systems, Phys. Rev. B 110, 085126 (2024).
+
+17
+[57] S. Liu, H.-K. Zhang, S. Yin, and S.-X. Zhang, Symmetry restoration and quantum Mpemba effect in symmetric random
+circuits, Phys. Rev. Lett. 133, 140405 (2024).
+[58] D. J. Strachan, A. Purkayastha, and S. R. Clark, Non-Markovian quantum Mpemba effect, Phys. Rev. Lett. 134, 220403 (2025).
+[59] A. Nava and R. Egger, Pontus-Mpemba effects, Phys. Rev. Lett. 135, 140404 (2025).
+[60] N. Hatime, S. Melliani, A. E. Mfadel, D. Baleanu, and M. Elomari, Existence, uniqueness, and ﬁnite-time stability of solutions
+for Ψ-Caputo fractional differential equations with time delay, Comput. Methods Differ. Equ. 11, 785 (2023).
+[61] A. Santos, Mpemba meets Newton:
+Exploring the Mpemba and Kovacs effects in the time-delayed cooling law,
+Phys. Rev. E 109, 044149 (2024).
+[62] A. Santos, Time-delayed Newton’s law of cooling with a ﬁnite-rate thermal quench: Impact on the Mpemba and Kovacs
+effects, Phys. Rev. E 111, 055402 (2025).
+[63] A. Nava, R. Egger, B. Dey, and D. Giuliano, Speeding up Pontus-Mpemba effects via dynamical phase transitions,
+Phys. Rev. Res. 7, 043332 (2025).
+[64] R. Descartes, The Philosophical Writings of Descartes, vol. III: The Correspondence. (Cambridge Univ. Press, Cambridge, 1991)
+translated by J. Cottingham, R. Stoothoff, D. Murdoch, and A. Kenny.
+[65] R. M. Corless, G. H. Gonnet,
+D. E. G. Hare,
+D. J. Jeffrey, and D. E. Knuth, On the Lambert W function,
+Adv. Comput. Math. 5, 329 (1996).
+[66] A. Santos, The-Mpemba-effect-in-the-Descartes-protocol-A-time-delayed-Newton-s-law-of-cooling-approach github (2026),
+(available at: https://github.com/AndresSantosR/The-Mpemba-effect-in-the-Descartes-protocol-A-time-delayed-Newton-s-law-of-cool

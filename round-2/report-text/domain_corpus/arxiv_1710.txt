@@ -1,0 +1,864 @@
+epl draft
+Cooling jug physics
+O. Luniachek1 , R. Timchenko1 , O. Golubov2,1
+1 School of Physics and Technology, V. N. Karazin Kharkiv National University – Svobody Sq. 4,
+61022, Kharkiv, Ukraine
+2 Department of Aerospace Engineering Sciences, University of Colorado Boulder – 429 UCB,
+Boulder, CO, 80309, USA
+PACS nn.mm.xx – First pacs description
+Abstract –We discuss the physics of the pot-in-pot cooler.
+By balancing
+temperature decrease due to evaporation and temperature increase due to
+heat exchange, we ﬁnd the equilibrium temperature of the pot. In this sim-
+pliﬁed model, the cooling jug acts as a psychrometer, and the theoretical
+prediction of our model is in a good agreement with psychrometric tables.
+Next, we study dynamics of the jug cooling. The cooling rate is limited by
+water vapour diﬀusion through air, heat conduction through air, and heat
+conduction through the body of the jug. The derived rate of temperature
+decrease is in general agreement with the result of our experiment. In the
+end, we discuss some additional factors, such as capillary eﬀects in the raw
+clay, water viscosity in the capillaries, and impact of complex shape of the
+jug.
+Introduction. –
+Keeping food cool has al-
+ways been an eﬀective way of extending its stor-
+age life, and diﬀerent devices have been used for
+this sake throughout history. Most of them con-
+sume energy to compensate for the energy ex-
+change of the food with the environment owing
+to the zeroth law of thermodynamics, so that
+currently the energy spent for food preservation
+is about 0.5 kWh per person per day [13].
+Evaporative cooling constitutes one of the
+most eﬀective and widely spread ways of low-
+ering the temperature, with its manifestations
+ranging from cooling hot food by blowing on it to
+lowering our own body’s temperatures by sweat-
+ing, and from evaporating ﬂuorocarbon refriger-
+ants for retaining low temperature in common
+fridges to attaining the coldest temperature ever
+reached in ultra cold atom experiments [12].
+In this article we focus on the pot-in-pot
+cooler, which harnesses evaporative cooling by
+water to keep foods fresh with zero energy con-
+sumption. It is a system made of two clay pots
+and a wet sand as a separator between them.
+The jug cools down due to the evaporative cool-
+ing of water from pores on the surface of the
+outer jug, to which the water gets from the wet
+sand. Evaporation is caused by heating of the
+outer surface by heat ﬂuxes from both the at-
+p-1
+arXiv:1710.00667v1  [cond-mat.soft]  25 Sep 2017
+
+O. Luniachek1, R. Timchenko1, O. Golubov2,1
+Fig. 1:
+Geometry of the wall of pot-in-pot with
+boundary layer and the distribution of the heat
+ﬂuxes at static equilibrium.
+mosphere and the inner pot. At ﬁrst we explain
+working principle of such a system in the static
+case, i.e. when the temperature of the jug sur-
+face and the external air are in equilibrium. In
+this model we consider only the contribution of
+heat ﬂow from the atmosphere to water evapo-
+ration.
+Then we make our model dynamic by
+taking into account heat ﬂuxes from the inner
+pot.
+Our consideration of this cooling system in-
+volves many simpliﬁcations. We explore only one
+particular case of an evaporative cooling system.
+More general approaches are presented in [10],
+[11].
+Methods. –
+Static equilibrium temperature of the jug.
+We will ﬁnd equilibrium temperature T1 of a wet
+jug when the air is of temperature Tair and rel-
+ative humidity φair. Our model is shown in ﬁg.
+1. When Tair > T1, the surface of the jug gets
+heat via heat conduction from the exterior air,
+and uses the heat to evaporate water from the
+surface. The water vapour is then transported
+away from the surface by diﬀusion. In equilib-
+rium, the mass of water evaporated due to the
+heat coming in by heat conduction, equals mass
+of water vapour transported away from the sur-
+face by diﬀusion, and it is the equilibrium be-
+tween heat conduction and diﬀusion that deter-
+mines the equilibrium surface temperature T1.
+We assume that both heat and diﬀusive ﬂuxes
+propagate across a ﬂat boundary layer of thick-
+ness l, in which gradients of both temperature
+and absolute humidity are uniform. Beyond this
+layer (at the distance l from the surface) air is
+assumed to be well mixed, and temperature and
+humidity are assumed to be the same as in the
+bulk of air. We also assume that the jug itself is
+in thermal equilibrium with its surface, so that
+the surface exchanges heat only with air, and
+that water covers all the surface, so that the pres-
+sure of water vapour at the surface is the same
+as the pressure of saturated vapour at temper-
+ature T1.
+We compare air temperature at the
+distances equal or bigger than boundary layer
+to the temperature of the dry thermometer (air
+is well mixed there), while temperature of satu-
+rated water vapour at the surface of the jug is
+compared to the wet thermometer. Later we are
+going to analyze these assumptions more scrupu-
+lously, and to go beyond them.
+Following Newton’s law [5], the heat ﬂux to
+the surface is
+J = κTair −T1
+l
+,
+(1)
+where κ is the heat conductivity of air. This heat
+evaporates the following mass of water from unit
+surface per unit time,
+dm
+dt dS = J
+L = κ(Tair −T1)
+Ll
+,
+(2)
+p-2
+
+Physics of cooling jug
+where L is the latent heat of vapourization of
+water.
+The rate at which the evaporated water dif-
+fuses away from the surface, is governed by Fick’s
+law,
+dm
+dt dS = Dρ(T1) −φairρ(Tair)
+l
+,
+(3)
+where D is the diﬀusion coeﬃcient of water
+vapour in air, and ρ(T1) is density of the sat-
+urated water vapour as function of temperature.
+In equilibrium, eq. (2) equals to eq. (3), re-
+sulting into the following equation for T1,
+κ(Tair −T1) = DL(ρ(T1) −φairρ(Tair)) .
+(4)
+Importantly, l cancels from this equation, and
+we do not have to make any assumptions about
+the boundary layer to determine the equilibrium
+temperature.
+To solve this equation, we need to substitute
+the functional form of ρ(T1). Although such ap-
+proximations for the pressure dependence p(T1)
+are well developed [1,2], approximations of ρ(T1)
+are scarce. For this reason, we had to construct
+our own approximation. We chose a functional
+form similar to the August equation or, more
+generally, to Clausius-Clapeyron equation,
+ρ(T1) = A exp
+
+−B
+T1
+
+,
+(5)
+where the temperature T1 is given in degrees
+Kelvin, while A and B are free constants, chosen
+to best ﬁt the experimental data in the tempera-
+ture range 10−50◦C. In the Fig.(5) 50 ◦C is the
+theoretical extrapolation, our approach can not
+deﬁne humidity precisely at such temperatures.
+The best ﬁt is provided by A = 369000 kg m−3,
+B = 4943 K. It is shown in ﬁg. 2, overplotted
+with the experimental data [3].
+When we substitute eq. (5) into eq. (4), we get
+a transcendental equation, that cannot be solved
+using elementary functions. Still, we notice that
+∆T = Tair −T1 is usually only a few degrees
+Celsius, so that the diﬀerence between ρ(Tair)
+and ρ(T1) is small. That allows us to decompose
+ρ(T1) = ρ(Tair+∆T) into a Taylor series in terms
+ 0
+ 0.01
+ 0.02
+ 0.03
+ 0.04
+ 0.05
+ 0.06
+ 0.07
+ 0.08
+ 0.09
+ 10
+ 15
+ 20
+ 25
+ 30
+ 35
+ 40
+ 45
+ 50
+ρ, kg/m3
+T1, oC
+experimental data
+approximation
+Fig. 2: Experimental relation between the tempera-
+ture and the density of the saturated water vapour
+[3], approximated by eq. (5).
+of ∆T, truncating the series after the linear term.
+The general form of the solution to the resulting
+linearized equation is
+∆T = (1 −φair)ρ(Tair)
+ρ′(Tair) +
+κ
+DL
+.
+(6)
+To verify our method, we reverse eq. (6) using
+eq. (5) to obtain humidity,
+φair = 1 −∆T
+ B
+T 2
+air
++
+κ
+DLA exp
+ B
+Tair
+ 
+. (7)
+Then in ﬁg. 3 we overplot this theoretical expres-
+sion for humidity with data from a psychrometric
+table1 [4].
+We see a decent agreement between the data
+and the theoretical prediction, which justiﬁes the
+methods we are using. Still, for big temperature
+diﬀerences ∆T we see an increasing discrepancy
+between the theory and the data. This should
+be expected, as the accuracy of the Taylor ap-
+proximation decreases with ∆T.
+Next we use eq.
+(6) to predict the ∆T for
+the cooling jug, and plot the results in ﬁg. 4.
+1Psychrometric table is used to determine relative hu-
+midity based on measurement results of a psycrometer,
+i.e. a device consisting of two thermometers, a dry one
+and a wet one. The dry thermometer shows the temper-
+ature of the ambient air, while the thermometer wrapped
+in wet fabric shows the temperature of evaporating water.
+The readings of the thermometers can then be translated
+into the relative humidity of the air.
+p-3
+
+O. Luniachek1, R. Timchenko1, O. Golubov2,1
+ 0
+ 20
+ 40
+ 60
+ 80
+ 100
+ 0
+ 5
+ 10
+ 15
+ 20
+ 25
+ 30
+φair, %
+Tair, oC
+2oC
+4oC
+6oC
+8oC
+10oC
+Fig. 3: Data from the psychrometric table (circles)
+overplotted with the theoretical formula - eq.
+(7)
+(solid lines). The table shows humidity φair versus
+temperature Tair of the exterior air (dry thermome-
+ter). Diﬀerent temperature diﬀerences ∆T between
+the dry and the wet thermometer are plotted in dif-
+ferent colours.
+As expected, the cooling ∆T is larger when the
+ambient temperature is high, and the humidity
+low.
+According to our theory, at Tair = 50◦C
+the temperature diﬀerence can reach up to 20◦C,
+although as we see from ﬁg. 3 the theory tends
+to give bigger errors at big ∆T.
+Although our approach is less precise than
+the available phenomenological formulae [6], it
+gives a clearer understanding of the underlying
+physics, and allows for simple generalizations to
+non-stationary cases, as we demonstrate in the
+following subsection.
+Dynamics of jug cooling.
+We want to con-
+sider how the ﬁnite heat conductivity of the jug
+walls hinder its cooling speed. We assume the jug
+to be ﬁlled with a well mixed liquid, whose tem-
+perature Tin is uniform throughout its volume,
+and whose speciﬁc heat capacity is cliq. The wall
+consists of three layers, as shown in Fig. 5. Two
+layers are composed of clay and one is composed
+of sand.
+To focus on the evaporation itself, we consider
+a simpliﬁed geometry where the wall thickness
+of both jugs, the distance between the jugs and
+the thickness of the air boundary layer are all
+much smaller than the inner radius of the inner
+jug. This allows us to treat the heat conduction
+ 0
+ 2
+ 4
+ 6
+ 8
+ 10
+ 12
+ 14
+ 16
+ 18
+ 20
+ 10
+ 15
+ 20
+ 25
+ 30
+ 35
+ 40
+ 45
+ 50
+ΔT, oC
+Tair, oC
+80%
+60%
+40%
+20%
+0%
+Fig. 4:
+The temperature diﬀerence ∆T between the
+cooling jug and the exterior air as given by eq. (6),
+plotted against the temperature of the exterior air
+Tair. Situations corresponding to diﬀerent humidities
+φair are shown in diﬀerent colours.
+and diﬀusion problems as one-dimensional. The
+theory required to go beyond this assumption
+will be brieﬂy reviewed in Discussion.
+So far we have only considered the inﬂuence of
+the outside heat ﬂux on water evaporation from
+the surface. The inner heat ﬂux should be also
+taken into account. The heat ﬂuxes in the dif-
+ferent layers q1, q2, q3 and qair (see Fig. 5) are
+determined by the heat conductivity equation:
+qair = κair
+Tair −T1
+l
+,
+(8)
+q1 = κclay
+T2 −T1
+l1
+,
+(9)
+q2 = κsand
+T3 −T2
+l2
+,
+(10)
+q3 = κclay
+Tin −T3
+l3
+.
+(11)
+The heat ﬂow from inside the jug q1 con-
+tributes to water evaporation from the surface.
+The sum of the outer and the inner heat ﬂows to
+the surface is the reason for water evaporation,
+as it is represented by the heat balance equation,
+qair + q1 = L dm
+dt dS .
+(12)
+The same heat ﬂow q1 causes the jug to cool
+down in accordance with the energy balance
+p-4
+
+Physics of cooling jug
+equation,
+C dTin
+dt
+= −q1S .
+(13)
+Here S is again the total surface area of the jug,
+and C is the total heat capacity of the jug,
+C = mliqcliq + msandcsand + mclaycclay ,
+(14)
+with m and c with diﬀerent subscripts denoting
+masses and speciﬁc heat capacities of liquid, sand
+and clay.
+These equations allow us to calculate cooling
+rate of the jug. We assume that the thermal in-
+ertia of the liquid inside the jug is much bigger
+than the thermal inertia of the jug itself. Then
+approximately q1 = q2 = q3, which allows us
+to eliminate T2 and T3 from eqs. (9)-(11), and
+to express q1 in terms of T1 and Tin. Then we
+substitute this equation together with eq.
+(8)
+into eq. (12), express
+dm
+dt dS from eq. (3), and
+thus get an equation for T1. Again applying the
+Taylor decomposition to ρ(T), we linearize this
+equation, and easily ﬁnd its solution T1. From
+the resulting T1 we calculate q1, and substitute
+it into eq. (13). Thus we arrive at a linear dif-
+ferential equation for Tin, whose solution is
+Tin = Tair−∆T +(Tliq0 −Tair + ∆T) e−t
+τ , (15)
+with the relaxation time τ determined as
+τ = C
+S
+l1 + l3
+κclay
++
+l2
+κsand
++
+l
+κair + LDρ′
+
+.
+(16)
+The boundary layer for a laminar ﬂow can be
+expressed in the following way [7]:
+l = α
+s
+ηR
+ρv .
+(17)
+Here η is the dynamic viscosity, R is the charac-
+teristic length of the pot, ρ is the density of the
+oncoming ﬂow, and v is the velocity of this ﬂow,
+and α is a constant of the order of unity, which is
+commonly set at α = 5 [7]. Then the thickness
+l corresponds to the distance from the surface,
+where the air speed reaches 99% of the speed
+Table 1: Values of the parameters used in our models
+Symbol
+Value
+L
+(2.46 ± 0.02) · 106 J · kg−1
+D
+(2.1 ± 0.1) · 10−5 m2 · s−1
+cliq
+(4.20 ± 0.02) · 103 J · kg−1 · K−1
+cclay
+(9.0 ± 0.2) · 102 J · kg−1 · K−1
+csand
+(8.2 ± 0.2) · 102 J · kg−1 · K−1
+κclay
+(1.5 ± 1) W · m−1 · K−1
+κsand
+(2.5 ± 0.5) W · m−1 · K−1
+κair
+(2.57 ± 0.04) · 102 W · m−1 · K−1
+v
+(1 ± 0.7) m · s−1
+η
+(1.72 ± 0.03) · 10−5 Pa · s
+α
+(5 ± 2)
+of the wind [7]. Assumption that the air is well
+mixed just outside this area and poorly mixed in-
+side is somewhat arbitrary, and setting diﬀerent
+speed limits instead of 99% would correspond to
+a diﬀerent α. Moreover, the boundary layer has
+diﬀerent thickness at diﬀerent parts of the jug,
+thus making eq. (17) a mere estimate. To ac-
+count for these uncertainties, we take α = 5 ± 2.
+Other parameters relevant for our model are
+listed in Table 1 together with their uncertain-
+ties.
+L, D, cliq, κair and η are given at room
+temperature, and the uncertainty is computed
+by assuming temperature variations of 10◦C. Un-
+certainties of cclay, csand, κclay strongly depend
+on the kind of sand and clay used, and are es-
+timated from the range of values cited for these
+substances (e.g. [8, 9]). Uncertainty in κsand is
+predominantly dictated by the uncertain wetness
+of sand [14]. For the speed of wind we took typ-
+ical speeds of air in a room.
+Other important limitations of the proposed
+theory include diﬀerent surface areas of diﬀerent
+boundaries, as well as inequality of heat ﬂuxes
+at these boundaries, because some heat is stored
+in heat capacity of the material. Heat exchange
+through the top and the bottom of the jug was
+also neglected.
+It is interesting though, that despite these
+shortcomings, our model can give reasonable es-
+timates for the cooling rate, as we will see in the
+following section.
+p-5
+
+O. Luniachek1, R. Timchenko1, O. Golubov2,1
+Fig. 5: Geometry of pot-in-pot cooler and the distri-
+bution of the heat ﬂuxes at dynamic equilibrium
+Results. –
+Experiment.
+For the experiment we use the
+two clay pots of diﬀerent size.
+The space be-
+tween the pots is ﬁlled with sand. Although we
+give theory for the case when the inner pot is
+ﬁlled with water, our experiment is carried out
+with wet sand. Such replacement is appropriate
+as we only need to change speciﬁc heat capacity
+and heat conductivity in our calculations. In or-
+der for refrigeration to occur, we need moisture,
+so we pour water into the sand between the pots.
+The sand becomes wet. Water enters the micro-
+pores of unbaked clay, due to the capillary eﬀect.
+Shortly after the start of the experiment, we ob-
+serve the formation of droplets on the outside of
+the pot. Drops evaporate from the entire surface
+of the pot and the system is cooled.
+If the outer pot is made of baked clay or cov-
+ered with paint, the micropores on the surface
+are closed, and water is not able to appear on
+the outer surface for evaporation.
+In order to neglect the evaporation of water
+directly from the space between pots and to re-
+duce heat loss to the environment the system is
+sealed with foil on top.
+The humidity of the ambient air is φair = 55%.
+The thermometer is put inside of the cup. The
+room temperature is 18.0◦C. After 5 hours the
+system temperature is equal to 13.5◦C.
+Fur-
+ther, the temperature slowly decreases, approx-
+imately following an exponential law. In order
+for the system to continue cooling, we need to
+add water, because otherwise the sand becomes
+drier.
+In the beginning of the experiment we
+poor about 0.5 liters of water into the sand.
+Then we add water every half an hour, result-
+ing in the total of 300 ml of water added. As the
+heat capacity of the added water is much smaller
+than the heat capacity of sand, adding the wa-
+ter could not much inﬂuence the cooling rate of
+the system, although certainly should have been
+accounted for in a more precise theory.
+Our setup is shown in ﬁg.
+7.
+Noteworthy,
+in our experiment the wall thickness of the jug
+is not small as compared to the radius, in di-
+rect contradiction with assumptions of the the-
+ory. Therefore, our theory can describe the ex-
+periment only approximately.
+Temperature versus time is shown in ﬁg. 6.
+Substitution of the relevant physical parameters
+and their uncertainties into eq. (15) with ∆T =
+5.6◦C and τ = 2.5+2.3
+−1.1 hours. This theoretical
+uncertainty is shown in the ﬁgure as light-green
+shaded area.
+Note, that one experiment is not suﬃcient to
+prove a theory with so many parameters, but
+merely to illustrate it. Moreover, giving substan-
+tial uncertainties in the parameters involved in
+the theory (especially the coeﬃcient in eq. (17)),
+such a good agreement of the theory and the ex-
+periment should be coincidental to some extent.
+Still, it allows us to argue, that our theory well
+reproduces the general temperature trend and
+gives at least a reasonable order-of-magnitude es-
+timate for the cooling rate.
+Discussion. –
+Some physical factors omit-
+ted by our theory could in principle be incor-
+porated into the model, although their inclusion
+would make the model overly complicated ana-
+lytically, while their practical signiﬁcance is hard
+to estimate. Here we only brieﬂy discuss the un-
+derlying physics, and its eﬀect on our model.
+Geometric shape.
+Our previous calculations
+were done under the assumption of a jug with
+a thin shell and an interior of a constant tem-
+perature. To understand the cooling rate of the
+shell or the temperature inhomogeneity in the
+p-6
+
+Physics of cooling jug
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 0
+ 1
+ 2
+ 3
+ 4
+ 5
+Tin, oC
+t, h
+experiment
+exponential fit
+theory
+uncertainty
+Fig. 6: Results of the experiment (red dots) overplot-
+ted with the least-square exponential ﬁt (blue line)
+and the theoretical predictions by eq.
+(15) (green
+line). The area shadowed in light green shows the
+theoretical uncertainty.
+interior, we must do a rigorous 3D simulation of
+heat diﬀusion in the jug. This means going from
+an ordinary diﬀerential equation like eq. (13) to
+a partial diﬀerential equation.
+Matter and energy balance on the surface re-
+sults into the boundary condition for this PDE.
+To derive it, we equate equations (2) and (3). By
+transforming and simplifying this expression, we
+get an inhomogeneous boundary condition of the
+third kind:
+α ∂T
+∂r
+
+r=R
++ β T|r=R = γ ,
+(18)
+with the coeﬃents
+α = lκclay ,
+(19)
+β = −(κair + LDρ′(T0)) ,
+(20)
+γ
+=
+LD ((1 −φ0)ρ(T0) −ρ′(T0)T0) −
+−
+κairT0 .
+(21)
+To get the temperature distribution, the heat
+conductivity equation has to be solved:
+∂T
+∂t = a2∆T .
+(22)
+Here ∆denotes the Laplace operator.
+Fig. 7: View of the experimental system. Its proper-
+ties are as follows. Inner pot: Height - 15cm, Diam-
+eter - 9cm, Thickness - 6mm. Outer pot: Height -
+40cm, Diameter - 18cm, Thickness - 6mm. We used
+10 kg of sand and 0.8 litres of water.
+For a cylindrical pot, the Laplace operator can
+be rewritten in cylindrical coordinates, and the
+solution will be obtained as a series in terms of
+the Bessel functions, although the coeﬃcients of
+this series can be found only from a transcen-
+dental algebraic equation. For a spherical pot,
+the problem can be simpliﬁed in spherical coor-
+dinates, and the solution can be obtained in a
+similar manner as a series in terms of spherical
+p-7
+
+O. Luniachek1, R. Timchenko1, O. Golubov2,1
+functions. For a pot of an arbitrary shape, there
+are no general methods to solve the equation,
+and it should be simulated numerically.
+Viscosity and surface tension.
+One more
+limitation to water evaporation from the sur-
+face is set by the viscosity of water. On its way
+through the clay, water has to overcome viscous
+friction in capillaries, which in the case of a cylin-
+dric capillary is governed by Hagen–Poiseuille
+equation,
+dm
+dt = 8µL
+πρR4 ∆p .
+(23)
+Here µ is the dynamic viscosity of water, ρ is its
+density, L is the length of the capillary, R is its
+radius, ∆p is the pressure diﬀerence between the
+two ends of the capillary, and
+dm
+dt is the mass
+ﬂow rate of water.
+If the sand is not soaking wet and can hold wa-
+ter inside, water pressure inside it is not greater
+than the atmospheric pressure.
+Then to move
+water through the capillary, the water pressure
+on the outer side of the jug must be less than
+the atmospheric pressure by some amount ∆p,
+which could only be attributed to the Laplace
+pressure on the outer side of the capillary,
+∆p = 2σ
+R .
+(24)
+Here σ is water surface tension, and the radius
+of curvature R is of the same order of magnitude
+as the radius of the capillary.
+Now we can see the non-trivial interplay be-
+tween these phenomena.
+If water experiences
+high friction in capillaries, the water pressure on
+the outer surface of the jug falls.
+Now water
+is sucked inside the thinnest capillaries, which
+have the biggest Laplace pressure. But the same
+Laplace pressure makes it harder for water to
+evaporate, and diminishes the pressure of satu-
+rated vapour on the surface of the jug. By this
+mechanism viscosity decreases the cooling rate
+of the jug.
+Dead-ends. –
+The experiments, with which
+we started modelling this problem and which we
+presented at the tournament, were much cruder
+Fig. 8: The experimental setup used for our ﬁst ex-
+periments.
+than the experiments described above. The ma-
+jor problem was that we did not have pots made
+of raw clay.
+So we used materials at hand to
+construct a setup shown in ﬁg. 8.
+A paper cup was covered with a cloth rag from
+inside and outside. Another cup was placed in-
+side it. Water was put in the ﬁrst cup, as well
+as to the space between the cups. Water rose by
+the cloth due to the capillary eﬀect, and evapo-
+rated, cooling the setup. The thermometer was
+put inside the cup. The room temperature was
+16.2◦C, and in less than an hour the water tem-
+perature inside the cup fell down to 11.5◦C. Fig.
+9 shows the temperature as a function of time.
+The general trend is similar to ﬁg.
+6, yet the
+exponential law now provides a worse ﬁt to the
+data.
+p-8
+
+Physics of cooling jug
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 0
+ 10
+ 20
+ 30
+ 40
+ 50
+ 60
+Tin, oC
+t, min
+experiment
+exponential fit
+Fig. 9: Results of our ﬁrst experiment (red dots) ant
+the least-square exponential ﬁt (blue line).
+Although representing the same physics, this
+model signiﬁcantly deviated from the problem
+statement.
+Moreover, water oozing through a
+folded cloth of complicated geometry presents
+a problem, whose precise physical description is
+not easier than the original problem of pot-in-pot
+refrigerator.
+Conclusions. –
+The cooling of the pot is
+caused by water evaporation from its surface.
+The minimal temperature attainable by the pot
+is determined from the mass and energy conser-
+vation laws at the surface. The rate at which this
+temperature will be achieved is limited by the
+heat conductivity through the pot, the heat con-
+ductivity through the boundary layer, and the
+diﬀusion of water vapour through the boundary
+layer.
+In the simplest model we get a linearized alge-
+braic equation for the minimal temperature, and
+a linear diﬀerential equation for the process of
+cooling to this temperature. The solution of the
+former is in reasonably good agreement with the
+psychrometric table. The solution of the latter
+as a function of time is an exponential function,
+which qualitatively agrees with our experiments.
+To make the model more precise, one can in-
+clude additional factors, such as the complex ge-
+ometric shape of the jug, the inﬂuence of resis-
+tance to water ﬂow in the capillaries, the curva-
+ture of the water surface in the capillaries, and
+air convection as a mixing agent that supple-
+ments the exterior wind.
+But this added pre-
+cision will come on an intolerable cost - tremen-
+dously increased complexity.
+REFERENCES
+[1] Thomson G. W. The Antoine equation for
+vapour pressure data (1946) Chemical reviews -
+ACS Publications
+[2] Alduchov O. A., Eskridge R. E. Improved Mag-
+nus Form Approximation of Saturation Vapor
+Pressure (1996) Journal of Applied Meteorol-
+ogy
+[3] Haar L., Gallagher J. S., Kell G. S. Nbs/Nrc
+Steam Tables:
+thermodynamic and transport
+properties and computer programs for vapor and
+liquid states of water in SI units (1984) Hemi-
+sphere, p. 8
+[4] Koshkin N. I., Schirkevitch M. I. Handbook of
+Elementary Physics (1975) Moscow: Nauka, p.
+74
+[5] Sivukhin D. V. General Physics Course. Ther-
+modynamics and molecular physics, Volume II
+(1990) Moscow: Nauka, p. 347-349
+[6] Stull R. Wet-Bulb Temperature from Relative
+Humidity and Air Temperature (2011) Journal
+of Applied Meteorology and Climatology, 50
+(11), pp. 2267-2269
+[7] Schlichting H., et al. Boundary-layer theory.
+Vol. 7. New York: McGraw-hill, 1960. Pp. 31,
+140
+[8] Engineering
+ToolBox,
+http://www.engineeringtoolbox.com
+[9] Abuel-Naga1 H. M., Bergado D. T., Bouazza A.
+Thermal Conductivity Evolution of Saturated
+Clay under Consolidation Process (2008) Inter-
+national Journal of Geomechanics 8.2: 114-122.
+[10] Halasz B. A general mathematical model of
+evaporative cooling devices (1998) Revue Gn-
+rale de Thermique
+[11] Wu J.M., Huang X., Zhang H. Theoretical anal-
+ysis on heat and mass transfer in a direct evapo-
+rative cooler (2009) Applied Thermal Engineer-
+ing
+[12] Weidemller M., Zimmermann C. Interactions
+in Ultracold Gases: From Atoms to Molecules
+(2003) Wiley-VCH Verlag GmbH & Co. KGaA,
+Weinheim, p.46-54
+p-9
+
+O. Luniachek1, R. Timchenko1, O. Golubov2,1
+[13] MacKay D. J. Sustainable Energy - without the
+hot air, 1st edn., (2009) Cambridge: UIT Cam-
+bridge, p. 50-53
+[14] Smits K. M., Sakaki T., Limsuwat A., Illan-
+gasekare T. H. Determination of the thermal
+conductivity of sands under varying moisture,
+drainage/wetting, and porosity conditions- ap-
+plications in near-surface soil moisture distri-
+bution analysis (2009) Hydrology days p.57-65
+p-10

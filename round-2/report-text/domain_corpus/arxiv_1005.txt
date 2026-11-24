@@ -1,0 +1,231 @@
+arXiv:1005.1013v2  [physics.gen-ph]  11 Dec 2012
+MPEMBA EFFECT, NEWTON COOLING LAW AND
+HEAT TRANSFER EQUATION
+Vladan Pankovi´c, Darko V. Kapor
+Department of Physics, Faculty of Sciences, 21000 Novi Sad,
+Trg Dositeja Obradovi´ca 4, Serbia,
+vladan.pankovic@df.uns.ac.rs
+PACS number: 05.70.-a
+Abstract
+In this work we suggest a simple theoretical solution of the Mpemba eﬀect in full
+agreement with known experimental data. This solution follows simply as an especial
+approximation (linearization) of the usual heat (transfer) equation, precisely linearization
+of the second derivation of the space part of the temperature function (as it is well-known
+Newton cooling law can be considered as the eﬀective approximation of the heat (transfer)
+equation for constant space part of the temperature function).
+In this work we shall suggest a simple theoretical solution of the Mpemba eﬀect in full
+agreement with known experimental data [1]-[4]. This solution follows simply as an especial
+approximation (linearization) of the usual heat (transfer) equation, precisely linearization of
+the second derivation of the space part of the temperature function (as it is well-known Newton
+cooling law [5] can be considered as the eﬀective approximation of the heat (transfer) equation
+for constant space part of the temperature function).
+As it is well-known [5] usual Newton’s law of cooling represents the following simple linear
+diﬀerential equation
+dT
+dt = −α(T −Te)
+(1)
+with simple solution
+T = (T0 −Te) exp[−αt] + Te.
+(2)
+Here T represents the temperature of a liquid with initial value T0, Te - constant, smaller than
+T, temperature of a cooling wall (thermostat or environment) in the contact with liquid, while
+1
+
+α represents a cooling parameter that simpliﬁedly expresses thermodynamics of the cooling pro-
+cess. It is supposed implicitly that cooling parameter is independent of the initial temperature
+of the liquid as well as of the cooling wall temperature.
+Consider now described by (1) or (2) thermodynamical interaction between liquid and cool-
+ing wall in two diﬀerent cases, precisely for two diﬀerent initial temperatures of the liquid, ﬁrst
+one T10 and second one T20 so that T10 is larger than T20 , i.e.
+T10 > T20.
+(3)
+Then (2), (3) imply
+T1 −Te
+T2 −Te
+= T10 −Te
+T20 −Te
+(4)
+where T1 and T2 represents the temperature of the liquid in the ﬁrst case and second case in
+some (ﬁnite) later time moment t. It means that temperature of the liquid in the ﬁrst case
+will be larger than the temperature of the liquid in the second case in any (ﬁnite) later time
+moment.
+Previous conclusion implies unambiguously that usual Newton’s cooling law (1) cannot
+model experimental data of the Mpemba eﬀect [1]-[4] according to which, simply speaking, hot
+liquid freezes faster than cold liquid.
+Consider, however, the standard (one-dimensional) heat transfer diﬀerential equation
+∂2T
+∂x2 = k∂T
+∂t .
+(5)
+Here x represents the coordinate (along x-axis) between 0 and linear dimension of the vessel
+L > 0, t - time moment between 0 and ∞, and k - corresponding (positive) constant, so that
+liquid temperature T represents the function of x and t. This equation, of course, represents
+mathematically partial diﬀerential equation of the second range.
+Suppose additionally that T satisﬁes the following two, initial and ”ﬁnal” conditions,
+T(x, 0) = T0
+(6)
+and
+T(x, t) = Te
+(7)
+for t ≫0 .
+As it is well-known solution of heat equation (5) can be supposed in the following form
+T(x, t) = X(x)τ(t) + A
+(8)
+where X(x) represents the space part of T(x, t) depending of x only, τ(t) - time part of T(x, t)
+depending of t only and A some constant.
+Introduction of (8) in (5) yields
+τ d2X
+dx2 = kX dτ
+dt
+(9)
+and further
+1
+X
+d2X
+dx2 = k
+τ
+dτ
+dt = −β
+(10)
+2
+
+where β represents some (positive) constant.
+It, in fact, represents a system of two usual
+diﬀerential equations with simple solutions
+τ = B exp[−β
+k t]
+(11)
+X = C cos[β
+1
+2x] + D sin[β
+1
+2x]
+(12)
+where B, C and D are some constants.
+Then, according to (8), it follows
+T = exp[−β
+k t](BC cos[β
+1
+2x] + BD sin[β
+1
+2x]) + A
+(13)
+which, according to initial and ”ﬁnal” conditions (6), (7) that imply
+A = Te
+(14)
+BC = BD = T0 −Te
+(15)
+, turns out in
+T = (T0 −Te) exp[−β
+k t](cos[β
+1
+2x] + sin[sin[β
+1
+2x]) + Te.
+(16)
+Obviously, in an approximation in which (cos[β
+1
+2x]+sin[sin[β
+1
+2x]) can be approximately treated
+as a constant, i.e. average value of this expression close to 1, solution (16) can be eﬀectively
+approximated by the solution of the Newton cooling law (2). Simply speaking, Newton cooling
+law can be considered as the eﬀective approximation of the heat (transfer) equation for constant
+space part of the temperature function. But it implies that standard heat (transfer) equation,
+as well as Newton cooling law, cannot model experimental data of the Mpemba eﬀect.
+Consider, now, such situation in which temperature function changes very slowly by space
+coordinate change so that the following linearization of the temperature second space derivation
+can be approximately realized
+∂2T
+∂x2 ≃T0 −Te
+L
+∂T
+∂x .
+(17)
+Such and similar kind of approximation is very often in diﬀerent important domains of the
+physics, e.g. quasi-classical approximation of the quantum mechanics, i.e. WBK formalism,
+solid state physics, quantum ﬁeld theory, inﬂationary cosmology etc. .
+In such approximation standard heat (transfer) equation turns out in
+T0 −Te
+L
+∂T
+∂x = k∂T
+∂t
+(18)
+or, after application of (8), in
+1
+X
+dX
+dx =
+kL
+T0 −Te
+1
+τ
+dτ
+dt = −β.
+(19)
+It, in fact, represents a system of two usual diﬀerential equations with simple solutions
+τ = B exp[−βT0 −Te
+kL
+t]
+(20)
+3
+
+X = C exp[−βx]
+(21)
+where B, C are some constants.
+Then, according to (8), it follows
+T = BC exp[−βx] exp[−βT0 −Te
+kL
+t] + A
+(22)
+which, according to initial and ”ﬁnal” conditions (6), (7) that imply
+A = Te
+(23)
+BC = T0 −Te
+(24)
+, turns out in
+T = (T0 −Te) exp[−βx] exp[−βT0 −Te
+kL
+t] + Te.
+(25)
+Obviously here T decreases exponentially during time with exponent parameter proportional
+to T0 −Te. It means that, simply speaking, hot liquid can freeze faster than cold liquid in full
+agreement with experimental data of the Mpemba eﬀect.
+Precisely, consider two equivalent liquids in the same vessels so that
+T20 > T10
+(26)
+where T20 represents the larger initial temperature of the second liquid while T10 represents
+the smaller initial temperature of the ﬁrst liquid. Suppose that the ﬁrst liquid obtains some
+temperature T (25) in a time moment t1 while the second liquid obtains the same temperature
+T in some other time moment t2. Then simple calculations, according suppositions and (25),
+yield
+t1 > T20 −Te
+T10 −Te
+t2 > t2
+(27)
+corresponding to Mpemba eﬀect experimental data.
+In this way it is shown that the suggested approximation of the heat transfer equation
+can successfully described the Mpemba eﬀect experimental data. Moreover it follows that the
+Mpemba eﬀect can appear only in situations when given approximation is satisﬁed, while in
+opposite situations Mpemba eﬀect does not appear. Finally, according to (25), in situations
+when Mpemba eﬀect appears this eﬀect becomes sharply expressed when L is smaller in full
+agreement with experimental data on the Mpemba eﬀect [1]-[4].
+In conclusion it can be repeated and pointed out the following. In this work we suggest a
+simple theoretical solution of the Mpemba eﬀect in full agreement with known experimental
+data. This solution follows simply as an especial approximation (linearization) of the usual
+heat (transfer) equation, precisely linearization of the second derivation of the space part of the
+temperature function (as it is well-known Newton cooling law can be considered as the eﬀec-
+tive approximation of the heat (transfer) equation for constant space part of the temperature
+function).
+This work is dedictated to memory on Prof. Dr. Bratislav Tosic. He stated, we paraphrase,
+approximation is not only ground tool but holly spirit too of any physical theory.
+4
+
+References
+[1 ] E. B. Mpemba, D. G. Osborne, Phys. Educ. 4 (1969) 172
+[2 ] D. Auerbach, A. J. Phys. 63 (1995) 882
+[3 ] M. Jeng, A. J. Phys. 74 (2006) 514
+[4 ] J. I. Katz, Am. J. Phys. 77 (2009) 27
+[5 ] C. T. O’Sullivan, Am. J. Phys. 58 (1990) 956
+5

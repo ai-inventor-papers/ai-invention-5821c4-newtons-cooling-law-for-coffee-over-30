@@ -1,0 +1,795 @@
+arXiv:1607.07226v1  [astro-ph.IM]  25 Jul 2016
+Uncertainty limits on solutions of inverse problems over
+multiple orders of magnitude using bootstrap methods:
+An astroparticle physics example
+Sabrina Eineckea,∗, Katharina Prokschb,1,∗, Nicolai Bissantzb, Fabian
+Clevermanna, Wolfgang Rhodea
+aInstitute of Physics, Technische Universit¨at Dortmund, D-44221 Dortmund, Germany
+bInstitute of Statistics, Ruhr-Universit¨at Bochum, D-44780 Bochum, Germany
+Abstract
+Astroparticle experiments such as IceCube or MAGIC require a deconvolution
+of their measured data with respect to the response function of the detector to
+provide the distributions of interest, e. g. energy spectra. In this paper, appro-
+priate uncertainty limits that also allow to draw conclusions on the geometric
+shape of the underlying distribution are determined using bootstrap methods,
+which are frequently applied in statistical applications. Bootstrap is a collective
+term for resampling methods that can be employed to approximate unknown
+probability distributions or features thereof. A clear advantage of bootstrap
+methods is their wide range of applicability. For instance, they yield reliable
+results, even if the usual normality assumption is violated.
+The use, meaning and construction of uncertainty limits to any user-speciﬁc
+conﬁdence level in the form of conﬁdence intervals and levels are discussed. The
+precise algorithms for the implementation of these methods, applicable for any
+deconvolution algorithm, are given. The proposed methods are applied to Monte
+Carlo simulations to show their feasibility and their precision in comparison to
+the statistical uncertainties calculated with the deconvolution software TRUEE.
+∗Corresponding authors.
+Email addresses: sabrina.einecke@tu-dortmund.de (Sabrina Einecke),
+katharina.proksch@ruhr-uni-bochum.de (Katharina Proksch)
+1Now at: Institute for Mathematical Stochastics, Georg-August-Universit¨at G¨ottingen,
+D-37077 G¨ottingen, Germany
+1
+
+Keywords:
+Uncertainty limits, Bootstrap, Unfolding, Inverse problem
+1. Introduction
+A problem is called an inverse problem, if it is impossible to observe a quan-
+tity of interest directly, and only indirect observations are available for any kind
+of inference about it. The process of solving an inverse problem is referred to
+as unfolding or deconvolution. These kinds of problems arise in many research
+areas of science, economics and engineering. In astroparticle physics, such a
+sought-after but not directly measurable feature of an observed particle is, e. g.,
+the particle’s energy. In this case, the corresponding energy distribution is the
+quantity of main interest, it extends over multiple orders of magnitude both in
+energy and particle numbers. These energy distributions – also referred to as
+energy spectra – are predicted by several theories, baring diﬀerent insights into
+the universe. In order to compare a measurement with these theories and to
+prove a certain theory, it is necessary to rely on uncertainty limits to distinguish
+between random ﬂuctuations and substantial diﬀerences between a theory and
+the underlying spectra. A frequently used method in statistical applications to
+construct these uncertainty limits is the bootstrap method, which is based on
+repetitive random sampling from a measurement to draw conclusions on features
+of its probability distribution. It allows the calculation of pointwise conﬁdence
+intervals as well as of conﬁdence bands for any conﬁdence level and is applica-
+ble for any unfolding algorithm. Pointwise conﬁdence intervals allow pointwise
+statements regarding the underlying spectrum, while conﬁdence bands allow
+also for the validation of global statements regarding, e. g., the overall geomet-
+ric shape of the underlying spectrum.
+In Section 2, an overview of inverse problems and their solution is given, as
+well as an introduction to the unfolding software TRUEE (Time-dependent Reg-
+ularized Unfolding for Economics and Engineering problems [1]). In Section 3,
+the diﬀerences between conﬁdence intervals and conﬁdence bands will be dis-
+cussed. The description of constructing uncertainty limits in terms of conﬁdence
+2
+
+intervals and bands on solutions of inverse problems using bootstrap methods
+will be described in Section 4. In Section 5, a toy Monte Carlo simulation of
+a typical astroparticle example will be unfolded with the software TRUEE and
+the proposed bootstrap method will be applied. Section 6 provides a discussion
+of the obtained results and conclusions.
+2. Inverse problems and unfolding
+A mathematical model that describes the folding process of the function
+of interest with a certain response function is given by the Fredholm integral
+equation [2]
+g(y) =
+Z
+A(y, E)f(E) dE ,
+(1)
+where f denotes the function to be recovered (e. g., the energy spectrum of
+particles). The kernel A of the integral equation corresponds to the response
+function of the measurement process (e. g. the detector) and g is the function
+that can be observed. A more detailed discussion of the model, its implications
+and origin can be found in [1].
+A typical data set only consists of a ﬁnite number of measurements, e. g.
+N particles with their folded energies. Each data point contains random noise,
+which is passed on to the unfolded data.
+This process of unfolding is very
+sensitive to noise in the data, which is why this sort of problem is called an
+ill-posed problem [3].
+The statistical model corresponding to the mathematical, idealized model
+(1) is given by
+Yj =
+Z
+A(yj, E)f(E) dE + εj,
+j = 1, . . . , N.
+(2)
+The quantities ε1, . . . , εN denote centered random uncertainties, i. e. un-
+certainties with zero mean: E(εj) = 0 for j = 1, . . . , N. The measurements
+Y1, . . . , YN contain only indirect information about the function f of interest.
+The problem diﬀers from other problems where it is assumed that the function
+3
+
+f is directly and empirically accessible. The diﬃculty in this context is that
+only data of the transformed function
+g :=
+Z
+A(·, E)f(E) dE
+(3)
+are accessible. The data need to be unfolded ﬁrst. In this context, unfold-
+ing means to recover the function f in the integral equation (1) as precisely as
+possible, if only discrete and noisy data as in (2) are available. Unfolding will
+only give an approximation of the true underlying distribution. This estimation
+of f will be denoted by ˆf to distinguish between the true and the reconstructed
+spectrum.
+To recover a particle spectrum, several algorithms are available,
+e. g. within the RooUnfold framework [4], or based on singular value decom-
+position as proposed in [5]. All these algorithms are only capable to use one
+measured observable during the unfolding process. To study the proposed boot-
+strap algorithm for the calculation of uncertainty limits, the unfolding software
+TRUEE (Time-dependent Regularized Unfolding for Economics and Engineer-
+ing problems [1]) will be used, providing stable results and reliable uncertainty
+estimations. TRUEE is able to use up to three measured observables during
+the unfolding ﬁt, increasing the informative content and thus optimizing the
+estimation of the function to be recoverd.
+3. Conﬁdence bars and conﬁdence bands
+Methods for the recovery of a signal from (indirect) data, such as the recovery
+of the energy spectrum, are in general not suﬃcient for drawing quantitative
+conclusions on the (astrophysical) problem under consideration. For example,
+in order to decide whether the reconstructed energy spectrum approaches zero
+with a certain slope towards high energies, an estimate on the uncertainty of
+the reconstruction of the spectra is needed.
+Otherwise, limits on the range
+of values for the slope consistent with the data cannot be provided. In this
+section, the basic concepts of both pointwise and uniform conﬁdence intervals on
+the recovered signal are introduced, providing the required conﬁdence intervals
+4
+
+and bands, respectively. Note that the speciﬁcation of a conﬁdence level α in
+mathematical notation corresponds to some multiple k of σ in physical notation.
+The precise connection is given via the equation α = 2 (1 −Φ(k)), where Φ
+is the cumulative distribution function of the standard normal distribution.
+Accordingly, a level of 1 σ corresponds to α = 0.32 and α = 0.05 corresponds to
+1.96 σ.
+3.1. Basic statistical concept: Estimates of uncertainty
+A conﬁdence interval is always associated with a predeﬁned probability, i. e.
+a small number α ∈(0, 1), which is needed to ﬁx the level of the conﬁdence
+interval. (1 −α) is the (minimum) probability that at some ﬁxed energy E
+the true value f(E) is actually contained in the conﬁdence interval. With a
+probability of at most α, the conﬁdence intervals are chosen either too small
+or at the wrong location and do not contain the true value f(E). Accepting
+such a residual risk is always necessary because of the stochastic nature of the
+data. Very small values of α yield a very small level of uncertainty, but at the
+cost of only a low precision, that is, large conﬁdence intervals, which are often
+useless for any kind of inference. Acceptance of a larger level of residual risk
+(e. g. α = 0.1 . . .0.2) yields small conﬁdence intervals, resulting in a trade-oﬀ
+between information and certainty. In statistical applications, typical values of
+α are 0.01, 0.05 and 0.1.
+3.2. Pointwise conﬁdence intervals
+If an energy spectrum f(E) is reconstructed at energy intervals E1, E2, . . . , En,
+a conﬁdence interval can be constructed for each of these energy intervals Ej
+separately. For each of the n energy intervals where the spectrum is estimated,
+there is a chance ≲α that the true value of the spectrum is not covered by
+the respective conﬁdence interval. Conﬁdence intervals are in general (under
+some additional assumptions) expected to underestimate the true uncertainty
+for about α·n points of the spectrum. The construction of n diﬀerent, separately
+constructed conﬁdence intervals for f(E1), . . . , f(En) can only be used to draw
+5
+
+conclusions at the points E1, . . . , En, respectively. The probability, that the
+true spectrum is outside of at least some of the pointwise conﬁdence intervals in
+the considered range, is substantially larger than α, it will approach 100% with
+n →∞. The determination of the shape of the spectrum, e. g. the slope of the
+spectrum, is problematic.
+3.3. Uniform conﬁdence bands
+It is possible to construct uniform conﬁdence bands (upper and lower limiting
+spectra) that contain the complete reconstructed spectrum with probability
+(1 −α). For instance, the probability, that a range of spectral slopes, which
+is determined based on the minimal and maximal slope consistent with the
+conﬁdence band, does not include the true value, is only α. The risk is much
+larger if the estimation is based on pointwise conﬁdence intervals with a risk of
+failure of α for each energy where the spectrum was reconstructed.
+In the literature, several standard approaches are available that can be used
+to construct uniform conﬁdence bands. They are based on limit theorems for the
+maximum deviation of the reconstructed spectrum ˆf(E) and the true spectrum
+f(E) within an interval [Emin, Emax], i. e. a limit theorem that gives the limiting
+distribution of the properly scaled quantity
+Z :=
+max
+E∈[Emin,Emax]
+f(E) −ˆf(E)
+,
+(4)
+where the limit is taken as the number N of observations used to obtain ˆf
+(see model (2)) tends to inﬁnity. Theoretical results like this were ﬁrst obtained
+by [6] for histogram estimates and by [7] for more general kernel density estima-
+tors. This latter method was further investigated and transferred to regression
+problems by [8] and [9] among many others. None of those methods consider
+inverse problems, instead, all assume that the quantity of interest is directly
+observable. The ﬁrst method of this type for inverse problems can be found
+in [10] in the context of density deconvolution and in [11] for inverse regression
+problems. By means of the limit distribution of Z (Eq. (4)), it is possible to
+6
+
+determine the width of the uniform conﬁdence band C(α) in dependence of cer-
+tain characteristics of the data such that the risk that the conﬁdence band with
+center ˆf(E) does not cover the true spectrum f(E) is at most (approximately)
+α:
+P
+
+ˆf(E) −C(α) ≤f(E) ≤C(α) + ˆf(E)
+
+≥(1 −α)
+∀E ∈[Emin, Emax] .
+(5)
+3.4. Feasibility and alternatives
+Unfortunately, results and methods for uniform conﬁdence bands in the case
+of inverse problems are only available for the estimation of the density (i. e. fre-
+quency distribution) of some quantity of interest which is only observable with
+noise, and for the case of regression if the variance of the observation uncer-
+tainty does not depend on the independent variable in the regression. In the
+context of density estimation, the standardization in the limit theorem includes
+the original density g (see model (3)). The reason is that in areas where the
+density of interest is large, more certain statements can be made because more
+data are available. In areas of small probability density, the certainty is small,
+resulting in wider bands. Methods to determine pointwise conﬁdence intervals
+or conﬁdence bands can only be applied if the density g in model (3) can be
+estimated reasonably well.
+The approximation of a distribution of some quantity Z (Eq. (4)) by its limit
+for moderate sample sizes can lead to a very poor performance in the results
+for moderate (practically available) sample sizes. In such a case, more reliable
+methods are of interest. A general approach are bootstrap methods which often
+have the same desirable asymptotic properties as the methods based on limit
+distributions, but provide better ﬁnite sample performance, i. e. are more reliable
+when applied to real data. Bootstrap is a collective term for resampling methods
+that can be used to estimate distributions of statistical quantities or certain
+characteristics thereof. Bootstrap techniques are based on the idea to use a
+given data sample of size N to create many new data sets comparable to the
+7
+
+original one and, by performing the same analysis to these bootstrap datasets
+as to the real data, understand the statistical uncertainties and characteristics
+of the method of reconstruction.
+In addition to the above introduced methods, a third method will be used
+for the reconstruction of the density, which provides a compromise between
+pointwise conﬁdence intervals and uniform conﬁdence bands. For this method,
+pointwise conﬁdence intervals are constructed with the Bonferroni method such
+that the chance, that the true spectrum violates the uncertainty limit in at
+least one point does not exceed α, i. e. a discrete version of the uniform con-
+ﬁdence bands.
+Such Bonferroni-corrected bands were already discussed in a
+non-parametric regression problem with a directly observable quantity of inter-
+est in [9], where it was also demonstrated that these bands tend to be larger
+than uniform conﬁdence bands. This is only critical for large numbers of values
+of the independent variable (i. e. E1, . . . , En with n ≳200), where the spectrum
+and the associated pointwise conﬁdence intervals are considered. The imple-
+mentation of the method makes use of pointwise conﬁdence intervals at level
+α′ = α/n. The overall simultaneous level of failure of the conﬁdence intervals is
+bounded from above by α, i. e. the constructed Bonferroni conﬁdence bands are
+conservative. Unfortunately, for increasing number of points E1, . . . , En, these
+Bonferroni conﬁdence bands are too wide by an increasing amount.
+4. Method
+In the following, the bootstrap algorithm for the determination of the con-
+ﬁdence intervals and bands from a sample of size N, i. e. the total number N
+of measured particles, is described. The total number of bins, i. e. the number
+of points at which the energy spectrum is reconstructed, is denoted by n. The
+index i denotes the index of a data point, Ei means the i-th value of interest,
+respectively, the i-th bin. The bootstrap algorithm comprises M iterations in
+total with j denoting the number of the current iteration, i. e. j = 1, . . . , M.
+Note, that M can be selected completely independent of N and n.
+8
+
+For all types of uncertainty limits discussed in this paper, the steps 0, 1 and
+2 described below are always the same, only step 3 is diﬀerent for each method.
+Step 0: Measurement of a data sample of size N.
+Step 1: Determination of the reconstructed function ˆf(E) by unfolding these
+N data points at all points E1, . . . , En.
+Step 2: Repetition of the following three steps
+ (i) −(iii)
+
+a total number of
+M times. The number M should be large, i .e . M ≥500.
+(i) Obtaining N data points by resampling with replacement from the mea-
+sured data sample of Step 0. (The number N in this step is equal to the number
+N of Step 0.)
+(ii) Unfolding of this data sample to determine the function ˆf ∗
+j (E) as in
+Step 1.
+(iii) Calculation of the deviations Si
+j between the reconstructed function
+ˆf(E) from Step 1 and the function ˆf ∗
+j (E) for each bin Ei, i. e.
+Si
+j :=
+ ˆf(Ei) −ˆf ∗
+j (Ei)
+
+(6)
+and the largest deviation
+Sj :=
+max
+i=1,...,n Si
+j .
+(7)
+Step 3: Estimation of the conﬁdence intervals and bands from the distributions
+Si
+j and Sj for level α as described below for the diﬀerent methods.
+Pointwise conﬁdence intervals: Determination of the (1−α)-quantile q(i)(1−α)
+from the sample Si
+1, . . . , Si
+M of deviations from Steps 2 for each i by rearrang-
+ing the distances Si
+j according to their value: Si
+(1) ≤Si
+(2) ≤. . . ≤Si
+(M). The
+quantity
+q(i)(1−α) =
+
+
+
+
+
+Si
+(M·(1−α))
+if M · (1 −α) ∈N
+Si
+(⌊M·(1−α)+1⌋)
+if M · (1 −α) /∈N
+.
+(8)
+is a commonly used, natural estimate for the (1−α)-quantile. The pointwise
+conﬁdence interval is then given by ˆf(Ei) ± q(i)(1−α).
+9
+
+Uniform conﬁdence band: Determination of the (1−α)-quantile qu
+(1−α) of the
+largest deviations only, i. e. the distribution of Sj, by replacing Si
+(M·(1−α)) and
+Si
+(⌊M·(1−α)⌋by S(M·(1−α)) and S(⌊M·(1−α)⌋, respectively. The uniform conﬁdence
+band is then given by ˆf(Ei) ± qu
+(1−α).
+Bonferroni-corrected conﬁdence band:
+Determination of the (1 −α
+n)-
+quantile q(i)(1−α
+n ) of the distribution of Si
+j in a similar way as described for
+q(i)(1−α). The Bonferroni-corrected conﬁdence band for level α is then given by
+ˆf(Ei) ± q(i)(1−α
+n ).
+5. Application
+To illustrate its feasibility, the proposed method is applied to toy Monte
+Carlo simulations of a typical astroparticle example. One Monte Carlo set is
+generated to determine the kernel for the unfolding, conducted with the software
+TRUEE. Another simulated Monte Carlo set is used as pseudo data, i. e. this
+set is treated the same as real data, allowing a comparison between the result of
+the unfolding and the truth. For a comparison of the obtained results with the
+well tested uncertainties of TRUEE and additional uncertainty estimations, the
+proposed method is slightly modiﬁed. In addition, multiple pseudo data sets
+are generated independently for further test purposes.
+5.1. Monte Carlo simulation
+The reconstruction of particle distributions over multiple orders of mag-
+nitude, such as the energy spectra of neutrinos or gamma rays, are typical
+problems in astroparticle physics. The generated toy Monte Carlo includes an
+energy spectrum following a power law of E−2 in the high-energy regime from
+45 GeV to 100 PeV. The simulation also includes an acceptance simulation, as
+most devices (e. g. the neutrino detector IceCube or the gamma ray telescope
+MAGIC) cannot detect every signal. The used acceptance function a(E) is
+a(E) =
+
+1 −exp
+−log10(E)
+2
+13
+(9)
+10
+
+and its inﬂuence is shown in Figure 1. The distributions of simulated observables
+to be used in the unfolding procedure are similar as in real experiments, compare
+Figure 2 to observable distributions in [1].
+As pseudo data 6 000 000 events are generated resulting in N = Npseudo ≈
+50 000 accepted events. For the determination of the kernel within the unfolding
+procedure, 60 000 000 Monte Carlo events were generated, which resulted in
+NMC ≈500 000 events.
+(Energy/GeV)
+10
+log
+2
+3
+4
+5
+6
+7
+8
+# Events
+10
+2
+10
+3
+10
+4
+10
+5
+10
+6
+10
+7
+10
+Generated events
+Accepted events
+Figure 1: Energy distribution of the 60 000 000 generated events (solid) and of the 494 272
+accepted events (dashed).
+5.2. Unfolding
+The pseudo data set is unfolded in the energy range from Emin = 100 GeV
+to Emax = 1 PeV with the unfolding software TRUEE. By taking advantage
+of the built-in test mode of TRUEE, a wide range of diﬀerent settings are
+tested and compared, and the following settings are chosen: 9 bins in energy, 12
+knots (representing the knots of the interpolation of f(E)), 8 degrees of freedom
+(representing the regularization strength) and the observables Obs1 and Obs2
+are used for the unfolding ﬁt. The resulting unfolded spectrum as well as the
+true distribution of events are depicted in Figure 3. Any unfolding is conducted
+11
+
+0
+100
+200
+300
+400
+500
+600
+700
+(Energy/GeV)
+10
+log
+2
+3
+4
+5
+6
+7
+8
+(Obs1)
+10
+log
+-18
+-16
+-14
+-12
+-10
+-8
+-6
+-4
+-2
+0
+100
+200
+300
+400
+500
+(Energy/GeV)
+10
+log
+2
+3
+4
+5
+6
+7
+8
+(Obs2)
+10
+log
+0
+2
+4
+6
+8
+10
+Figure 2: Dependence between the energy and the generated observables Obs1 (top) and Obs2
+(bottom), respectively.
+with the same unfolding settings and the same Monte Carlo set to determine
+the kernel. Only the pseudo data sets vary.
+12
+
+ # Events
+3
+10
+4
+10
+5
+10
+6
+10
+True distribution
+Unfolded distribution with TRUEE
+(Energy/GeV)
+10
+log
+2.0
+2.5
+3.0
+3.5
+4.0
+4.5
+5.0
+5.5
+6.0
+TRUEE / True
+0.9
+1.0
+1.1
+Figure 3: Comparison of the true energy distribution of events (dashed) and the unfolding
+result including the 68% uncertainty, determined by the software TRUEE (solid). The ratio
+of these distributions is depicted in the lower ﬁgure and indicates an appropriate estimation
+of the spectrum and the corresponding uncertainties.
+13
+
+5.3. Results
+For each test presented in this section, M = 1 000 bootstrap iterations are
+performed with j = 1, . . . , M. From these M results the diﬀerent uncertainty
+limits are determined. A total number of n = 9 bins in energy is considered, in
+which the Bonferroni correction is applicable.
+As stated in Section 3.3, the quantity for constructing uniform conﬁdence
+bands (Eq. (4)) needs to be scaled properly. In the considered astroparticle ex-
+ample, the spectrum f(E) spans multiple orders of magnitude in event numbers,
+leading to large diﬀerences in event numbers from bin to bin. By taking the
+absolute deviation between the reconstructed function ˆf(E) and the function
+ˆf ∗
+j (E) from the individual bootstrap iteration, the maximum deviation Sj stems
+almost always from the bin with the maximum event numbers and the uniform
+conﬁdence band will depend largely on this bin. Transferring this band to the
+remaining bins, the estimated uncertainty will be large and no conclusions on
+the shape of the spectrum can be drawn. In the case of using relative deviations
+instead, i. e.
+Si
+j :=
+ ˆf(Ei) −ˆf ∗
+j (Ei)
+
+ˆf(Ei)
+,
+(10)
+the deviations are in the same order of magnitude and thus, this scale is more
+suited.
+The calculated relative 68% conﬁdence limits for 1 000 resampled data sets
+are depicted in Figure 4. As expected, the uniform and the Bonferroni cor-
+rected conﬁdence band are larger as the pointwise conﬁdence interval. In the
+considered example, the Bonferroni corrected conﬁdence band is more suited
+than the uniform conﬁdence band, since it allows more precise conclusions, e. g.
+on the geometric shape of the spectrum of interest. The value of the uniform
+conﬁdence band is nearly the same as the pointwise conﬁdence interval of the
+highest energy bin, which contains the fewest entries. The largest relative de-
+viations arise mostly in the bin with the fewest entries, the probability density
+is small and thus the uncertainty is large. The eﬀect of increasing uncertainty
+14
+
+(Energy/GeV)
+10
+log
+2.0
+2.5
+3.0
+3.5
+4.0
+4.5
+5.0
+5.5
+6.0
+Relative uncertainty
+0.00
+0.05
+0.10
+0.15
+0.20
+TRUEE uncertainty
+Pointwise confidence interval
+Uniform confidence band
+Bonferroni corrected confidence band
+Figure 4: Relative 68% conﬁdence limits calculated by diﬀerent approaches for resampled
+pseudo data sets. The pointwise conﬁdence interval (dashed), the uniform (dash-dotted) and
+the Bonferroni corrected (dotted) conﬁdence band are shown. The uncertainty of the unfolding
+software TRUEE is depicted as well (solid).
+with decreasing event numbers is also visible for the TRUEE uncertainties.
+The standard bootstrap algorithm, described in Section 4, estimates the
+standard deviation (a measure of dispersion) in combination with the bias (a
+measure of a systematic uncertainty). As the software TRUEE calculates only
+the standard deviation, a slight modiﬁcation of the bootstrap algorithm is per-
+formed for a qualitative comparison between the TRUEE uncertainties and the
+pointwise conﬁdence intervals. This modiﬁcation concerns only the determina-
+tion of Si
+j in Step 2 (iii) as follows:
+Si
+j :=
+ ˜f(Ei) −ˆf ∗
+j (Ei)
+
+˜f(Ei)
+(11)
+with the medians ˜f(E1), ..., ˜f(En) of the distributions ˆf ∗
+j (E1), ..., ˆf ∗
+j (En).
+The median is a more robust estimate of the center of the underlying distribution
+of the data. Figure 5 represents the relative 68% conﬁdence limits for resampled
+15
+
+data sets with the modiﬁed Si
+j. In the bottom panel, the ratio between the
+pointwise conﬁdence interval and the TRUEE uncertainty shows an agreement
+within about 10% for almost every bin. The bin with the fewest entries features
+a relatively large diﬀerence.
+To investigate this large diﬀerence, the 1 000 sets are sampled from the true
+underlying probability density function instead of resampling from one single
+sample of the probability density function and the bootstrap is performed again.
+It should be noted that sampling from the true probability density function is
+only possible because toy Monte Carlo simulations are used. The use of these
+data sets leads to an agreement within 8% for each bin (see Figure 6). This
+proves the feasibility of the method in case of a suﬃciently large probability
+density and demonstrates the constraints of the method for areas in which the
+probability density is very small.
+Figure 7 illustrates the comparison between the uncertainties obtained with
+data sets sampled from the true probability density function (as in Figure 6)
+and data sets resampled with replacement from one sample of the probability
+density function (as in Figure 5). The Bonferroni corrected conﬁdence bands are
+consistent within 10%. The pointwise conﬁdence intervals are compatible within
+10% as well, except for the bin with the smallest probability density. Bonferroni
+corrected conﬁdence bands turn out to be most robust against changes in the
+order of magnitude of the underlying probability density.
+6. Conclusions
+A bootstrap-based method for the construction of uncertainty limits on solu-
+tions of inverse problems has been presented, providing the possibility to deter-
+mine both conﬁdence intervals and bands to any user-speciﬁc conﬁdence level.
+This method is applicable for any unfolding algorithm and it might even im-
+prove the construction of uncertainty limits which are already implemented in
+an algorithm. Standard methods to calculate uncertainty limits often rely heav-
+ily on assumptions regarding the (often normal or Poisson) distribution of the
+16
+
+Relative uncertainty
+0.00
+0.05
+0.10
+0.15
+0.20
+TRUEE uncertainty
+Pointwise confidence interval
+Uniform confidence band
+Bonferroni corrected confidence band
+(Energy/GeV)
+10
+log
+2.0
+2.5
+3.0
+3.5
+4.0
+4.5
+5.0
+5.5
+6.0
+Pointwise / TRUEE
+0.8
+1.0
+1.2
+1.4
+1.6
+Figure 5: Relative 68% conﬁdence limits calculated by diﬀerent approaches for resampled
+pseudo data sets. The pointwise conﬁdence interval (dashed), the uniform (dash-dotted) and
+the Bonferroni corrected (dotted) conﬁdence band are shown. The uncertainty of the unfolding
+software TRUEE is depicted as well (solid). In the lower ﬁgure the comparison between the
+pointwise conﬁdence intervals and the uncertainties calculated by TRUEE is illustrated by
+their ratio. Values greater than 1 indicate that the pointwise conﬁdence interval is larger than
+the one of TRUEE.
+17
+
+Relative uncertainty
+0.00
+0.05
+0.10
+0.15
+0.20
+TRUEE uncertainty
+Pointwise confidence interval
+Uniform confidence band
+Bonferroni corrected confidence band
+(Energy/GeV)
+10
+log
+2.0
+2.5
+3.0
+3.5
+4.0
+4.5
+5.0
+5.5
+6.0
+Pointwise / TRUEE
+0.9
+1.0
+1.1
+Figure 6: Relative 68% conﬁdence limits similar to Figure 5. Here, 1 000 data sets are sampled
+from the true probability density function instead of the resampling from one single sample
+of the true probability density function.
+data. The proposed bootstrap algorithm works independently from such strong
+restrictions. Even if methods fail, because there these strong assumptions are
+violated, the less restrictive bootstrap-based methodology still works properly
+in many situations. The uncertainty limits also include an estimate of the sys-
+tematic uncertainty, describing the bias introduced by a regularization in the
+unfolding algorithm.
+The method has been tested with a typical astroparticle physics example.
+The use of relative instead of absolute deviations as an appropriate scale within
+the limit theorem for constructing uniform conﬁdence bands has been proposed
+for problems extending over multiple orders of magnitude, yielding reasonable
+results for the calculation of conﬁdence intervals as well as conﬁdence bands. It
+has been proven that the conﬁdence intervals match the well checked uncertain-
+ties calculated by the unfolding software TRUEE.
+Many applications where distributions are reconstructed can beneﬁt from
+18
+
+(Energy/GeV)
+10
+log
+2.0
+2.5
+3.0
+3.5
+4.0
+4.5
+5.0
+5.5
+6.0
+Ratio
+0.8
+0.9
+1.0
+1.1
+1.2
+1.3
+1.4
+1.5
+1.6
+Pointwise confidence interval
+Bonferroni corrected confidence band
+Figure 7: Comparison of uncertainties obtained with data sets sampled from the true prob-
+ability density function and data sets resampled with replacement from one sample of the
+probability density function.
+this bootstrap method. This could be mass spectra in accelerator experiments,
+searching for new particles, as well as energy distributions used for the search
+of dark matter or the neutrinoless double beta decay.
+It is often crucial to
+determine speciﬁc values or distributions with a particular conﬁdence limit,
+e. g. for the detection of a new particle a conﬁdence of 5 σ (corresponding to
+α ≈5.733 · 10−7) is necessary. The presented bootstrap method provides very
+useful tools, especially for physical applications, and extends the possibilities of
+existing unfolding algorithms and software.
+Acknowledgment
+This research is supported by the German Research Foundation (DFG)
+through the Collaborative Research Center SFB 823, project C4, which is grate-
+fully acknowledged.
+19
+
+References
+[1] N. Milke, M. Doert, S. Klepser, D. Mazin, V. Blobel, W. Rhode, Solving
+inverse problems with the unfolding program truee: Examples in astroparti-
+cle physics, Nuclear Instruments and Methods in Physics Research Section
+A 697 (2013) 133 – 147.
+[2] I. Fredholm, Sur une classe d’´equations fonctionnelles, Acta Mathematica
+27 (1903) 365–390.
+[3] V. Blobel, An Unfolding method for high-energy physics experiments, in:
+Contribution to the Conference on Advanced statistical techniques in par-
+ticle physics, Durham, March 18-22, 2002, 2002, pp. 258–267.
+[4] T. Adye, Unfolding algorithms and tests using RooUnfold, in: Proceedings
+of the PHYSTAT 2011 Workshop on Statistical Issues Related to Discovery
+Claims in Search Experiments and Unfolding, CERN, Geneva, Switzerland,
+CERN-2011-006, pp. 313–318.
+[5] A. H¨ocker, V. Kartvelishvili, SVD approach to data unfolding, Nuclear
+Instruments and Methods in Physics Research A 372 (1996) 469–481.
+[6] N. V. Smirnov, On the construction of conﬁdence regions for the density
+of distribution of random variables, Doklady Akad. Nauk SSSR. 74 (1950)
+189–191.
+[7] P. J. Bickel, M. Rosenblatt, On some global measures of the deviations of
+density function estimates, Annals of Statistics 1 (1973) 1071–1095.
+[8] G. J. Johnston, Probabilities of maximal deviations for nonparametric re-
+gression function estimates, Journal of Multivariate Analysis 12 (1982) 402–
+414.
+[9] R. L. Eubank, P. L. Speckman, Conﬁdence bands in nonparametric regres-
+sion, Journal of the American Statistical Association 88 (1993) 1287–1301.
+20
+
+[10] N. Bissantz, L. D¨umbgen, H. Holzmann, A. Munk, Nonparametric con-
+ﬁdence bands in deconvolution density estimation, Journal of the Royal
+Statistical Society, Series B 69 (2007) 483–506.
+[11] M. Birke, N. Bissantz, H. Holzmann, Conﬁdance bands for inverse regres-
+sion models, Inverse Problems 26 (2010) 115020.
+21

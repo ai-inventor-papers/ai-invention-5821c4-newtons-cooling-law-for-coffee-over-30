@@ -1,0 +1,2099 @@
+Nonisothermal evaporation
+E. S. Benilov∗
+Department of Mathematics and Statistics, University of Limerick, Limerick V94 T9PX, Ireland
+Evaporation of a liquid layer on a substrate is examined without the often-used isothermality
+assumption – i.e., temperature variations are accounted for. Qualitative estimates show that non-
+isothermality makes the evaporation rate depend on the conditions the substrate is maintained at. If
+it is thermally insulated, evaporative cooling dramatically slows evaporation down; the evaporation
+rate tends to zero with time and cannot be determined by measuring the external parameters only.
+If, however, the substrate is maintained at a ﬁxed temperature, the heat ﬂux coming from below
+sustains evaporation at a ﬁnite rate – deducible from the ﬂuid’s characteristics, relative humidity,
+and the layer’s depth (whose importance has not been recognized before). The qualitative predic-
+tions are quantiﬁed using the diﬀuse-interface model applied to a liquid evaporating into its own
+vapor.
+I.
+INTRODUCTION AND PRELIMINARY
+ESTIMATES
+Evaporation of liquids has been studied for over a cen-
+tury, since the pioneering work of James Clerk Maxwell
+[1, 2], and it is still studied now – both theoretically (e.g.,
+Refs. [3–8]) and experimentally (e.g., Refs. [9–13]) – as
+numerous issues have yet to be resolved.
+Consider, for example, a ﬂat liquid layer. It is generally
+believed that it evaporates at a steady rate depending on
+the liquid’s parameters (temperature, heat of vaporiza-
+tion, etc.) and the humidity of air. There are numerous
+measurements of evaporation rates; a recent review of
+this work in application to water can be found in Refs.
+[12, 13].
+Fig. 1 shows a selection1 of measurements of the evap-
+oration rate E, for water evaporating into still air, as a
+function of the temperature T within a “room temper-
+ature” range. There is evident discord in these results,
+suggesting that important factors vary from experiment
+to experiment.
+The present paper identiﬁes at least some of these fac-
+tors. It is shown that nonisothermal eﬀects – e.g., the
+heat exchange between the liquid and substrate (and side
+walls, if any) – can make E depend on the distance be-
+tween the interface and substrate, and the material the
+latter is made of.
+To illustrate the importance of heat exchange with the
+boundaries, consider an amount of liquid in a thermally
+insulated vessel – and let half of the liquid evaporate. The
+∗Email address: Eugene.Benilov@ul.ie;
+Homepage: https://staﬀ.ul.ie/eugenebenilov/
+1 Fig.
+1 shows those empiric formulae listed in Table 1 of Ref.
+[13] that involve only the relative humidity and characteris-
+tics uniquely related to the temperature, such as the saturated
+pressure and vaporization heat of water (calculated using Refs.
+[14, 15], respectively). One of the formulae includes also the wind
+speed which was set to zero.
+All the other empiric results cited in Ref. [13] involve further
+parameters (e.g., the horizontal scale of the vessel), making a
+comparison with the low-parameter formulae impossible.
+15
+20
+25
+30
+35
+ T (  C)
+0
+0.01
+0.02
+0.03
+0.04
+0.05
+0.06
+0.07
+      E  (g m-2 s-1)
+1
+2
+3
+4
+5
+6
+FIG. 1. Evaporation rate vs. temperature, according to var-
+ious empiric formulae.
+Curves (1)–(6) correspond to Refs.
+[16–21] , respectively. In all cases, the relative humidity is
+50%.
+temperature of the remaining half decreases due to evap-
+orative cooling – and the size of the decrease is easy to
+estimate. Assuming for simplicity that vaporization heat
+∆h and heat capacity c(l)
+P of the liquid do not change sig-
+niﬁcantly with T, one can approximate the temperature
+decrease by
+∆T = ∆h
+c(l)
+P
+.
+(1)
+For ∆h = 2442 J g−1 and c(l)
+P
+= 4.182 J g−1K−1 (which
+correspond to water at 25◦C [22]), Eq. (1) yields a some-
+what unexpected result:
+∆T ≈584 K.
+In reality, however, evaporation of liquid in an insulated
+vessel slows down to a virtual standstill well before it
+half-evaporates. Since the dependence of E on T at nor-
+mal conditions is typically exponential, even a moderate
+temperature decrease can reduce the evaporation rate by
+an order of magnitude.
+arXiv:2302.12348v2  [cond-mat.soft]  29 Apr 2023
+
+2
+Alternatively, let the vessel’s walls and bottom be kept
+at a ﬁxed temperature (such a setting has probably more
+applications). In this case, the energy loss to vaporization
+is replenished by the incoming heat ﬂux, which can be
+readily calculated,
+−κ(l)T ′ = E ∆h,
+(2)
+where κ(l) is the liquid’s thermal conductivity and the
+temperature gradient T ′ can be expressed through the
+temperature diﬀerence ∆T between the interface and the
+nearest boundary, and the corresponding distance D,
+T ′ = −∆T
+D .
+(3)
+To determine ∆T
+for water at 25◦C,
+set κ(l)
+=
+0.6065 W m−1K−1 [22] and
+E = 0.025361 g m−2s−1,
+(4)
+which is the average of empiric curves 2–6 in Fig. 1 (curve
+1 cannot be used, as 25◦C is not in its range). With these
+values, Eqs. (2)–(3) yield
+∆T = E ∆h
+κ(l) D ≈1 K
+1 cm × D.
+(5)
+Evidently, this estimate is both qualitatively and quan-
+titatively diﬀerent from that for insulated substrates.
+The diﬀerence between insulated and ﬁxed-T vessels
+demonstrates the importance of heat ﬂuxes from bound-
+aries and, generally, nonisothermal eﬀects. In this work,
+they are explored using the simplest setting: evapora-
+tion of a liquid into its own undersaturated vapor. It is
+described by a relatively simple model which does not in-
+clude the diﬀusive mass ﬂux (pure ﬂuids do not diﬀuse).
+Evaporation in this case occurs via advection [23], but
+heat conduction is similar to that in mixtures.
+The described setting will be examined using the so-
+called diﬀuse interface model (DIM). It was proposed in
+1901 by Diederik Korteweg [24] and has been used since
+then in thousands of papers and for tens of applications
+(some of this work is reviewed in Ref. [25]). The DIM is
+particularly suited to the problem at hand: it describes
+both liquid and vapor, as well as the interfacial dynamics
+– as opposed to models built of ‘blocks’ describing one
+item each. The use of the DIM is convenient but not cru-
+cial, however, as nonisothermal eﬀects can be introduced
+into any good model of evaporation.
+In Sec. II of the present paper, the problem is formu-
+lated mathematically. In Sec. III, evaporation is exam-
+ined under the assumption of isothermality. This case
+will be used as a yardstick for the full problem examined
+in IV. Other eﬀects potentially explaining the discord
+among the empiric curves in Fig. 1 are discussed in Sec.
+V. In Sec. VI, the results are summarized, plus it is clar-
+iﬁed there when the heat ﬂux from air is weak and its
+eﬀect on evaporation, negligible (which is of interest in a
+broader context, not just for the present work).
+II.
+FORMULATION
+A.
+Thermodynamics
+Thermodynamic properties of a ﬂuid can be described
+by the dependence of its speciﬁc (per unit mass) inter-
+nal energy e and speciﬁc entropy s on the density ρ and
+temperature T. The functions e(ρ, t) and s(ρ, t) are sup-
+posed to be constrained by the Gibbs relation; if written
+in terms of e and s, it takes the form
+∂e
+∂T = T ∂s
+∂T .
+(6)
+The ﬂuid’s equation of state, or the expression for the
+pressure p, is given by
+p = ρ2
+∂e
+∂ρ −T ∂s
+∂ρ
+
+,
+(7)
+and the chemical potential, or speciﬁc free energy, by
+G = e + p
+ρ −Ts.
+(8)
+It follows from (6)–(8) that
+∂p
+∂ρ = ρ∂G
+∂ρ ,
+(9)
+∂p
+∂T = −ρ2 ∂s
+∂ρ.
+(10)
+These two identities enable one to replace p with G or s,
+which happens to be convenient in the problem at hand.
+Deﬁne the heat capacity at constant volume,
+cV = ∂e
+∂T ,
+(11)
+the speciﬁc enthalpy,
+h = e + p
+ρ,
+(12)
+and the heat capacity at constant pressure,
+cP =
+ ∂h
+∂T
+
+p=const
+.
+Expressing the derivative at constant pressure via the
+partial derivatives with respect ρ and T, and recalling
+Eq. (12), one obtains
+cP = ∂e
+∂T −
+∂e
+∂ρ −p
+ρ2
+ ∂p
+∂T
+∂p
+∂ρ
+−1
+.
+(13)
+B.
+Hydrodynamics
+Consider a liquid layer on a horizontal solid substrate,
+and vapor above the liquid. If the vapor in undersatu-
+rated, the liquid evaporates, giving rise to a vertical ﬂow.
+This setting is characterized by the velocity w(z, t), den-
+sity ρ(z, t), and temperature T(z, t), where z is the ver-
+tical coordinate and t, the time.
+
+3
+1.
+Governing equations
+It can be safely assumed that the Reynolds number
+associated with evaporation is small, so that the contri-
+bution of inertia to the balance of momentum is negligi-
+ble. Thus, Stokes-ﬂow (slow-ﬂow) approximation can be
+employed.
+Using the diﬀuse-interface model (DIM), one can write
+the Stokes-ﬂow version of the hydrodynamic equations in
+the form
+∂ρ
+∂t + ∂
+∂z (ρw)
+|{z}
+mass ﬂux
+= 0,
+(14)
+∂p
+∂z
+|{z}
+pressure gradient
+=
+∂
+∂z
+
+η ∂w
+∂z
+
+|
+{z
+}
+viscous stress
++
+Kρ∂3ρ
+∂z3
+| {z }
+van der Waals force
+, (15)
+∂(ρe)
+∂t
++ ∂
+∂z
+
+w
+
+ρe + p −η ∂w
+∂z
+
+−κ∂T
+∂z
+
+|
+{z
+}
+heat ﬂux
+=
+w Kρ∂3ρ
+∂z3
+|
+{z
+}
+rate of work done by van der Waals force
+,
+(16)
+where the eﬀective viscosity η is related to the shear vis-
+cosity µs and and bulk viscosity µb by
+η = 4
+3µs + µb,
+κ is the thermal conductivity and K, the so-called Ko-
+rteweg parameter. The expression for the van der Waals
+force comes from the DIM, otherwise (14)–(16) are stan-
+dard equations of compressible Stokes-ﬂow hydrodynam-
+ics.
+The three-dimensional, non-Stokes ﬂow versions
+of Eqs.
+(14)–(16) were derived in Ref.
+[26] from the
+Enskog–Vlasov kinetic theory, and in Ref.
+[27] via
+nonequilibrium thermodynamics. In this paper, a brief
+derivation of the DIM expression for the van der Waals
+force is given in Appendix A.
+Note that η and κ depend generally on ρ and T,
+whereas K is a constant. Its value is related to, and can
+be deduced from, the ﬂuid’s surface tension – for water,
+for example, K ≈1.9 × 10−17m7s−2kg−1 [25].
+2.
+Boundary conditions far above the interface
+Assume that, far above the liquid–vapor interface, the
+viscous stress is zero,
+∂w
+∂z →0
+as
+z →+∞,
+(17)
+and the vapor density and temperature tend to certain
+values,
+T →T (v)
+as
+z →+∞,
+(18)
+ρ →ρ(v)
+as
+z →+∞.
+(19)
+For evaporation to occur, ρ(v) should be smaller than the
+saturated vapor density ρ(v.sat) – which is determined, to-
+gether with the matching saturated liquid density ρ(l.sat),
+by the Maxwell construction:
+p(ρ(l.sat), T (v)) = p(ρ(v.sat), T (v)),
+(20)
+G(ρ(l.sat), T (v)) = G(ρ(v.sat), T (v)),
+(21)
+where it is implied that ρ(l.sat) ≥ρ(v.sat).
+Physically, the equalities of the pressure and chemi-
+cal potential in the two phases guarantee the mechanical
+and thermodynamic equilibria of the interface, respec-
+tively. Mathematically, conditions (20)–(21) can be de-
+rived from the DIM (to be elaborated later) or from any
+other good model describing a static ﬂat interface in an
+unbounded space.
+Require also that the saturated vapor and liquid be
+thermodynamically stable, which amounts to
+∂p
+∂ρ
+
+ρ=ρ(v.sat) ≥0,
+∂p
+∂ρ
+
+ρ=ρ(l.sat) ≥0,
+(22)
+i.e., an increase in ρ does not decrease the pressure. The
+Maxwell construction (20)–(21) and requirements (22)
+uniquely deﬁne ρ(v.sat) and ρ(l.sat) as functions of T.
+Before proceeding further, it is convenient to integrate
+the momentum equation (15) and ﬁx the constant of inte-
+gration via boundary conditions (17)–(19), which yields
+p = η ∂w
+∂z + K
+"
+ρ∂2ρ
+∂z2 −1
+2
+∂ρ
+∂z
+2#
++ p(v),
+(23)
+where p(v) = p(ρ(v), T (v)).
+3.
+Boundary conditions at the substrate
+Let the substrate be located at z = 0 and write the
+no-ﬂow boundary condition in the form
+w = 0
+at
+z = 0.
+(24)
+Two diﬀerent conditions for T will be examined: one as-
+suming that the substrate is kept at a ﬁxed temperature,
+T = T0
+at
+z = 0,
+(25)
+and another corresponding to a thermally insulated sub-
+strate,
+∂T
+∂z = 0
+at
+z = 0.
+(26)
+Due to the presence of higher-order derivatives of ρ in
+expression for the van der Waals force, a separate bound-
+ary condition is required for the density. Several diﬀer-
+ent versions of such are used in the literature (e.g., Refs.
+
+4
+[27–29]), describing slightly diﬀerent models of the ﬂuid–
+substrate interaction. The speciﬁc form of this boundary
+condition is important only if the thickness of the liquid–
+vapor interface is comparable to the liquid layer’s depth
+– which is, obviously, not the case for a macroscopic layer
+considered in this work.
+Thus, the simplest version of the boundary condition
+for ρ will be used – the one suggested in Ref. [29],
+ρ = ρ0
+at
+z = 0,
+(27)
+where ρ0 characterizes the ﬂuid–substrate interaction.
+This condition reﬂects the balance of forces aﬀecting ﬂuid
+molecules adjacent to the substrate, and it can be derived
+under the same assumptions as the DIM itself [30].
+Note that none of the conclusions reported in this pa-
+per depends on the speciﬁc value of ρ0.
+4.
+A ﬂat interface in an unbounded ﬂuid
+In a suﬃciently deep layer, the interface is not aﬀected
+by the substrate. Boundary condition (24) can be moved
+to minus-inﬁnity,
+w →0
+as
+z →−∞,
+(28)
+and conditions (25)–(27), replaced with
+T →T (l)
+as
+z →−∞,
+(29)
+ρ →ρ(l)
+as
+z →−∞.
+(30)
+Note that Eq. (23) and boundary conditions (28)–(30)
+imply that the liquid’s temperature T (l) and density ρ(l)
+are not entirely arbitrary, but are related to the vapor
+parameters by
+p(ρ(l), T (l)) = p(ρ(v), T (v)).
+(31)
+Mathematically, this constraint is a result of the Stokes-
+ﬂow approximation: if the time derivative in the mo-
+mentum equation were retained, (31) would not hold.
+Physically, the constraint suggests that an adjustment of
+pressure should occur (via fast acoustic waves) before the
+ﬂow becomes truly slow.
+C.
+Nondimensionalization
+To nondimensionalize Eqs. (14)–(16), introduce char-
+acteristic scales of pressure P, density ϱ, and viscosity ¯η.
+Using these parameters, one can deﬁne a velocity scale
+and a spatial scale,
+V = Pl
+¯η ,
+l =
+r
+Kϱ2
+P
+.
+As seen later, this choice of V and l corresponds to an
+asymptotic regime where the pressure gradient, viscous
+stress, and van der Waals force in Eq.
+(15) are all of
+the same order. The interfacial scale l will be referred to
+as ‘microscopic’, and the depth of the whole liquid layer,
+‘macroscopic’.
+The following nondimensional variables will be used:
+znd = z
+l ,
+tnd = V
+l t,
+wnd = w
+V ,
+ρnd = ρ
+ϱ,
+Tnd = ϱRT
+P
+,
+end = ϱe
+P ,
+snd = s
+R,
+pnd = p
+P ,
+Gnd = ϱG
+P ,
+hnd = ϱh
+P ,
+(cV )nd = cV
+R ,
+(cP )nd = cP
+R ,
+where R is the speciﬁc gas constant of the ﬂuid under
+consideration. It is convenient to also nondimensionalize
+the viscosity and thermal diﬀusivity,
+ηnd = η
+¯η ,
+κnd = κ
+¯κ,
+where ¯η is a characteristic value of η, whereas ¯κ is not
+that of κ – but is given by
+¯κ = KRϱ3
+¯η
+.
+This choice of ¯κ conveniently eliminates all nondimen-
+sional parameters in the governing equations, but one
+should keep in mind that κnd can be large or small.
+In terms of the new variables, Eqs. (14)–(16) take the
+form (the subscript nd omitted)
+∂ρ
+∂t + ∂(ρw)
+∂z
+= 0,
+(32)
+p = η ∂w
+∂z + ρ∂2ρ
+∂z2 −1
+2
+∂ρ
+∂z
+2
++ p(v),
+(33)
+∂(ρe)
+∂t
++ ∂
+∂z
+
+w
+
+ρe + p −η ∂w
+∂z
+
+−κ∂T
+∂z
+
+= wρ∂3ρ
+∂z3 .
+(34)
+The nondimensional versions of the thermodynamics
+identities from Sec.
+II A look exactly as their dimen-
+sional counterparts, and so do the boundary conditions
+from Secs. II B 3–II B 2, provided ρ0 is nondimensional-
+ized by ϱ and T0 by P/ϱR.
+
+5
+0
+0.1
+0.2
+0.3
+T
+0
+0.2
+0.4
+0.6
+0.8
+1
+  ρ
+ρ(v.sat)
+ρ(l.sat)
+FIG. 2. The saturated densities of liquid and vapor vs. the
+temperature, for the van der Waals ﬂuid. The nondimensional
+critical point in this case is Tcr = 8/27 (marked by the black
+dot and dotted line).
+D.
+The van der Waals ﬂuid
+In what follows, general conclusions will be illustrated
+using the van der Waals ﬂuid, whose nondimensional in-
+ternal energy and entropy are
+e = cV T −ρ,
+s = cV ln T −ln
+ρ
+1 −ρ,
+(35)
+where the heat capacity at constant volume cV is a given
+constant. Then, Eqs. (7)–(8) yield the following expres-
+sions for the pressure and chemical potential:
+p(ρ, T) =
+Tρ
+1 −ρ −ρ2,
+(36)
+G(ρ, T) = T
+
+ln
+ρ
+1 −ρ +
+1
+1 −ρ
+
+−2ρ
++ cV T (1 −ln T) .
+(37)
+To illustrate the properties of the van der Waals ﬂuid,
+expressions (36)–(37) and the Maxwell construction (20)–
+(21) were used to compute the saturated densities ρ(l.sat)
+and ρ(v.sat). The results are shown in Fig. 2. Observe
+that, if T > Tcr, only one phase exists, so interfaces do
+not.
+III.
+ISOTHERMAL EVAPORATION
+The assumption of isothermality is used in many pa-
+pers on evaporation (as quantiﬁed by the 2 million results
+yielded by a Google search for “isothermal” + “evapo-
+ration”). In terms of the present model, isothermality
+corresponds to the limit κ →∞, in which case Eq. (34)
+yields ∂T/∂z →0. Assuming that T is also independent
+of t, one can treat the temperature in Eqs. (32)–(33) as
+a known parameter. The isothermal reduction of the full
+DIM was ﬁrst examined in Ref. [29].
+A.
+Steady evaporation
+Consider ﬁrst a liquid–vapor interface in an unbounded
+space and assume that it is steadily receding due to evap-
+oration. Its velocity is equal to −E/ρ(l) where E is the
+nondimensional evaporation rate and ρ(l), the liquid’s
+nondimensional density.
+Mathematically, the assumption of steadiness corre-
+sponds to the following ansatz:
+ρ = ρ(ξ),
+w = w(ξ),
+where
+ξ = z + E
+ρ(l) t.
+In terms of ξ, the general boundary conditions (17), (19)
+and (28), (30) become
+w →0
+as
+ξ →−∞,
+(38)
+ρ →ρ(l)
+as
+ξ →−∞,
+(39)
+dw
+dξ →0
+as
+ξ →+∞,
+(40)
+ρ →ρ(v)
+as
+ξ →+∞.
+(41)
+When rewritten in terms of ξ, Eq. (32) and conditions
+(38)–(39) yield
+w = E
+1
+ρ −
+1
+ρ(l)
+
+,
+(42)
+which automatically satisﬁes condition (40) as well. Then
+Eq. (33) becomes
+p(ρ, T) = −Eη(ρ, T)
+ρ2
+dρ
+dξ + ρd2ρ
+dξ2 −1
+2
+dρ
+dξ
+2
++ p(ρ(v), T).
+(43)
+This equation and boundary conditions (39) and (41) are
+translationally invariant – thus, to ensure the solution’s
+uniqueness, the following extra requirement is imposed
+ρ = ρ(l) + ρ(v)
+2
+at
+z = 0.
+(44)
+Eq. (43) and conditions (39), (41), and (44) constitute a
+boundary-value problem for the function ρ(ξ) and unde-
+termined parameters E and ρ(l). The latter can be found
+
+6
+straight away from constraint (31) with T (l) = T (v) = T,
+which yields
+p(ρ(l), T) = p(ρ(v), T).
+(45)
+This equation relates ρ(l) to the (known) density ρ(v) of
+the vapor far above the interface. To make ρ(l) unique,
+one should require that the liquid phase is stable,
+∂p
+∂ρ
+
+ρ=ρ(l) ≥0.
+It turns out that, if T is suﬃciently large and ρ(v) is
+suﬃciently small, Eq. (45) does not have any solutions.
+Such a situation is illustrated in Fig. 3a: if the vapor
+pressure happens to be in the shaded region, it cannot
+match any value of the liquid pressure. Such a pattern
+arises only if T > 1/4 – otherwise the local minimum of
+p(ρ) is negative and, for any ρ(v), there exists a matching
+value of ρ(l).
+Fig. 3(b) shows the region of the (T, ρ(v)) plane where
+Eq. (45) admits physically meaningful solutions. What
+happens if (T, ρ(v)) are such that no steady solution exists
+will be clariﬁed in Sec. II C.
+Boundary-value problem (39), (41), (43)–(44) was
+solved numerically (using the function bvp5c of MAT-
+LAB) for the van der Waals ﬂuid (36). The viscosity was
+assumed to be proportional to the density, with the pro-
+portionality coeﬃcient implied to be scaled out during
+the nondimensionalization,
+η = ρ.
+(46)
+This is the simplest model qualitatively reﬂecting growth
+of a ﬂuid’s viscosity with density.
+Fig.
+4 shows typical proﬁles ρ(ξ) for various values
+of T [panels (a)] and various values of relative humidity
+ρ(v)/ρ(v.sat) [panel (b)]. The latter also illustrates that,
+unless T is close to Tcr, the liquid’s density ρ(l) is close
+to its saturated value ρ(l.sat).
+The dependence of E on T is illustrated in Fig.
+5.
+Note that the curves depicted could not be extended to
+T = 0 due to computational diﬃculties (the vapor den-
+sity becomes too small). In the opposite limit, the curves
+are truncated due to the nonexistence of solution of Eq.
+(45) as explained above.
+B.
+The limit of nearly-saturated vapor
+If the vapor is close to saturation, evaporation must be
+slow, i.e.,
+ρ(v)
+ρ(v.sat) ≈1
+⇒
+E ≪1.
+In this case, boundary-value problem (39), (41), (43)–
+(44) can be solved asymptotically.
+If the ﬂuid temperature is far from its critical
+value, the problem involves another small parameter,
+ρ(v.sat)/ρ(l.sat), making the analysis awkward. To remedy
+this, it is assumed that this parameter is order-one, then
+the asymptotic results are shown numerically to work for
+ρ(v.sat)/ρ(l.sat) ≪1 as well.
+Deﬁne the equilibrium solution ρ(0)(z) as that of Eq.
+(43) with E = 0, subject to boundary conditions (39),
+(41), and (44) with ρ(l) = ρ(l.sat) and ρ(v) = ρ(v.sat), i.e.,
+ρ(0) d2ρ(0)
+dξ2
+−1
+2
+dρ(0)
+dξ
+2
+−p(ρ(0), T) + p(ρ(v.sat), T) = 0,
+(47)
+ρ(0) →ρ(l.sat)
+as
+ξ →−∞,
+(48)
+ρ(0) →ρ(v.sat)
+as
+ξ →+∞,
+(49)
+ρ(0) = ρ(l.sat) + ρ(v.sat)
+2
+at
+ξ = 0.
+(50)
+It can be shown that, unless ρ(l.sat) and ρ(v.sat) satisfy
+the Maxwell construction (20)–(21), the above boundary-
+value problem does not have a solution (see Appendix
+B 1).
+The solution ρ of the full problem (39), (41), (43)–(44)
+is close, but not equal, to the equilibrium solution ρ(0).
+The deviation of the former from the latter is comparable
+to the evaporation rate E, so let
+ρ = ρ(0) + ρ(1) + · · · ,
+where ρ(1) = O(E) and · · · = O(E2). Assume also that
+E scales with the deviation of the relative humidity from
+unity,
+1 −
+ρ(v)
+ρ(v.sat) = O(E),
+and that the liquid density is close to its saturated value
+by the same margin,
+1 −
+ρ(l)
+ρ(l.sat) = O(E).
+To zeroth order, Eq. (47) and boundary conditions (39),
+(41) are satisﬁed identically. The ﬁrst order yields, after
+straightforward algebra,
+d
+dξ
+ 1
+ρ(0)
+dρ(1)
+dξ
+
++
+1
+ρ(0)2
+d2ρ(0)
+dξ2
+−∂p(ρ(0), T)
+∂ρ(0)
+
+ρ(1) = Eη(ρ(0), T)
+ρ(0)4
+dρ(0)
+dξ
+−
+1
+ρ(0)2
+∂p(ρ(v.sat), T)
+∂ρ(v.sat)
+
+ρ(v) −ρ(v.sat)
+, (51)
+
+7
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+ ρ
+0
+0.01
+0.02
+0.03
+0.04
+p
+(a)
+0
+0.1
+0.2
+0.3
+T
+0
+0.1
+0.2
+0.3
+       ρ(v)
+1
+2
+3
+E
+(b)
+FIG. 3. Existence of physically meaningful solutions of Eq. (45) for the van der Waals ﬂuid. (a) The equation of state p(ρ) for
+the particular case of T = 0.27315; the region where the vapor density does not have a match in the liquid region is shaded.
+(b) The existence region (marked with a letter “E”) of solutions of Eq. (45), in the (T, ρ(v)) parameter plane. Curve (1)
+separates the values of ρ(v) that have a match in the liquid region from those that do not; curve 2 is the saturation curve (the
+vapor at inﬁnity should be undersaturated); curve 3 is T = Tcr.
+-5
+0
+5
+ ξ
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+ ρ
+3
+2
+1
+(a)
+-5
+0
+5
+ ξ
+ρ = ρ(v.sat)
+ρ = ρ(l.sat)
+(b)
+FIG. 4. Solutions of boundary-value problem (39), (41), (43)–(44), for various temperatures and relative humidities. Panel (a):
+ρ(v)/ρ(v.sat) = 0.5; (1) T = 0.1, (2) T = 0.15, (3) T = 0.2. Panel (b): T = 0.2; ρ(v)/ρ(v.sat) = 0.1, 0.5, 0.9; these curves
+are not numbered, but can still be distinguished by comparing them to the dotted straight line marking the density ρ(v.sat) of
+saturated vapor. The other dotted line shows the density ρ(l.sat) of saturated liquid.
+ρ(1) →ρ(l) −ρ(l.sat)
+as
+ξ →−∞,
+(52)
+ρ(1) →ρ(v) −ρ(v.sat)
+as
+ξ →+∞.
+(53)
+The evaporation rate E can be found without ﬁnding
+ρ(1)(ξ) (and even considering ρ(2)(ξ) and the higher cor-
+rections).
+To do so, observe that the operator on the
+left-hand side of Eq.
+(51) is self-adjoint, and the ho-
+mogeneous version of problem (51)–(53) is satisﬁed by
+ρ(1) = dρ(0)/dξ – hence, the full (nonhomogeneous) ver-
+sion should be orthogonal to dρ(0)/dξ.
+To derive the orthogonality condition, multiply (51)
+by dρ(0)/dξ and integrate from ξ = −∞to ξ = +∞.
+Using boundary condition (48)–(49) for ρ(0) and (52)–
+(53) for ρ(1), one obtains the desired expression for the
+evaporation rate:
+E = H
+A ,
+(54)
+
+8
+0
+0.1
+0.2
+T
+1e-9
+1e-8
+1e-7
+1e-6
+1e-5
+1e-4
+1e-3
+1e-2
+1e-1
+E
+0.9
+0.5
+0.1
+FIG. 5. Nondimensional evaporation rate E vs. temperature
+T, as described by boundary-value problem (39) and (41),
+(43)–(44). The curves are marked with the corresponding val-
+ues of the relative humidity, ρ(v)/ρ(v.sat). The dotted curves
+show the corresponding asymptotic result, (54)–(56).
+where
+H =
+
+1 −ρ(v.sat)
+ρ(l.sat)
+ ∂p(ρ(v.sat), T)
+∂ρ(v.sat)
+ρ(v.sat) −ρ(v)
+ρ(v.sat)
+, (55)
+A =
+Z ∞
+−∞
+η(ρ(0), T)
+ρ(0)4
+dρ(0)
+dξ
+2
+dξ.
+(56)
+Observe that the last factor in the expression for H is
+the diﬀerence between the relative humidity and unity.
+Asymptotic result (54)–(56) is compared to the nu-
+meric solution of the exact problem in Fig. 5. Interest-
+ingly, the agreement between the two solutions is reason-
+ably good even when the relative humidity is far from
+unity: the relative error of the most part of the asymp-
+totic curve for the 50% humidity is less than 0.15 and that
+for the 10% curve is less than 0.22. These errors are only
+exceeded near the terminal point, where the asymptotic
+solution noticeably under-predicts the exact one.
+The coeﬃcient A given by expression (56) always arises
+when the DIM is used to examine evaporation [23], con-
+densation [31], or another setting where these processes
+play a role [32].
+It involves the leading-order solution
+ρ(0)(z) which needs to be computed before the integral
+in (56) can be evaluated.
+To avoid this extra compu-
+tation, one can express A as a closed-form integral (see
+Appendix B 2)
+A = 21/2
+Z ρ(l.sat)
+ρ(v.sat)
+η(ρ, T)
+ρ4
+q
+ρ
+
+G(ρ, T) −G(ρ(v.sat), T)
+
+−p(ρ, T) + p(ρ(v.sat), T)dρ.
+(57)
+If the nondimensional temperature is low (which is the
+case for many common ﬂuids at “normal conditions”
+[33]), expressions (57) can be calculated asymptotically,
+A ≈0.14219η(0, T) T 1/2
+ ρ(v.sat)5/2
+if
+T ≪1,
+(58)
+where η(0, T) is the small-density limit of the viscosity
+η(ρ, T). Since ρ(v.sat) →0 as T →0, one can deduce from
+the above expression and formula (54) that the evapora-
+tion rate vanishes as T →0 (as it should do physically).
+C.
+Unsteady evaporation
+It remains to ﬁnd out how the liquid evaporates if no
+steady solution exists . In terms of Fig. 3b, this occurs
+when the pair (T, ρ(v)) is outside the existence region.
+The steady and unsteady scenarios of evaporation were
+simulated using the set of evolution equations (32)–(33)
+using the method of lines [34]. Typical results are illus-
+trated in Fig. 6.
+The parameters of Fig. 6(a) are such that a steady
+solution exists. Even though it was obtained for an un-
+bounded space, the presence of the substrate does not
+change it until the interface is very close to the substrate
+(this stage of the evolution is not shown in the ﬁgure).
+The run depicted in Fig. 6(a) originates from an initial
+condition obtained by solving the steady problem (39),
+(41), (43)–(44) and shifting the solution to the right by
+a distance of ∆z = 65 from the substrate.
+For the parameters of Fig. 6(b), no steady solution
+exists. The following initial condition was used:
+ρ = ρ(0)(z −∆z)
+ ρ(v)
+ρ(v.sat) + 1
+
++
+ ρ(v)
+ρ(v.sat) −1
+
+tanh z −z1
+W
+
+,
+(59)
+where ρ(0)(z) is the equilibrium solution described by
+(47)–(50), ∆z is the initial position of the interface, z1
+is the position of a transitional region where the vapor
+density changes from ρ(v.sat) [as ‘prescribed’ by ρ(0)(z)] to
+ρ(v) corresponding to the chosen relative humidity, and
+W is this region’s width . In Fig. 6(b), the following
+
+9
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+ ρ
+0
+1
+2
+3
+4
+(a)
+0
+100
+200
+300
+400
+z
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+ ρ
+0
+1
+2
+3
+4
+(b)
+FIG. 6. Two scenarios of isothermal evaporation. In both
+cases, T = 0.26 and the near-substrate density ρ0 equals,
+for simplicity, the value prescribed by the initial condition.
+(a) ρ(v)/ρ(v.sat) = 0.4 (a steady solution exists and is used as
+the initial condition); (b) ρ(v)/ρ(v.sat) = 0.3 (steady solution
+does not exist, the initial condition is given by (58)–(59)]. In
+both cases, the time t of the snapshot is related to the curve
+number n by t = 22 n.
+parameter values were used:
+∆z = 65,
+z1 = 67,
+W = 2.
+(60)
+The diﬀerence between the two scenarios is evident: if
+no steady solution exists, the whole layer ‘empties out’ –
+quickly and all at once. This occurs because the pressure
+in the liquid cannot equilibrate with that in the vapor (re-
+call that condition (45) does not hold) – and the resulting
+pressure gradient generates a strong evaporative ﬂow. It
+can be conjectured that, in a three-dimensional model –
+where bubbles may arise – the liquid in this regime boils.
+If this conjecture is true, the impossibility of matching
+the pressure in the vapor and liquid phases at a certain
+temperature provides a criterion for a ‘near-vacuum boil-
+ing’ (which includes the ‘vacuum boiling’ proper as a lim-
+iting case).
+Observe the near-substrate boundary layer in Fig.
+6(b). It develops due to boundary condition (27) forc-
+ing the near-substrate density to remain ﬁxed. Compu-
+tations with various values of ρ0 have shown that this
+boundary layer has no impact on the global dynamics.
+Note that evaporation of a pure ﬂuid has been previ-
+ously examined in Ref. [35] – and not only via the DIM,
+but also via simulations molecular dynamics. The param-
+eter range explored in this paper happened to be inside
+the existence region of steady solutions, so the unsteady
+regime was not observed.
+IV.
+NONISOTHERMAL EVAPORATION
+If evaporation is steady, the density ﬁeld near the in-
+terface is microscopic – i.e., its dimensional spatial scale
+is comparable to l introduced in Sec. II C. For the tem-
+perature ﬁeld, however, no mechanism exists for keeping
+it short-scale. As a result, evaporative cooling rapidly
+spreads out and eventually become macroscopic.
+Thus, the problem splits into two subproblems:
+(A) an analysis of the macroscopic temperature ﬁeld,
+which yields the heat ﬂuxes coming into the interface
+from the vapor and liquid sides,
+(B) an analysis of the microscopic interfacial dynamics,
+which inter-relates the heat ﬂuxes and evaporation rate.
+Subproblems (A) and (B) are examined in Secs. IV A
+and IV B, respectively. The former is solved three times:
+for an unbounded space (the simplest case), for a semi-
+inﬁnite space bounded by a ﬁxed-temperature substrate
+(the case with most applications), and for an insulated
+substrate.
+Admittedly, the analyses presented below involve sev-
+eral assumptions, so the results obtained will be veriﬁed
+via numerical simulations of the exact governing equa-
+tions in Sec. IV C.
+A.
+Macroscopic solution
+The evaporative cooling is unlikely to exceed, say, 10–
+20 degrees – otherwise, as argued in the Introduction, the
+evaporation would eﬀectively stop. Within the normal-
+conditions range, 20 degrees is a small fraction of the
+absolute temperature, so that T(z, t) can be decomposed
+into a constant part T0 and a small variation ˜T(z, t),
+T = T0 + ˜T.
+(61)
+For a ﬁxed-T substrate, T0 is its temperature.
+Consider liquid and vapor far from the interface, were
+the density is close to either ρ(l) or ρ(v).
+The spatial
+scale of the temperature ﬁeld in these regions is macro-
+scopic, which nondimensionally means “much greater
+than unity”.
+Under such assumptions, the governing
+equations (32)–(34) can be reduced to a heat conduction
+equation (see Appendix C2).
+
+10
+Let the position of the interface be z = zi(t). Its ve-
+locity can be expressed in terms of the evaporation rate
+and the liquid’s density,
+dzi
+dt = −E
+ρ(l) .
+Changing to the co-moving reference frame (z, t) →(ξ, t),
+where
+ξ = z −zi = z +
+Z E(t)
+ρ(l) dt,
+(62)
+one can describe the temperature evolution by
+ρ(l)c(l)
+P
+ 
+∂˜T
+∂t + E
+ρ(l)
+∂˜T
+∂z
+!
+= κ(l) ∂2 ˜T
+∂z2
+if
+z < 0, (63)
+ρ(v)c(v)
+P
+ 
+∂˜T
+∂t + E
+ρ(l)
+∂˜T
+∂z
+!
+= κ(v) ∂2 ˜T
+∂z2
+if
+z > 0, (64)
+where
+c(l)
+P = cP (ρ(l), T0),
+c(v)
+P
+= cP (ρ(v), T0),
+κ(l) = κ(ρ(l), T0),
+κ(v) = κ(ρ(v), T0),
+Eqs. (63)–(64) are to be solved with the following condi-
+tions:
+
+˜T
+
+z=+0 =
+
+˜T
+
+z=−0 ,
+(65)
+κ(v)
+ 
+∂˜T
+∂z
+!
+z=+0
+−κ(l)
+ 
+∂˜T
+∂z
+!
+z=−0
+= E ∆h,
+(66)
+where the right-hand side of (66) describes consumption
+of heat in the interface due to evaporative cooling. The
+simplest initial condition will be assumed,
+˜T = 0
+at
+t = 0,
+(67)
+i.e., initially, the temperature ﬁeld is uniform.
+The problem formulated contains a hidden small pa-
+rameter. To identify it, denote the vertical spatial scale
+of the solution by D (in case of a ﬁnite layer, D coincides
+with its depth) and observe that
+Eq. (63):
+E-involving term
+right-hand side
+∼ED c(l)
+P
+κ(l) ,
+(68)
+Eq. (64):
+E-involving term
+right-hand side
+∼ED c(v)
+P
+κ(v)
+ρ(v)
+ρ(l) .
+(69)
+Thus, if
+D ≪κ(l)
+Ec(l)
+P
+,
+(70)
+the E-involving term in Eq. (63) can be neglected.
+To understand how restrictive condition (70) is, one
+can estimate its right-hand side for water at, say, 25◦C.
+Using Ref.
+[22] to obtain values for κ(l) and c(l)
+P
+and
+assuming estimate (4) for E, one obtains
+D ≪5.7 m.
+Many physically important examples comply with this
+restriction, and those that do not are discussed in Sec.
+IV C.
+Observe also the small factor ρ(v)/ρ(l) in estimate (69)
+– hence, its right-hand is likely to be smaller than that
+of (68). Estimating the ratio of the two right-hand sides
+for water and air at 25◦C, one obtains
+
+c(v)
+P /κ(v)  ρ(v)/ρ(l)
+
+c(l)
+P /κ(l)
+
+≈0.0066.
+Thus, if the E-involving term in Eq. (63) is negligible,
+its counterpart in Eq. (64) is too.
+Omitting these terms in Eqs. (63)–(64), one obtains
+ρ(l)c(l)
+P
+∂˜T
+∂t = κ(l) ∂2 ˜T
+∂z2
+if
+z < 0,
+(71)
+ρ(v)c(v)
+P
+∂˜T
+∂t = κ(v) ∂2 ˜T
+∂z2
+if
+z > 0.
+(72)
+These equations do not explicitly involve t – hence, can
+be solved via the Laplace transformation (the presence
+of E(t) in the matching condition (66) does not pose a
+problem, as this is not a coeﬃcient but a right-hand side).
+1.
+A ﬂat interface in an unbounded space
+This case corresponds to the following boundary con-
+ditions:
+˜T →0
+as
+z →±∞.
+(73)
+Applying the Laplace transformation to Eqs. (71)–(72),
+then recalling initial condition (67) and boundary condi-
+tions (65)–(66) and (73), one obtains
+
+11
+ˆT = −
+s−1/2 ˆE ∆h
+q
+ρ(l)c(l)
+P κ(l) +
+q
+ρ(v)c(v)
+P κ(v)
+exp
+
+
+s
+ρ(l)c(l)
+P s
+κ(l)
+z
+
+
+if
+z < 0,
+ˆT = −
+s−1/2 ˆE ∆h
+q
+ρ(l)c(l)
+P κ(l) +
+q
+ρ(v)c(v)
+P κ(v)
+exp
+
+−
+s
+ρ(v)c(v)
+P s
+κ(v)
+z
+
+
+if
+z > 0,
+where the variables with hats represent the transforms,
+e.g.,
+ˆT(s, t) =
+Z ∞
+0
+˜T(z, t) e−st dt.
+The inverse transform of ˆT(s, t) will be matched to the
+microscopic solution obtained later. Three characteris-
+tics of the former will be needed for the matching: the
+temperature at the interface and the heat ﬂuxes toward
+it. Calculating the inverse transforms of these charac-
+teristics only [which is easier than calculating the whole
+T(z, t)], one obtains
+
+˜T
+
+z=0 = −
+∆h
+q
+ρ(l)c(l)
+P κ(l) +
+q
+ρ(v)c(v)
+P κ(v)
+Z t
+0
+E(t′)
+p
+π (t −t′)
+dt′,
+(74)
+κ(l)
+ 
+∂˜T
+∂z
+!
+z=−0
+= −
+q
+ρ(l)c(l)
+P κ(l)E ∆h
+q
+ρ(l)c(l)
+P κ(l) +
+q
+ρ(v)c(v)
+P κ(v)
+,
+κ(v)
+ 
+∂˜T
+∂z
+!
+z=+0
+=
+q
+ρ(v)c(v)
+P κ(v)E ∆h
+q
+ρ(l)c(l)
+P κ(l) +
+q
+ρ(v)c(v)
+P κ(v)
+.
+(75)
+Note that (75) [but not (74)] can be deduced from basic
+symmetries of the heat-conduction equations (71)–(72) –
+which probably explains their relatively simple form.
+2.
+Fixed-temperature substrate
+In the coordinate system co-moving with the interface,
+a ﬁxed-T substrate corresponds to the following bound-
+ary condition,
+˜T = 0
+at
+z = −D,
+(76)
+where D(t) is the depth of the liquid layer. Since this con-
+dition is set at a moving boundary, Eqs. (71)–(72) can
+no longer be solved exactly, but one can still solve them
+asymptotically under the same assumption (70) which
+makes the E-involving term negligible. It makes evap-
+oration slower than the temperature evolution – hence,
+one can ‘freeze’ D – i.e., assume that it depends on a
+slow-time variable diﬀerent from t.
+Now, apply the Laplace transformation to Eqs. (71)–
+(72) and boundary conditions (65)–(66),
+(76) with
+‘frozen’ D. After straightforward algebra, one can show
+that the temperature ﬁeld tends to
+˜T →
+
+
+
+
+
+−E ∆h
+κ(l) (z + D)
+if
+−D < z < 0,
+−E ∆h
+κ(l) D
+if
+z > 0
+as
+t →∞.
+(77)
+Solution (77) has a clear physical meaning: it describes a
+quasi-steady heat ﬂux from the substrate toward the in-
+terface, feeding evaporation. The vapor above the inter-
+face has uniform temperature because the temperature
+variations have spread out to z →+∞.
+Note that the linear dependence of T on z in liquid has
+indeed been observed experimentally [36].
+
+12
+3.
+Thermally insulated substrate
+The boundary condition at the substrate in this case
+is
+∂˜T
+∂z = 0
+at
+z = −D.
+As before, the initial-boundary-value problem for ˜T(z, t)
+(with D(t) ‘frozen’), can be solved via the Laplace trans-
+formation – but the resulting solution is much more cum-
+bersome than those in the two previous cases. One can
+still see that, in the liquid, the temperature ﬁeld becomes
+spatially uniform, with a small parabolic correction:
+˜T ≈˜T0(t)
++ d ˜T0
+dt
+ρ(l)c(l)
+P
+κ(l)
+(D + z)2
+2
+if
+−D < z < 0.
+(78)
+Since the case of insulated substrate is cumbersome
+mathematically and trivial physically, it will not be ex-
+amined analytically in further detail (but will be simu-
+lated numerically in Sec. IV C).
+B.
+Microscopic solution
+Strictly speaking, nonisothermal evaporation is not
+steady, but can be regarded as quasisteady – i.e., ad-
+justed to the current temperature of the interface and
+incoming heat ﬂuxes, and slowly changing with them.
+In this section, E is calculated asymptotically for
+quasi-steady nonisothermal evaporation under an addi-
+tional assumption that the relative humidity is close to
+100%. Only the case of ﬁxed-T substrate will be exam-
+ined; those of insulated substrate and unbounded space
+will be brieﬂy discussed in the next subsection.
+The assumption of quasi-steadiness amounts to rewrit-
+ing the governing equations (32)–(34) in the co-moving
+reference frame (ξ, t) [ξ is deﬁned by (62)] and omitting
+the time derivatives, which yields
+E
+ρ(l)
+∂ρ
+∂ξ + ∂(ρw)
+∂ξ
+= 0,
+(79)
+p = η ∂w
+∂ξ + ρ∂2ρ
+∂ξ2 −1
+2
+∂ρ
+∂ξ
+2
++ p(v),
+(80)
+E
+ρ(l)
+∂(ρe)
+∂ξ
++ ∂
+∂ξ
+
+w
+
+ρe + p −η ∂w
+∂ξ
+
+−κ∂T
+∂ξ
+
+= wρ∂3ρ
+∂ξ3 .
+(81)
+These equations are to be solved with the ‘old’ boundary
+conditions for w, (38) and (40), whereas those for ρ and T
+will be obtained later via matching with the macroscopic
+solution.
+As in the isothermal case, one can reduce Eq. (79) to
+expression (42) for w, and substitute it into Eqs. (80)–
+(81) which become
+p(ρ, T) = −Eη(ρ, T)
+ρ2
+∂ρ
+∂ξ + ρ∂2ρ
+∂ξ2 −1
+2
+∂ρ
+∂ξ
+2
++ p(ρ(v), T0),
+(82)
+κ(ρ, T)∂T
+∂ξ = E
+"
+e(ρ, T) +
+
+1 −
+ρ
+ρ(l)
+ p(ρ, T)
+ρ
+−
+
+1 −
+ρ
+ρ(l)
+ ∂2ρ
+∂ξ2 −
+1
+2ρ(l)
+∂ρ
+∂ξ
+2
+−Q
+#
++ E2
+1
+ρ −
+1
+ρ(l)
+ η
+ρ2
+∂ρ
+∂ξ , (83)
+where Eq. (83) was integrated and Q is the integration constant (to be ﬁxed later). As before, assume that the
+solution is close to equilibrium: the leading-order temperature is uniform and equals T0 [the same constant as in the
+macroscopic representation (61)], and the leading-order density is described by the solution ρ(0) of the equilibrium
+boundary-value problem (47)–(50). These assumptions amount to
+ρ = ρ(0) + ρ(1) + · · ·,
+T = T0 + T (1) + · · · ,
+where ρ(1) and T (1) are O(E). Upon substitution of these expansions into Eq. (82), the zeroth order cancels out and
+the ﬁrst-order yields
+∂
+∂ξ
+ 1
+ρ(0)
+∂2ρ(1)
+∂ξ2
+
++
+1
+ρ(0)2
+∂2ρ(0)
+∂ξ2
+−∂p(ρ(0), T0)
+∂ρ(0)
+
+ρ(1)
+= Eη(ρ(0), T0)
+ρ4
+∂ρ(0)
+∂ξ
+−
+1
+ρ(0)2
+∂p(ρ(v.sat), T0)
+∂ρ(v.sat)
+
+ρ(v) −ρ(v.sat)
++
+1
+ρ(0)2
+∂p(ρ(0), T0)
+∂T0
+T (1).
+(84)
+By comparison with its isothermal counterpart (51), Eq. (84) includes an extra term (the last term on its right-hand
+
+13
+side). Expanding, in turn, the temperature equation (83), one obtains
+κ(ρ(0), T0)∂T (1)
+∂ξ
+= E
+"
+e(ρ(0), T0) +
+ 1
+ρ(0) −
+1
+ρ(l.sat)
+
+p(ρ(0), T0) −
+
+1 −
+ρ(0)
+ρ(l.sat)
+ ∂2ρ(0)
+∂ξ2
+−
+1
+2ρ(l.sat)
+∂ρ(0)
+∂ξ
+2
+−Q
+#
+.
+The derivatives of ρ(0) in this equation can be eliminated via equalities (B1) and (B3), and after straightforward
+algebra involving the use of deﬁnition (8) of the chemical potential, one obtains
+κ(ρ(0), T0)∂T (1)
+∂ξ
+= ET0
+h
+s(ρ(0), T0) −s(ρ(v.sat), T0)
+i
++ e(ρ(v.sat), T0) −Q.
+(85)
+The solution of this equation and the outer (macroscopic)
+solution (77) match only if the former satisfy the follow-
+ing boundary condition
+∂T (1)
+∂ξ
+→−
+E ∆h(T0)
+κ(ρ(l.sat), T0)
+as
+ξ →−∞,
+(86)
+T (1) →−
+E ∆h(T0)
+κ(ρ(l.sat), T0)D
+as
+ξ →+∞.
+(87)
+Condition (87) implies that the constant Q in Eq. (85)
+is
+Q = e(ρ(v.sat), T0),
+(88)
+and condition (86) yields the same result, but subject to
+∆h(T0) = T0
+h
+s(ρ(v.sat), T0) −s(ρ(l.sat), T0)
+i
+,
+(89)
+which is actually an identity (as shown in Appendix D).
+Keeping in mind that asymptotics (86) predicts linear
+behavior of T (1)(ξ) as ξ →−∞, one can show that Eq.
+(84) admits a similar linear asymptotics for ρ(1), i.e.,
+ρ(1) = O(ξ)
+as
+ξ →−∞.
+(90)
+In vapor, one should, as before, assume
+ρ(1) →ρ(v) −ρ(v.sat)
+as
+ξ →+∞.
+(91)
+The evaporation rate E can be found using the same pro-
+cedure as that in the isothermal case. Multiplying Eq.
+(84) by dρ(0)/dξ, one eliminates ρ(1) by integrating by
+parts, and recalling boundary conditions (90)–(91) for
+ρ(1) and boundary-value problem (48)–(49) for ρ(0). Af-
+ter straightforward algebra involving the use of thermo-
+dynamic identity (10), one obtains
+E =
+H
+A + A′ ,
+(92)
+where H and A are given by the isothermal expressions
+(55)–(56), respectively, and
+A′ = −1
+E
+Z ∞
+−∞
+T (1) ds(ρ(0), T0)
+dξ
+dξ
+can be shown to be independent of E.
+To do so, recall that the function T (1) in A′ is the so-
+lution of boundary-value problem (85)–(88) which needs
+to be solved before A′ can be calculated. This can be
+by-passed, however, by rearranging A′ in the form
+A′ = −1
+E
+Z ∞
+−∞
+
+T (1) +
+E ∆h
+κ(ρ(l.sat), T0)D
+ d
+
+s(ρ(0), T0) −s(ρ(l.sat), T0)
+
+dξ
+dξ
++
+∆h(T0)
+κ(ρ(l.sat), T0)D
+h
+s(ρ(v.sat), T0) −s(ρ(l.sat), T0)
+i
+,
+then integrating the ﬁrst term by parts, recalling boundary conditions (86)–(87), and rearranging the second term
+using identity (89). As a result, the expression for A′ involves only ∂T (1)/∂ξ, which can be eliminated using Eqs. (85)
+and (88). Eventually, one obtains
+A′ = A′
+1 + A′
+2D,
+(93)
+where
+A′
+1 = T0
+Z ∞
+−∞
+
+s(ρ(0), T0) −s(ρ(l.sat), T0)
+ 
+s(ρ(0), T0) −s(ρ(v.sat), T0)
+
+κ(ρ(0), T0)
+dξ,
+A′
+2 = T0
+
+s(ρ(v.sat), T0) −s(ρ(l.sat), T0)
+2
+κ(ρ(l.sat), T0)
+.
+
+14
+Expressions
+(92)–(93)
+constitute
+the
+most
+general
+asymptotic result of the present work. It can be used
+to ﬁnd the dependence of the evaporation rate E and the
+liquid’s depth D on the time variable t; to do so, one
+needs to complement (92)–(93) with the ordinary diﬀer-
+ential equation
+dD
+dt = −
+E
+ρ(l.sat) .
+With E determined by expressions (92), the above equa-
+tion can be readily solved.
+C.
+Numerical simulations
+The above predictions regarding the substrate’s eﬀect
+on evaporation have been tested via numerical integra-
+tion of the exact governing equations (32)–(34), for vari-
+ous initial conditions and parameter values. Note that, in
+the numerics, the energy equation (34) was conveniently
+replaced with the (mathematically equivalent) tempera-
+ture equation (C1).
+Figs. 7–8 illustrate a typical evolution. It was com-
+puted for the viscosity η given by (46) and
+cV = 3,
+κ = κ0ρ,
+where the former value corresponds to diluted water va-
+por, and the latter reﬂects the general tendency of ther-
+mal conductivity to increase with density.
+Comparing
+the nondimensionalization of this paper with that of Ref.
+[25], one can deduce that κ0 is the reciprocal of the
+“isothermality parameter” β introduced in the latter: if,
+in a certain region of the ﬂow, κ0 is large (β, small),
+the temperature ﬁeld in this region is almost uniform.
+According to the estimate of Ref. [25] for water under
+normal conditions, β ≈0.06, which approximately corre-
+sponds to
+κ0 = 17.
+The simplest initial condition for the temperature was
+used, T = const, and the initial density ﬁeld was repre-
+sented by the steady isothermal solution – i.e., that of
+(39), (41), (43)–(44) – for ρ(v)/ρ(v.sat) = 0.9, shifted to
+the right by a distance of ∆z = 20 from the substrate.
+The boundary conditions for the vapor density and tem-
+perature were moved from z = +∞to z = 400, and the
+computation was stopped well before the perturbations
+of T and ρ reached anywhere near this point.
+The following features of the evolution can be ob-
+served:
+• Fig. 7 shows that the evolution of the density ﬁeld
+is much slower than the temperature evolution (as
+assumed in the asymptotic analysis). This conclu-
+sion applies to both kinds of substrates.
+• The two lower left-hand panels of Fig. 7 show that,
+for the ﬁxed-T substrate, the temperature ﬁeld in
+the liquid settles into a quasi-steady pattern with
+linear dependence of T on z and uniform heat ﬂux
+[as predicted by asymptotics (77)]. Fig. 8 shows
+that the evaporation rate is changing very slowly
+in this case and is close to its asymptotic value pre-
+dicted by formulae (92)–(93).
+• The two right-hand lower panels of Fig.
+7 show
+that, for an insulated substrate, the liquid’s tem-
+perature becomes nearly-uniform [as predicted by
+asymptotics (78)] and is rapidly decreasing, while
+E tends to zero (see Fig. 8). Since T cannot drop
+below the dew point (at which the initial density of
+vapor coincides with the saturated density), it can
+only approach it from above2.
+• This eﬀectively means that, in the case of insu-
+lated substrate, the evaporation rate depends on t
+– hence, is not fully determined by a set of external
+(measurable) parameters. It can only be measured
+directly.
+• For ﬁxed-T substrates, in turn, the evaporation
+rate does not tend to zero and is determined by ex-
+ternal parameters (as evidenced by the good agree-
+ment between the dotted and solid curves, both
+marked with (f), in Fig. 8).
+D.
+Can the problem be solved if condition (70)
+does not hold?
+If the depth D of the evaporating layer is large enough,
+the timescale of the long-term temperature evolution is
+comparable to that of evaporation. This invalidates the
+asymptotic approach used in Sec.
+(IV A) for solving
+the macroscopic problem. Another shortcoming of the
+asymptotic approach is that it works only if the relative
+humidity is close to unity.
+However, even though there is no timescale separation
+in this case, one can still exploit the spatial scale sepa-
+ration – i.e., the diﬀerence between the microscopic scale
+of the interface and the macroscopic scale of the liquid
+layer.
+This implies solving the macroscopic equations
+(63)–(64) numerically and, at each time step, feeding the
+computed temperature of, and ﬂuxes at, the interface
+into the microscopic problem – then using it to compute
+E from the microscopic problem and feeding E back into
+the macroscopic equations.
+The approach outlined above will not be discussed in
+further detail. It is worth implementing only after the
+2 Calculating the dew point for the parameters of Figs. 7–8, one
+obtains (T −T0) × 103 ≈−4.294. The convergence to this value
+in the actual ﬁgures is extremely slow, making it diﬃcult to
+extend the simulation to the stage where it is almost reached.
+
+15
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+ ρ
+0
+1
+2
+3
+4
+(a)
+Fixed-temperature substrate
+-3
+-2
+-1
+0
+                 (T − T0) x 10 3
+0
+1
+2
+3
+4
+(b)
+0
+10
+20
+30
+40
+50
+60
+z
+0
+1
+2
+3
+4
+          heat  flux x 10 4
+0
+1
+2
+3
+4
+(c)
+0
+1
+2
+3
+4
+Insulated substrate
+0
+1
+2
+3
+4
+0
+10
+20
+30
+40
+50
+60
+z
+0
+1
+2
+3
+4
+FIG. 7. Numerical solutions for a ﬁxed-temperature substrate (left-hand panels) and insulated substrate (right-hand panels):
+(a) density ﬁeld, (b) temperature ﬁeld, (c) heat ﬂux. The initial conditions and parameters are described in Sec. IV C. The
+curves represent the snapshots taken at the following times: (0) t = 0, (1) t = 20, (2) t = 200, (3) t = 500, (4) t = 1400. The
+density distribution evolves very slowly, to the extent that curves (0)–(4) in the upper panels are indistinguishable. Note that
+this ﬁgure shows only a fraction of the z range of the underlying computation which was carried for z ∈(0, 400).
+
+16
+0
+500
+1000
+t
+0
+2e-4
+4e-4
+6e-4
+8e-4
+E
+i
+f
+FIG. 8.
+The evaporation rate vs.
+time, for the computa-
+tions represented in Fig. 7: (i) insulated substrate, (f) ﬁxed-
+temperature substrate [the dotted curve shows the asymptotic
+solution (92 )–(93)].
+present model is extended to evaporation into air (as op-
+posed to the liquid’s own vapor).
+V.
+CAN OTHER FACTORS CONTRIBUTE TO
+THE DISCREPANCIES AMONG
+EXPERIMENTAL RESULTS?
+There are two factors, not included in the present
+model, which may potentially contribute to the discord
+among the empiric formulae illustrated in Fig. 1. These
+factors are convection in the liquid and diﬀusion of the
+vapor in air.
+• In a layer on a ﬁxed-T substrate, evaporation can
+cause a large temperature diﬀerence between the
+substrate and interface – which, in turn, can trig-
+ger oﬀconvection.
+The size and number of the
+convection cells depend on the depth D of the tank
+with liquid, but also on its width L – hence, two
+experiments diﬀering by the value of L but identi-
+cal otherwise may yield diﬀerent results. It is not
+a priory clear how large this diﬀerence is, but it is
+telling that some of the empiric formulae listed in
+Refs. [12, 13] do involve L.
+• It is well known that diﬀusion of vapor, or any other
+substance, in an inﬁnite semispace does not have a
+steady regime: the one-dimensional diﬀusion equa-
+tion does not simply have such solutions. Physi-
+cally, the vapor accumulates near the interface in
+this case, making the evaporation rate tend to zero
+with time – while the layer of nearly-saturated va-
+por slowly expands toward inﬁnity.
+If, however, the vapor is collected at a ﬁnite
+height above the interface, a steady regime does
+exist, such that the vapor ﬂux is spatially uniform
+and vapor concentration is linear. This eﬀectively
+means that the measured evaporation rate should
+depend on the evaporation chamber’s height. Such
+a dependence is indeed acknowledged in some pa-
+pers (e.g., Ref.
+[37]), but not mentioned in the
+others (including the results presented in Fig. 1).
+Both of the above factors can be incorporated into
+the diﬀuse-interface model: to study convection, a three-
+dimensional version of the DIM should be used, whereas
+diﬀusion of vapor in air can be examined via a multicom-
+ponent version [25]. The work on the latter problem is
+in progress.
+Among other factors aﬀecting evaporation, one might
+mention radiative exchange of heat between liquid and
+air. It is often small, but can still be important for the
+case of insulated vessels, where the heat ﬂuxes from the
+boundaries are zero.
+VI.
+SUMMARY AND CONCLUDING
+REMARKS
+The following features of nonisothermal evaporation of
+liquid layers on a substrate are reported in this paper:
+(a) Qualitative estimates (1) and (5) show that non-
+isothermality aﬀects evaporation even under nor-
+mal conditions (and probably more so in high-
+temper

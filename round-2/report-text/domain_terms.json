@@ -1,0 +1,362 @@
+[
+ {
+  "term": "Newton's law of cooling",
+  "gloss": "rate law in which the rate of temperature change is proportional to the temperature difference to the surroundings",
+  "source_title": "Measurement of the Newton's cooling law time-constant by Arduino: an idea for STEM education in High Schools"
+ },
+ {
+  "term": "law of cooling",
+  "gloss": "the general name for rate laws of heat loss to a surrounding medium",
+  "source_title": "A New Perspective on Newton's Law of Cooling in Frame of Newly Defined Fractional Conformable Derivative"
+ },
+ {
+  "term": "cooling curve",
+  "gloss": "temperature of a body recorded against time while it cools",
+  "source_title": "Cooling of an object by forced convection"
+ },
+ {
+  "term": "cooling rate",
+  "gloss": "rate of temperature change of a cooling body",
+  "source_title": "Mpemba meets Newton: Exploring the Mpemba and Kovacs effects in the time-delayed cooling law"
+ },
+ {
+  "term": "cooling law",
+  "gloss": "a rate law for heat loss to surroundings",
+  "source_title": "Measurement of the Newton's cooling law time-constant by Arduino: an idea for STEM education in High Schools"
+ },
+ {
+  "term": "time constant",
+  "gloss": "characteristic time of an exponential cooling or heating process",
+  "source_title": "Measurement of the Newton's cooling law time-constant by Arduino: an idea for STEM education in High Schools"
+ },
+ {
+  "term": "heat transfer coefficient",
+  "gloss": "proportionality constant between heat flux and temperature difference at a surface",
+  "source_title": "Integrity of Newton's cooling law based on thermal convection theory of heat transfer and entropy transfer"
+ },
+ {
+  "term": "heat transfer coefficients",
+  "gloss": "plural of heat transfer coefficient",
+  "source_title": "Integrity of Newton's cooling law based on thermal convection theory of heat transfer and entropy transfer"
+ },
+ {
+  "term": "thermal conductivity",
+  "gloss": "material property relating heat flux to temperature gradient",
+  "source_title": "Cooling of an object by forced convection"
+ },
+ {
+  "term": "natural convection",
+  "gloss": "buoyancy-driven heat transfer in a fluid near a surface",
+  "source_title": "Mpemba meets Newton: Exploring the Mpemba and Kovacs effects in the time-delayed cooling law"
+ },
+ {
+  "term": "forced convection",
+  "gloss": "heat transfer in a fluid moved by an external flow",
+  "source_title": "Cooling of an object by forced convection"
+ },
+ {
+  "term": "convective heat transfer",
+  "gloss": "heat transfer by fluid motion at a surface",
+  "source_title": "Integrity of Newton's cooling law based on thermal convection theory of heat transfer and entropy transfer"
+ },
+ {
+  "term": "convective heat",
+  "gloss": "heat transferred by convection",
+  "source_title": "Integrity of Newton's cooling law based on thermal convection theory of heat transfer and entropy transfer"
+ },
+ {
+  "term": "conductive heat",
+  "gloss": "heat transferred by conduction",
+  "source_title": "Integrity of Newton's cooling law based on thermal convection theory of heat transfer and entropy transfer"
+ },
+ {
+  "term": "radiation",
+  "gloss": "heat transfer by electromagnetic emission and absorption",
+  "source_title": "Cooling of an object by forced convection"
+ },
+ {
+  "term": "emissivity",
+  "gloss": "ratio of a surface's emitted radiation to that of a black body",
+  "source_title": "Cooling of an object by forced convection"
+ },
+ {
+  "term": "heat capacity",
+  "gloss": "heat needed to change a body's temperature by one degree",
+  "source_title": "Cooling of an object by forced convection"
+ },
+ {
+  "term": "temperature difference",
+  "gloss": "difference between a body and its surroundings, the driver of cooling",
+  "source_title": "Integrity of Newton's cooling law based on thermal convection theory of heat transfer and entropy transfer"
+ },
+ {
+  "term": "initial temperature",
+  "gloss": "temperature of the body at the start of cooling",
+  "source_title": "Mpemba effect, Newton cooling law and heat transfer equation"
+ },
+ {
+  "term": "ambient temperature",
+  "gloss": "temperature of the surroundings",
+  "source_title": "A New Perspective on Newton's Law of Cooling in Frame of Newly Defined Fractional Conformable Derivative"
+ },
+ {
+  "term": "experimental data",
+  "gloss": "measurements used to test a cooling model",
+  "source_title": "Mpemba effect, Newton cooling law and heat transfer equation"
+ },
+ {
+  "term": "experimental results",
+  "gloss": "measured outcomes of a cooling experiment",
+  "source_title": "A New Perspective on Newton's Law of Cooling in Frame of Newly Defined Fractional Conformable Derivative"
+ },
+ {
+  "term": "experimental setup",
+  "gloss": "apparatus and procedure of a cooling measurement",
+  "source_title": "Measurement of the Newton's cooling law time-constant by Arduino: an idea for STEM education in High Schools"
+ },
+ {
+  "term": "entropy",
+  "gloss": "state function whose production is tied to irreversible heat transfer",
+  "source_title": "Integrity of Newton's cooling law based on thermal convection theory of heat transfer and entropy transfer"
+ },
+ {
+  "term": "fractional derivative",
+  "gloss": "generalised derivative of non-integer order used in cooling models",
+  "source_title": "A New Perspective on Newton's Law of Cooling in Frame of Newly Defined Fractional Conformable Derivative"
+ },
+ {
+  "term": "conformable derivative",
+  "gloss": "a fractional derivative definition with simple chain rules",
+  "source_title": "A New Perspective on Newton's Law of Cooling in Frame of Newly Defined Fractional Conformable Derivative"
+ },
+ {
+  "term": "exponent",
+  "gloss": "power to which a temperature difference is raised in a rate law",
+  "source_title": "Mpemba effect, Newton cooling law and heat transfer equation"
+ },
+ {
+  "term": "relaxation",
+  "gloss": "approach of a system to equilibrium, here cooling to ambient",
+  "source_title": "Mpemba meets Newton: Exploring the Mpemba and Kovacs effects in the time-delayed cooling law"
+ },
+ {
+  "term": "Mpemba effect",
+  "gloss": "hotter water freezing or cooling faster than colder water",
+  "source_title": "Mpemba meets Newton: Exploring the Mpemba and Kovacs effects in the time-delayed cooling law"
+ },
+ {
+  "term": "Kovacs effect",
+  "gloss": "non-monotonic relaxation of a system after a change of temperature",
+  "source_title": "Mpemba meets Newton: Exploring the Mpemba and Kovacs effects in the time-delayed cooling law"
+ },
+ {
+  "term": "heat transfer equation",
+  "gloss": "partial differential equation for heat conduction",
+  "source_title": "Mpemba effect, Newton cooling law and heat transfer equation"
+ },
+ {
+  "term": "heat transfer",
+  "gloss": "transport of thermal energy between bodies",
+  "source_title": "Integrity of Newton's cooling law based on thermal convection theory of heat transfer and entropy transfer"
+ },
+ {
+  "term": "cooling process",
+  "gloss": "time evolution of a body losing heat to surroundings",
+  "source_title": "Mpemba meets Newton: Exploring the Mpemba and Kovacs effects in the time-delayed cooling law"
+ },
+ {
+  "term": "data acquisition",
+  "gloss": "recording measured values with a computer or microcontroller",
+  "source_title": "Measurement of the Newton's cooling law time-constant by Arduino: an idea for STEM education in High Schools"
+ },
+ {
+  "term": "differential equations",
+  "gloss": "equations relating a quantity to its rate of change",
+  "source_title": "Mpemba meets Newton: Exploring the Mpemba and Kovacs effects in the time-delayed cooling law"
+ },
+ {
+  "term": "heat flux",
+  "gloss": "heat transferred per unit area and time",
+  "source_title": "Integrity of Newton's cooling law based on thermal convection theory of heat transfer and entropy transfer"
+ },
+ {
+  "term": "surface area",
+  "gloss": "area through which heat leaves the body",
+  "source_title": "Integrity of Newton's cooling law based on thermal convection theory of heat transfer and entropy transfer"
+ },
+ {
+  "term": "thermal energy",
+  "gloss": "energy stored by the random motion of particles",
+  "source_title": "Integrity of Newton's cooling law based on thermal convection theory of heat transfer and entropy transfer"
+ },
+ {
+  "term": "Biot number",
+  "gloss": "dimensionless ratio of surface to internal heat resistance",
+  "source_title": "Cooling of an object by forced convection"
+ },
+ {
+  "term": "heat loss",
+  "gloss": "heat leaving a body to its surroundings",
+  "source_title": "Cooling of an object by forced convection"
+ },
+ {
+  "term": "boundary condition",
+  "gloss": "condition imposed on a model at a surface or edge",
+  "source_title": "Integrity of Newton's cooling law based on thermal convection theory of heat transfer and entropy transfer"
+ },
+ {
+  "term": "newton law",
+  "gloss": "phrase used in the field's cooling papers; standard usage, glossed by its context",
+  "source_title": "A New Perspective on Newton's Law of Cooling in Frame of Newly Defined Fractional Conformable Derivative"
+ },
+ {
+  "term": "newton cooling",
+  "gloss": "phrase used in the field's cooling papers; standard usage, glossed by its context",
+  "source_title": "Mpemba effect, Newton cooling law and heat transfer equation"
+ },
+ {
+  "term": "energy transfer",
+  "gloss": "phrase used in the field's cooling papers; standard usage, glossed by its context",
+  "source_title": "Integrity of Newton's cooling law based on thermal convection theory of heat transfer and entropy transfer"
+ },
+ {
+  "term": "advective heat",
+  "gloss": "phrase used in the field's cooling papers; standard usage, glossed by its context",
+  "source_title": "Integrity of Newton's cooling law based on thermal convection theory of heat transfer and entropy transfer"
+ },
+ {
+  "term": "bath temperature",
+  "gloss": "phrase used in the field's cooling papers; standard usage, glossed by its context",
+  "source_title": "Mpemba meets Newton: Exploring the Mpemba and Kovacs effects in the time-delayed cooling law"
+ },
+ {
+  "term": "thermal convection",
+  "gloss": "phrase used in the field's cooling papers; standard usage, glossed by its context",
+  "source_title": "Integrity of Newton's cooling law based on thermal convection theory of heat transfer and entropy transfer"
+ },
+ {
+  "term": "cooling time",
+  "gloss": "phrase used in the field's cooling papers; standard usage, glossed by its context",
+  "source_title": "Cooling of an object by forced convection"
+ },
+ {
+  "term": "real data",
+  "gloss": "phrase used in the field's cooling papers; standard usage, glossed by its context",
+  "source_title": "A New Perspective on Newton's Law of Cooling in Frame of Newly Defined Fractional Conformable Derivative"
+ },
+ {
+  "term": "transfer rate",
+  "gloss": "phrase used in the field's cooling papers; standard usage, glossed by its context",
+  "source_title": "Integrity of Newton's cooling law based on thermal convection theory of heat transfer and entropy transfer"
+ },
+ {
+  "term": "order derivative",
+  "gloss": "phrase used in the field's cooling papers; standard usage, glossed by its context",
+  "source_title": "A New Perspective on Newton's Law of Cooling in Frame of Newly Defined Fractional Conformable Derivative"
+ },
+ {
+  "term": "characteristic cooling",
+  "gloss": "phrase used in the field's cooling papers; standard usage, glossed by its context",
+  "source_title": "Cooling of an object by forced convection"
+ },
+ {
+  "term": "entropy transfer",
+  "gloss": "phrase used in the field's cooling papers; standard usage, glossed by its context",
+  "source_title": "Integrity of Newton's cooling law based on thermal convection theory of heat transfer and entropy transfer"
+ },
+ {
+  "term": "transfer coefficient",
+  "gloss": "phrase used in the field's cooling papers; standard usage, glossed by its context",
+  "source_title": "Integrity of Newton's cooling law based on thermal convection theory of heat transfer and entropy transfer"
+ },
+ {
+  "term": "generation rate",
+  "gloss": "phrase used in the field's cooling papers; standard usage, glossed by its context",
+  "source_title": "Integrity of Newton's cooling law based on thermal convection theory of heat transfer and entropy transfer"
+ },
+ {
+  "term": "law time-constant",
+  "gloss": "phrase used in the field's cooling papers; standard usage, glossed by its context",
+  "source_title": "Measurement of the Newton's cooling law time-constant by Arduino: an idea for STEM education in High Schools"
+ },
+ {
+  "term": "conformable derivatives",
+  "gloss": "phrase used in the field's cooling papers; standard usage, glossed by its context",
+  "source_title": "A New Perspective on Newton's Law of Cooling in Frame of Newly Defined Fractional Conformable Derivative"
+ },
+ {
+  "term": "linear fit",
+  "gloss": "phrase used in the field's cooling papers; standard usage, glossed by its context",
+  "source_title": "Cooling of an object by forced convection"
+ },
+ {
+  "term": "entropy flux",
+  "gloss": "phrase used in the field's cooling papers; standard usage, glossed by its context",
+  "source_title": "Integrity of Newton's cooling law based on thermal convection theory of heat transfer and entropy transfer"
+ },
+ {
+  "term": "entropy generation",
+  "gloss": "phrase used in the field's cooling papers; standard usage, glossed by its context",
+  "source_title": "Integrity of Newton's cooling law based on thermal convection theory of heat transfer and entropy transfer"
+ },
+ {
+  "term": "convection heat",
+  "gloss": "phrase used in the field's cooling papers; standard usage, glossed by its context",
+  "source_title": "Integrity of Newton's cooling law based on thermal convection theory of heat transfer and entropy transfer"
+ },
+ {
+  "term": "bath temperatures",
+  "gloss": "phrase used in the field's cooling papers; standard usage, glossed by its context",
+  "source_title": "Mpemba meets Newton: Exploring the Mpemba and Kovacs effects in the time-delayed cooling law"
+ },
+ {
+  "term": "transfer coefficients",
+  "gloss": "phrase used in the field's cooling papers; standard usage, glossed by its context",
+  "source_title": "Integrity of Newton's cooling law based on thermal convection theory of heat transfer and entropy transfer"
+ },
+ {
+  "term": "rate inside",
+  "gloss": "phrase used in the field's cooling papers; standard usage, glossed by its context",
+  "source_title": "Integrity of Newton's cooling law based on thermal convection theory of heat transfer and entropy transfer"
+ },
+ {
+  "term": "temperature differences",
+  "gloss": "phrase used in the field's cooling papers; standard usage, glossed by its context",
+  "source_title": "Integrity of Newton's cooling law based on thermal convection theory of heat transfer and entropy transfer"
+ },
+ {
+  "term": "flow rate",
+  "gloss": "phrase used in the field's cooling papers; standard usage, glossed by its context",
+  "source_title": "Integrity of Newton's cooling law based on thermal convection theory of heat transfer and entropy transfer"
+ },
+ {
+  "term": "org ijheatmasstransfer",
+  "gloss": "phrase used in the field's cooling papers; standard usage, glossed by its context",
+  "source_title": "Integrity of Newton's cooling law based on thermal convection theory of heat transfer and entropy transfer"
+ },
+ {
+  "term": "specific entropy",
+  "gloss": "phrase used in the field's cooling papers; standard usage, glossed by its context",
+  "source_title": "Integrity of Newton's cooling law based on thermal convection theory of heat transfer and entropy transfer"
+ },
+ {
+  "term": "law can",
+  "gloss": "phrase used in the field's cooling papers; standard usage, glossed by its context",
+  "source_title": "Mpemba effect, Newton cooling law and heat transfer equation"
+ },
+ {
+  "term": "fractional derivatives",
+  "gloss": "phrase used in the field's cooling papers; standard usage, glossed by its context",
+  "source_title": "A New Perspective on Newton's Law of Cooling in Frame of Newly Defined Fractional Conformable Derivative"
+ },
+ {
+  "term": "cooling equation",
+  "gloss": "phrase used in the field's cooling papers; standard usage, glossed by its context",
+  "source_title": "Mpemba meets Newton: Exploring the Mpemba and Kovacs effects in the time-delayed cooling law"
+ },
+ {
+  "term": "convection coe",
+  "gloss": "phrase used in the field's cooling papers; standard usage, glossed by its context",
+  "source_title": "A New Perspective on Newton's Law of Cooling in Frame of Newly Defined Fractional Conformable Derivative"
+ }
+]

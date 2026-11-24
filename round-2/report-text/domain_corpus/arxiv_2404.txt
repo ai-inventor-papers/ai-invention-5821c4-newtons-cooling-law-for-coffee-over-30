@@ -1,0 +1,343 @@
+Cooling of an objetct by forced convection
+Mateo Dutra1a, Mart´ın Monteiro2b, Arturo C. Mart´ı 1c
+1Instituto de F´ısica, Universidad de la Rep´ublica, Montevideo, Uruguay;
+2Universidad ORT Uruguay, Montevideo, Uruguay
+E-mail: amateodutrafisica@gmail.com,
+bfisica.martin@gmail.com,cmarti@fisica.edu.uy
+Abstract.
+We present an experiment on forced convection where a previously heated
+object is cooled under the effect of a controlled stream of air. We consider a square
+copper plate in which temperature variations can be considered negligible and we
+measure the cooling rate as a function of the average velocity of the air stream. We use a
+thermal camera to measure the temperature field and the cooling curves as a function of
+time for different conditions. An empirical relation between the characteristic cooling
+time and the mean velocity of the air stream is reported. The results obtained are
+discussed in the framework of simple dimensional models and their limits of validity.
+1. Introduction
+In thermodynamics, temperature variations in a system related to energy flows within
+the system and with the environment are of fundamental importance.
+In general,
+three heat transfer mechanisms are distinguished: conduction, radiation and convection
+[1]. Energy transfers by conduction typically occur within a solid due to temperature
+differences within it and can be quantified by means of the thermal conductivity, the
+area of the object and the temperature difference. The second mechanism mentioned,
+thermal radiation, is due to the conversion of thermal energy of the material charges into
+electromagnetic radiation. It depends on the temperature of the object, its emissivity,
+its area and the ambient temperature. Finally, convection, also known as convective
+heat transfer, is generally defined as the transfer of heat between two sites due to the
+movement of the fluid. This heat transfer mechanism is usually predominant in liquids
+and gases and in many experimental situations its effect overcomes that of the other
+heat transfer mechanisms. The importance of these phenomena covers all scales from
+the smallest to the astrophysical, including geophysical and climatic phenomena.
+The cooling of an object placed in front of an air stream is in principle a complex
+phenomenon that depends on many factors. A model that claims to be accurate should
+take into account the thermodynamic properties and variables of both the object and
+the jet fluid as well as the relative orientation. In this paper we focus on a situation
+where we reduce the variables to be considered to a minimum. It is worth mentioning
+arXiv:2404.08587v2  [physics.ed-ph]  15 Apr 2024
+
+Cooling of an objetct by...
+2
+that a similar problem was proposed by Lord Rayleigh in the early days of dimensional
+analysis in a paper [2] where he proposed several problems as an application of the then
+recent Buckingham’s Pi theorem. The proposed solution was not without controversy,
+as can be found at [1].
+Within the great variety of phenomena related to heat transfer, situations where
+an object is cooled occupy a prominent place. Newton’s law of cooling states that if the
+temperature differences between the object and the environment are not very large, a
+law of exponential type is verified [3]. In instructional laboratories for undergraduate
+students several experiments have been proposed centered on this law and the cooling
+of objects in different conditions [4, 5, 6]. Others experiments have focused on natural
+convection phenomena where the motion is due to buoyancy forces caused by variations
+of the fluid density with temperature. In contrast, situations where convection is forced,
+i.e., the fluid is forced by an external mechanism and impinges on the cooling object,
+have received very little attention [7].
+In this work we study the cooling of an object in the presence of an externally
+controlled air stream with the objective of determining the exponent that characterizes
+the cooling curve as a function of the average air velocity. For this purpose, we set
+up a square copper plate, whose temperature can be considered uniform and the heat
+radiation mechanisms are negligible, and we studied the cooling in the presence of an
+incident air stream. The temperature of the plate is obtained by using a thermal camera
+attached to a smartphone. This tool has proven to be useful in several demonstrative
+or instructional laboratory experiments [8, 9, 10]. Since the price has dropped in the
+last years [11], they are being more frequently used and different activities have been
+proposed in many physics topics [12, 13, 14, 15, 16, 17]. The development of IR cameras
+that work in conjunction with smartphones opens up the possibility of new experiments
+at lower cost. [18]. Other innovative alternatives recently proposed in the literature for
+the experimental study of cooling laws are based on the use of Arduino microcontrollers
+[19].
+Below we briefly summarize the theoretical framework of this experiment.
+In
+section III we discuss the experimental setup. The results are presented and discussed
+in section IV and finally in section V we formulate the closing remarks.
+2. Theoretical framework
+In the realm of heat transfer, various mechanisms operate concurrently, each exerting its
+influence on the thermal dynamics of a system. Yet, there are instances where one mode
+of heat transfer predominates over others, shaping the overall heat exchange process.
+To quantify the significance of each heat transfer mechanism, it is usual to employ non-
+dimensional numbers, providing a framework to assess their relative impacts within a
+given context.
+The dimensionless Biot number, Bi, is defined by the ratio between the conductive
+and the convective heat transfer coefficients. When the Biot number verifies Bi ≪1 the
+internal flow is much larger than the heat loss from the surface, so we can consider the
+
+Cooling of an objetct by...
+3
+object as homogeneously heated [3]. In this case, and if the radiative cooling contribution
+is neglected, the temperature To of the object located in a medium with temperature Te
+varies over time t according to
+mcdTo
+dt = −αconv · A · (To −Te)
+(1)
+where m is the mass of the object, c is the specific heat, αconv the convective heat
+transfer coefficient and A the area of the object [3]. A solution for this equation is
+To(t) = Te + (Ti −Te) · e−t
+τ
+(2)
+where Ti is the temperature of the object when t = 0, and τ is the characteristic cooling
+time defined by
+τ =
+mc
+Aαconv
+.
+(3)
+obtained from the temporal evolution of the temperature linearized as
+log(To −Te) = log(Ti −Te) −t
+τ .
+(4)
+It is worth mentioning that in a situation where the radiation contribution is significant
+we must add a term to Eq. 1 to become
+mcdTo
+dt = −αconv · A · (To −Te) −ε · σ · A · (T 4
+o −T 4
+e )
+(5)
+where ε is the object emissivity, and σ the Stefan-Boltzmann constant.
+Here, we are undertaking a study on the cooling process of an object exposed to an
+air current. The cooling behavior heavily relies on the geometry of the object, making it
+challenging to model accurately in the absence of symmetry. As a result, we have opted
+to focus on analyzing the cooling of a vertically oriented square plate positioned within
+a horizontal air stream that runs perpendicular to the plate’s surface. For this study, we
+consider that the cross-sectional area occupied by the air stream covers the entire plate
+and that the air velocity can be considered constant in the region close to the plate. In
+this case the most relevant geometrical characteristic of the plate is the thickness while
+the other dimensions do not play an important role in a first approximation.
+By considering additional dimensionless numbers, specifically the Prandtl and
+Reynolds numbers, we can establish a correlation between the convective heat transfer
+coefficient and the mean velocity of the stream v. The Prandtl number Pr is defined as
+the ratio of momentum diffusivity to thermal diffusivity, and the Reynolds number Re
+as the ratio of inertial forces to viscous forces. For laminar flow, if
+Pr > 0.6,
+(6)
+then αconv ∝Re1/2, and consequently αconv ∝v1/2 [1]. In addition, if we neglect the
+radiation heat transfer, we obtain from Eq. 3
+τ ∝v−1/2
+(7)
+establishing a relationship between the characteristic cooling time and the air stream
+velocity.
+
+Cooling of an objetct by...
+4
+In this work we use a thermal camera to measure the temperature of the vertical
+plate as a function of time of a vertical plate under the effect of forced convection
+originated by an air stream. For each air velocity we calculate the characteristic cooling
+time τ and compare with the previous scaling relation given by Eq. 7.
+3. Experimental configuration
+The experimental setup shown in Fig. 1 consists of a square copper plate with size
+2.0(1) × 2.0(1) × 0.092(2) cm3 and mass m = 3.330(1) g, and an air blower generating a
+nearly circular stream produced with a Pasco Variable Output Air Supply SF-9216.
+The mean air velocity and temperature were previously measured with a hot wire
+anemometer CEM DT-8880. The copper plate is hung vertically from a support so
+that the air stream is incident parallel to the face of the plate. In the center of the
+plate a circle was painted with white-out correction fluid, that has a thermal emissivity
+close to one, to ensure accurate temperature measurements with the FLIR ONE thermal
+camera that was attached to a smartphone with the app Vernier Thermal Analysis Plus
+for Flir One.
+Figure 1. Experimental configuration. A plate is cooled by a horizontal airflow, and
+a thermal camera measures its temperature. A white circle in the center of the plate
+was painted with white-out correction fluid, to ensure accurate measurements.
+The experiment begins by heating the copper plate on a hotplate until a
+temperature higher than 150oC which is the highest value that the thermal camera
+can measure with the Vernier app. Since the heat conduction inside is very fast and in
+less than a second it becomes uniform, it is not crucial if the temperature of the plate
+is not uniform during this process.
+After reaching this temperature the plate is placed on the support where the air
+stream hits as indicated in Fig. 1.
+We used the thermal camera to record a video
+
+Cooling of an objetct by...
+5
+Figure 2. Cooling process of the plate. The points correspond to the dimnensionless
+temperature as a function of the mean stream velocity (indicated in the legend box).
+The lines represent linear fits of the experimental values. The correlation coefficient
+is r = 0.997 for v = 5.5m/s, and r = 0.999 for the other mean velocity values. The
+linear relationship reveals that the radiation heat transfer can be neglected in this
+experiment.
+with 9 frames per second and measured the plate temperature in each one while
+it was cooled until 25oC.
+The process was repeated for different stream velocities:
+v = [(5.5±0.5), (11±1), (13±1), (18±2), (22±2)]m/s. The uncertainty is obtained as the
+standard error of the fluctuations of the anemometer reading. In all the measurements
+considered here the stream temperature was in the range between 20oC and 25oC, so
+Pr ≈0.71 and condition given by Eq. 6 remains valid.
+4. Results and discussion
+Using the thermal camera record we obtained the temperature of the plate as it cooled
+over time for each air velocity, and calculated log(To −Te) in order to analyze the
+consistency of the experimental data with the linearization of Eq. 3. Fig. 2 shows this
+relation, and the linear fit of the experimental values for each cooling. Given that the
+correlation coefficient is r = 0.997 for v = 5.5m/s, and r = 0.999 for the other velocities,
+is not necessary to take into account the radiation heat loss. We even compared the
+two terms on the right hand side of the Eq. 5 for different temperature values, and in
+all the cases we obtain that αconv · A · (To −Te) >> ε · σ · A · (T 4
+o −T 4
+e ).
+We obtain τ for each cooling from the slope of the linear fit in Fig. 2.
+Then,
+
+Cooling of an objetct by...
+6
+Dimensional variables
+Symbol
+Imposed dimensions
+Characteristic time
+τ
+T
+Plate thickness
+d
+L
+Velocity of the stream
+v
+LT 1
+Volumetric heat capacity of the fluid
+c
+HL−3θ−1
+Thermal conductivity of the fluid
+κ
+HL−1T −1θ−1
+Temperature difference
+∆T
+θ
+Table 1. The six dimensional variables and the four imposed dimensions. Note the
+dimensions of head and temperature are denoted as H and θ respectively.
+we calculated the αconv from Ec. 3 and the maximum value was αconv−max
+=
+253W/K. The conductive heat transfer coefficient can be calculated as αcond = λ/s =
+(398W/Km)/(0.02m) = 19990W/K, where λ is the thermal conductivity and s the large
+of the plate. Consequently, Bimax = αconv−max/αcond = 0.013 << 1 so we can consider
+the object as homogeneously heated.
+Figure 3 shows the relation between the characteristic cooling time and the averaged
+velocity of the air stream. The slope of the linear fit was obtained through the least
+squares method and is 0.48(4). This value is coherent with that mentioned in Eq. 7.
+The uncertainty region of the linear fit is also shown in shading blue in the graph. The
+correlation coefficient obtained shows that the quality of the linear fit is very acceptable.
+The dependence of the characteristic cooling time on the stream velocity obtained
+is consistent with the conclusions that can be drawn from dimensional analysis. This
+problem was considered from the dimensional approach at the beginning of the 20th
+century by Lord Rayleigh [2] and at the time prompted a wide-ranging debate (see
+[20]). Inspired by Rayleigh’s arguments, we consider that, in a first approximation the
+characteristic decay time depends on five quantities: the thickness of the plate d, the
+average stream velocity v, the heat capacity per unit volume of the fluid c, and the
+thermal conductivity of the fluid κ, and the temperature difference between the plate
+and the air stream ∆T. It should be noted that in this approach the air stream is
+considered to cover the entire plate and the temperature is homogeneous over the entire
+surface so that the most important variable for the cooling time is the thickness. Other
+properties of the fluid such as viscosity are not taken into account either, since at high
+Reynolds numbers, i.e. turbulent flows, they can be neglected. Table 1 enumerates the
+six dimensional variables and the four imposed dimensions.
+Therefore as a consequence of Buckingham’s Pi theorem the problem depends only
+on two dimensionless numbers and the characteristic time can be expressed as [21]
+τ κ
+cd2 = f
+ vcd
+κ
+!
+(8)
+where f is an arbitrary function expressing the relationship between two dimensionless
+numbers. Note that the temperature difference does not enter into this result. This fact
+is compatible with an exponential decay of the temperature difference.
+
+Cooling of an objetct by...
+7
+Figure 3. Log-log plot of the characteristic cooling time, τ, as a function of mean
+stream velocity.
+The blue line represents the linear fit of the experimental values,
+obtained through the least squares method.
+Furthermore, the shaded blue area
+represents the 95% confidence interval of this fit.
+The slope of this graph reveals
+that the relationship τ ∝v−1/2 is reasonably valid within the margins of uncertainty.
+If we consider here the experimentally obtained dependence with τ ∝v−1/2 we can
+further refine the above result by expressing the cooling time as
+τ =
+ c
+κ
+1/2
+d3/2v−1/2
+(9)
+This result not only includes a velocity dependence compatible with the experi-
+mental results but also with the other quantities. Indeed, it is to be expected that
+the cooling time increases with the heat capacity of the fluid (i.e. air) and with the
+thickness of the plate and in turn decreases with the thermal conductivity of the fluid.
+This result is also consistent with the approach proposed by Boussinesq and mentioned
+by Rayleigh in the 1915 paper [2].
+5. Conclusions
+In this work we experimentally study the forced convection of a metal plate placed in
+front of an air stream. The plate was heated to a predetermined temperature and by
+means of a thermal camera we studied the characteristic cooling time in relation to the
+average velocity of the air stream. The experimental results reveal that τ for each air
+velocity and the results were consistent with τ ∝v−1/2.
+
+Cooling of an objetct by...
+8
+The experiment holds significant potential to include in thermodynamics laboratory
+courses. It is relatively cost-effective as it makes use of an affordable thermal camera,
+which enables its execution. The problem addressed has also its importance from the
+point of view of the daily experience of students because in many real life situations we
+face cooling problems and in many of them convection plays an important role.
+The simplicity of the experimental device, which requires only a thermal camera
+(which can be a device that attaches to a smartphone) and other materials available
+in many laboratories, allows the experiment to be performed in various socioeconomic
+contexts.
+The only caution to be taken is the handling of hot objects, which must
+be done taking the necessary precautions. We believe that this experiment can be a
+valuable and motivating resource.
+Acknowledgment
+The authors would like to thank PEDECIBA (MEC, UdelaR, Uruguay).
+References
+[1] Bergman T L, Bergman T L, Incropera F P, Dewitt D P and Lavine A S 2011 Fundamentals of
+heat and mass transfer (John Wiley & Sons)
+[2] Rayleigh L 1915 Nature 95 202–203
+[3] Vollmer M 2009 European Journal of Physics 30 1063 URL https://dx.doi.org/10.1088/
+0143-0807/30/5/014
+[4] O’Sullivan C T 1990 American Journal of Physics 58 956–960 ISSN 0002-9505 (Preprint
+https://pubs.aip.org/aapt/ajp/article-pdf/58/10/956/11783443/956_1_online.pdf)
+URL https://doi.org/10.1119/1.16309
+[5] Spuller J and Cobb R 1993 American journal of physics 61 568–571
+[6] Planinˇsiˇc G and Vollmer M 2008 European Journal of Physics 29 369 URL https://dx.doi.org/
+10.1088/0143-0807/29/2/017
+[7] Gonzalez M I and Lucio J H 2008 European journal of physics 29 263
+[8] Haglund J, Jeppsson F, Hedberg D and Sch¨onborn K J 2015 Physics Education 50 424
+[9] M¨ollmann K P and Vollmer M 2007 European Journal of Physics 28 S37 URL https://dx.doi.
+org/10.1088/0143-0807/28/3/S04
+[10] Guido R, Dutra M, Monteiro M and Marti A 2023 European Journal of Physics
+[11] Vollmer M and M¨ollmann K P 2018 Physics Education 53 065019
+[12] K´acovsk`y P 2019 The Physics Teacher 57 597–599
+[13] Oss S and Zendri G 2015 European Journal of Physics 36 065016 URL https://dx.doi.org/10.
+1088/0143-0807/36/6/065016
+[14] Xie C and Hazzard E 2011 The Physics Teacher 49 368–372
+[15] Cabello R, Navarro-Esbr´ı J, Llopis R and Torrella E 2006 International Journal of Engineering
+Education 22 373
+[16] Gfroerer T, Phillips R and Rossi P 2015 American Journal of Physics 83 923–927
+[17] Pendrill A M 2024 Physics Education 59 015033 URL https://dx.doi.org/10.1088/1361-6552/
+ad125c
+[18] Monteiro M and Mart´ı A C 2022 American Journal of Physics 90 328–343
+[19] Galeriu C 2018 The Physics Teacher
+56 618–620 ISSN 0031-921X (Preprint
+https://
+pubs.aip.org/aapt/pte/article-pdf/56/9/618/9869883/618_1_online.pdf) URL https:
+//doi.org/10.1119/1.5080580
+
+Cooling of an objetct by...
+9
+[20] Bridgman P W 1922 Dimensional analysis (Yale university press)
+[21] Lemons D S 2017 A student’s guide to dimensional analysis (Cambridge University Press)

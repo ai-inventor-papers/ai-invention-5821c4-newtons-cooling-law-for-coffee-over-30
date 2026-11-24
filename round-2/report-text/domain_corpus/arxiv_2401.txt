@@ -1,0 +1,2171 @@
+arXiv:2401.03550v2  [cond-mat.soft]  24 Apr 2024
+Mpemba meets Newton: Exploring the Mpemba and Kovacs effects in the time-delayed
+cooling law
+Andrés Santos
+Departamento de Física and Instituto de Computación Cientíﬁca Avanzada (ICCAEx),
+Universidad de Extremadura, E-06006 Badajoz, Spain∗
+(Dated: April 26, 2024)
+Despite extensive research, the fundamental physical mechanisms underlying the Mpemba effect, a
+phenomenon where a substance cools faster after initially being heated, remain elusive. Although his-
+torically linked with water, the Mpemba effect manifests across diverse systems, sparking heightened
+interest in Mpemba-like phenomena. Concurrently, the Kovacs effect, a memory phenomenon ob-
+served in materials such as polymers, involves rapid quenching and subsequent temperature changes,
+resulting in nonmonotonic relaxation behavior. This paper probes the intricacies of the Mpemba and
+Kovacs effects within the framework of the time-delayed Newton’s law of cooling, recognized as
+a simplistic yet effective phenomenological model accommodating memory phenomena. This law
+allows for a nuanced comprehension of temperature variations, introducing a delay time (τ) and in-
+corporating speciﬁc protocols for the thermal bath temperature, contingent on a deﬁned waiting time
+(tw). Remarkably, the relevant parameter space is two-dimensional (τ and tw), with bath tempera-
+tures exerting no inﬂuence on the presence or absence of the Mpemba effect or the relative strength of
+the Kovacs effect. The ﬁndings enhance our understanding of these memory phenomena, providing
+valuable insights applicable to researchers across diverse ﬁelds, ranging from physics to materials
+science.
+I.
+INTRODUCTION
+As a teenager, Mpemba (1950–2023) accidentally dis-
+covered the paradoxical effect that now bears his name.
+In the ﬁrst part of his renowned paper [1] with Os-
+borne (1932–2014),the 19-year-old Mpemba candidly re-
+counted the story. In the second part of the paper, Os-
+borne wrote,
+“The headmaster of Mkwawa High School
+invited me to speak to the students on
+‘Physics and national development’.
+[...]
+One student raised a laugh from his col-
+leagues with a question I remember as ‘If
+you take two beakers with equal volumes of
+water, one at 35◦C and the other at 100◦C,
+and put them into a refrigerator, the one
+that started at 100◦C freezes ﬁrst. Why?’. It
+seemed an unlikely happening, but the stu-
+dent insisted that he was sure of the facts. I
+confess that I thought he was mistaken but
+fortunately remembered the need to encour-
+age students to develop questioning and
+critical attitudes.
+No question should be
+ridiculed. In this case there was an added
+reason for caution, for everyday events are
+seldom as simple as they seem and it is
+dangerous to pass a superﬁcial judgment on
+what can and cannot be. I said that the facts
+as they were given surprised me because
+they appeared to contradict the physics I
+knew. But I added that it was possible that
+∗andres@unex.es
+the rate of cooling might be affected by some
+factor I had not considered.
+I promised I
+would put the claim to the test of experiment
+and encouraged my questioner to repeat the
+experiment himself.”
+In that second part of Ref. [1], Osborne reported some
+experimental results conﬁrming the effect, although he
+conceded that “The experiments attempted were rela-
+tively crude and several factors could inﬂuence cool-
+ing rates. More sophisticated experiments are needed
+to provide a more certain answer to the question.”
+The above paragraph succinctly states what the
+Mpemba effect is about—the possibility that hot wa-
+ter freezes faster than cold water.
+But, more impor-
+tantly, Osborne emphasizes the importance of fostering
+a spirit of curiosity and open-mindedness in scientiﬁc
+inquiry. When confronted with a seemingly counterin-
+tuitive claim by a student, Osborne resisted the temp-
+tation to dismiss or ridicule the idea outright. Instead,
+he acknowledged the potential limitations of his own
+understanding and expressed a willingness to explore
+the claim through experimentation. This approach re-
+ﬂects a commitment to the principle that scientiﬁc in-
+quiry should be driven by evidence and an openness to
+reevaluate established beliefs in the face of new and un-
+expected observations. Osborne’s response underscores
+the idea that questioning assumptions and testing un-
+conventional ideas can lead to a deeper understanding
+of the complexities inherent in scientiﬁc phenomena.
+After 1969, attention to the Mpemba effect was mainly
+conﬁned to popular science and education journals [2–
+23]. It was also revealed that the phenomenon had al-
+ready been noted by classical philosophers and scholars,
+including Aristotle [24], Roger Bacon [25], Francis Bacon
+[26], and Descartes [27]. Interestingly, in the same year
+
+2
+2006
+2007
+2008
+2009
+2010
+2011
+2012
+2013
+2014
+2015
+2016
+2017
+2018
+2019
+2020
+2021
+2022
+2023
+1
+10
+100
+1
+10
+100
+Publications and Citations
+Year
+ Publications
+ Citations
+FIG. 1. Number of publications and citations in the period
+2006–2023 obtained from the Web of Science [98] with the
+search query “topic=(Mpemba effect).” Note the vertical loga-
+rithmic scale.
+that Mpemba and Osborne published their paper, Kell
+independently published a brief note that began with
+the following statement: “It is widely believed, at least
+in Canada, that hot water will freeze more quickly than
+cold water.”
+A unanimous agreement remains elusive regarding
+the fundamental physical mechanisms responsible for
+the Mpemba effect.
+Various factors, including water
+evaporation [2, 3, 7, 28], natural convection [4, 23, 29],
+disparities in the gas composition of water [9, 16, 30], the
+effects of supercooling, either independently [12, 31, 32]
+or in combination with other factors [33–36], lack of en-
+ergy equipartition [37], or the inﬂuence of rough walls in
+creating nucleation sites [38], have been proposed as po-
+tential contributors to the Mpemba effect. Conversely,
+doubts have been raised about the very existence of the
+Mpemba effect in water [38–40].
+In addition to its historical association with water,
+the Mpemba effect exhibits similar phenomena reported
+across a diverse range of systems, including carbon nan-
+otube resonators [41], clathrate hydrates [42], Marko-
+vian models [43–48], granular gases [49–59], molecu-
+lar gases under drag [59–62], spin glasses [63], non-
+Markovian mean-ﬁeld systems [64, 65], inertial sus-
+pensions [66, 67], colloidal systems [45, 68–71], Ising-
+like models [48, 72–76], ideal gases [77], phase transi-
+tions [78], active matter [79], the autonomous informa-
+tion engine [80], ionic liquids [81], polymers [82, 83],
+Langevin systems [84, 85], and plasmas [86]. Particu-
+larly noteworthy is the recent surge in studies examin-
+ing the effect in quantum systems [87–97]. The esca-
+lating interest in Mpemba-like effects is illustrated by
+Fig. 1.
+To
+elucidate the
+counterintuitive
+nature of
+the
+Mpemba effect, consider the following excerpt from Os-
+borne [8]:
+“Why is the effect unexpected? We suppose
+C
+E
+B
+D
+ 
+ 
+temperature (arb. units)
+time (arb. units)
+A
+FIG. 2. Sketch of supposed cooling curves for two similar sys-
+tems in the same environment, adapted from Ref. [8].
+the rate of heat transfer to depend on the
+temperature difference between the cooling
+system and its environment, and not to de-
+pend on its previous history. This is repre-
+sented in Fig. 2, a sketch of supposed cooling
+curves showing temperature against time for
+two similar systems placed in the same en-
+vironment at the same time but at different
+initial temperatures. The hot water takes a
+ﬁnite time to cool down to the starting tem-
+perature of the cooler water. We expect this
+system then to be identical to the cooler sys-
+tem when it was ﬁrst placed in the freezer,
+that is for the hot starter and the cooler sys-
+tem to be identical at the points represented
+by B and D on the sketch. Subsequent cool-
+ing should also be identical, so that the cool-
+ing curve BC should be similar to the cooling
+curve DE.
+But the subsequent cooling is not iden-
+tical (the overtaking effect would be repre-
+sented by the curve BC cutting the curve
+DE). Hence the states of the two systems
+when represented by the points B and D are
+not identical. Any explanation for the over-
+taking effect should enable us to describe the
+difference between the two systems as rep-
+resented by the points B and D in such a
+way that we would expect the system start-
+ing hotter to cool faster even below this tem-
+perature. What differences might there be?”
+Osborne’s depiction in his ﬁrst “common-sense”
+paragraph is aptly illustrated by Newton’s law of cool-
+ing [99–101],
+˙T(t) = −λ [T(t) −Tb] ,
+(1)
+where Tb is the temperature of the thermal bath (or en-
+vironment) and λ is the coefﬁcient of heat transfer (or
+
+3
+cooling rate), here assumed to be a (positive) constant.
+Its value depends on various factors including the ma-
+terial properties, the object geometry, the surface condi-
+tions, and the surrounding environment. For instance,
+in the case of water, λ can typically range from about
+10−3 s to 10−2 s depending on the temperature differ-
+ence and the volume of water [102].
+The general solution to Eq. (1) is simply
+T(t) = Tb + (T0 −Tb) e−λt,
+(2)
+with T0 = T(0) being the initial temperature. On the
+other hand, if the Mpemba effect exists in a certain ma-
+terial, memory dynamics must be taken into account,
+so that “the overtaking effect should enable us to de-
+scribe the difference between the two systems as repre-
+sented by the points B and D [see Fig. 2] in such a way
+that we would expect the system starting hotter to cool
+faster even below this temperature.” The simplest way
+to incorporate those memory phenomena into Newton’s
+law involves postulating that the temperature’s rate of
+change at time t depends on the temperature at a pre-
+ceding time t −τ [103], i.e.,
+˙T(t) = −λ [T(t −τ) −Tb(t)] ,
+(3)
+where τ > 0 is the delay time and we have considered
+the possibility that the bath temperature, Tb(t), changes
+with time. Equation (3) can be considered as the sim-
+plest phenomenological equation incorporating mem-
+ory effects.
+Additionally to the Mpemba effect, another fascinat-
+ing memory phenomenon is the Kovacs effect, origi-
+nally reported in polymer materials [104, 105] and also
+observed in other complex systems [57, 59, 106–115]. In
+the Kovacs effect, a sample, initially in equilibrium at a
+high temperature T−
+b , undergoes rapid quenching to a
+lower temperature T+
+b . The sample evolves for a speci-
+ﬁed waiting time tw, but subsequently the bath tempera-
+ture is abruptly raised to T(tw). Beyond t = tw, the sam-
+ple temperature exhibits a dynamic behavior: it initially
+increases, reaches a maximum, and then returns to equi-
+librium for a longer period. The effect thus highlights
+the nontrivial impact of the material’s thermal past on
+its present and future behavior.
+The aim of this paper is to analyze the Mpemba and
+Kovacs effects as described by the time-delayed cool-
+ing law, given by Eq. (3). Its general solution is stud-
+ied in Sec. II, with special attention to single and double
+quenches. It is seen that, in the former case, the solution
+has a form similar to Eq. (2), except that the role of the
+exponential e−λt is played by a function E(t), here called
+the τ-exp function.
+This function is positive deﬁnite
+only if the delay time is smaller than a threshold value,
+τmax = λ−1e−1. Next, in Sec. III, the solution is applied
+to the study of the Mpemba effect under simple proto-
+cols involving a hot bath at temperature Th
+b and a cold
+bath at temperature Tc
+b. Sample A is thermalized at tem-
+perature Th
+b and then quenched to temperature Tc
+b. Con-
+versely, sample B is thermalized at Tc
+b, quenched to Th
+b ,
+and, after a waiting time tw, quenched again to the cold
+temperature Tc
+b. For simplicity, the quench of sample A
+and the ﬁrst quench of sample B occur at the same time.
+After this preparation protocol, both samples are in the
+same environment (bath Tc
+b) but start with different tem-
+peratures. It is proved in Sec. III that (i) the existence or
+absence of the Mpemba effect is independent of the val-
+ues of Th
+b and Tc
+b, (ii) the Mpemba effect exists if and only
+if the two control parameters (τ and tw) lie inside a cer-
+tain narrow region, and (iii) the direct (cooling process)
+and the inverse (heating process) effects are fully equiv-
+alent. Section IV is devoted to the Kovacs effect and the
+function characterizing the strength of the Kovacs hump
+is identiﬁed. Interestingly, this hump points downward
+in the cooling process, thus signaling the presence of an
+anomalous Kovacs effect [108, 114], which becomes rela-
+tively stronger as both the delay time τ and the waiting
+time tw increase. Finally, the paper is closed in Sec. V
+with a summary and conclusion.
+II.
+TIME-DELAYED NEWTON’S COOLING LAW
+A.
+Expansion in powers of the delay time
+Before proceeding with the complete delayed equa-
+tion, given by Eq. (3), let us consider τ as a small param-
+eter and expand T(t −τ) in a series of powers of τ:
+T(t −τ) =
+∞
+∑
+k=0
+dkT(t)
+dtk
+(−τ)k
+k!
+.
+(4)
+Truncation at the level k = 0 yields the original law,
+given by Eq. (1). Interestingly, truncation at k = 1 just
+produces the same law, except for a renormalized cool-
+ing rate λ′ ≡λ/(1 −λτ). However, the equation result-
+ing from truncation at k = 2 yields
+µ ¨T(t) + ˙T(t) = −λ′ [T(t) −Tb(t)] ,
+µ ≡λ′τ2
+2
+.
+(5)
+The presence of the term µ ¨T(t) suggests a more complex
+heat transfer process compared to the standard New-
+ton’s cooling equation.
+It represents a sort of “ther-
+mal inertia” of the material, meaning that it might resist
+changes in temperature more than as described by New-
+ton’s law. In fact, by assuming Tb = const, the general
+solution to Eq. (5) is
+T(t) =Tb + T0 −Tb
+λ′+ −λ′−
+
+λ′
++e−λ′−t −λ′
+−e−λ′+t
++
+˙T0
+λ′+ −λ′−
+
+e−λ′−t −e−λ′+t
+,
+(6)
+where
+λ′
+± ≡1 ±
+p
+1 −4λ′µ
+2µ
+,
+˙T0 ≡˙T(0).
+(7)
+
+4
+Thus, the temperature evolution is not solely deter-
+mined by the initial temperature T0, as is the case with
+Eq. (2), but also by the initial slope ˙T0, thereby violating
+the simplistic depiction outlined in Fig. 2 and allowing
+memory effects to manifest. It is worthwhile noting that
+the second-order differential equation, given by Eq. (5),
+with Tb = const is equivalent to the following coupled
+set of two ﬁrst-order differential equations:
+˙T(t) = −λ′ [T(t) −Tb] + q(t),
+(8a)
+˙q(t) = −λ′2 [T(t) −Tb] −
+
+µ−1 −λ′
+q(t).
+(8b)
+This two-variable scheme resembles the approach used
+to investigate the Mpemba and Kovacs effects in granu-
+lar and molecular gases [49–51, 53, 55, 56, 58, 60, 62, 66].
+Certainly, truncating Eq. (4) at higher orders leads to
+differential equations of increasing order, thereby am-
+plifying the inﬂuence of memory effects.
+B.
+General solution in Laplace space
+The general solution of Eq. (3) depends not only on
+the initial temperature T0 but it is actually a functional
+of the previous history T(t) for −τ < t < 0. Given the
+linear character of Eq. (3), it is convenient to deﬁne the
+Laplace transforms as
+eT(s) =
+Z ∞
+0
+dt e−stT(t),
+eTb(s) =
+Z ∞
+0
+dt e−stTb(t). (9)
+Thus, Eq. (3) becomes
+seT(s) −T0 = eTb(s) −e−sτ eT(s) −eH(s),
+(10)
+where
+eH(s) =
+Z 0
+−τ dt e−s(t+τ)T(t),
+(11)
+and, for simplicity, we have taken λ−1 = 1 as the unit of
+time. Thus, the general solution in Laplace space is
+eT(s) =
+1
+s + e−sτ
+h
+T0 + eTb(s) −eH(s)
+i
+.
+(12)
+C.
+Basic solution. Single quench
+Let us ﬁrst consider the simple bath temperature his-
+tory
+Tb(t) =
+(
+T−
+b ,
+t < 0,
+T+
+b ,
+t > 0.
+(13)
+The system is assumed to have equilibrated at T−
+b for
+t < 0, that is, T(t ≤0) = T−
+b . Then, at t = 0, the
+system is quenched to the bath temperature T+
+b , so that
+limt→∞T(t) = T+
+b .
+Our aim is to describe the transient stage from T(t ≤
+0) = T−
+b to T(∞) = T+
+b . In Laplace space, this is de-
+scribed by Eq. (12) with T0 = T−
+b , eTb(s) = T+
+b s−1, and
+eH(s) = T−
+b s−1  1 −e−sτ
+.
+(14)
+Thus, Eq. (12) reduces to
+eT(s) = T+
+b s−1 +
+ T−
+b −T+
+b
+ eE(s),
+(15)
+where
+eE(s) = s−1 −
+s−2
+1 + s−1e−sτ .
+(16)
+Note that eE(s) is independent of both T−
+b and T+
+b . In
+real time, one has
+T(t) =
+(
+T−
+b ,
+t ≤0,
+T+
+b +
+ T−
+b −T+
+b
+ E(t),
+t ≥0,
+(17)
+with E(t) being the inverse Laplace transform of eE(s). In
+the limit of no delay (τ →0), eE(s) →(1 + s)−1, so that
+E(t) →e−t and Eq. (2) is recovered. Because of that,
+henceforth the quasi-exponential function E(t) will be
+referred to as the τ-exp function .
+In general, if τ > 0, the function E(t) characterizes the
+transient of temperature from T−
+b to T+
+b . To obtain E(t),
+let us expand (1 + s−1e−sτ)−1 = ∑∞
+n=0(−s)−ne−nsτ and
+rewrite Eq. (16) as
+eE(s) = s−1 −
+∞
+∑
+n=0
+(−s)−(n+2)e−nsτ.
+(18)
+Therefore,
+E(t) =1 +
+∞
+∑
+n=0
+(nτ −t)n+1
+(n + 1)!
+Θ(t −nτ)
+=1 +
+⌊t/τ⌋
+∑
+n=0
+(nτ −t)n+1
+(n + 1)!
+,
+t ≥0,
+(19)
+where Θ(·) is the Heaviside step function and ⌊·⌋de-
+notes the ﬂoor function. More explicitly,
+E(t) =
+
+
+
+
+
+
+
+
+
+
+
+1 −t,
+0 ≤t ≤τ,
+1 −t + (τ−t)2
+2
+,
+τ ≤t ≤2τ,
+1 −t + (τ−t)2
+2
++ (2τ−t)3
+3!
+,
+2τ ≤t ≤3τ,
+· · · ,
+· · ·
+(20)
+Note that
+˙E(t) = −
+(
+1,
+0 ≤t ≤τ,
+E(t −τ),
+t ≥τ.
+(21)
+
+5
+0
+1
+2
+3
+4
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+0
+1
+2
+3
+4
+10-4
+10-3
+10-2
+10-1
+100
+t=e-1
+E(t)
+t
+t=0
+E(t)
+t
+FIG. 3. Plot of the τ-exp function E(t) with, from top to bot-
+tom, τ = 0, 0.1, 0.2, 0.3, and e−1 ≃0.368. Inset; The graph in
+semilogarithmic scale.
+Figure 3 shows the τ-exp function E(t) for several val-
+ues of τ in normal (main panel) and semilogarithmic (in-
+set) scales. As we can see, the larger the delay time τ, the
+faster the decay of E(t).
+The long-time behavior of E(t) is governed by the
+dominant pole of eE(s), that is, the root of the transcen-
+dental equation s + e−sτ = 0 with the least negative real
+part. It can be shown that such a root is real (s = −κ
+with κ < τ−1) provided that τ < τmax = e−1 ≃0.368
+(at which case κ = e ≃2.718). In that domain, κ is
+the real root of κ = eκτ, i.e., κ = −τ−1W0(−τ), where
+W0(z) is the principal branch of the Lambert function.
+If, on the other hand, τ > τmax, then the dominant
+root is a pair of complex conjugates, implying an os-
+cillatory behavior with a negative absolute minimum
+Emin = E(tmin) < 0 at a certain time t = tmin. The
+existence of this minimum compromises the positive-
+deﬁniteness of the solution, given by Eq. (17). Suppose
+that τ > τmax = e−1 and T−
+b /T+
+b > 1 + |Emin|−1. Then,
+T(tmin)/T+
+b
+= 1 −(T−
+b /T+
+b −1)|Emin| < 0.
+There-
+fore, the time-delayed Newton’s cooling law is physi-
+cally meaningful only if τ < τmax = e−1. This is the
+maximum value of τ considered in Fig. 3.
+The amplitude AE of the asymptotic decay of E(t) is
+given by the residue of eE(s) at the pole s = −κ. Thus,
+E(t ≫1) ≈AEe−κt,
+AE =
+κ−1
+1 −τκ .
+(22)
+The damping coefﬁcient κ and the amplitude AE are dis-
+played as functions of the delay time τ in Fig. 4. The
+damping coefﬁcient increases from κ = 1 at τ = 0 to
+κ = e ≃2.718 at the maximum delay time τmax = e−1 ≃
+0.368. As for the amplitude, it is practically AE ≃1 until
+τ ≃0.3, but then it diverges as τ approaches its maxi-
+mum value.
+Suppose two samples (A and B) subjected to the
+0.0
+0.1
+0.2
+0.3
+0.4
+1
+2
+3
+4
+5
+k
+A
+E
+k, A
+E
+t
+FIG. 4. Plot of the damping coefﬁcient κ and the amplitude AE
+as functions of τ. The circle represents the damping coefﬁcient
+κ = e ≃2.718 at the maximum delay time τmax = e−1 ≃0.368.
+quench described by Eq. (13), except that the prior bath
+temperatures are different, say T−
+b,A > T−
+b,B. In that case,
+according to Eq. (17),
+TA(t) −TB(t) =
+(
+T−
+b,A −T−
+b,B,
+t ≤0,
+(T−
+b,A −T−
+b,B)E(t),
+t ≥0.
+(23)
+Since E(t) > 0 if τ < τmax, Eq. (23) proves that no
+Mpemba effect is possible with the single-quench pro-
+tocol.
+D.
+A more complex solution. Double quench
+Now, instead of taking the single-quench protocol,
+given by Eq. (13), let us assume that the material is
+kept at a prior temperature T−
+b for times t < −tw, next
+it is quenched to a middle bath temperature T−∗
+b
+for
+−tw < t < 0, and then (after a waiting time tw) it is
+quenched again to a ﬁnal bath temperature T+
+b . This
+double-quench protocol is
+Tb(t) =
+
+
+
+
+
+T−
+b ,
+t < −tw,
+T−∗
+b ,
+−tw < t < 0,
+T+
+b ,
+t > 0.
+(24)
+A sketch of this protocol is shown in Fig. 5(a). It can
+be expressed as the sum of the two single-quench proto-
+cols represented in Figs. 5(b) and 5(c), respectively. Of
+course, the decomposition is still valid if an arbitrary
+constant is added and subtracted to each single-quench
+protocol, respectively. In general, an nfold-quench pro-
+tocol is equivalent to the sum of n single-quench proto-
+cols.
+Taking into account the linear character of Eq. (3),
+the solution associated with the bath protocol given by
+
+6
+(b)
+T -*
+b
+T +
+b
+T -
+b
+Tb(t)
+-tw   0                 t
+=            +
+(a)
+T +
+b /2
+T -
+b-T -*
+b +T +
+b /2
+Tb(t)
+-tw   0                 t
+(c)
+T +
+b /2
+Tb(t)
+      0                 t
+T -*
+b -T +
+b /2
+FIG. 5. Schematic representation of the decomposition of the (a) double-quench protocol into the sum of the (b),(c) single-quench
+protocols.
+Eq. (24) can be obtained as the superposition of the solu-
+tions associated with the protocols in Figs. 5(b) and 5(c).
+Therefore,
+T(t) = T1(t) + T2(t),
+(25)
+where, by application of Eq. (17),
+T1(t) =
+(
+T−
+b −T−∗
+b
++ T+
+b /2,
+t ≤−tw,
+T+
+b /2 + (T−
+b −T−∗
+b )E(t + tw),
+t ≥−tw,
+(26a)
+As a consequence, the solution corresponding to the
+double quench is
+T(t) =
+
+
+
+
+
+
+
+
+
+T−
+b ,
+t ≤−tw,
+T−∗
+b
++ (T−
+b −T−∗
+b )E(t + tw),
+−tw ≤t ≤0,
+T+
+b + (T−∗
+b
+−T+
+b )E(t)
++(T−
+b −T−∗
+b )E(t + tw),
+t ≥0.
+(27)
+In particular, at t = 0,
+T0 = T−∗
+b
++ (T−
+b −T−∗
+b )E(tw).
+(28)
+III.
+MPEMBA EFFECT
+To explore whether the Mpemba effect can be ob-
+served from the solutions of the time-delayed Newton’s
+cooling equation, given by Eq. (3), we consider two ther-
+mal reservoirs, i.e., a hot one (at temperature Th
+b ) and
+a cold one (at temperature Tc
+b). Two simple protocols
+(A and B) are proposed for the Mpemba effect, both di-
+rect and inverse, as illustrated in Fig. 6. Let us ﬁrst de-
+scribe the protocols for the direct effect; see Fig. 6(a).
+According to protocol A, one sample (A) is ﬁrst equili-
+brated at the hot bath temperature Th
+b and then it is sud-
+denly quenched to the cold bath temperature Tc
+b at time
+t = −tw. The other sample (B) is ﬁrst equilibrated at the
+ A
+ B
+T c
+b
+T c
+b
+T h
+b
+Tb(t)
+-tw    0                 t
+(a)
+ A
+ B
+T c
+b
+T h
+b
+Tb(t)
+-tw    0                 t
+(b)
+FIG. 6. Schematic representation of the protocols A and B for
+(a) the direct Mpemba effect and (b) the inverse Mpemba ef-
+fect.
+cold bath temperature Tc
+b, then quenched to the hot bath
+temperature Th
+b at t = −tw, and ﬁnally quenched to the
+cold bath at t = 0. Thus, sample A experiences a sin-
+gle quench (Th
+b →Tc
+b), while sample B is subjected to a
+double quench (Tc
+b →Th
+b →Tc
+b). As seen from Fig. 6(b),
+protocols A and B for the inverse Mpemba effect are the
+same, except for the exchange Th
+b ↔Tc
+b (i.e., A: Tc
+b →Th
+b ;
+B: Th
+b →Tc
+b →Th
+b ).
+For the protocols depicted in Fig. 6(a), the temporal
+evolution of sample A is given by Eq. (27) with T−
+b =
+T−∗
+b
+= Th
+b and T+
+b
+= Tc
+b. Analogously, in the case of
+sample B, T−
+b = T+
+b = Tc
+b and T−∗
+b
+= Th
+b . Therefore,
+TA(t) =
+(
+Th
+b ,
+t ≤−tw,
+Tc
+b + (Th
+b −Tc
+b)E(t + tw),
+t ≥−tw,
+(29a)
+
+7
+-1.0
+-0.5
+0.0
+0.5
+1.0
+1.5
+2.0
+1.0
+1.2
+1.4
+1.6
+1.8
+2.0
+tw=0.2
+B
+T(t)
+t
+(a)
+A
+-1.0
+-0.5
+0.0
+0.5
+1.0
+1.5
+2.0
+1.0
+1.2
+1.4
+1.6
+1.8
+2.0
+tw=0.4
+B
+T(t)
+t
+(b)
+A
+-1.0
+-0.5
+0.0
+0.5
+1.0
+1.5
+2.0
+1.0
+1.2
+1.4
+1.6
+1.8
+2.0
+tw=0.6
+B
+T(t)
+t
+(c)
+A
+FIG. 7. Plot of TA(t) and TB(t), including their history for t <
+0. Here, Th
+b = 2, Tc
+b = 1, and τ = 0.36, with (a) tw = 0.2,
+(b) tw = 0.4, and (c) tw = 0.6. In each panel, the dashed line
+depicts TB(t) if the sample were not quenched to Tc
+b at t = 0.
+Note that a Mpemba effect exists in the case of (b) (tw = 0.4).
+TB(t) =
+
+
+
+
+
+Tc
+b,
+t ≤−tw,
+Th
+b −(Th
+b −Tc
+b)E(t + tw),
+−tw ≤t ≤0,
+Tc
+b + (Th
+b −Tc
+b) [E(t) −E(t + tw)] ,
+t ≥0.
+(29b)
+As an example, Fig. 7 shows the time evolution of
+TA(t) and TB(t) for a hot bath at Th
+b = 2 (in arbitrary
+units), a cold bath at Tc
+b = 1, a delay time τ = 0.36, and
+three waiting times (tw = 0.2, 0.4, 0.6). As we can see,
+if the waiting time is too short (for instance, tw = 0.2),
+TB(0) is so far below TA(0) that no Mpemba crossing
+is possible. On the other hand, if the waiting time is
+too long (for instance, tw = 0.6), a crossing takes place
+during the preparation stage, that is, before sample B is
+quenched to Tc
+b at t = 0, so that TB(0) > TA(0) and
+again no Mpemba effect occurs. However, if the waiting
+time is within the right range (for instance, tw = 0.4),
+one has TA(0) > TB(0) but sample A cools down sufﬁ-
+ciently faster than sample B as to eventually overtake it
+at a certain crossover time t× (direct Mpemba effect).
+Let us now investigate the necessary and sufﬁcient
+conditions for the existence of the Mpemba effect. From
+0.0
+0.5
+1.0
+1.5
+2.0
+-0.2
+0.0
+0.2
+0.4
+0.6
+tw=0.6
+tw=0.4
+D(t)
+t
+tw=0.2
+FIG. 8. Plot of the difference function ∆(t) for τ = 0.36 and
+tw = 0.2 (solid curve), 0.4 (dash-dotted curve), and 0.6 (dashed
+curve). The circle in the curve corresponding to tw = 0.4 de-
+notes the corresponding crossover time t×.
+Eqs. (29), we have, for t ≥0,
+TA(t) −TB(t) = (Th
+b −Tc
+b)∆(t),
+t ≥0,
+(30)
+where the difference function is
+∆(t) = 2E(t + tw) −E(t).
+(31)
+For the protocols shown in Fig. 6(b), one would have
+TA(t) −TB(t) = −(Th
+b −Tc
+b)∆(t). Thus, our ﬁrst obser-
+vation is that the existence or absence of the Mpemba ef-
+fect (both direct and inverse) is independent of the bath
+temperatures Th
+b and Tc
+b, depending only on the delay
+time τ and the waiting time tw through the difference
+function ∆(t). Figure 8 shows the function ∆(t) for the
+same values of τ and tw as in Fig. 7.
+To prevent a situation similar to that illustrated in
+Fig. 7(c), one must ensure that ∆(0) > 0, so that TA(0) −
+TB(0) > 0 in the direct effect and TA(0) −TB(0) < 0
+in the inverse effect. This implies that, for a given de-
+lay time τ, the maximum value tmax
+w
+of the waiting time
+tw is the solution of E(tw) = 1/2.
+This maximum
+value ranges from tmax
+w
+= ln 2 ≃0.693 for τ = 0 to
+tmax
+w
+≃0.510 for τ = e−1.
+Next, once tw < tmax
+w
+and, therefore, ∆(t) > 0, the
+occurrence of a Mpemba effect requires that ∆(t×) = 0
+at a certain crossover time t×, so that it asymptotically
+relaxes to ∆(t) →0 from below, as exempliﬁed by the
+curve with tw = 0.4 in Fig. 8. After the crossover time
+t×, −∆(t) presents a maximum at a time tM given by the
+solution to ˙∆(t) = 0. According to Eqs. (21) and (31),
+˙∆(t) = −
+
+
+
+
+
+1,
+0 ≤t ≤max{0, τ −tw},
+2E(t + tw −τ) −1,
+max{0, τ −tw} ≤t ≤τ,
+∆(t −τ),
+t ≥τ,
+(32)
+implying that tM = t× + τ
+
+8
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+-1.0
+-0.5
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+t=0.36
+t=0.30
+A
+D
+tw/tmax
+w
+t=0
+FIG. 9. Plot of the amplitude A∆as a function of tw/tmax
+w
+for
+τ = 0 (solid curve), 0.30 (dash-dotted curve), and 0.36 (dashed
+curve). The circles in the curves corresponding to τ = 0.30 and
+0.36 denote the respective values of tmin
+w /tmax
+w
+.
+1.0
+1.1
+1.2
+1.3
+1.4
+1.5
+1.6
+1.7
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
+-3.0 -2.5 -2.0 -1.5 -1.0 -0.5 0.0
+0
+1
+2
+3
+4
+5
+t=0.36
+t=0.30
+t
+´
+tw/tmin
+w
+t=0.25
+t
+´
+log10(tw/tmin
+w -1)
+FIG. 10. Plot of the crossover time t× as a function of tw/tmin
+w
+for τ = 0.25 (solid curve), 0.30 (dash-dotted curve), and 0.36
+(dashed curve). The circles denote the respective values of
+tmax
+w
+/tmin
+w . Inset: t× vs log10(tw/tmin
+w
+−1).
+From Eq. (22), we see that the asymptotic long-time
+behavior of ∆(t) is
+∆(t ≫1) ≈A∆e−κt,
+A∆=
+κ−1
+1 −τκ
+ 2e−κtw −1
+
+. (33)
+The amplitude A∆is plotted in Fig. 9 as a function of
+tw/tmax
+w
+for τ = 0, 0.3, and 0.36. Except in the undelayed
+case (τ = 0), we can see that A∆becomes negative if tw
+is larger than a threshold value tmin
+w . Therefore, given a
+delay time τ, the minimum waiting time tmin
+w
+is deter-
+mined by the condition A∆= 0, that is, tmin
+w
+= κ−1 ln 2.
+If tmin
+w
+< tw < tmax
+w
+, the crossover time t× is character-
+ized by the condition ∆(t×) = 0. It is plotted in Fig. 10
+as a function of tw/tmin
+w
+for τ = 0.25, 0.3, and 0.36.
+As tw increases from tmin
+w
+to tmax
+w
+, the crossover time
+tmin
+w
+tw
+t
+tmax
+w
+Mpemba
+FIG. 11. Phase space for the Mpemba effect. The lower and up-
+per curves represent tmin
+w
+and tmax
+w
+, respectively, as functions of
+the delay time τ. If tw < tmin
+w , then ∆(t) > 0 for t ≥0. If, on
+the other hand, tw > tmax
+w
+, then ∆(t) < 0 for t ≥0. There-
+fore, the Mpemba effect occurs if and only if tmin
+w
+< tw < tmax
+w
+(shaded region). The dashed line represents the locus deﬁned
+by the condition ∆(0) = |∆(tM)|.
+t× decreases monotonically, vanishing at tw = tmax
+w
+.
+Near tw = tmin
+w , t× diverges logarithmically as t× ∼
+−log10(tw/tmin
+w
+−1) (see inset of Fig. 10).
+In summary, the time-delayed Newton’s cooling
+equation exhibits a Mpemba effect (either direct or in-
+verse) under the protocols depicted in Fig. 6 if, and only
+if, the two control parameters (τ and tw) are such that
+the difference function ∆(t) fulﬁlls two conditions: (i)
+∆(0) > 0 (implying tw < tmax
+w
+) and (ii) ∆(t) < 0 in
+the long-time regime (implying tw > tmin
+w ). The phase
+space for the occurrence of the Mpemba effect on the
+plane tw vs τ is shown in Fig. 11. Within the shaded
+Mpemba region, one can say that, given a delay time
+τ, the magnitude of the effect is maximal if the waiting
+time tw is such that the maximum positive value and the
+minimum negative value of ∆(t) are the same (except
+for the sign), i.e., ∆(0) = |∆(tM)|. That line of maximal
+Mpemba effect is also included in Fig. 11. To contextu-
+alize the characteristic values of the control parameters,
+note that, if λ = 10−3s−1, then τ = 0.36 and tw = 0.42
+correspond to 6 min and 7 min, respectively.
+Some illustrations of the Mpemba effect (both direct
+and inverse) are displayed in Fig. 12. The chosen values
+of τ and tw are close to the locus of maximal effect. We
+observe that, as expected, the Mpemba effect tends to
+become more pronounced as the delay time τ increases.
+IV.
+KOVACS EFFECT
+In the Kovacs effect, the protocol is similar to that of
+sample B in the Mpemba effect (see Fig. 6), except for
+a couple of points, as summarized in Fig. 13. First, it is
+
+9
+0.0
+0.5
+1.0
+1.5
+2.0
+1.0
+1.1
+1.2
+1.3
+1.4
+1.5
+B
+T(t)
+t
+(a)
+A
+0.0
+0.5
+1.0
+1.5
+2.0
+1.0
+1.1
+1.2
+1.3
+1.4
+1.5
+B
+T(t)
+t
+(b)
+A
+0.0
+0.5
+1.0
+1.5
+2.0
+1.0
+1.1
+1.2
+1.3
+1.4
+1.5
+B
+T(t)
+t
+(c)
+A
+0.0
+0.5
+1.0
+1.5
+2.0
+0.7
+0.8
+0.9
+1.0
+B
+T(t)
+t
+(d)
+A
+0.0
+0.5
+1.0
+1.5
+2.0
+0.7
+0.8
+0.9
+1.0
+B
+T(t)
+t
+(e)
+A
+0.0
+0.5
+1.0
+1.5
+2.0
+0.7
+0.8
+0.9
+1.0
+B
+T(t)
+t
+(f)
+A
+FIG. 12. Plot of TA(t) and TB(t) for t > 0. (a),(d) (τ, tw) = (0.25, 0.52), (b),(e) (τ, tw) = (0.30, 0.49), and (c),(f) (τ, tw) = (0.36, 0.47).
+(a)–(c) The direct Mpemba effect (with Tc
+b = 1 and Th
+b = 2); (d)–(f) the inverse Mpemba effect (with Tc
+b = 0.5 and Th
+b = 1).
+T c
+b
+T w
+b =T(tw)
+T h
+b
+Tb(t)
+0    tw           t
+(a)
+T c
+b
+T w
+b =T(tw)
+T h
+b
+Tb(t)
+0    tw           t
+(b)
+FIG. 13. Schematic representation of the protocols for (a) the
+direct Kovacs effect and (b) the inverse Kovacs effect.
+tw=1
+T(t)
+t
+(a)
+tw=0.1
+-0.5 0.0
+0.5
+1.0
+1.5
+2.0
+0.5
+0.6
+0.7
+0.8
+0.9
+1.0
+tw=1
+tw=0.1
+T(t)
+t
+(b)
+FIG. 14. Kovacs effect for τ = 0.36 and tw = 0.1, 0.2, . . . , 1.
+(a) The direct effect (with Th
+b = 2 and Tc
+b = 1); (b) the inverse
+effect (with Tc
+b = 0.5 and Th
+b = 1). In each panel, the dashed
+line represents T(t) if the sample were not quenched to T(tw)
+at t = tw.
+0.0
+0.5
+1.0
+1.5
+2.0
+0.00
+0.05
+0.10
+0.15
+tw=1
+K(t)
+t
+(a)
+tw=0.1
+0.0
+0.5
+1.0
+1.5
+2.0
+0.00
+0.05
+0.10
+0.15
+0.20
+t=0.36
+t=0.30
+Kmax
+tw
+(b)
+t=0.25
+FIG. 15. (a) Plot of the Kovacs hump function K(t) for τ = 0.36
+and tw = 0.1, 0.2, . . . , 1. (b) Plot of the maximum value Kmax
+of K(t) as a function of tw for, from bottom to top, τ = 0.25,
+0.3, and 0.36. The dashed lines represent the asymptotic values
+1 −τ −κ−1.
+convenient to shift time by an amount tw, so that the ﬁrst
+quench occurs at t = 0 and the second one at a waiting
+time t = tw. Second, the ﬁnal bath temperature is made
+to coincide with the instantaneous system’s temperature
+at t = tw, i.e., T+
+b = T(tw) ≡Tw
+b . Thus, according to
+Eq. (27), the temperature in the direct Kovacs effect is
+T(t) =
+
+
+
+
+
+
+
+
+
+Th
+b ,
+t ≤0,
+Tc
+b + (Th
+b −Tc
+b)E(t),
+0 ≤t ≤tw,
+Tw
+b + (Tc
+b −Tw
+b )E(t −tw)
++(Th
+b −Tc
+b)E(t),
+t ≥tw,
+(34)
+with
+Tw
+b = Tc
+b + (Th
+b −Tc
+b)E(tw).
+(35)
+
+10
+In the inverse effect, one must set Th
+b ↔Tc
+b.
+Figure 14 illustrates the direct and inverse effects for
+τ = 0.36. As can be seen, after the quench at t = tw,
+the temperature presents a local minimum (maximum)
+in the direct or cooling (inverse or heating) case.
+In
+the direct Kovacs effect, the temperature slope experi-
+ences a discontinuity from ˙T(t−
+w) = −
+
+T(tw −τ) −Tc
+b
+
+to ˙T(t+
+w) = −
+
+T(tw −τ) −Tw
+b
+
+, but the sign is negative
+at both sides of t = tw. Consequently, the Kovacs hump
+appears below T = Tw
+b , thus qualifying as an anomalous
+Kovacs effect [108, 114]. An analogous conclusion holds
+in the inverse effect, where ˙T(t−
+w) = Th
+b −T(tw −τ) >
+˙T(t+
+w) = Tw
+b −T(tw −τ) > 0 and the hump appears
+above T = Tw
+b .
+Let us characterize the Kovacs hump in more detail.
+From Eqs. (34) and (35), one ﬁnds that the temperature
+in the domain t ≥tw is
+T(t) −Tw
+b = −(Tw
+b −Tc
+b)K(t −tw),
+(direct effect),
+(36a)
+T(t) −Tw
+b = (Th
+b −Tw
+b )K(t −tw),
+(inverse effect),
+(36b)
+where
+K(t) = E(t) −E(t + tw)
+E(tw)
+(37)
+is a semi-deﬁnite positive function, henceforth named
+the Kovacs hump function, which characterizes the rel-
+ative strength of the Kovacs effect. It vanishes both at
+t = 0 and in the limit t →∞. Note that
+˙K(t) = −
+
+
+
+
+
+1 −
+1
+E(tw),
+0 ≤t ≤max{0, τ −tw},
+1 −E(t+tw−τ)
+E(tw)
+,
+max{0, τ −tw} ≤t ≤τ,
+K(t −τ),
+t ≥τ.
+(38)
+Therefore, ˙K(τ) = 0, implying that K(t) has a maxi-
+mum value Kmax = 1 −τ −E(τ + tw)/E(tw) at a time
+tK = τ. At a given delay time τ, Kmax increases mono-
+tonically with increasing waiting time tw, reaching a ﬁ-
+nite value in the limit tw →∞. From Eq. (22), we have
+limtw→∞Kmax = 1 −τ −e−κτ = 1 −τ −κ−1.
+Figure 15(a) shows the Kovacs hump function K(t) for
+a delay time τ = 0.36 and several values of the waiting
+time. The maximum value Kmax is plotted in Fig. 15(b)
+as a function of tw for several values of τ. As expected,
+the relative strength of the Kovacs effect, as measured
+by Kmax, increases with increasing τ and tw.
+V.
+CONCLUSIONS
+The time-delayed Newton’s cooling law stands out as
+a seemingly straightforward yet powerful phenomeno-
+logical model for grasping the intricacies of thermal
+memory dynamics. This paper has focused on unrav-
+eling its solution and applying it to two paradigmatic
+TABLE I. Summary of the main quantities and results.
+Quantity
+Symbol
+Expression
+General
+Delay time
+τ
+Free parameter
+Maximum delay time
+τmax
+e−1 ≃0.368
+τ-exp function
+E(t)
+1 +
+⌊t/τ⌋
+∑
+n=0
+(nτ −t)n+1
+(n + 1)!
+Asymptotic decay of E(t)
+E(t) ≈AEe−κt
+Damping coefﬁcient
+κ
+−τ−1W0(−τ)
+Amplitude
+AE
+κ−1
+1 −τκ
+Waiting time
+tw
+Free parameter
+Mpemba effect
+Difference function
+∆(t)
+2E(t + tw) −E(t)
+Minimum waiting time
+tmin
+w
+κ−1 ln 2
+Maximum waiting time
+tmax
+w
+Root of E(tw) = 1/2
+Crossover time
+t×
+Root of ∆(t×) = 0
+Time when −∆(t) is maximum
+tM
+t× + τ
+Kovacs effect
+Kovacs hump function
+K(t)
+E(t) −E(t + tw)
+E(tw)
+Time when K(t) is maximum
+tK
+τ
+Maximum value of K(t)
+Kmax
+1 −τ −E(τ + tw)
+E(tw)
+memory phenomena: the Mpemba and Kovacs effects.
+The main quantities and results of this work are summa-
+rized in Table I.
+A pivotal role is played by the τ-exp function E(t),
+functioning as the delay-time analog of the conventional
+decaying exponential.
+Imposing the physical condi-
+tion that E(t) > 0 for all time sets an upper bound,
+τ < τmax = e−1, for the delay time.
+As the simplest protocol for the observation of the
+Mpemba effect, we have assumed that samples A and
+B were thermalized in the past (t < −tw) to the tem-
+peratures (Th
+b and Tc
+b) of a hot and a cold bath, respec-
+tively. Sudden quenches at t = −tw are then applied
+to both samples by exchanging their baths, followed by
+a second quench to temperature Tc
+b at t = 0 for sample
+B. Notably, the delay time enhances the cooling of sam-
+ple A while inhibiting that of sample B, leading to the
+Mpemba effect under speciﬁc conditions (tmin
+w
+< tw <
+tmax
+w
+). The effect is independent of the bath temperatures
+(Th
+b and Tc
+b) and is determined by a difference function
+∆(t) parameterized by the control parameters τ and tw.
+In the inverse Mpemba effect, the protocol is identical,
+except for the exchange Th
+b ↔Tc
+b, so that the difference
+function ∆(t) is the same as in the direct case. Therefore,
+the time-delayed Newton’s cooling law with a constant
+coefﬁcient of heat transfer fails to capture the known fact
+that heating is faster than cooling [71, 116, 117].
+In general, the Mpemba effect necessitates the consid-
+eration of at least three distinct temperatures: the initial
+temperatures, TA(0) and TB(0), of both samples, and the
+temperature, Tc
+b, of the shared ﬁnal bath. The protocol
+
+11
+outlined in Fig. 6(a) is relatively straightforward, involv-
+ing only two bath temperatures (Th
+b and Tc
+b), along with
+a waiting time (tw). However, more complex protocols
+can be devised. For instance, sample B might initially
+equilibrate to a temperature T−
+b,B (with Tc
+b ≤T−
+b,B < Th
+b )
+for t < −tw, then be quenched at t = −tw to a bath at
+temperature T−∗
+b,B (with T−
+b,B < T−∗
+b,B ≤Th
+b ), and ﬁnally
+quenched at t = 0 to the cold bath at temperature Tc
+b.
+Moreover, the introduction of two waiting times instead
+of just one could be contemplated, providing ﬂexibility
+to accommodate different experimental protocols.
+The exact solution of the time-delayed cooling equa-
+tion under a double-quench protocol has also been ex-
+ploited to study the Kovacs effect. While the system is
+relaxing from a hot bath temperature (Th
+b ) to a cold bath
+temperature (Tc
+b), it is suddenly put in contact at a wait-
+ing time tw with a bath at temperature Tw
+b = T(tw). In-
+stead of maintaining that temperature for t > tw, the
+memory of a higher temperature in the past (t < tw)
+makes the system momentarily keep cooling, eventually
+reaching a minimum temperature at time t = tw + τ,
+and ﬁnally relaxing to the bath temperature Tw
+b from
+below. This downward hump contrasts with the orig-
+inal one in polymer systems [104, 105] but agrees with
+the anomalous Kovacs effect observed in granular gases
+[108, 114]. In analogy with the Mpemba case, a rela-
+tive strength measure, the Kovacs hump function K(t),
+remains independent of bath temperatures (Th
+b and Tc
+b)
+and increases with τ and tw.
+It must be emphasized that. for simplicity, the anal-
+ysis carried out in this paper has assumed a constant
+coefﬁcient of heat transfer λ. However, factors such as
+dependence on the time-dependent temperature, varia-
+tion in material properties with temperature, or chang-
+ing boundary layer conditions due to natural convection
+might cause λ to slightly deviate over time. While a
+constant λ provides a valuable ﬁrst approximation, ac-
+knowledging this potential time-dependence is impor-
+tant for a more comprehensive understanding of the
+Mpemba and Kovacs effect scenarios. Future investiga-
+tions could explore the inﬂuence of a non-constant λ on
+the results and potentially reﬁne the model for greater
+accuracy.
+In conclusion, the time-delayed Newton’s law of cool-
+ing emerges as a simplistic yet effective phenomenolog-
+ical model that accommodates memory effects. The ex-
+ploration of the Mpemba and Kovacs effects within its
+framework has unveiled signiﬁcant insights into the in-
+tricate nature of these memory phenomena. This pa-
+per may contribute to a comprehensive analysis of the
+Mpemba and Kovacs effects, shedding light on their un-
+derlying mechanisms and expanding their relevance to
+diverse systems. The ﬁndings presented here not only
+can contribute to deepening our understanding of these
+memory phenomena, but also offer valuable insights ap-
+plicable across various scientiﬁc domains, from physics
+to materials science. The exploration of time-delayed
+cooling laws paves the way for future research avenues,
+inviting further investigation into the fascinating inter-
+play between thermal history, memory effects, and com-
+plex system behaviors.
+DATA AVAILABILITY
+The data that support the ﬁndings of this study are
+available from the author on reasonable request.
+ACKNOWLEDGMENTS
+The
+author
+acknowledges
+ﬁnancial
+support
+from Grant No. PID2020-112936GB-I00 funded by
+MCIN/AEI/10.13039/501100011033, and from Grant
+No. IB20079 funded by Junta de Extremadura (Spain)
+and by European Regional Development Fund (ERDF)
+“A way of making Europe.”
+[1] E.
+B.
+Mpemba
+and
+D.
+G.
+Osborne,
+Cool?,
+Phys. Educ. 4, 172 (1969).
+[2] G. S. Kell, The freezing of hot and cold water,
+Am. J. Phys. 37, 564 (1969).
+[3] I. Firth, Cooler?, Phys. Educ. 6, 32 (1971).
+[4] E. Deeson, Cooler-lower down, Phys. Educ. 6, 42 (1971).
+[5] F. C. Frank, The Descartes–Mpemba phenomenon,
+Phys. Educ. 9, 284 (1974).
+[6] R.
+Gallear,
+The
+Bacon–Descartes–Mpemba
+phe-
+nomenon, Phys. Educ. 9, 490 (1974).
+[7] J. Walker, Hot water freezes faster than cold water. Why
+does it do so?, Sci. Am. 237, 246 (1977).
+[8] D. G. Osborne, Mind on ice, Phys. Educ. 14, 414 (1979).
+[9] M.
+Freeman,
+Cooler
+still—an
+answer?,
+Phys. Educ. 14, 417 (1979).
+[10] K. Kumar, Mpemba effect and 18th century ice-cream,
+Phys. Educ. 15, 268 (1980).
+[11] J. W. Hanneken, Mpemba effect and cooling by radiation
+to the sky, Phys. Educ. 16, 7 (1981).
+[12] D.
+Auerbach,
+Supercooling
+and
+the
+Mpemba
+ef-
+fect:
+When hot water freezes quicker than cold,
+Am. J. Phys. 63, 882 (1995).
+[13] C. A. Knight, The Mpemba effect: The freezing times of
+cold and hot water, Am. J. Phys. 64, 524 (1996).
+[14] J.-M. Courty and E. Kierlik, Coup de froid sur le chaud,
+Pour la Science 342, 98 (2006).
+[15] M. Jeng, The Mpemba effect: When can hot water freeze
+faster than cold?, Am. J. Phys. 74, 514 (2006).
+[16] J.
+I.
+Katz,
+When
+hot
+water
+freezes
+before
+cold,
+Am. J. Phys. 77, 27 (2009).
+
+12
+[17] J. D. Brownridge, When does hot water freeze faster
+then cold water?
+A search for the Mpemba effect,
+Am. J. Phys. 79, 78 (2011).
+[18] A. Wang, M. Chen, Y. Vourgourakis, and A. Nas-
+sar, On the paradox of chilling water:
+Crossover
+temperature in the Mpemba effect, arXiv:1101.2684
+10.48550/arXiv.1101.2684 (2011).
+[19] M. Balážoviˇc and B. Tomášik, The Mpemba effect,
+Shechtman’s quasicrystals and student exploration ac-
+tivities, Phys. Educ. 47, 568 (2012).
+[20] C.
+Q.
+Sun,
+Behind
+the
+Mpemba
+paradox,
+Temperature 2, 38 (2015).
+[21] M.
+Balážoviˇc
+and
+B.
+Tomášik,
+Paradox
+of
+tem-
+perature
+decreasing
+without
+unique
+explanation,
+Temperature 2, 61 (2015).
+[22] A. A. Romanovsky, Which is the correct answer to the
+Mpemba puzzle?, Temperature 2, 63 (2015).
+[23] R. T. Ibekwe and J. P. Cullerne, Investigating the
+Mpemba effect: When hot water freezes faster than cold
+water, Phys. Educ. 51, 025011 (2016).
+[24] The Works of Aristotle (Translated into English under the
+editorship of W.D. Ross), Vol. III, edited by W. D. Ross
+(Clarendon Press, Oxford, 1931).
+[25] R. Bacon, Opus Majus, Vol. II (Russell and Russell, New
+York, 1962) , translated by R. Belle Burke.
+[26] F. Bacon, Novum Organum Scientiarum (in Latin). Trans-
+lated into English in: The New Organon. Under the editor-
+ship of L. Jardine, M. Silverthorne (2000) (Cambridge Uni-
+versity Press, Cambridge, 1620).
+[27] R. Descartes, Discours de la méthode pour bien conduire
+sa raison, et chercher la vérité dans les sciences (in French).
+Translated into English in: Discourse on Method, Optics,
+Geometry, and Meteorology. Under the editorship of P. J.
+Olscamp (2001), Vol. II, translated by R. Belle Burke
+(Hackett, New York, 1637).
+[28] M.
+Vynnycky
+and
+S.
+L.
+Mitchell,
+Evap-
+orative
+cooling
+and
+the
+Mpemba
+effect,
+Heat Mass Transf. 46, 881 (2010).
+[29] P. K. Maciejewski, Evidence of a convective instability
+allowing warm water to freeze in less time than cold wa-
+ter, J. Heat Transf. 118, 65 (1996).
+[30] B.
+Wojciechowski,
+I.
+Owczarek,
+and
+G.
+Bednarz,
+Freezing
+of
+aqueous
+solutions
+containing
+gases,
+Cryst. Res. Technol. 23, 843 (1988).
+[31] X. Zhang, Y. Huang, Z. Ma, Y. Zhou, J. Zhou, W. Zheng,
+Q. Jiang, and C. Q. Sun, Hydrogen-bond memory and
+water-skin supersolidity resolving the Mpemba para-
+dox, Phys. Chem. Chem. Phys. 16, 22995 (2014).
+[32] C. Q. Sun,
+Y. L. Huang,
+X. Zhang,
+Z. S.
+Ma,
+and B. Wang, The physics behind water irregularity,
+Phys. Rep. 998, 1 (2023).
+[33] S. Esposito, R. De Risi, and L. Somma, Mpemba effect
+and phase transitions in the adiabatic cooling of water
+before freezing, Physica A 387, 757 (2008).
+[34] M. Vynnycky and N. Maeno, Axisymmetric natural
+convection-driven evaporation of hot water and the
+Mpemba effect, Intl. J. Heat Mass Transf. 55, 7297 (2012).
+[35] M.
+Vynnycky
+and
+S.
+Kimura,
+Can
+natural
+con-
+vection
+alone
+explain
+the
+Mpemba
+effect?,
+Intl. J. Heat Mass Transf. 80, 243 (2015).
+[36] J. Jin and W. A. Goddard, Mechanisms underlying the
+Mpemba effect in water from molecular dynamics simu-
+lations, J. Phys. Chem. C 119, 2622 (2015).
+[37] A. Gijón, A. Lasanta, and E. R. Hernández, Paths to-
+wards equilibrium in molecular systems: The case of
+water, Phys. Rev. E 100, 032103 (2019).
+[38] H. C. Burridge and O. Hallstadius, Observing the
+Mpemba effect with minimal bias and the value of the
+Mpemba effect to scientiﬁc outreach and engagement,
+Proc. R. Soc. A 476, 20190829 (2020).
+[39] H. C. Burridge and P. F. Linden, Questioning the
+Mpemba effect: Hot water does not cool more quickly
+than cold, Sci. Rep. 6, 37665 (2016).
+[40] D. C. Elton and P. D. Spencer, Pathological water science
+— Four examples and what they have in common, in
+Biomechanical and Related Systems, Biologically-Inspired
+Systems, Vol. 17, edited by A. Gadomski (Springer,
+Cham., 2021) pp. 155–169.
+[41] P. A. Greaney, G. Lani, G. Cicero, and J. C. Grossman,
+Mpemba-like behavior in carbon nanotube resonators,
+Metall. Mater. Trans. A 42, 3907 (2011).
+[42] Y.-H. Ahn, H. Kang, D.-Y. Koh, and H. Lee, Experimen-
+tal veriﬁcations of Mpemba-like behaviors of clathrate
+hydrates, Korean J. Chem. Eng. 33, 1903 (2016).
+[43] Z. Lu and O. Raz, Nonequilibrium thermodynam-
+ics of the Markovian Mpemba effect and its inverse,
+Proc. Natl. Acad. Sci. U.S.A. 114, 5083 (2017).
+[44] I. Klich,
+O. Raz,
+O. Hirschberg, and M. Vucelja,
+Mpemba
+index
+and
+anomalous
+relaxation,
+Phys. Rev. X 9, 021060 (2019).
+[45] R.
+Chétrite,
+A.
+Kumar,
+and
+J.
+Bechhoefer,
+The
+metastable
+Mpemba effect corresponds to
+a non-
+monotonic
+temperature
+dependence
+of
+extractable
+work, Front. Phys. 9, 654271 (2021).
+[46] D. M. Busiello, D. Gupta, and A. Maritan, Inducing and
+optimizing Markovian Mpemba effect with stochastic
+reset, New J. Phys. 23, 103012 (2021).
+[47] J. Lin, K. Li, J. He, J. Ren, and J. Wang, Power statis-
+tics of Otto heat engines with the Mpemba effect,
+Phys. Rev. E 105, 014104 (2022).
+[48] G.
+Teza,
+R.
+Yaacoby,
+and
+O.
+Raz,
+Relax-
+ation
+shortcuts
+through
+boundary
+coupling,
+Phys. Rev. Lett. 131, 017101 (2023).
+[49] A. Lasanta, F. Vega Reyes, A. Prados, and A. Santos,
+When the hotter cools more quickly: Mpemba effect in
+granular ﬂuids, Phys. Rev. Lett. 119, 148001 (2017).
+[50] A. Torrente, M. A. López-Castaño, A. Lasanta, F. Vega
+Reyes, A. Prados, and A. Santos, Large Mpemba-
+like effect in a gas of inelastic rough hard spheres,
+Phys. Rev. E 99, 060901(R) (2019).
+[51] A. Biswas,
+V. V. Prasad,
+O. Raz, and R. Rajesh,
+Mpemba effect in driven granular Maxwell gases,
+Phys. Rev. E 102, 012906 (2020).
+[52] E. Mompó, M. A. López Castaño, A. Torrente, F. Vega
+Reyes, and A. Lasanta, Memory effects in a gas of vis-
+coelastic particles, Phys. Fluids 33, 062005 (2021).
+[53] R.
+Gómez
+González,
+N.
+Khalil,
+and
+V.
+Garzó,
+Mpemba-like
+effect
+in
+driven
+binary
+mixtures,
+Phys. Fluids 33, 053301 (2021).
+[54] R. Gómez González and V. Garzó, Time-dependent
+homogeneous states of binary granular suspensions,
+Phys. Fluids 33, 093315 (2021).
+[55] A. Biswas, V. V. Prasad, and R. Rajesh, Mpemba
+effect
+in
+an
+anisotropically
+driven
+granular
+gas,
+EPL 136, 46001 (2021).
+[56] A. Biswas, V. V. Prasad, and R. Rajesh, Mpemba ef-
+fect in anisotropically driven inelastic Maxwell gases,
+
+13
+J. Stat. Phys. 186, 45 (2022).
+[57] A. Megías and A. Santos, Kinetic theory and memory
+effects of homogeneous inelasticgranular gases under
+nonlinear drag, Entropy 24, 1436 (2022).
+[58] A. Megías and A. Santos, Mpemba-like effect protocol
+for granular gases of inelastic and rough hard disks,
+Front. Phys. 10, 971671 (2022).
+[59] A. Patrón, B. Sánchez-Rey, C. A. Plata, and A. Prados,
+Non-equilibrium memory effects: Granular ﬂuids and
+beyond, EPL 143, 61002 (2023).
+[60] A.
+Santos
+and
+A.
+Prados,
+Mpemba
+effect
+in
+molecular
+gases
+under
+nonlinear
+drag,
+Phys. Fluids 32, 072010 (2020).
+[61] A. Patrón, B. Sánchez-Rey, and A. Prados, Strong nonex-
+ponential relaxation and memory effects in a ﬂuid with
+nonlinear drag, Phys. Rev. E 104, 064127 (2021).
+[62] A. Megías, A. Santos, and A. Prados, Thermal versus en-
+tropic Mpemba effect in molecular gases with nonlinear
+drag, Phys. Rev. E 105, 054140, (2022).
+[63] M. Baity-Jesi, E. Calore, A. Cruz, L. A. Fernandez,
+J. M. Gil-Narvión, A. Gordillo-Guerrero, D. Iñiguez,
+A. Lasanta, A. Maiorano, E. Marinari, V. Martin-Mayor,
+J. Moreno-Gordo,
+A. Muñoz-Sudupe,
+D. Navarro,
+G. Parisi, S. Perez-Gaviro, F. Ricci-Tersenghi, J. J.
+Ruiz-Lorenzo, S. F. Schifano, B. Seoane, A. Tarancón,
+R.
+Tripiccione,
+and
+D.
+Yllanes,
+The
+Mpemba
+ef-
+fect in spin glasses is a persistent memory effect,
+Proc. Natl. Acad. Sci. U.S.A. 116, 15350 (2019).
+[64] Z.-Y.
+Yang
+and
+J.-X.
+Hou,
+Non-Markovian
+Mpemba
+effect
+in
+mean-ﬁeld
+systems,
+Phys. Rev. E 101, 052106 (2020).
+[65] Z.-Y.
+Yang
+and
+J.-X.
+Hou,
+Mpemba
+effect
+of
+a
+mean-ﬁeld
+system:
+The
+phase
+transition
+time,
+Phys. Rev. E 105, 014119 (2022).
+[66] S. Takada, H. Hayakawa, and A. Santos, Mpemba effect
+in inertial suspensions, Phys. Rev. E 103, 032901 (2021).
+[67] S. Takada, Homogeneous cooling and heating states
+of
+dilute
+soft-core
+gases
+under
+nonlinear
+drag,
+EPJ Web Conf. 249, 04001 (2021).
+[68] A. Kumar and J. Bechhoefer, Exponentially faster cool-
+ing in a colloidal system, Nature (Lond.) 584, 64 (2020).
+[69] J.
+Bechhoefer,
+A.
+Kumar,
+and
+R.
+Chétrite,
+A
+fresh
+understanding
+of
+the
+Mpemba
+effect,
+Nat. Rev.

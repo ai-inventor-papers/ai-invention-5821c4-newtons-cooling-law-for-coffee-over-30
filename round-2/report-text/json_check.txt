@@ -1,0 +1,18 @@
+16 word(s) and 0 phrase(s) are not in the domain vocabulary built from 13 papers of this field (domain_vocabulary.json).
+- misses (x3): "Held out, the porcelain pot parameters transfer poorly: on the Manitoba coffee curve the constant-rate law misses by 3.45 K RMS and the non…"
+- miss (x1): "Held out, the porcelain pot parameters transfer poorly: on the Manitoba coffee curve the constant-rate law misses by 3.45 K RMS and the non…"
+- fat (x2): "Humidity, fat-layer and geometry terms remain untested because no available series records them."
+- untested (x2): "Humidity, fat-layer and geometry terms remain untested because no available series records them."
+- partly (x1): "The question is partly answered."
+- flip (x1): "Out of sample, the constant-rate law misses the held-out Manitoba coffee curve by 3.45 K RMS and the nonlinear law by 2.66 K, and six Lange…"
+- placebo (x1): "Out of sample, the constant-rate law misses the held-out Manitoba coffee curve by 3.45 K RMS and the nonlinear law by 2.66 K, and six Lange…"
+- refitted (x1): "30-minute in-window RMS of the one-term cooling law against the fixed convective exponent x on the porcelain pot coffee curve, with the sca…"
+- delta (x1): "The minimum is at x = 2.18; the delta chi-squared 3.84 interval is 1.95 to 2.42 at sigma = 0.3 C."
+- chi (x1): "The minimum is at x = 2.18; the delta chi-squared 3.84 interval is 1.95 to 2.42 at sigma = 0.3 C."
+- sigma (x1): "The minimum is at x = 2.18; the delta chi-squared 3.84 interval is 1.95 to 2.42 at sigma = 0.3 C."
+- text (x1): "The line is drawn through the ten profile points listed in the text."
+- shallow (x1): "Shows that the in-window RMS has a shallow minimum near x = 2.18 and rises on both sides."
+- chart (x2): "Line chart, one series 'Profile over x (a re-fitted at each x)'."
+- label (x4): "X-axis label 'Convective exponent x', range 1.0 to 3.0."
+- categories (x1): "Categories: 'Manitoba coffee', 'Langer 01', 'Langer 02', 'Langer 03', 'Langer 04', 'Langer 05', 'Langer 06'."
+For each one: replace it with a word the field's papers use for the same thing (`lookup` tests candidates against the corpus and shows a sentence for each). When no corpus word fits, find a paper of this field that uses the word, save its text and run `add-word` with it; when many ordinary words are missing, save one or two more full papers of the field into the corpus and rebuild instead. Never substitute wording of your own that is not on the list. A term this paper coins is defined once at first use ("we call ...").

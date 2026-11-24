@@ -1,0 +1,93 @@
+[
+ {
+  "files": [
+   "scirep2022.txt"
+  ],
+  "url": "https://doi.org/10.1038/s41598-022-18961-8",
+  "title": "Integrity of Newton's cooling law based on thermal convection theory of heat transfer and entropy transfer"
+ },
+ {
+  "files": [
+   "arxiv_2107.txt"
+  ],
+  "url": "https://arxiv.org/abs/2107.09527",
+  "title": "Measurement of the Newton's cooling law time-constant by Arduino: an idea for STEM education in High Schools"
+ },
+ {
+  "files": [
+   "arxiv_1005.txt"
+  ],
+  "url": "https://arxiv.org/abs/1005.1013",
+  "title": "Mpemba effect, Newton cooling law and heat transfer equation"
+ },
+ {
+  "files": [
+   "arxiv_2401.txt"
+  ],
+  "url": "https://arxiv.org/html/2401.03550v1",
+  "title": "Mpemba meets Newton: Exploring the Mpemba and Kovacs effects in the time-delayed cooling law"
+ },
+ {
+  "files": [
+   "arxiv_2404.txt"
+  ],
+  "url": "https://arxiv.org/abs/2404.08587",
+  "title": "Cooling of an object by forced convection"
+ },
+ {
+  "files": [
+   "arxiv_1811.txt"
+  ],
+  "url": "https://arxiv.org/abs/1811.03696",
+  "title": "A New Perspective on Newton's Law of Cooling in Frame of Newly Defined Fractional Conformable Derivative"
+ },
+ {
+  "files": [
+   "arxiv_1710.txt"
+  ],
+  "url": "https://arxiv.org/abs/1710.00667",
+  "title": "Cooling jug physics"
+ },
+ {
+  "files": [
+   "arxiv_physics0512.txt"
+  ],
+  "url": "https://arxiv.org/abs/physics/0512262",
+  "title": "Hot water can freeze faster than cold?!?"
+ },
+ {
+  "files": [
+   "arxiv_2302.txt"
+  ],
+  "url": "https://arxiv.org/abs/2302.12348",
+  "title": "Nonisothermal evaporation"
+ },
+ {
+  "files": [
+   "arxiv_2501.txt"
+  ],
+  "url": "https://arxiv.org/abs/2501.01180",
+  "title": "Science of a coffee cup: a physicist walks into a bar..."
+ },
+ {
+  "files": [
+   "arxiv_2602.txt"
+  ],
+  "url": "https://arxiv.org/abs/2602.03790",
+  "title": "The Mpemba effect in the Descartes protocol: a time-delayed Newton's law of cooling approach"
+ },
+ {
+  "files": [
+   "arxiv_1607.txt"
+  ],
+  "url": "https://arxiv.org/abs/1607.07226",
+  "title": "Uncertainty Limits on Solutions of Inverse Problems over Multiple Orders of Magnitude using Bootstrap Methods: An Astroparticle Physics Example"
+ },
+ {
+  "files": [
+   "arxiv_2311.txt"
+  ],
+  "url": "https://arxiv.org/abs/2311.02019",
+  "title": "Reproducible Parameter Inference Using Bagged Posteriors"
+ }
+]
