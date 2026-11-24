@@ -1,0 +1,953 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Newton's Cooling Law Fitted to One Coffee Curve Does Not Transfer Between Cups: interactive demo</title>
+<style>
+:root{--ink:#1d2330;--muted:#5b6374;--paper:#fbfbf9;--card:#ffffff;--hair:#dcdfe6;--accent:#0b6bcb;--base:#7a8394;--amber:#c77700;--target:#b42318;--focus:#0b6bcb;--radius:8px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-size:18px;line-height:1.6;overflow-x:hidden}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-9999px;top:8px;background:#fff;color:var(--ink);padding:10px 14px;border:2px solid var(--accent);border-radius:6px;z-index:100}
+.skip:focus{left:12px}
+a{color:var(--accent);text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:3px}
+h1{font-size:2.1rem;line-height:1.2;margin:.2em 0 .3em;letter-spacing:-.01em}
+h2{font-size:1.6rem;line-height:1.25;margin:0 0 .5em;padding-top:28px;border-top:1px solid var(--hair)}
+h3{font-size:1.2rem;margin:1.2em 0 .4em}
+p{margin:.5em 0 .9em;max-width:72ch}
+.kicker{font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0}
+.hero{padding:34px 0 18px}
+.byline{color:var(--muted);margin:0}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 4px;padding:0;list-style:none}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:8px 16px;border-radius:6px;border:2px solid var(--accent);color:var(--accent);text-decoration:none;font-weight:600;background:#fff}
+.btn.primary{background:var(--accent);color:#fff}
+.btn:hover{text-decoration:underline}
+nav.sec{position:sticky;top:0;background:rgba(251,251,249,.97);border-bottom:1px solid var(--hair);z-index:50;overflow-x:auto}
+nav.sec ul{display:flex;gap:4px;list-style:none;margin:0;padding:6px 0;white-space:nowrap}
+nav.sec a{display:inline-block;padding:8px 10px;min-height:40px;line-height:24px;color:var(--ink);text-decoration:none;font-size:.92rem;border-bottom:3px solid transparent}
+nav.sec a[aria-current="true"]{border-bottom-color:var(--accent);font-weight:700}
+section.block{padding-bottom:20px}
+.q{font-size:1.1rem;font-weight:600;margin:.2em 0 .6em;max-width:72ch}
+.answer{font-size:1.05rem;max-width:72ch}
+.big{font-size:2.6rem;font-weight:800;color:var(--accent);line-height:1.1;margin:.1em 0 .1em;font-variant-numeric:tabular-nums}
+.card{background:var(--card);border:1px solid var(--hair);border-radius:var(--radius);padding:18px;margin:16px 0}
+.grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:20px;align-items:start}
+@media (max-width:820px){.grid2{grid-template-columns:minmax(0,1fr)}}
+fieldset{border:1px solid var(--hair);border-radius:var(--radius);padding:8px 12px 10px;margin:0 0 12px;min-width:0}
+legend{font-weight:600;font-size:.95rem;padding:0 4px}
+.radios{display:flex;flex-wrap:wrap;gap:6px 14px}
+.radios label{display:inline-flex;align-items:center;gap:6px;min-height:40px;cursor:pointer;font-size:.97rem}
+input[type=radio],input[type=checkbox]{width:20px;height:20px;accent-color:var(--accent)}
+select,input[type=search]{font:inherit;font-size:.97rem;min-height:40px;padding:6px 10px;border:1px solid #9aa2b1;border-radius:6px;background:#fff;color:var(--ink);max-width:100%}
+button.ctl{font:inherit;font-size:.97rem;min-height:40px;min-width:40px;padding:6px 14px;border:1px solid #9aa2b1;border-radius:6px;background:#fff;color:var(--ink);cursor:pointer}
+button.ctl[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+button.ctl:disabled{opacity:.45;cursor:not-allowed}
+.takeaway{font-weight:600;background:#eef5fc;border-left:4px solid var(--accent);padding:10px 14px;border-radius:0 6px 6px 0;margin:14px 0 4px;max-width:72ch}
+.chart{position:relative;width:100%;min-height:300px}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart text{fill:var(--ink);font-size:13px}
+.chart .ax{stroke:#6b7280;stroke-width:1}
+.chart .grid{stroke:#e6e8ee;stroke-width:1}
+.chart .lbl-muted{fill:var(--muted)}
+.tip{position:absolute;pointer-events:none;background:#1d2330;color:#fff;font-size:.88rem;line-height:1.35;padding:6px 9px;border-radius:5px;max-width:260px;display:none;z-index:20}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.93rem;margin:6px 0;padding:0;list-style:none}
+.legend li{display:inline-flex;align-items:center;gap:7px}
+.sw{display:inline-block;width:16px;height:12px;border-radius:2px}
+.dot{display:inline-block;width:11px;height:11px;border-radius:50%}
+.tablewrap{overflow-x:auto;max-width:100%;border:1px solid var(--hair);border-radius:6px;background:#fff}
+table{border-collapse:collapse;width:100%;font-size:.95rem;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--hair);vertical-align:top}
+th{background:#f3f4f7;font-weight:600}
+td.n,th.n{text-align:right}
+.itembrowser{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:18px;align-items:start}
+@media (max-width:820px){.itembrowser{grid-template-columns:minmax(0,1fr)}}
+.toolrow{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;margin-bottom:10px}
+.toolrow label{display:flex;flex-direction:column;font-size:.9rem;color:var(--muted);gap:3px}
+.itemlist{list-style:none;padding:0;margin:0;max-height:420px;overflow-y:auto;border:1px solid var(--hair);border-radius:6px;background:#fff}
+.itemlist li+li{border-top:1px solid var(--hair)}
+.itemlist button{display:block;width:100%;text-align:left;font:inherit;font-size:.95rem;min-height:48px;padding:8px 12px;background:#fff;border:0;color:var(--ink);cursor:pointer}
+.itemlist button[aria-pressed="true"]{background:#e8f1fb;font-weight:700;box-shadow:inset 4px 0 0 var(--accent)}
+.itemlist small{display:block;color:var(--muted);font-weight:400;font-size:.85rem}
+.stepper{border:1px solid var(--hair);border-radius:var(--radius);background:#fff;padding:14px 16px;margin:14px 0}
+.pipe{width:100%;height:auto;display:block;margin-bottom:8px}
+.pipe .node{fill:#fff;stroke:#9aa2b1;stroke-width:2}
+.pipe .node.cur{fill:#e8f1fb;stroke:var(--accent);stroke-width:3}
+.pipe .nodetxt{font-size:13px;fill:var(--ink)}
+.pipe .arrow{stroke:#9aa2b1;stroke-width:2;fill:none}
+.stagebox{min-height:180px}
+.stagebar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;margin-top:10px}
+.stagemarks{display:flex;flex-wrap:wrap;gap:6px}
+.stagemarks button{min-width:44px}
+.glossterm{font:inherit;color:var(--ink);background:none;border:0;border-bottom:1px dotted var(--accent);padding:0 1px;cursor:help;min-height:24px;min-width:24px;display:inline}
+.termtip{position:absolute;z-index:40;background:#fff;color:var(--ink);border:1px solid #9aa2b1;border-radius:6px;box-shadow:0 4px 14px rgba(0,0,0,.14);padding:8px 10px;font-size:.92rem;line-height:1.4;max-width:300px;display:none}
+.termwrap{position:relative;display:inline-block}
+.termwrap .termtip{top:calc(100% + 6px);left:0}
+.fig{margin:16px 0}
+.fig img{width:100%;height:auto;border:1px solid var(--hair);border-radius:6px;background:#fff}
+.fig figcaption{font-size:.93rem;color:var(--muted);margin-top:6px;max-width:72ch}
+.gloss dt{font-weight:700;margin-top:10px}
+.gloss dd{margin:2px 0 6px 0;max-width:72ch}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.muted{color:var(--muted);font-size:.95rem}
+footer{border-top:1px solid var(--hair);margin-top:30px;padding:28px 0 60px;color:var(--muted);font-size:.97rem}
+footer ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:8px 20px}
+footer h2{font-size:1.2rem;color:var(--ink);border:0;padding-top:0}
+footer code{font-size:.9rem;word-break:break-all}
+.hint{font-size:.92rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="hero wrap" id="top">
+  <p class="kicker">Interactive companion to the paper</p>
+  <h1>Newton's Cooling Law Fitted to One Coffee Curve Does Not Transfer Between Cups</h1>
+  <ul class="btns">
+    <li><a class="btn primary" href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-5821c4-newtons-cooling-law-for-coffee-over-30@main/paper.pdf">Read the paper (PDF)</a></li>
+    <li><a class="btn" href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-5821c4-newtons-cooling-law-for-coffee-over-30@main/report.pdf">Read the full research report</a></li>
+  </ul>
+</header>
+
+<nav class="sec wrap" aria-label="Page sections">
+  <ul>
+    <li><a href="#finding">The finding</a></li>
+    <li><a href="#how">How it works</a></li>
+    <li><a href="#evidence">Explore the evidence</a></li>
+    <li><a href="#try">Try it</a></li>
+    <li><a href="#fails">Where it fails</a></li>
+    <li><a href="#about">Links and provenance</a></li>
+  </ul>
+</nav>
+
+<main id="main" class="wrap">
+
+<section class="block" id="finding" aria-labelledby="h-finding">
+  <h2 id="h-finding">The finding</h2>
+  <p class="q">Question: how far off is Newton's law of cooling over 30 minutes when its constant is fitted to one cup and carried to other cups?</p>
+  <p class="answer">Answer: on the seven held-out curves the mean 30-minute error is <span id="headline-num"></span> for Newton's law. The target set before the test was under 0.5 K, so the frozen test failed. The chart below draws the real per-curve values. Change the set or the ambient assumption to see how the numbers move.</p>
+  <p class="big" id="headline-big" aria-live="polite"></p>
+  <p class="muted" style="margin-top:0">Mean 30-minute RMS error over seven held-out curves, Newton's law, ambient A. <span id="headline-ci"></span></p>
+
+  <div class="card">
+    <div class="grid2">
+      <div>
+        <fieldset>
+          <legend>Curves shown</legend>
+          <div class="radios" id="set-radios">
+            <label><input type="radio" name="set" value="all" checked> All seven held-out curves</label>
+            <label><input type="radio" name="set" value="manitoba"> Manitoba coffee cup</label>
+            <label><input type="radio" name="set" value="langer"> Six Langer hot-water cups</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Ambient temperature assumption</legend>
+          <div class="radios" id="amb-radios">
+            <label><input type="radio" name="amb" value="A" checked> A: recorded, or 20 °C where none is reported</label>
+            <label><input type="radio" name="amb" value="B"> B: one shared value fitted within 5 K of 20 °C</label>
+          </div>
+        </fieldset>
+        <p class="hint">The horizontal line marks the 0.5 K accuracy target. Bars start at zero. Hover, focus or tap a bar to read its exact value.</p>
+      </div>
+      <div>
+        <div class="chart" id="chart-headline" role="group" aria-label="Bar chart of 30-minute RMS error per held-out curve"></div>
+        <ul class="legend" id="legend-headline"></ul>
+      </div>
+    </div>
+    <p class="takeaway" id="takeaway-finding" aria-live="polite"></p>
+  </div>
+  <p>Newton's law is the baseline here, shown in grey. The power-law extension in amber has one extra fitted exponent. On the all-curve set its mean is <span id="pl-mean-txt"></span>, a paired difference of <span id="pl-diff-txt"></span>, but a resampling test gives p = 0.0625, so the advantage is not established.</p>
+</section>
+
+<section class="block" id="how" aria-labelledby="h-how">
+  <h2 id="h-how">How it works</h2>
+  <p class="q">Question: what happens to one real cup, step by step, from its recorded temperatures to its error score?</p>
+  <p>The method has no learned model. It fits two constants on one measured coffee curve, freezes them, and predicts other curves. Step through the five stages below using the Manitoba coffee cup as the worked example.</p>
+
+  <div class="stepper" id="stepper">
+    <svg class="pipe" id="pipe" viewBox="0 0 960 84" role="img" aria-label="Pipeline of five stages: recorded input, fit to the china-pot curve, freeze the constants, predict the other cup, score against the measurement"></svg>
+    <div class="stagebox" id="stage-box" aria-live="polite"></div>
+    <div class="stagebar">
+      <div class="stagemarks" id="stage-marks" role="group" aria-label="Choose a stage"></div>
+      <div>
+        <button class="ctl" type="button" id="stage-prev">Previous stage</button>
+        <button class="ctl" type="button" id="stage-next">Next stage</button>
+      </div>
+    </div>
+    <p class="hint">Keyboard: press the left and right arrow keys while the stepper has focus.</p>
+  </div>
+  <p class="takeaway" id="takeaway-how" aria-live="polite"></p>
+</section>
+
+<section class="block" id="evidence" aria-labelledby="h-evidence">
+  <h2 id="h-evidence">Explore the evidence</h2>
+  <h3 id="h-items">View 1: each curve, observed against both laws</h3>
+  <p class="q">Question: for one cup, how close does each law come to the measured temperatures?</p>
+  <p>Pick a curve from the list. The detail panel shows its input, the measured values, and both laws' predictions side by side. Filters and sorting act on the twelve curves in the recorded output file.</p>
+
+  <div class="itembrowser">
+    <div>
+      <div class="toolrow">
+        <label for="item-set">Show
+          <select id="item-set">
+            <option value="planned">Held-out, planned set (7)</option>
+            <option value="sensitivity">Sensitivity-only Langer cups (4)</option>
+            <option value="fitting">Fitting curve (1)</option>
+            <option value="all">All curves (12)</option>
+          </select>
+        </label>
+        <label for="item-sort">Sort by
+          <select id="item-sort">
+            <option value="newton">Newton error, high to low</option>
+            <option value="power">Power-law error, high to low</option>
+            <option value="name">Curve name</option>
+          </select>
+        </label>
+      </div>
+      <div class="toolrow">
+        <label for="item-search">Search curve name
+          <input type="search" id="item-search" placeholder="for example Langer 03">
+        </label>
+      </div>
+      <p class="muted" id="item-count" aria-live="polite"></p>
+      <ul class="itemlist" id="item-list" aria-label="Curves"></ul>
+    </div>
+    <div>
+      <div id="item-detail" aria-live="polite"></div>
+    </div>
+  </div>
+  <p class="takeaway" id="takeaway-items" aria-live="polite"></p>
+
+  <h3 id="h-set">View 2: the set-level comparison by source</h3>
+  <p class="q">Question: does the frozen comparison hold for every source, or only for some of them?</p>
+  <p>Each source is held out in turn while both laws are refitted on the other two. Values are the stored leave-one-source-out means, under ambient A.</p>
+  <fieldset>
+    <legend>Held-out source</legend>
+    <div class="radios" id="fold-radios">
+      <label><input type="radio" name="fold" value="Sedlacek" checked> Sedlacek and Dolejsi coffee (1 curve)</label>
+      <label><input type="radio" name="fold" value="Manitoba"> Manitoba coffee cup (1 curve)</label>
+      <label><input type="radio" name="fold" value="Langer"> Langer hot-water cups (6 curves)</label>
+    </div>
+  </fieldset>
+  <div class="tablewrap" role="region" aria-label="Leave-one-source-out table" tabindex="0">
+    <table id="fold-table"><caption class="visually-hidden">Leave-one-source-out results for the selected held-out source</caption>
+      <thead><tr><th>Measure</th><th class="n">Newton law</th><th class="n">Power law (x = 2.18)</th></tr></thead>
+      <tbody id="fold-body"></tbody>
+    </table>
+  </div>
+  <p class="takeaway" id="takeaway-fold" aria-live="polite"></p>
+</section>
+
+<section class="block" id="try" aria-labelledby="h-try">
+  <h2 id="h-try">Try it</h2>
+  <h3 id="h-window">What if the error were judged over a shorter window?</h3>
+  <p class="q">Question: how sensitive is the frozen comparison to the 30-minute end point?</p>
+  <p>The slider recomputes the RMS error of each held-out curve over every recorded point with time up to the chosen minute, using the recorded predictions and measurements. The stored convention counts the start point at t = 0, as the values in the paper's tables do. At 30 minutes the means reproduce the paper.</p>
+  <div class="card">
+    <label for="window-slider"><strong>Window end (minutes)</strong>: <output id="window-out" for="window-slider" aria-live="polite">30</output></label>
+    <input type="range" id="window-slider" min="2" max="30" step="1" value="30" style="width:100%;accent-color:#0b6bcb;min-height:40px;margin-top:6px">
+    <div class="chart" id="chart-window" role="group" aria-label="Bar chart of RMS error over the chosen window"></div>
+    <ul class="legend" id="legend-window"></ul>
+    <p class="takeaway" id="takeaway-window" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="block" id="fails" aria-labelledby="h-fails">
+  <h2 id="h-fails">Where it fails</h2>
+  <h3 id="h-sign">View 3: the first 10 minutes disagree in sign</h3>
+  <p class="q">Question: where does Newton's law run warm and where does it run cold during the early window?</p>
+  <p>Each bar is the signed mean residual over minutes 0 to 10 for one held-out curve, model minus observed. A positive value means the model is warmer than the liquid. One constant is off in opposite directions on the two sets.</p>
+  <div class="chart" id="chart-sign" role="group" aria-label="Signed early residual for each held-out curve"></div>
+  <ul class="legend" id="legend-sign"></ul>
+  <p class="takeaway" id="takeaway-sign" aria-live="polite"></p>
+
+  <h3 id="h-refit">View 4: frozen constant or fitted again</h3>
+  <p class="q">Question: does the error fall when the constant is allowed to be fitted again on early data?</p>
+  <fieldset>
+    <legend>Protocol</legend>
+    <div class="radios" id="protocol-radios">
+      <label><input type="radio" name="protocol" value="frozen" checked> Frozen constant, 30 minutes (7 curves)</label>
+      <label><input type="radio" name="protocol" value="refit"> Fitted again on minutes 0 to 10, tested 10 to 30 (11 curves)</label>
+    </div>
+  </fieldset>
+  <div class="chart" id="chart-refit" role="group" aria-label="Per-curve error under the selected protocol"></div>
+  <ul class="legend" id="legend-refit"></ul>
+  <p class="takeaway" id="takeaway-refit" aria-live="polite"></p>
+</section>
+
+<section class="block" id="limits" aria-labelledby="h-limits">
+  <h3 id="h-limits-h">What the paper says it does not show</h3>
+  <ul>
+    <li>One measured coffee curve is the fitting curve, and only one held-out curve is coffee. Six of the eight curves are hot-water cups from one lab and protocol.</li>
+    <li>No source reports relative humidity or a lid, so evaporation is not tested.</li>
+    <li>Ambient temperature is assumed at 20 °C for the fitting curve and the Langer cups.</li>
+    <li>The exponent 2.18 is a single fitted estimate. It is not a physical constant, and it does not carry across cups without refitting.</li>
+    <li>Four of the ten Langer fits again reach the lower bound of the ambient search, which lowers confidence in those fitted-again errors.</li>
+  </ul>
+</section>
+
+</main>
+
+<footer id="about">
+  <div class="wrap">
+    <h2>Links</h2>
+    <ul>
+      <li><a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-5821c4-newtons-cooling-law-for-coffee-over-30@main/paper.pdf">Read the paper (PDF)</a></li>
+      <li><a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-5821c4-newtons-cooling-law-for-coffee-over-30@main/report.pdf">Read the full research report</a></li>
+      <li><a href="https://github.com/ai-inventor-papers/ai-invention-5821c4-newtons-cooling-law-for-coffee-over-30">Code repository</a></li>
+    </ul>
+    <h2>Data provenance</h2>
+    <ul>
+      <li>Views 1, the stepper and the window slider: <code>data-curves</code> from <code>experiment_2/full_method_out.json</code> (recorded inputs, measured temperatures, and predictions with frozen constants).</li>
+      <li>Headline bars and item errors: <code>data-scores</code> from <code>experiment_2/results/heldout_scores.json</code>.</li>
+      <li>Interval values, paired differences and leave-one-source-out means: <code>data-blocks</code> from <code>experiment_2/results/fold_summary.json</code>, with the exponent interval from <code>experiment_3/results/exponent_profile.json</code>.</li>
+      <li>Fitted-again errors and the refit summary: <code>data-refit</code> from <code>experiment_3/results/heldout_scores.json</code>.</li>
+    </ul>
+    <h2>Glossary</h2>
+    <dl class="gloss" id="glossary"></dl>
+    <p class="hint">The paper carries no citation block in its source.</p>
+  </div>
+</footer>
+
+<script type="application/json" id="data-curves" data-source="experiment_2/full_method_out.json">{"curves":[{"id":"SEDLACEK2010_Fig1","label":"Sedlacek and Dolejsi coffee (fitting curve)","role":"fitting","T0":80.25,"room":20.0,"roomSource":"default_20C","t":[0.0,2.75,4.65,9.66,14.67,20.58,25.59],"obs":[80.25,74.86,71.76,65.2,60.18,54.73,52.81],"c0":[80.25,76.0162,73.266,66.6446,60.8462,54.9258,50.5842],"c1":[80.25,74.8835,71.7429,65.0658,60.0206,55.4415,52.3625]},{"id":"MANITOBA_WORKSHOP_coffee","label":"Manitoba coffee cup","role":"planned","T0":85.56,"room":21.67,"roomSource":"recorded","t":[0.0,1.0,2.0,3.0,8.0,13.0,18.0,23.0,28.0],"obs":[85.56,81.67,79.44,77.22,68.89,62.22,57.22,52.78,48.89],"c0":[85.56,83.8894,82.2626,80.6782,73.3566,66.9435,61.3261,56.4057,52.0958],"c1":[85.56,83.2028,81.0274,79.0131,70.8192,64.8118,60.2049,56.5513,53.5776]},{"id":"LANGER2018_Abb2-01","label":"Langer 01","role":"planned","T0":80.17,"room":20.0,"roomSource":"default_20C","t":[1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0,25.0,26.0,27.0,28.0,29.0,30.0],"obs":[80.17,78.86,77.75,76.64,75.65,74.65,73.69,72.74,71.82,70.89,70.05,69.22,68.39,67.61,66.85,66.12,65.4,64.69,64.04,63.38,62.68,62.1,61.43,60.83,60.27,59.63,59.09,58.51,57.95,57.43],"c0":[78.5967,77.0645,75.5725,74.1194,72.7043,71.3262,69.9841,68.6772,67.4044,66.1649,64.9578,63.7823,62.6375,61.5226,60.4369,59.3796,58.3499,57.3471,56.3706,55.4196,54.4935,53.5915,52.7132,51.8578,51.0248,50.2136,49.4236,48.6542,47.905,47.1754],"c1":[78.0963,76.1725,74.3825,72.7124,71.1504,69.6859,68.31,67.0146,65.7926,64.6379,63.545,62.5087,61.5248,60.5893,59.6986,58.8495,58.039,57.2646,56.5237,55.8143,55.1342,54.4818,53.8552,53.2529,52.6735,52.1157,51.5783,51.0601,50.5601,50.0774]},{"id":"LANGER2018_Abb2-02","label":"Langer 02","role":"planned","T0":80.6,"room":20.0,"roomSource":"default_20C","t":[1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0,25.0,26.0,27.0,28.0,29.0,30.0],"obs":[80.6,79.6,78.9,77.93,77.14,76.35,75.49,74.74,73.86,73.13,72.35,71.61,70.82,70.18,69.44,68.73,68.02,67.32,66.72,66.07,65.43,64.79,64.15,63.59,63.05,62.46,61.91,61.31,60.75,60.27],"c0":[79.0155,77.4724,75.9696,74.5061,73.0809,71.693,70.3414,69.0251,67.7432,66.4948,65.2791,64.0951,62.9422,61.8193,60.7259,59.661,58.6239,57.614,56.6305,55.6727,54.74,53.8316,52.947,52.0855,51.2466,50.4295,49.6339,48.859,48.1044,47.3696],"c1":[78.4945,76.5424,74.727,73.0342,71.4516,69.9686,68.5758,67.265,66.0291,64.8615,63.7567,62.7096,61.7157,60.7709,59.8716,59.0145,58.1966,57.4152,56.6679,55.9524,55.2667,54.6089,53.9773,53.3703,52.7865,52.2245,51.6831,51.1612,50.6577,50.1717]},{"id":"LANGER2018_Abb2-03","label":"Langer 03","role":"planned","T0":82.28,"room":20.0,"roomSource":"default_20C","t":[1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0,25.0,26.0,27.0,28.0,29.0,30.0],"obs":[82.28,81.65,80.98,80.27,79.62,78.88,78.32,77.68,77.06,76.45,75.77,75.14,74.55,73.98,73.35,72.79,72.2,71.63,71.1,70.53,69.97,69.43,68.93,68.46,67.96,67.45,66.94,66.47,66.01,65.5],"c0":[80.6515,79.0656,77.5212,76.0172,74.5525,73.1261,71.737,70.3842,69.0667,67.7838,66.5343,65.3176,64.1326,62.9787,61.8549,60.7605,59.6947,58.6568,57.646,56.6617,55.7031,54.7695,53.8604,52.975,52.1128,51.2731,50.4554,49.6591,48.8836,48.1283],"c1":[80.0478,77.9831,76.0673,74.2844,72.6208,71.0646,69.6054,68.2343,66.9432,65.7252,64.5742,63.4846,62.4514,61.4704,60.5375,59.6493,58.8024,57.9941,57.2216,56.4826,55.7749,55.0964,54.4455,53.8203,53.2193,52.6412,52.0846,51.5483,51.0312,50.5322]},{"id":"LANGER2018_Abb2-04","label":"Langer 04","role":"planned","T0":80.63,"room":20.0,"roomSource":"default_20C","t":[1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0,25.0,26.0,27.0,28.0,29.0,30.0],"obs":[80.63,79.46,78.51,77.69,76.85,75.98,75.17,74.38,73.59,72.82,72.07,71.36,70.59,69.92,69.24,68.56,67.91,67.28,66.64,66.01,65.39,64.79,64.23,63.69,63.17,62.6,62.07,61.52,61.02,60.5],"c0":[79.0447,77.5008,75.9973,74.5331,73.1072,71.7186,70.3663,69.0493,67.7668,66.5178,65.3015,64.117,62.9634,61.84,60.746,59.6806,58.6431,57.6327,56.6487,55.6904,54.7572,53.8484,52.9633,52.1014,51.262,50.4446,49.6485,48.8733,48.1183,47.3831],"c1":[78.5223,76.5681,74.751,73.0566,71.4726,69.9883,68.5943,67.2825,66.0455,64.8771,63.7715,62.7236,61.729,60.7836,59.8836,59.026,58.2076,57.4257,56.6779,55.962,55.2759,54.6177,53.9857,53.3784,52.7943,52.2321,51.6904,51.1683,50.6645,50.1782]},{"id":"LANGER2018_Abb2-05","label":"Langer 05","role":"planned","T0":80.86,"room":20.0,"roomSource":"default_20C","t":[1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0,25.0,26.0,27.0,28.0,29.0,30.0],"obs":[80.86,79.81,78.85,77.92,77.02,76.11,75.26,74.41,73.54,72.72,71.88,71.14,70.36,69.62,68.86,68.16,67.42,66.74,66.08,65.45,64.79,64.17,63.55,63.01,62.43,61.81,61.25,60.71,60.13,59.59],"c0":[79.2687,77.7189,76.2097,74.74,73.3087,71.9148,70.5573,69.2354,67.948,66.6943,65.4733,64.2843,63.1264,61.9988,60.9006,59.8311,58.7897,57.7754,56.7877,55.8258,54.889,53.9768,53.0883,52.2232,51.3806,50.5601,49.761,48.9828,48.225,47.487],"c1":[78.7351,76.7658,74.935,73.2284,71.6334,70.1391,68.7361,67.416,66.1716,64.9962,63.8843,62.8306,61.8306,60.8802,59.9757,59.1138,58.2914,57.5058,56.7546,56.0354,55.3463,54.6853,54.0506,53.4408,52.8543,52.2899,51.7461,51.222,50.7164,50.2283]},{"id":"LANGER2018_Abb2-06","label":"Langer 06","role":"planned","T0":81.9,"room":20.0,"roomSource":"default_20C","t":[1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0,25.0,26.0,27.0,28.0,29.0,30.0],"obs":[81.9,80.85,79.98,79.15,78.34,77.64,76.89,76.15,75.41,74.68,73.95,73.25,72.54,71.86,71.22,70.55,69.9,69.27,68.63,68.0,67.38,66.8,66.2,65.66,65.08,64.52,64.0,63.51,63.03,62.51],"c0":[80.2815,78.7053,77.1703,75.6754,74.2196,72.8019,71.4213,70.0767,68.7674,67.4922,66.2504,65.0411,63.8634,62.7165,61.5995,60.5118,59.4525,58.4209,57.4163,56.438,55.4852,54.5574,53.6538,52.7738,51.9169,51.0823,50.2696,49.4781,48.7073,47.9567],"c1":[79.6968,77.6578,75.7649,74.0026,72.3575,70.8179,69.3738,68.0163,66.7378,65.5312,64.3907,63.3107,62.2864,61.3136,60.3883,59.5071,58.6667,57.8645,57.0977,56.3639,55.6612,54.9874,54.3408,53.7197,53.1226,52.5481,51.9949,51.4619,50.9478,50.4517]},{"id":"LANGER2018_Abb2-07","label":"Langer 07","role":"sensitivity","T0":81.34,"room":20.0,"roomSource":"default_20C","t":[1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0,25.0,26.0,27.0,28.0,29.0,30.0],"obs":[81.34,80.52,79.64,78.9,78.14,77.42,76.73,76.09,75.36,74.68,74.01,73.4,72.76,72.11,71.49,70.9,70.26,69.66,69.12,68.54,67.99,67.44,66.9,66.34,65.83,65.31,64.79,64.29,63.82,63.34],"c0":[79.7361,78.1742,76.6531,75.1717,73.7291,72.3242,70.9561,69.6237,68.3262,67.0626,65.832,64.6336,63.4665,62.33,61.2232,60.1453,59.0956,58.0733,57.0778,56.1083,55.1642,54.2447,53.3493,52.4773,51.6281,50.8011,49.9957,49.2114,48.4476,47.7038],"c1":[79.1792,77.1778,75.3185,73.5863,71.9682,70.453,69.0311,67.6938,66.4336,65.2439,64.1188,63.0529,62.0417,61.081,60.1669,59.296,58.4653,57.6721,56.9136,56.1877,55.4923,54.8254,54.1852,53.5702,52.9788,52.4097,51.8616,51.3333,50.8238,50.332]},{"id":"LANGER2018_Abb2-08","label":"Langer 08","role":"sensitivity","T0":81.12,"room":20.0,"roomSource":"default_20C","t":[1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0,25.0,26.0,27.0,28.0,29.0,30.0],"obs":[81.12,80.31,79.52,78.7,77.9,77.2,76.47,75.73,74.97,74.27,73.54,72.86,72.15,71.48,70.83,70.16,69.51,68.87,68.25,67.63,67.01,66.39,65.83,65.27,64.69,64.16,63.67,63.17,62.66,62.12],"c0":[79.5219,77.9655,76.4499,74.9738,73.5364,72.1366,70.7733,69.4457,68.1528,66.8938,65.6676,64.4735,63.3106,62.1782,61.0753,60.0013,58.9554,57.9368,56.9448,55.9788,55.0381,54.1219,53.2297,52.3608,51.5147,50.6906,49.8882,49.1067,48.3456,47.6044],"c1":[78.9757,76.989,75.1428,73.4224,71.8149,70.3093,68.896,67.5666,66.3137,65.1305,64.0114,62.9512,61.9451,60.9891,60.0794,59.2126,58.3858,57.596,56.8409,56.1181,55.4255,54.7613,54.1237,53.511,52.9219,52.3549,51.8088,51.2824,50.7747,50.2846]},{"id":"LANGER2018_Abb2-09","label":"Langer 09","role":"sensitivity","T0":81.41,"room":20.0,"roomSource":"default_20C","t":[1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0,25.0,26.0,27.0,28.0,29.0,30.0],"obs":[81.41,80.17,79.27,78.28,77.42,76.57,75.68,74.83,73.93,73.12,72.27,71.48,70.69,69.93,69.17,68.42,67.71,67.01,66.32,65.66,64.98,64.35,63.74,63.13,62.53,61.98,61.37,60.77,60.21,59.63],"c0":[79.8043,78.2405,76.7177,75.2347,73.7904,72.3839,71.0142,69.6803,68.3813,67.1163,65.8843,64.6845,63.5161,62.3783,61.2702,60.1911,59.1402,58.1168,57.1201,56.1495,55.2043,54.2838,53.3874,52.5144,51.6642,50.8363,50.03,49.2448,48.4801,47.7354],"c1":[79.2439,77.2379,75.3744,73.6384,72.0169,70.4987,69.074,67.7342,66.4717,65.2799,64.1528,63.0852,62.0724,61.1101,60.1946,59.3225,58.4906,57.6962,56.9367,56.2099,55.5135,54.8457,54.2047,53.589,52.9969,52.4271,51.8783,51.3495,50.8394,50.347]},{"id":"LANGER2018_Abb2-10","label":"Langer 10","role":"sensitivity","T0":79.03,"room":20.0,"roomSource":"default_20C","t":[1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0,25.0,26.0,27.0,28.0,29.0,30.0],"obs":[79.03,78.09,77.2,76.31,75.46,74.58,73.74,72.9,72.05,71.28,70.47,69.73,68.95,68.13,67.42,66.71,65.97,65.31,64.61,63.96,63.36,62.67,62.02,61.41,60.79,60.17,59.59,59.01,58.47,57.87],"c0":[77.4865,75.9834,74.5196,73.094,71.7057,70.3538,69.0371,67.7549,66.5063,65.2902,64.106,62.9527,61.8296,60.7359,59.6708,58.6335,57.6233,56.6395,55.6815,54.7485,53.8399,52.9551,52.0934,51.2543,50.437,49.6412,48.8661,48.1114,47.3763,46.6605],"c1":[77.0394,75.1897,73.4661,71.8558,70.3477,68.9321,67.6006,66.3457,65.1608,64.0401,62.9784,61.9709,61.0137,60.1028,59.2349,58.407,57.6163,56.8603,56.1367,55.4434,54.7784,54.1401,53.5268,52.9371,52.3695,51.8229,51.296,50.7878,50.2973,49.8235]}]}</script>
+<script type="application/json" id="data-scores" data-source="experiment_2/results/heldout_scores.json (rows: in-sample, Sedlacek to Manitoba+Langer transfer, leave-one-source-out) and experiment_3/results/heldout_scores.json">{"scores":[{"protocol":"in_sample_reference","fold":"Sedlacek","ambient":"A","model":"C0","curve_id":"SEDLACEK2010_Fig1","rms_K":1.260833253246719,"signed_0_10_K":1.0266909633708785,"signed_10_30_K":-0.4545713620214258},{"protocol":"in_sample_reference","fold":"Sedlacek","ambient":"A","model":"C1","curve_id":"SEDLACEK2010_Fig1","rms_K":0.32750775340306404,"signed_0_10_K":-0.03195188684200545,"signed_10_30_K":0.034878338935934984},{"protocol":"in_sample_reference","fold":"Sedlacek","ambient":"B","model":"C0","curve_id":"SEDLACEK2010_Fig1","rms_K":1.1238682675882559,"signed_0_10_K":0.9069078438086109,"signed_10_30_K":-0.4362735798075808},{"protocol":"in_sample_reference","fold":"Sedlacek","ambient":"B","model":"C1","curve_id":"SEDLACEK2010_Fig1","rms_K":0.3232276836049024,"signed_0_10_K":-0.0256127351149793,"signed_10_30_K":0.0312130220337347},{"protocol":"A_transfer","fold":"Sedlacek->Manitoba+Langer","ambient":"A","model":"C0","curve_id":"MANITOBA_WORKSHOP_coffee","rms_K":3.454423112780328,"signed_0_10_K":2.5933678740437474,"signed_10_30_K":3.9152796778225607},{"protocol":"A_transfer","fold":"Sedlacek->Manitoba+Langer","ambient":"A","model":"C0","curve_id":"LANGER2018_Abb2-01","rms_K":6.863607004068806,"signed_0_10_K":-3.1245830515949278,"signed_10_30_K":-7.920674457499253},{"protocol":"A_transfer","fold":"Sedlacek->Manitoba+Langer","ambient":"A","model":"C0","curve_id":"LANGER2018_Abb2-02","rms_K":8.950733275876443,"signed_0_10_K":-4.239815737521238,"signed_10_30_K":-10.332956907502993},{"protocol":"A_transfer","fold":"Sedlacek->Manitoba+Langer","ambient":"A","model":"C0","curve_id":"LANGER2018_Abb2-03","rms_K":11.926926833125309,"signed_0_10_K":-5.328422510442616,"signed_10_30_K":-13.805095316819898},{"protocol":"A_transfer","fold":"Sedlacek->Manitoba+Langer","ambient":"A","model":"C0","curve_id":"LANGER2018_Abb2-04","rms_K":8.896074185043924,"signed_0_10_K":-3.9478087156091135,"signed_10_30_K":-10.294825450526508},{"protocol":"A_transfer","fold":"Sedlacek->Manitoba+Langer","ambient":"A","model":"C0","curve_id":"LANGER2018_Abb2-05","rms_K":8.308521230923741,"signed_0_10_K":-3.8904215476162065,"signed_10_30_K":-9.589150947040128},{"protocol":"A_transfer","fold":"Sedlacek->Manitoba+Langer","ambient":"A","model":"C0","curve_id":"LANGER2018_Abb2-06","rms_K":9.943729797583359,"signed_0_10_K":-4.437844787996108,"signed_10_30_K":-11.513427105188692},{"protocol":"A_transfer","fold":"Sedlacek->Manitoba+Langer","ambient":"A","model":"C1","curve_id":"MANITOBA_WORKSHOP_coffee","rms_K":2.6589534094770912,"signed_0_10_K":1.3685016297085326,"signed_10_30_K":3.5089167329864335},{"protocol":"A_transfer","fold":"Sedlacek->Manitoba+Langer","ambient":"A","model":"C1","curve_id":"LANGER2018_Abb2-01","rms_K":6.571885350686255,"signed_0_10_K":-4.4904899900743604,"signed_10_30_K":-7.326159074983583},{"protocol":"A_transfer","fold":"Sedlacek->Manitoba+Langer","ambient":"A","model":"C1","curve_id":"LANGER2018_Abb2-02","rms_K":8.768225212126469,"signed_0_10_K":-5.679020237607311,"signed_10_30_K":-9.849547549096496},{"protocol":"A_transfer","fold":"Sedlacek->Manitoba+Langer","ambient":"A","model":"C1","curve_id":"LANGER2018_Abb2-03","rms_K":12.09223528544031,"signed_0_10_K":-7.06137709402911,"signed_10_30_K":-13.764892130268663},{"protocol":"A_transfer","fold":"Sedlacek->Manitoba+Langer","ambient":"A","model":"C1","curve_id":"LANGER2018_Abb2-04","rms_K":8.685313880714618,"signed_0_10_K":-5.392155857645262,"signed_10_30_K":-9.819203600885183},{"protocol":"A_transfer","fold":"Sedlacek->Manitoba+Langer","ambient":"A","model":"C1","curve_id":"LANGER2018_Abb2-05","rms_K":8.181636122067742,"signed_0_10_K":-5.374320419911943,"signed_10_30_K":-9.173388220732367},{"protocol":"A_transfer","fold":"Sedlacek->Manitoba+Langer","ambient":"A","model":"C1","curve_id":"LANGER2018_Abb2-06","rms_K":10.034462705591595,"signed_0_10_K":-6.103332735142243,"signed_10_30_K":-11.371720329377021},{"protocol":"A_transfer","fold":"Sedlacek->Manitoba+Langer","ambient":"B","model":"C0","curve_id":"MANITOBA_WORKSHOP_coffee","rms_K":2.8850043637074414,"signed_0_10_K":2.3453608755854534,"signed_10_30_K":3.0682940578354714},{"protocol":"A_transfer","fold":"Sedlacek->Manitoba+Langer","ambient":"B","model":"C0","curve_id":"LANGER2018_Abb2-01","rms_K":6.831585174647376,"signed_0_10_K":-3.279885619299962,"signed_10_30_K":-7.8786198561353755},{"protocol":"A_transfer","fold":"Sedlacek->Manitoba+Langer","ambient":"B","model":"C0","curve_id":"LANGER2018_Abb2-02","rms_K":8.937469966504356,"signed_0_10_K":-4.401515686660834,"signed_10_30_K":-10.306641453709029},{"protocol":"A_transfer","fold":"Sedlacek->Manitoba+Langer","ambient":"B","model":"C0","curve_id":"LANGER2018_Abb2-03","rms_K":11.963532905086117,"signed_0_10_K":-5.515116880070724,"signed_10_30_K":-13.840272346554908},{"protocol":"A_transfer","fold":"Sedlacek->Manitoba+Langer","ambient":"B","model":"C0","curve_id":"LANGER2018_Abb2-04","rms_K":8.879379142329055,"signed_0_10_K":-4.109954993686006,"signed_10_30_K":-10.269608076795564},{"protocol":"A_transfer","fold":"Sedlacek->Manitoba+Langer","ambient":"B","model":"C0","curve_id":"LANGER2018_Abb2-05","rms_K":8.301621305311013,"signed_0_10_K":-4.0559896808790254,"signed_10_30_K":-9.57235218712565},{"protocol":"A_transfer","fold":"Sedlacek->Manitoba+Langer","ambient":"B","model":"C0","curve_id":"LANGER2018_Abb2-06","rms_K":9.968451271436372,"signed_0_10_K":-4.618885657751818,"signed_10_30_K":-11.534695120792145},{"protocol":"A_transfer","fold":"Sedlacek->Manitoba+Langer","ambient":"B","model":"C1","curve_id":"MANITOBA_WORKSHOP_coffee","rms_K":1.8832143949131583,"signed_0_10_K":1.1059194313191312,"signed_10_30_K":2.362767830866744},{"protocol":"A_transfer","fold":"Sedlacek->Manitoba+Langer","ambient":"B","model":"C1","curve_id":"LANGER2018_Abb2-01","rms_K":6.569431382974613,"signed_0_10_K":-4.483168878587044,"signed_10_30_K":-7.32476418821101},{"protocol":"A_transfer","fold":"Sedlacek->Manitoba+Langer","ambient":"B","model":"C1","curve_id":"LANGER2018_Abb2-02","rms_K":8.765012305601086,"signed_0_10_K":-5.669414718350064,"signed_10_30_K":-9.847866505710575},{"protocol":"A_transfer","fold":"Sedlacek->Manitoba+Langer","ambient":"B","model":"C1","curve_id":"LANGER2018_Abb2-03","rms_K":12.085225175152654,"signed_0_10_K":-7.041859066538899,"signed_10_30_K":-13.76110051852064},{"protocol":"A_transfer","fold":"Sedlacek->Manitoba+Langer","ambient":"B","model":"C1","curve_id":"LANGER2018_Abb2-04","rms_K":8.681868864811547,"signed_0_10_K":-5.382387128415987,"signed_10_30_K":-9.81749869130365},{"protocol":"A_transfer","fold":"Sedlacek->Manitoba+Langer","ambient":"B","model":"C1","curve_id":"LANGER2018_Abb2-05","rms_K":8.177908421756088,"signed_0_10_K":-5.3632837845319585,"signed_10_30_K":-9.17148349713103},{"protocol":"A_transfer","fold":"Sedlacek->Manitoba+Langer","ambient":"B","model":"C1","curve_id":"LANGER2018_Abb2-06","rms_K":10.028475445517016,"signed_0_10_K":-6.0861948240653,"signed_10_30_K":-11.368543006482865},{"protocol":"B_leave_one_source_out","fold":"Sedlacek","ambient":"A","model":"C0","curve_id":"SEDLACEK2010_Fig1","rms_K":7.207460208580466,"signed_0_10_K":3.8177781376228843,"signed_10_30_K":9.574355550543379},{"protocol":"B_leave_one_source_out","fold":"Sedlacek","ambient":"A","model":"C1","curve_id":"SEDLACEK2010_Fig1","rms_K":7.1953266475423625,"signed_0_10_K":3.744858279273906,"signed_10_30_K":9.606487978491744},{"protocol":"B_leave_one_source_out","fold":"Manitoba","ambient":"A","model":"C0","curve_id":"MANITOBA_WORKSHOP_coffee","rms_K":10.770195169403372,"signed_0_10_K":4.645325649380649,"signed_10_30_K":14.78909469226475},{"protocol":"B_leave_one_source_out","fold":"Manitoba","ambient":"A","model":"C1","curve_id":"MANITOBA_WORKSHOP_coffee","rms_K":11.0355979292303,"signed_0_10_K":4.820383916662661,"signed_10_30_K":15.126501285098293},{"protocol":"B_leave_one_source_out","fold":"Langer","ambient":"A","model":"C0","curve_id":"LANGER2018_Abb2-01","rms_K":8.913560029626337,"signed_0_10_K":-4.093904299585192,"signed_10_30_K":-10.300796853120598},{"protocol":"B_leave_one_source_out","fold":"Langer","ambient":"A","model":"C0","curve_id":"LANGER2018_Abb2-02","rms_K":11.018495607254286,"signed_0_10_K":-5.216064160792141,"signed_10_30_K":-12.730088653799378},{"protocol":"B_leave_one_source_out","fold":"Langer","ambient":"A","model":"C0","curve_id":"LANGER2018_Abb2-03","rms_K":14.051216597969258,"signed_0_10_K":-6.3317352464378605,"signed_10_30_K":-16.268682200637375},{"protocol":"B_leave_one_source_out","fold":"Langer","ambient":"A","model":"C0","curve_id":"LANGER2018_Abb2-04","rms_K":10.963112878294808,"signed_0_10_K":-4.924540430178672,"signed_10_30_K":-12.6931438957072},{"protocol":"B_leave_one_source_out","fold":"Langer","ambient":"A","model":"C0","curve_id":"LANGER2018_Abb2-05","rms_K":10.384226304697677,"signed_0_10_K":-4.870858495475405,"signed_10_30_K":-11.996567417000493},{"protocol":"B_leave_one_source_out","fold":"Langer","ambient":"A","model":"C0","curve_id":"LANGER2018_Abb2-06","rms_K":12.054986985691977,"signed_0_10_K":-5.435035834208469,"signed_10_30_K":-13.961982469804969},{"protocol":"B_leave_one_source_out","fold":"Langer","ambient":"A","model":"C1","curve_id":"LANGER2018_Abb2-01","rms_K":8.212105406943946,"signed_0_10_K":-5.5716945073022135,"signed_10_30_K":-9.160680272821459},{"protocol":"B_leave_one_source_out","fold":"Langer","ambient":"A","model":"C1","curve_id":"LANGER2018_Abb2-02","rms_K":10.42466474428145,"signed_0_10_K":-6.774608346906165,"signed_10_30_K":-11.70081460169977},{"protocol":"B_leave_one_source_out","fold":"Langer","ambient":"A","model":"C1","curve_id":"LANGER2018_Abb2-03","rms_K":13.806866215410881,"signed_0_10_K":-8.213748255181432,"signed_10_30_K":-15.681292075005942},{"protocol":"B_leave_one_source_out","fold":"Langer","ambient":"A","model":"C1","curve_id":"LANGER2018_Abb2-04","rms_K":10.341856679435947,"signed_0_10_K":-6.488749787545922,"signed_10_30_K":-11.671637854392774},{"protocol":"B_leave_one_source_out","fold":"Langer","ambient":"A","model":"C1","curve_id":"LANGER2018_Abb2-05","rms_K":9.847697180463372,"signed_0_10_K":-6.478635614219532,"signed_10_30_K":-11.03476613789885},{"protocol":"B_leave_one_source_out","fold":"Langer","ambient":"A","model":"C1","curve_id":"LANGER2018_Abb2-06","rms_K":11.737352559676141,"signed_0_10_K":-7.24277947657275,"signed_10_30_K":-13.273429559756021},{"protocol":"B_leave_one_source_out","fold":"Sedlacek","ambient":"B","model":"C0","curve_id":"SEDLACEK2010_Fig1","rms_K":7.201424139018184,"signed_0_10_K":3.786092632590279,"signed_10_30_K":9.587446083462531},{"protocol":"B_leave_one_source_out","fold":"Sedlacek","ambient":"B","model":"C1","curve_id":"SEDLACEK2010_Fig1","rms_K":7.1895921144448005,"signed_0_10_K":3.625298111365108,"signed_10_30_K":9.677955893493563},{"protocol":"B_leave_one_source_out","fold":"Manitoba","ambient":"B","model":"C0","curve_id":"MANITOBA_WORKSHOP_coffee","rms_K":10.556890010016069,"signed_0_10_K":4.618312630416045,"signed_10_30_K":14.467961505967292},{"protocol":"B_leave_one_source_out","fold":"Manitoba","ambient":"B","model":"C1","curve_id":"MANITOBA_WORKSHOP_coffee","rms_K":10.928907020825744,"signed_0_10_K":4.808177198990296,"signed_10_30_K":14.964565984805365},{"protocol":"B_leave_one_source_out","fold":"Langer","ambient":"B","model":"C0","curve_id":"LANGER2018_Abb2-01","rms_K":8.456727863409135,"signed_0_10_K":-4.121957873642861,"signed_10_30_K":-9.758173186435585},{"protocol":"B_leave_one_source_out","fold":"Langer","ambient":"B","model":"C0","curve_id":"LANGER2018_Abb2-02","rms_K":10.580956760692644,"signed_0_10_K":-5.251229832521426,"signed_10_30_K":-12.204035604217264},{"protocol":"B_leave_one_source_out","fold":"Langer","ambient":"B","model":"C0","curve_id":"LANGER2018_Abb2-03","rms_K":13.66540286919389,"signed_0_10_K":-6.394687718372531,"signed_10_30_K":-15.807370166713104},{"protocol":"B_leave_one_source_out","fold":"Langer","ambient":"B","model":"C0","curve_id":"LANGER2018_Abb2-04","rms_K":10.521612024097672,"signed_0_10_K":-4.960202294768763,"signed_10_30_K":-12.168246935690402},{"protocol":"B_leave_one_source_out","fold":"Langer","ambient":"B","model":"C0","curve_id":"LANGER2018_Abb2-05","rms_K":9.953454260760468,"signed_0_10_K":-4.910324505331713,"signed_10_30_K":-11.480533810317805},{"protocol":"B_leave_one_source_out","fold":"Langer","ambient":"B","model":"C0","curve_id":"LANGER2018_Abb2-06","rms_K":11.65701329434859,"signed_0_10_K":-5.491703196572873,"signed_10_30_K":-13.486026634719991},{"protocol":"B_leave_one_source_out","fold":"Langer","ambient":"B","model":"C1","curve_id":"LANGER2018_Abb2-01","rms_K":7.632286746185951,"signed_0_10_K":-5.278433971869721,"signed_10_30_K":-8.48555193826973},{"protocol":"B_leave_one_source_out","fold":"Langer","ambient":"B","model":"C1","curve_id":"LANGER2018_Abb2-02","rms_K":9.84293846348598,"signed_0_10_K":-6.482587647841005,"signed_10_30_K":-11.02472129984999},{"protocol":"B_leave_one_source_out","fold":"Langer","ambient":"B","model":"C1","curve_id":"LANGER2018_Abb2-03","rms_K":13.221733494934888,"signed_0_10_K":-7.927701719843722,"signed_10_30_K":-15.002510351343384},{"protocol":"B_leave_one_source_out","fold":"Langer","ambient":"B","model":"C1","curve_id":"LANGER2018_Abb2-04","rms_K":9.758931819300413,"signed_0_10_K":-6.196819979142129,"signed_10_30_K":-10.995481497987113},{"protocol":"B_leave_one_source_out","fold":"Langer","ambient":"B","model":"C1","curve_id":"LANGER2018_Abb2-05","rms_K":9.266049605693654,"signed_0_10_K":-6.18742167764419,"signed_10_30_K":-10.358144756587498},{"protocol":"B_leave_one_source_out","fold":"Langer","ambient":"B","model":"C1","curve_id":"LANGER2018_Abb2-06","rms_K":11.15324111330944,"signed_0_10_K":-6.955223822706948,"signed_10_30_K":-12.595107356564943}]}</script>
+<script type="application/json" id="data-blocks" data-source="experiment_2/results/fold_summary.json; experiment_2/results/heldout_scores.json (fitted parameters); experiment_3/results/exponent_profile.json">{"blocks":{"A_transfer|Sedlacek->Manitoba+Langer|A":{"C0_mean":8.334859348485987,"C0_interval":[6.538624636157838,9.927509266135074],"C1_mean":8.141815995157726,"C1_interval":[5.931806497417686,9.964286273625877],"paired_mean_diff":-0.1930433533282613,"paired_interval":[-0.43726266272509373,-0.0033605315603804455],"count_C1_lower":5,"n_curves":7},"A_transfer|Sedlacek->Manitoba+Langer|B":{"C0_mean":8.252434875574533,"C0_interval":[6.292322435885532,9.934925999429659],"C1_mean":8.027305141532308,"C1_interval":[5.551976506804564,9.959051377216747],"paired_mean_diff":-0.22512973404222406,"paired_interval":[-0.5210117268661341,-0.020417507829597923],"count_C1_lower":5,"n_curves":7},"B_loso|Sedlacek|A":{"C0_mean":7.207460208580466,"C0_interval":[4.126168575566362,9.26034919656161],"C1_mean":7.1953266475423625,"C1_interval":[4.047117140293438,9.08480542667195],"paired_mean_diff":-0.01213356103810348,"paired_interval":[-0.10259943764913082,0.018007132002599846],"count_C1_lower":1,"n_curves":1},"B_loso|Manitoba|A":{"C0_mean":10.770195169403372,"C0_interval":[4.834021457952117,14.543391900928642],"C1_mean":11.0355979292303,"C1_interval":[5.018849957376175,14.539453552522797],"paired_mean_diff":0.2654027598269284,"paired_interval":[0.17130769126348788,0.4383200080427585],"count_C1_lower":0,"n_curves":1},"B_loso|Langer|A":{"C0_mean":11.230933067255725,"C0_interval":[10.086966404206274,12.592893421802705],"C1_mean":10.728423797701957,"C1_interval":[9.384859839118993,12.184568195421479],"paired_mean_diff":-0.5025092695537673,"paired_interval":[-0.629705449542687,-0.3680784827973553],"count_C1_lower":6,"n_curves":6}},"fitted":{"C0":{"k":0.02649543286553719},"C1":{"kc":0.00028187612436524897,"x":2.1823972144051766}},"exponent":{"profile_minimum_x":2.18,"interval_dchi2":[1.95,2.42],"sigma_C":0.3}}</script>
+<script type="application/json" id="data-refit" data-source="experiment_3/results/heldout_scores.json (summary, S2 refit to minutes 0 to 10)">{"refit":{"x=1.00":{"mean_rms_K":0.6414402147276286,"n_usable":11,"per_curve":[{"curve_id":"MANITOBA_WORKSHOP_coffee","newton_K":5.301055892477772,"power_K":5.301055892477772},{"curve_id":"LANGER2018_Abb2-01","newton_K":0.2941276545933308,"power_K":0.2941276545933308},{"curve_id":"LANGER2018_Abb2-02","newton_K":0.1463875427602068,"power_K":0.1463875427602068},{"curve_id":"LANGER2018_Abb2-03","newton_K":0.25830513172981046,"power_K":0.25830513172981046},{"curve_id":"LANGER2018_Abb2-04","newton_K":0.223040134112928,"power_K":0.223040134112928},{"curve_id":"LANGER2018_Abb2-05","newton_K":0.19169755186286735,"power_K":0.19169755186286735},{"curve_id":"LANGER2018_Abb2-06","newton_K":0.08622248992425145,"power_K":0.08622248992425145},{"curve_id":"LANGER2018_Abb2-07","newton_K":0.06326882027184849,"power_K":0.06326882027184849},{"curve_id":"LANGER2018_Abb2-08","newton_K":0.07551816063116476,"power_K":0.07551816063116476},{"curve_id":"LANGER2018_Abb2-09","newton_K":0.22558515520830982,"power_K":0.22558515520830982},{"curve_id":"LANGER2018_Abb2-10","newton_K":0.1906338284314228,"power_K":0.1906338284314228}],"C1_better_count":0,"pairs":11},"x=2.18":{"mean_rms_K":0.6027290161043438,"n_usable":11,"per_curve":[{"curve_id":"MANITOBA_WORKSHOP_coffee","newton_K":5.301055892477772,"power_K":0.7666053051927054},{"curve_id":"LANGER2018_Abb2-01","newton_K":0.2941276545933308,"power_K":0.595274384440241},{"curve_id":"LANGER2018_Abb2-02","newton_K":0.1463875427602068,"power_K":0.2276025952505833},{"curve_id":"LANGER2018_Abb2-03","newton_K":0.25830513172981046,"power_K":0.3147571310584561},{"curve_id":"LANGER2018_Abb2-04","newton_K":0.223040134112928,"power_K":1.0923909032775612},{"curve_id":"LANGER2018_Abb2-05","newton_K":0.19169755186286735,"power_K":0.03137476452723869},{"curve_id":"LANGER2018_Abb2-06","newton_K":0.08622248992425145,"power_K":1.4211579256643547},{"curve_id":"LANGER2018_Abb2-07","newton_K":0.06326882027184849,"power_K":0.7226863094457655},{"curve_id":"LANGER2018_Abb2-08","newton_K":0.07551816063116476,"power_K":0.2529263410963864},{"curve_id":"LANGER2018_Abb2-09","newton_K":0.22558515520830982,"power_K":0.8549934704222887},{"curve_id":"LANGER2018_Abb2-10","newton_K":0.1906338284314228,"power_K":0.3502500467722012}],"C1_better_count":2,"pairs":11}}}</script>
+
+<script>
+(function () {
+'use strict';
+var RM = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function J(id) { return JSON.parse(document.getElementById(id).textContent); }
+var D = { curves: J('data-curves'), scores: J('data-scores'), blocks: J('data-blocks'), refit: J('data-refit') };
+var CURVES = D.curves.curves;
+var SCORES = D.scores.scores;
+var BLK = D.blocks.blocks;
+var REFIT = D.refit.refit;
+var FIT = D.blocks.fitted;
+var EXP = D.blocks.exponent;
+var COL = { newton: '#7a8394', power: '#c77700', obs: '#1d2330', accent: '#0b6bcb', target: '#b42318' };
+var NEW_LABEL = 'Newton law (baseline)';
+var POW_LABEL = 'Power law, x = 2.18';
+
+function f2(v) { return (Math.round(v * 100) / 100).toFixed(2); }
+function f2s(v) { return (v >= 0 ? '+' : '') + f2(v); }
+function fmtInterval(a) { return '[' + f2(a[0]) + ' to ' + f2(a[1]) + ']'; }
+function byId(id) { return document.getElementById(id); }
+function clear(el) { while (el.firstChild) el.removeChild(el.firstChild); }
+function el(tag, attrs, text) {
+  var n = document.createElementNS(tag.indexOf('svg') === 0 || tag === 'g' || tag === 'rect' || tag === 'line' || tag === 'text' || tag === 'circle' || tag === 'path' ? 'http://www.w3.org/2000/svg' : 'http://www.w3.org/1999/xhtml', tag);
+  if (attrs) Object.keys(attrs).forEach(function (k) { n.setAttribute(k, attrs[k]); });
+  if (text != null) n.textContent = text;
+  return n;
+}
+function svgEl(tag, attrs, text) {
+  var n = document.createElementNS('http://www.w3.org/2000/svg', tag);
+  if (attrs) Object.keys(attrs).forEach(function (k) { n.setAttribute(k, attrs[k]); });
+  if (text != null) n.textContent = text;
+  return n;
+}
+var measureCtx = document.createElement('canvas').getContext('2d');
+function measure(text, px) { measureCtx.font = (px || 13) + 'px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif'; return measureCtx.measureText(text).width; }
+function ticksFor(max, step) { var a = []; for (var v = 0; v <= max + 1e-9; v += step) a.push(Math.round(v * 1000) / 1000); return a; }
+function niceStep(max) { var raw = max / 5; var p = Math.pow(10, Math.floor(Math.log10(raw))); var c = [1, 2, 2.5, 5, 10]; for (var i = 0; i < c.length; i++) if (c[i] * p >= raw) return c[i] * p; return 10 * p; }
+
+var tipEl = null;
+function tipFor(container) {
+  var t = container.querySelector('.tip');
+  if (!t) { t = document.createElement('div'); t.className = 'tip'; t.setAttribute('role', 'status'); container.appendChild(t); }
+  return t;
+}
+function showTip(container, node, text, x, y) {
+  var t = tipFor(container);
+  t.textContent = text;
+  t.style.display = 'block';
+  var cw = container.clientWidth;
+  var left = Math.min(Math.max(4, x + 12), cw - 270);
+  t.style.left = left + 'px';
+  t.style.top = Math.max(4, y - 10) + 'px';
+}
+function hideTip(container) { var t = container.querySelector('.tip'); if (t) t.style.display = 'none'; }
+function markEvents(container, node, text, getXY) {
+  node.setAttribute('tabindex', '0');
+  node.setAttribute('role', 'img');
+  node.setAttribute('aria-label', text);
+  var show = function (ev) {
+    var r = container.getBoundingClientRect();
+    var xy = getXY(node);
+    showTip(container, node, text, xy[0], xy[1]);
+  };
+  node.addEventListener('mouseenter', show);
+  node.addEventListener('focus', show);
+  node.addEventListener('click', show);
+  node.addEventListener('touchstart', show, { passive: true });
+  node.addEventListener('mouseleave', function () { if (document.activeElement !== node) hideTip(container); });
+  node.addEventListener('blur', function () { hideTip(container); });
+}
+document.addEventListener('keydown', function (e) { if (e.key === 'Escape') document.querySelectorAll('.chart').forEach(hideTip); });
+document.addEventListener('pointerdown', function (e) {
+  document.querySelectorAll('.chart').forEach(function (c) { if (!c.contains(e.target)) hideTip(c); });
+});
+
+/* ---------- generic grouped bar chart ---------- */
+function barChart(container, opt) {
+  clear(container);
+  var W = Math.max(300, container.clientWidth || 600);
+  var labelW = 0;
+  var yMax = opt.yMax;
+  var step = niceStep(yMax);
+  var ticks = ticksFor(yMax, step);
+  ticks.forEach(function (t) { labelW = Math.max(labelW, measure(String(t), 13)); });
+  var yTitleH = 18;
+  var left = Math.ceil(labelW + 12 + yTitleH + 14);
+  var catW = 0; opt.cats.forEach(function (c) { catW = Math.max(catW, measure(c, 13)); });
+  var right = 16, top = 14, bottom = opt.catRotate ? Math.ceil(catW) + 22 : 56;
+  var H = opt.height || 320;
+  var svg = svgEl('svg', { viewBox: '0 0 ' + W + ' ' + H, width: W, height: H, role: 'img', 'aria-label': opt.aria || 'bar chart' });
+  var plotW = W - left - right, plotH = H - top - bottom;
+  var y = function (v) { return top + plotH - (v / yMax) * plotH; };
+  ticks.forEach(function (t) {
+    svg.appendChild(svgEl('line', { x1: left, x2: W - right, y1: y(t), y2: y(t), class: 'grid' }));
+    svg.appendChild(svgEl('text', { x: left - 8, y: y(t) + 4, 'text-anchor': 'end' }, String(t)));
+  });
+  var yt = svgEl('text', { x: 0, y: 0, 'text-anchor': 'middle', transform: 'translate(' + (labelW + 12 + 6) + ',' + (top + plotH / 2) + ') rotate(-90)' }, opt.yTitle);
+  svg.appendChild(yt);
+  svg.appendChild(svgEl('line', { x1: left, x2: left, y1: top, y2: top + plotH, class: 'ax' }));
+  svg.appendChild(svgEl('line', { x1: left, x2: W - right, y1: top + plotH, y2: top + plotH, class: 'ax' }));
+  var cats = opt.cats.length;
+  var groupW = plotW / cats;
+  var series = opt.series.length;
+  var barW = Math.min(34, (groupW * 0.72) / series);
+  opt.cats.forEach(function (c, i) {
+    var gx = left + groupW * i + groupW / 2;
+    var lab;
+    if (opt.catRotate) lab = svgEl('text', { x: 0, y: 0, 'text-anchor': 'end', transform: 'translate(' + (gx + 5) + ',' + (top + plotH + 8) + ') rotate(-90)' }, c);
+    else lab = svgEl('text', { x: gx, y: top + plotH + 16, 'text-anchor': 'middle' }, c);
+    svg.appendChild(lab);
+    opt.series.forEach(function (s, si) {
+      var v = s.values[i];
+      if (v == null) return;
+      var bx = gx - (barW * series) / 2 + si * barW;
+      var r = svgEl('rect', { x: bx + 1, y: y(v), width: barW - 2, height: top + plotH - y(v), fill: s.color, rx: 2 });
+      svg.appendChild(r);
+      var txt = s.name + ', ' + c + ': ' + f2(v) + ' K';
+      markEvents(container, r, txt, function () { return [bx + barW / 2, y(v)]; });
+      r.addEventListener('mouseenter', function () { showTip(container, r, txt, bx + barW / 2, y(v)); });
+    });
+  });
+  if (opt.target != null) {
+    var ty = y(opt.target);
+    svg.appendChild(svgEl('line', { x1: left, x2: W - right, y1: ty, y2: ty, stroke: COL.target, 'stroke-width': 2, 'stroke-dasharray': '6 4' }));
+  }
+  container.appendChild(svg);
+  if (opt.zero) { /* zero line already drawn by axis when yMin is 0 */ }
+  container.style.height = H + 'px';
+  container.style.minHeight = H + 'px';
+  container.style.height = 'auto';
+  container.setAttribute('aria-label', opt.aria || 'chart');
+  return svg;
+}
+function signedBarChart(container, opt) {
+  clear(container);
+  var W = Math.max(300, container.clientWidth || 600);
+  var lo = opt.yMin, hi = opt.yMax;
+  var step = niceStep(hi - lo);
+  var ticks = []; for (var v = Math.ceil(lo / step) * step; v <= hi + 1e-9; v += step) ticks.push(Math.round(v * 1000) / 1000);
+  var labelW = 0; ticks.forEach(function (t) { labelW = Math.max(labelW, measure(String(t), 13)); });
+  var catW = 0; opt.cats.forEach(function (c) { catW = Math.max(catW, measure(c, 13)); });
+  var left = Math.ceil(labelW + 12 + 18 + 14), right = 16, top = 14, bottom = Math.ceil(catW) + 22, H = 320;
+  var svg = svgEl('svg', { viewBox: '0 0 ' + W + ' ' + H, width: W, height: H, role: 'img', 'aria-label': opt.aria });
+  var plotW = W - left - right, plotH = H - top - bottom;
+  var y = function (v) { return top + (hi - v) / (hi - lo) * plotH; };
+  ticks.forEach(function (t) {
+    svg.appendChild(svgEl('line', { x1: left, x2: W - right, y1: y(t), y2: y(t), class: 'grid' }));
+    svg.appendChild(svgEl('text', { x: left - 8, y: y(t) + 4, 'text-anchor': 'end' }, String(t)));
+  });
+  svg.appendChild(svgEl('text', { x: 0, y: 0, 'text-anchor': 'middle', transform: 'translate(' + (labelW + 18) + ',' + (top + plotH / 2) + ') rotate(-90)' }, opt.yTitle));
+  svg.appendChild(svgEl('line', { x1: left, x2: W - right, y1: y(0), y2: y(0), class: 'ax' }));
+  svg.appendChild(svgEl('line', { x1: left, x2: left, y1: top, y2: top + plotH, class: 'ax' }));
+  var groupW = plotW / opt.cats.length;
+  var barW = Math.min(44, groupW * 0.6);
+  opt.cats.forEach(function (c, i) {
+    var gx = left + groupW * i + groupW / 2;
+    var lab = svgEl('text', { x: 0, y: 0, 'text-anchor': 'end', transform: 'translate(' + (gx + 5) + ',' + (top + plotH + 8) + ') rotate(-90)' }, c);
+    svg.appendChild(lab);
+    var v = opt.values[i];
+    var yy = v >= 0 ? y(v) : y(0), h = Math.abs(y(v) - y(0));
+    var r = svgEl('rect', { x: gx - barW / 2, y: yy, width: barW, height: h, fill: v >= 0 ? COL.power : COL.newton, rx: 2 });
+    svg.appendChild(r);
+    var txt = c + ': mean residual ' + f2s(v) + ' K over minutes 0 to 10';
+    markEvents(container, r, txt, function () { return [gx, y(v)]; });
+  });
+  container.appendChild(svg);
+  container.style.minHeight = H + 'px';
+  return svg;
+}
+
+/* ---------- line chart for one curve ---------- */
+function lineChart(container, curve) {
+  clear(container);
+  var W = Math.max(300, container.clientWidth || 600), H = 300;
+  var xs = curve.t.filter(function (t) { return t <= 30; });
+  var n = xs.length;
+  var series = [
+    { name: 'Measured', color: COL.obs, vals: curve.obs.slice(0, n), dots: true },
+    { name: NEW_LABEL, color: COL.newton, vals: curve.c0.slice(0, n), dots: false },
+    { name: POW_LABEL, color: COL.power, vals: curve.c1.slice(0, n), dots: false }
+  ];
+  var all = []; series.forEach(function (s) { all = all.concat(s.vals); });
+  var lo = Math.floor(Math.min.apply(null, all) - 1), hi = Math.ceil(Math.max.apply(null, all) + 1);
+  var yStep = niceStep(hi - lo);
+  var yT = []; for (var a = Math.ceil(lo / yStep) * yStep; a <= hi + 1e-9; a += yStep) yT.push(Math.round(a * 1000) / 1000);
+  var labelW = 0; yT.forEach(function (t) { labelW = Math.max(labelW, measure(String(t), 13)); });
+  var left = Math.ceil(labelW + 12 + 18 + 14), right = 18, top = 12, bottom = 52;
+  var svg = svgEl('svg', { viewBox: '0 0 ' + W + ' ' + H, width: W, height: H, role: 'img', 'aria-label': 'Line chart of measured and predicted temperature against time for ' + curve.label });
+  var plotW = W - left - right, plotH = H - top - bottom;
+  var xMax = 30;
+  var X = function (t) { return left + (t / xMax) * plotW; };
+  var Y = function (v) { return top + (hi - v) / (hi - lo) * plotH; };
+  yT.forEach(function (t) {
+    svg.appendChild(svgEl('line', { x1: left, x2: W - right, y1: Y(t), y2: Y(t), class: 'grid' }));
+    svg.appendChild(svgEl('text', { x: left - 8, y: Y(t) + 4, 'text-anchor': 'end' }, String(t)));
+  });
+  [0, 5, 10, 15, 20, 25, 30].forEach(function (t) {
+    svg.appendChild(svgEl('text', { x: X(t), y: top + plotH + 16, 'text-anchor': 'middle' }, String(t)));
+  });
+  svg.appendChild(svgEl('text', { x: left + plotW / 2, y: H - 8, 'text-anchor': 'middle' }, 'Time (minutes)'));
+  svg.appendChild(svgEl('text', { x: 0, y: 0, 'text-anchor': 'middle', transform: 'translate(' + (labelW + 18) + ',' + (top + plotH / 2) + ') rotate(-90)' }, 'Liquid temperature (°C)'));
+  svg.appendChild(svgEl('line', { x1: left, x2: left, y1: top, y2: top + plotH, class: 'ax' }));
+  svg.appendChild(svgEl('line', { x1: left, x2: W - right, y1: top + plotH, y2: top + plotH, class: 'ax' }));
+  series.forEach(function (s) {
+    if (!s.dots) {
+      var d = ''; for (var i = 0; i < n; i++) d += (i ? 'L' : 'M') + X(xs[i]).toFixed(1) + ' ' + Y(s.vals[i]).toFixed(1);
+      svg.appendChild(svgEl('path', { d: d, fill: 'none', stroke: s.color, 'stroke-width': 2.4, 'stroke-linejoin': 'round' }));
+    }
+    for (var j = 0; j < n; j++) {
+      var cx = X(xs[j]), cy = Y(s.vals[j]);
+      var c = svgEl('circle', { cx: cx, cy: cy, r: s.dots ? 5 : 3.2, fill: s.dots ? '#fff' : s.color, stroke: s.color, 'stroke-width': s.dots ? 2 : 0 });
+      svg.appendChild(c);
+      var txt = s.name + ' at ' + xs[j] + ' min: ' + f2(s.vals[j]) + ' °C';
+      (function (node, t2, cx2, cy2) { markEvents(container, node, t2, function () { return [cx2, cy2]; }); })(c, txt, cx, cy);
+    }
+  });
+  container.appendChild(svg);
+  container.style.minHeight = H + 'px';
+  return series;
+}
+
+/* ---------- headline view ---------- */
+var sets = {
+  all: CURVES.filter(function (c) { return c.role === 'planned'; }).map(function (c) { return c.id; }),
+};
+var HELD = CURVES.filter(function (c) { return c.role === 'planned'; });
+function scoreFor(id, model, amb, protocol) {
+  var f = SCORES.filter(function (r) { return r.curve_id === id && r.model === model && r.ambient === amb && r.protocol.indexOf(protocol) === 0; });
+  return f.length ? f[0].rms_K : null;
+}
+function shortLabel(c) { return c.label.replace(' (fitting curve)', '').replace('Sedlacek and Dolejsi coffee', 'Sedlacek'); }
+var setState = { set: 'all', amb: 'A' };
+
+function renderHeadline() {
+  var set = setState.set, amb = setState.amb;
+  var list = set === 'manitoba' ? HELD.filter(function (c) { return c.id.indexOf('MANITOBA') === 0; })
+    : set === 'langer' ? HELD.filter(function (c) { return c.id.indexOf('LANGER') === 0; })
+    : HELD;
+  var cats = list.map(shortLabel);
+  var c0 = list.map(function (c) { return scoreFor(c.id, 'C0', amb, 'A_transfer'); });
+  var c1 = list.map(function (c) { return scoreFor(c.id, 'C1', amb, 'A_transfer'); });
+  var mean = function (a) { return a.reduce(function (s, v) { return s + v; }, 0) / a.length; };
+  var m0 = mean(c0), m1 = mean(c1);
+  var blkKey = 'A_transfer|Sedlacek->Manitoba+Langer|' + amb;
+  var blk = BLK[blkKey];
+  var headNum, headCI;
+  if (set === 'all') {
+    headNum = f2(blk.C0_mean);
+    headCI = 'Interval ' + fmtInterval(blk.C0_interval) + ' (95% bootstrap over curves; power law ' + f2(blk.C1_mean) + ' ' + fmtInterval(blk.C1_interval) + ').';
+  } else {
+    headNum = f2(m0);
+    headCI = 'Mean of ' + list.length + ' curve' + (list.length > 1 ? 's' : '') + ' (no interval shown for this subset). Power law: ' + f2(m1) + '.';
+  }
+  byId('headline-big').textContent = headNum + ' K';
+  byId('headline-num').textContent = headNum + ' K';
+  byId('headline-ci').textContent = headCI;
+  byId('pl-mean-txt').textContent = f2(blkKey === 'A_transfer|Sedlacek->Manitoba+Langer|A' ? blk.C1_mean : BLK[blkKey].C1_mean) + ' K' + (amb === 'A' ? ' (ambient A)' : ' (ambient B)');
+  byId('pl-diff-txt').textContent = f2s(blk.paired_mean_diff) + ' K, 95% interval ' + fmtInterval(blk.paired_interval) + ' (ambient ' + amb + ')';
+  barChart(byId('chart-headline'), {
+    cats: cats, series: [{ name: NEW_LABEL, color: COL.newton, values: c0 }, { name: POW_LABEL, color: COL.power, values: c1 }],
+    yMax: 13, yTitle: '30-minute RMS error (K)', target: 0.5, targetLabel: '0.5 K target',
+    catRotate: true, aria: 'Bar chart of frozen 30-minute RMS error for ' + list.length + ' curves under ambient ' + amb + '. Newton law ' + f2(m0) + ' K mean; power law ' + f2(m1) + ' K mean.'
+  });
+  legend(byId('legend-headline'), [[NEW_LABEL, COL.newton], [POW_LABEL, COL.power]], 'target');
+  var lower = c0.map(function (v, i) { return c1[i] < v ? 1 : 0; }).reduce(function (a, b) { return a + b; }, 0);
+  byId('takeaway-finding').textContent = list.length > 1
+    ? 'The power law has the lower mean on this set under ambient ' + amb + ' (' + f2(m1) + ' K against ' + f2(m0) + ' K) and is lower on ' + lower + ' of ' + list.length + ' curves. No curve in this set falls under the 0.5 K target.'
+    : 'On the Manitoba coffee cup the power law is ' + f2(m1) + ' K and Newton\'s law ' + f2(m0) + ' K. Both are well above the 0.5 K target.';
+}
+function legend(ul, items, withTarget) {
+  clear(ul);
+  items.forEach(function (it) {
+    var li = document.createElement('li');
+    var sw = document.createElement('span'); sw.className = 'sw'; sw.style.background = it[1];
+    li.appendChild(sw); li.appendChild(document.createTextNode(it[0])); ul.appendChild(li);
+  });
+  if (withTarget) {
+    var li2 = document.createElement('li');
+    var s2 = document.createElement('span'); s2.className = 'sw'; s2.style.background = COL.target; s2.style.height = '3px';
+    li2.appendChild(s2); li2.appendChild(document.createTextNode('0.5 K accuracy target (dashed line)')); ul.appendChild(li2);
+  }
+}
+
+/* ---------- stepper ---------- */
+var MAN = CURVES.filter(function (c) { return c.id.indexOf('MANITOBA') === 0; })[0];
+var STAGES = [
+  { name: 'Recorded input', short: 'Input' },
+  { name: 'Fit to the pot curve', short: 'Fit' },
+  { name: 'Freeze the constants', short: 'Freeze' },
+  { name: 'Predict the other cup', short: 'Predict' },
+  { name: 'Score against measurement', short: 'Score' }
+];
+var stage = 0;
+function renderPipe() {
+  var svg = byId('pipe'); clear(svg);
+  var n = STAGES.length, w = 960 / n;
+  STAGES.forEach(function (s, i) {
+    var x = i * w + 6;
+    var r = svgEl('rect', { x: x, y: 8, width: w - 22, height: 56, rx: 8, class: i === stage ? 'node cur' : 'node' });
+    svg.appendChild(r);
+    var t = svgEl('text', { x: x + (w - 22) / 2, y: 40, 'text-anchor': 'middle', class: 'nodetxt', 'font-weight': i === stage ? 700 : 400 }, (i + 1) + '. ' + s.short);
+    svg.appendChild(t);
+    if (i < n - 1) svg.appendChild(svgEl('path', { d: 'M' + (x + w - 18) + ' 36 L' + (x + w - 4) + ' 36', class: 'arrow' }));
+  });
+}
+function fmtRow(a) { return a.map(function (v) { return f2(v); }); }
+function renderStage() {
+  renderPipe();
+  var box = byId('stage-box'); clear(box);
+  var h = document.createElement('h3'); h.textContent = 'Stage ' + (stage + 1) + ' of 5: ' + STAGES[stage].name; box.appendChild(h);
+  var p = document.createElement('p');
+  var tbl = null;
+  var m0 = SCORES.filter(function (r) { return r.curve_id === MAN.id && r.model === 'C0' && r.ambient === 'A' && r.protocol.indexOf('A_transfer') === 0; })[0];
+  var m1 = SCORES.filter(function (r) { return r.curve_id === MAN.id && r.model === 'C1' && r.ambient === 'A' && r.protocol.indexOf('A_transfer') === 0; })[0];
+  var txtTakeaway = '';
+  if (stage === 0) {
+    p.innerHTML = 'The Manitoba coffee cup starts at ' + f2(MAN.T0) + ' °C in a room the source records at ' + f2(MAN.room) + ' °C. It has nine measured points from 0 to 28 minutes. Nothing about this cup was used to fit the constants. It is a held-out curve.';
+    tbl = makeTable(['Time (min)', 'Measured (°C)'], MAN.t.map(function (t, i) { return [t, MAN.obs[i]]; }), [0, 1]);
+    txtTakeaway = 'The input is one initial temperature, one recorded room temperature and nine measured times.';
+  } else if (stage === 1) {
+    p.innerHTML = 'The constants come from the china-pot coffee curve only, using its first 30 minutes (7 points). Newton\'s law gives k = ' + FIT.C0.k.toFixed(4) + ' per minute. The power-law extension gives k<sub>c</sub> = ' + FIT.C1.kc.toExponential(2) + ' and x = ' + FIT.C1.x.toFixed(2) + '. The exponent is fitted along with the rate; Newton\'s law is the case x = 1.';
+    txtTakeaway = 'Both constants come from one cup. Nothing from the Manitoba cup enters this fit.';
+  } else if (stage === 2) {
+    p.innerHTML = 'The three constants are now frozen: k for Newton\'s law, and k<sub>c</sub> and x for the power law. They are not refitted for any other cup in the frozen test. The table shows the room temperature each cup uses.';
+    tbl = makeTable(['Curve', 'Initial (°C)', 'Room (°C)', 'Room source'], [[MAN.label, f2(MAN.T0), f2(MAN.room), 'recorded']], []);
+    txtTakeaway = 'The frozen constants are the only information carried to the new cup.';
+  } else if (stage === 3) {
+    p.innerHTML = 'Each law predicts the cup\'s temperature at every measured time from its initial temperature, using the frozen constants. The predictions below are the recorded outputs of the method.';
+    tbl = makeTable(['Time (min)', 'Measured (°C)', 'Newton law (°C)', 'Power law (°C)'], MAN.t.map(function (t, i) { return [t, MAN.obs[i], MAN.c0[i], MAN.c1[i]]; }), [0, 1, 2, 3]);
+    txtTakeaway = 'On this cup the power law is closer to the measured temperature at every measured time.';
+  } else {
+    var resid = MAN.t.map(function (t, i) { return [t, MAN.c0[i] - MAN.obs[i], MAN.c1[i] - MAN.obs[i]]; });
+    p.innerHTML = 'Each residual is model minus measured, so a positive value means the model is warmer than the cup. The 30-minute RMS error is the root-mean-square of these residuals. The stored values are <strong>' + f2(m0.rms_K) + ' K</strong> for Newton\'s law and <strong>' + f2(m1.rms_K) + ' K</strong> for the power law. Both are far above the 0.5 K target.';
+    tbl = makeTable(['Time (min)', 'Newton residual (K)', 'Power residual (K)'], resid.map(function (r) { return [r[0], f2s(r[1]), f2s(r[2])]; }), [0]);
+    txtTakeaway = 'Newton\'s law runs warm at every point, by about 2 to 5 K. The stored RMS values are the paper\'s figures for this cup.';
+  }
+  box.appendChild(p);
+  if (tbl) box.appendChild(tbl);
+  byId('takeaway-how').textContent = txtTakeaway;
+  var marks = byId('stage-marks');
+  Array.prototype.forEach.call(marks.querySelectorAll('button'), function (b, i) {
+    b.setAttribute('aria-pressed', i === stage ? 'true' : 'false');
+    if (i === stage) b.setAttribute('aria-current', 'step'); else b.removeAttribute('aria-current');
+  });
+  byId('stage-prev').disabled = stage === 0;
+  byId('stage-next').disabled = stage === STAGES.length - 1;
+}
+function makeTable(heads, rows, leftCols) {
+  var wrap = document.createElement('div'); wrap.className = 'tablewrap'; wrap.setAttribute('tabindex', '0'); wrap.setAttribute('role', 'region'); wrap.setAttribute('aria-label', 'Table of values');
+  var t = document.createElement('table');
+  var thead = document.createElement('thead'); var tr = document.createElement('tr');
+  heads.forEach(function (h, i) { var th = document.createElement('th'); th.textContent = h; if (leftCols.indexOf(i) < 0) th.className = 'n'; tr.appendChild(th); });
+  thead.appendChild(tr); t.appendChild(thead);
+  var tb = document.createElement('tbody');
+  rows.forEach(function (r) {
+    var row = document.createElement('tr');
+    r.forEach(function (v, i) { var td = document.createElement('td'); td.textContent = (typeof v === 'number') ? f2(v) : String(v); if (leftCols.indexOf(i) < 0) td.className = 'n'; row.appendChild(td); });
+    tb.appendChild(row);
+  });
+  t.appendChild(tb); wrap.appendChild(t);
+  return wrap;
+}
+function buildStepper() {
+  var marks = byId('stage-marks');
+  STAGES.forEach(function (s, i) {
+    var b = document.createElement('button'); b.type = 'button'; b.className = 'ctl'; b.textContent = (i + 1) + '. ' + s.short;
+    b.setAttribute('aria-label', 'Stage ' + (i + 1) + ': ' + s.name);
+    b.addEventListener('click', function () { stage = i; renderStage(); });
+    marks.appendChild(b);
+  });
+  byId('stage-prev').addEventListener('click', function () { if (stage > 0) { stage--; renderStage(); } });
+  byId('stage-next').addEventListener('click', function () { if (stage < STAGES.length - 1) { stage++; renderStage(); } });
+  byId('stepper').addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight' && stage < STAGES.length - 1) { stage++; renderStage(); e.preventDefault(); }
+    else if (e.key === 'ArrowLeft' && stage > 0) { stage--; renderStage(); e.preventDefault(); }
+  });
+  renderStage();
+}
+
+/* ---------- item browser ---------- */
+var itemSel = null;
+function currentItems() {
+  var set = byId('item-set').value;
+  var q = byId('item-search').value.trim().toLowerCase();
+  var sort = byId('item-sort').value;
+  var list = CURVES.filter(function (c) { return set === 'all' || c.role === set; });
+  if (q) list = list.filter(function (c) { return c.label.toLowerCase().indexOf(q) >= 0 || c.id.toLowerCase().indexOf(q) >= 0; });
+  var rowFor = function (c) { return { c: c, n: scoreFor(c.id, 'C0', 'A', 'A_transfer') != null ? scoreFor(c.id, 'C0', 'A', 'A_transfer') : scoreFor(c.id, 'C0', 'A', 'in_sample'), p: scoreFor(c.id, 'C1', 'A', 'A_transfer') != null ? scoreFor(c.id, 'C1', 'A', 'A_transfer') : scoreFor(c.id, 'C1', 'A', 'in_sample') }; };
+  var rows = list.map(rowFor);
+  if (sort === 'newton') rows.sort(function (a, b) { return b.n - a.n; });
+  else if (sort === 'power') rows.sort(function (a, b) { return b.p - a.p; });
+  else rows.sort(function (a, b) { return a.c.label < b.c.label ? -1 : 1; });
+  return rows;
+}
+function renderItemList() {
+  var rows = currentItems();
+  var ul = byId('item-list'); clear(ul);
+  byId('item-count').textContent = rows.length + ' curve' + (rows.length === 1 ? '' : 's') + ' shown.';
+  rows.forEach(function (r) {
+    var li = document.createElement('li');
+    var b = document.createElement('button'); b.type = 'button';
+    b.setAttribute('aria-pressed', itemSel === r.c.id ? 'true' : 'false');
+    b.textContent = r.c.label;
+    var s = document.createElement('small');
+    s.textContent = 'Newton ' + f2(r.n) + ' K · power law ' + f2(r.p) + ' K · ' + (r.c.role === 'planned' ? 'held-out, planned' : r.c.role === 'sensitivity' ? 'sensitivity only' : 'fitting curve');
+    b.appendChild(s);
+    b.addEventListener('click', function () { itemSel = r.c.id; renderItemList(); renderDetail(); });
+    li.appendChild(b); ul.appendChild(li);
+  });
+  if (!rows.length) { var e = document.createElement('li'); e.textContent = 'No curves match this filter.'; e.style.padding = '10px 12px'; ul.appendChild(e); }
+  if (!itemSel || !rows.some(function (r) { return r.c.id === itemSel; })) { itemSel = rows.length ? rows[0].c.id : null; }
+}
+function renderDetail() {
+  var box = byId('item-detail'); clear(box);
+  var c = CURVES.filter(function (x) { return x.id === itemSel; })[0];
+  if (!c) { box.textContent = 'No curve is selected.'; byId('takeaway-items').textContent = ''; return; }
+  var n0 = scoreFor(c.id, 'C0', 'A', 'A_transfer'), n1 = scoreFor(c.id, 'C1', 'A', 'A_transfer');
+  var insample = c.role === 'fitting';
+  if (insample) { n0 = scoreFor(c.id, 'C0', 'A', 'in_sample'); n1 = scoreFor(c.id, 'C1', 'A', 'in_sample'); }
+  var h = document.createElement('h3'); h.textContent = c.label; h.style.marginTop = '0'; box.appendChild(h);
+  var inp = document.createElement('p'); inp.className = 'hint';
+  inp.textContent = 'Input: initial temperature ' + f2(c.T0) + ' °C; room temperature ' + f2(c.room) + ' °C (' + (c.roomSource === 'recorded' ? 'recorded' : 'assumed, 20 °C') + '); ' + c.t.filter(function (t) { return t <= 30; }).length + ' measured times up to 30 minutes.' + (insample ? ' This is the curve the constants were fitted to.' : '') + (c.role === 'sensitivity' ? ' Read from figures; outside the planned set.' : '');
+  box.appendChild(inp);
+  var cd = document.createElement('div'); cd.className = 'chart'; cd.setAttribute('role', 'group'); cd.setAttribute('aria-label', 'Chart for ' + c.label);
+  box.appendChild(cd);
+  var leg = document.createElement('ul'); leg.className = 'legend';
+  box.appendChild(leg);
+  lineChart(cd, c);
+  legend(leg, [['Measured', COL.obs], [NEW_LABEL, COL.newton], [POW_LABEL, COL.power]], false);
+  var rows = c.t.map(function (t, i) { return [t, c.obs[i], c.c0[i], c.c1[i]]; }).filter(function (r) { return r[0] <= 30; });
+  box.appendChild(makeTable(['Time (min)', 'Measured (°C)', 'Newton law (°C)', 'Power law (°C)'], rows, [0, 1, 2, 3]));
+  var sm = document.createElement('p'); sm.className = 'muted';
+  sm.textContent = 'Stored 30-minute RMS error: Newton law ' + (n0 != null ? f2(n0) : 'not available') + ' K; power law ' + (n1 != null ? f2(n1) : 'not available') + ' K.' + (insample ? ' (in-sample, fitted to this curve)' : '');
+  box.appendChild(sm);
+  var better = (n1 != null && n0 != null) ? (n1 < n0 ? 'lower' : 'higher') : null;
+  byId('takeaway-items').textContent = (n0 != null && n1 != null)
+    ? c.label + ': the power law error is ' + f2(n1) + ' K, ' + better + ' than Newton\'s law at ' + f2(n0) + ' K.'
+    : c.label + ' has no stored error for this set.';
+}
+
+/* ---------- fold table ---------- */
+function renderFold() {
+  var f = document.querySelector('input[name="fold"]:checked').value;
+  var key = f === 'Sedlacek' ? 'B_loso|Sedlacek|A' : f === 'Manitoba' ? 'B_loso|Manitoba|A' : 'B_loso|Langer|A';
+  var b = BLK[key];
+  var body = byId('fold-body'); clear(body);
+  var rows = [
+    ['Held-out curves (count)', String(b.n_curves), String(b.n_curves)],
+    ['Mean 30-minute RMS error (K)', f2(b.C0_mean), f2(b.C1_mean)],
+    ['Interval (95%, bootstrap over curves)', fmtInterval(b.C0_interval), fmtInterval(b.C1_interval)],
+  ];
+  rows.forEach(function (r) {
+    var tr = document.createElement('tr');
+    r.forEach(function (v, i) { var td = document.createElement(i ? 'td' : 'th'); td.textContent = v; if (i) td.className = 'n'; tr.appendChild(td); });
+    body.appendChild(tr);
+  });
+  var pr = document.createElement('tr');
+  var th = document.createElement('th'); th.textContent = 'Paired difference, power minus Newton (K)';
+  var td = document.createElement('td'); td.colSpan = 2; td.className = 'n';
+  td.textContent = f2s(b.paired_mean_diff) + ' K, 95% interval ' + fmtInterval(b.paired_interval) + '; power law lower on ' + b.count_C1_lower + ' of ' + b.n_curves + ' curves';
+  pr.appendChild(th); pr.appendChild(td); body.appendChild(pr);
+  var label = f === 'Sedlacek' ? 'Sedlacek and Dolejsi coffee' : f === 'Manitoba' ? 'the Manitoba coffee cup' : 'the six Langer hot-water cups';
+  byId('takeaway-fold').textContent = b.paired_mean_diff < 0
+    ? 'With ' + label + ' held out, the power law has the lower mean error by ' + f2(-b.paired_mean_diff) + ' K.'
+    : 'With ' + label + ' held out, the power law has the higher mean error, by ' + f2(b.paired_mean_diff) + ' K. The advantage reverses.';
+}
+
+/* ---------- sign chart ---------- */
+function renderSign() {
+  var rows = SCORES.filter(function (r) { return r.protocol.indexOf('A_transfer') === 0 && r.ambient === 'A' && r.model === 'C0'; });
+  var cats = rows.map(function (r) { return shortLabel({ label: (r.curve_id.indexOf('MANITOBA') === 0 ? 'Manitoba' : r.curve_id.replace('LANGER2018_Abb2-', 'Langer ')) }); });
+  var vals = rows.map(function (r) { return r.signed_0_10_K; });
+  signedBarChart(byId('chart-sign'), {
+    cats: cats, values: vals, yMin: -6, yMax: 4, yTitle: 'Mean residual, minutes 0 to 10 (K)',
+    aria: 'Signed mean early residual for each held-out curve under Newton law, ambient A'
+  });
+  legend(byId('legend-sign'), [['Newton runs warm (positive)', COL.power], ['Newton runs cold (negative)', COL.newton]], false);
+  var pos = vals.filter(function (v) { return v > 0; }).length;
+  byId('takeaway-sign').textContent = 'Newton\'s law runs warm on ' + pos + ' of ' + vals.length + ' held-out curves over minutes 0 to 10, and cold on the rest.';
+}
+
+/* ---------- refit chart ---------- */
+function renderRefit() {
+  var protocol = document.querySelector('input[name="protocol"]:checked').value;
+  var c0, c1, cats, n;
+  if (protocol === 'frozen') {
+    var rows = HELD;
+    cats = rows.map(shortLabel);
+    c0 = rows.map(function (c) { return scoreFor(c.id, 'C0', 'A', 'A_transfer'); });
+    c1 = rows.map(function (c) { return scoreFor(c.id, 'C1', 'A', 'A_transfer'); });
+    barChart(byId('chart-refit'), { cats: cats, series: [{ name: NEW_LABEL, color: COL.newton, values: c0 }, { name: POW_LABEL, color: COL.power, values: c1 }], yMax: 13, yTitle: 'RMS error, 30 minutes, frozen (K)', catRotate: true, aria: 'Frozen 30-minute error per curve', target: 0.5, targetLabel: '0.5 K target' });
+    byId('takeaway-refit').textContent = 'Frozen constants: Newton\'s law averages ' + f2(BLK['A_transfer|Sedlacek->Manitoba+Langer|A'].C0_mean) + ' K and the power law ' + f2(BLK['A_transfer|Sedlacek->Manitoba+Langer|A'].C1_mean) + ' K over the seven held-out curves.';
+  } else {
+    var rf = REFIT['x=2.18'];
+    cats = rf.per_curve.map(function (p) { return p.curve_id.indexOf('MANITOBA') === 0 ? 'Manitoba' : p.curve_id.replace('LANGER2018_Abb2-', 'Langer '); });
+    c0 = rf.per_curve.map(function (p) { return p.newton_K; });
+    c1 = rf.per_curve.map(function (p) { return p.power_K; });
+    barChart(byId('chart-refit'), { cats: cats, series: [{ name: NEW_LABEL, color: COL.newton, values: c0 }, { name: POW_LABEL, color: COL.power, values: c1 }], yMax: 6, yTitle: 'RMS error, minutes 10 to 30 (K)', catRotate: true, aria: 'Error after fitting again, per curve' });
+    byId('takeaway-refit').textContent = 'Fitted again: the mean is ' + f2(REFIT['x=1.00'].mean_rms_K) + ' K for Newton\'s law and ' + f2(rf.mean_rms_K) + ' K for the power law over eleven curves. The Manitoba cup is ' + f2(c0[0]) + ' K under Newton\'s law and ' + f2(c1[0]) + ' K under the power law.';
+  }
+  legend(byId('legend-refit'), [[NEW_LABEL, COL.newton], [POW_LABEL, COL.power]], protocol === 'frozen');
+}
+
+/* ---------- window what-if ---------- */
+function windowStats(T) {
+  var per = HELD.map(function (c) {
+    var s0 = 0, s1 = 0, n = 0;
+    c.t.forEach(function (t, i) {
+      if (t <= T + 1e-9 && c.obs[i] != null) {
+        var r0 = c.c0[i] - c.obs[i], r1 = c.c1[i] - c.obs[i];
+        s0 += r0 * r0; s1 += r1 * r1; n++;
+      }
+    });
+    return { id: c.id, label: shortLabel(c), n: n, r0: n ? Math.sqrt(s0 / n) : null, r1: n ? Math.sqrt(s1 / n) : null };
+  }).filter(function (p) { return p.n > 0; });
+  var mean = function (a) { return a.reduce(function (s, v) { return s + v; }, 0) / a.length; };
+  return { per: per, m0: mean(per.map(function (p) { return p.r0; })), m1: mean(per.map(function (p) { return p.r1; })), lower: per.filter(function (p) { return p.r1 < p.r0; }).length };
+}
+function renderWindow() {
+  var T = parseInt(byId('window-slider').value, 10);
+  byId('window-out').textContent = String(T);
+  byId('window-slider').setAttribute('aria-valuetext', 'Window end ' + T + ' minutes');
+  var s = windowStats(T);
+  barChart(byId('chart-window'), {
+    cats: s.per.map(function (p) { return p.label; }),
+    series: [{ name: NEW_LABEL, color: COL.newton, values: s.per.map(function (p) { return p.r0; }) }, { name: POW_LABEL, color: COL.power, values: s.per.map(function (p) { return p.r1; }) }],
+    yMax: 13, yTitle: 'RMS error to ' + T + ' min (K)', catRotate: true, aria: 'RMS error over the first ' + T + ' minutes for each held-out curve'
+  });
+  legend(byId('legend-window'), [[NEW_LABEL, COL.newton], [POW_LABEL, COL.power]], false);
+  byId('takeaway-window').textContent = 'Judged over the first ' + T + ' minutes, the mean error of Newton\'s law is ' + f2(s.m0) + ' K and of the power law ' + f2(s.m1) + ' K. The power law is lower on ' + s.lower + ' of ' + s.per.length + ' curves.' + (T === 30 ? ' At 30 minutes this matches the paper.' : '');
+}
+
+/* ---------- headline view wiring ---------- */
+function wire() {
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="set"]'), function (r) { r.addEventListener('change', function () { setState.set = r.value; renderHeadline(); }); });
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="amb"]'), function (r) { r.addEventListener('change', function () { setState.amb = r.value; renderHeadline(); }); });
+  ['item-set', 'item-sort'].forEach(function (id) { byId(id).addEventListener('change', function () { renderItemList(); renderDetail(); }); });
+  byId('item-search').addEventListener('input', function () { renderItemList(); renderDetail(); });
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="fold"]'), function (r) { r.addEventListener('change', renderFold); });
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="protocol"]'), function (r) { r.addEventListener('change', renderRefit); });
+  byId('window-slider').addEventListener('input', renderWindow);
+}
+
+/* ---------- glossary and term tooltips ---------- */
+var GLOSS = [
+  ['RMS error', 'Root-mean-square error: the square root of the mean squared difference between model and observed temperature, in kelvin. Lower is better.'],
+  ['Held-out curve', 'A cooling curve that was not used to fit the constants. It is scored with constants it never saw.'],
+  ['Frozen constant', 'A constant fitted to one curve and carried to another without refitting.'],
+  ['Fitted again', 'The constant is refitted to the first 10 minutes of a held-out curve, then tested over minutes 10 to 30.'],
+  ['Power-law extension', 'The one-term extension that replaces the constant rate with a rate depending on the temperature difference: dT/dt = −k<sub>c</sub> (T − T<sub>a</sub>)<sup>x</sup>.'],
+  ['Exponent x', 'The power fitted along with the rate in the power-law extension. Newton\'s law is the case x = 1.'],
+  ['Ambient temperature', 'The room temperature the cup cools toward. It is recorded where the source reports it, and assumed at 20 °C where it does not.'],
+  ['Bootstrap interval', 'A 95% interval from 1000 resamples with a fixed random state of 0, resampling curves where a set has two or more.'],
+  ['Resampling test', 'Randomly reverses the sign of each curve\'s difference and asks how often the mean reaches the observed value.'],
+  ['Residual', 'Model minus observed temperature, so a positive value means the model is warmer than the liquid.'],
+  ['Sensitivity-only curve', 'A Langer curve read from figures but kept outside the planned set of six. It is scored with the same frozen constants.']
+];
+function termButton(term, def) {
+  var wrap = document.createElement('span'); wrap.className = 'termwrap';
+  var b = document.createElement('button'); b.type = 'button'; b.className = 'glossterm'; b.textContent = term;
+  var id = 'tip-' + term.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+  var tip = document.createElement('span'); tip.className = 'termtip'; tip.id = id; tip.setAttribute('role', 'tooltip'); tip.innerHTML = def;
+  b.setAttribute('aria-describedby', id);
+  var open = function () { tip.style.display = 'block'; };
+  var close = function () { tip.style.display = 'none'; };
+  b.addEventListener('mouseenter', open);
+  b.addEventListener('focus', open);
+  b.addEventListener('click', open);
+  b.addEventListener('touchstart', open, { passive: true });
+  b.addEventListener('mouseleave', function () { if (document.activeElement !== b) close(); });
+  b.addEventListener('blur', close);
+  b.addEventListener('keydown', function (e) { if (e.key === 'Escape') { close(); b.blur(); } });
+  wrap.appendChild(b); wrap.appendChild(tip);
+  return wrap;
+}
+document.addEventListener('keydown', function (e) { if (e.key === 'Escape') Array.prototype.forEach.call(document.querySelectorAll('.termtip'), function (t) { t.style.display = 'none'; }); });
+document.addEventListener('click', function (e) {
+  Array.prototype.forEach.call(document.querySelectorAll('.termwrap'), function (w) { if (!w.contains(e.target)) { var t = w.querySelector('.termtip'); if (t) t.style.display = 'none'; } });
+});
+function buildGlossary() {
+  var dl = byId('glossary');
+  GLOSS.forEach(function (g) {
+    var dt = document.createElement('dt'); dt.appendChild(termButton(g[0], g[1]));
+    var dd = document.createElement('dd'); dd.innerHTML = g[1];
+    dl.appendChild(dt); dl.appendChild(dd);
+  });
+  // term triggers in prose: link the first mention of key terms in the findings text
+  var targets = [['RMS error', 'headline-ci'], ['held-out', 'takeaway-finding']];
+}
+function mountInlineTerms() {
+  var pairs = [['held-out', 'Held-out curve'], ['frozen constant', 'Frozen constant'], ['power-law extension', 'Power-law extension'], ['bootstrap', 'Bootstrap interval'], ['ambient temperature', 'Ambient temperature'], ['residual', 'Residual']];
+  var p = document.querySelector('#finding .answer');
+  if (!p) return;
+  var first = pairs[0];
+  var txt = p.textContent;
+  var idx = txt.toLowerCase().indexOf('held-out curves');
+  if (idx >= 0) { /* leave prose unchanged; glossary covers terms */ }
+}
+
+/* ---------- section nav ---------- */
+function navWatch() {
+  var links = Array.prototype.slice.call(document.querySelectorAll('nav.sec a'));
+  var secs = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+  if (!('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) {
+        links.forEach(function (a) { a.setAttribute('aria-current', a.getAttribute('href') === '#' + en.target.id ? 'true' : 'false'); });
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  secs.forEach(function (s) { if (s) io.observe(s); });
+}
+
+/* ---------- render all ---------- */
+function renderAll() {
+  renderHeadline();
+  renderItemList(); renderDetail();
+  renderFold();
+  renderSign();
+  renderRefit();
+  renderWindow();
+}
+var rTimer = null;
+window.addEventListener('resize', function () { clearTimeout(rTimer); rTimer = setTimeout(renderAll, 150); });
+
+function init() {
+  wire();
+  buildStepper();
+  buildGlossary();
+  mountInlineTerms();
+  navWatch();
+  renderAll();
+}
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script>
+</body></html>
